@@ -1,0 +1,46 @@
+/* ============================================================
+   BASE — minimal reset + brand defaults + texture utilities
+   Consumers get sensible page defaults and the signature
+   scanline/grid texture classes for free.
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text-default);
+  font: var(--text-body-r);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4 { color: var(--text-heading); margin: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+img, svg { display: block; max-width: 100%; }
+:focus-visible { outline: none; box-shadow: var(--ring); border-radius: var(--radius-xs); }
+
+/* ---- Brand texture utilities ---- */
+.cr-scanlines { position: relative; }
+.cr-scanlines::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: var(--tex-scanlines); mix-blend-mode: overlay; opacity: 0.6;
+}
+.cr-grid-bg {
+  background-color: var(--bg-page);
+  background-image: var(--tex-grid);
+  background-size: var(--tex-grid-size);
+}
+
+/* ---- Mono kicker / eyebrow label ---- */
+.cr-kicker {
+  font: var(--fw-bold) var(--fs-2xs)/1 var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  color: var(--accent);
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}

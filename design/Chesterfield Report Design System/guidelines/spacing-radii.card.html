@@ -1,0 +1,21 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Radii & borders" subtitle="Crisp HUD corners — 0 → pill, hairline → neon edge" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; padding:22px; background:var(--bg-page); }
+  .row { display:flex; gap:18px; align-items:center; }
+  .box { width:72px; height:56px; background:var(--surface-raised); border:1px solid var(--ink-300); display:grid; place-items:end center; }
+  .tok { font:var(--fs-3xs)/1 var(--font-mono); color:var(--text-faint); padding:4px; }
+  .neon { border:var(--bw-3) solid var(--neon-teal); box-shadow:var(--glow-sm-teal); }
+</style></head>
+<body>
+  <div class="row">
+    <div class="box" style="border-radius:var(--radius-0)"><span class="tok">0</span></div>
+    <div class="box" style="border-radius:var(--radius-xs)"><span class="tok">xs·2</span></div>
+    <div class="box" style="border-radius:var(--radius-sm)"><span class="tok">sm·4</span></div>
+    <div class="box" style="border-radius:var(--radius-md)"><span class="tok">md·6</span></div>
+    <div class="box" style="border-radius:var(--radius-lg)"><span class="tok">lg·10</span></div>
+    <div class="box" style="border-radius:var(--radius-pill);width:96px"><span class="tok">pill</span></div>
+    <div class="box neon" style="border-radius:var(--radius-sm)"><span class="tok" style="color:var(--neon-teal)">neon edge</span></div>
+  </div>
+</body></html>

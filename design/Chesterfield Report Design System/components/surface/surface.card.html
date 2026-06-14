@@ -1,0 +1,51 @@
+<!-- @dsCard group="Components" viewport="700x260" name="Card surface" subtitle="HUD panels — accent bar, gradient wash, corner bracket, hover lift" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 22px; background: var(--bg-page); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .ttl { font: var(--text-h3); font-size: var(--fs-lg); color: var(--text-strong); margin: 10px 0 6px; }
+  .meta { font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--text-faint); }
+  p { font-size: var(--fs-sm); color: var(--text-default); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { Card, Badge } = window.ChesterfieldReportDesignSystem_ad430c;
+  function Demo() {
+    return (
+      <div className="grid">
+        <Card interactive accent tone="breaking" bracket>
+          <Badge tone="breaking" dot>Breaking</Badge>
+          <div className="ttl">Board approves riverfront rezoning</div>
+          <p>4–1 vote clears the way for 220 acres along the Appomattox.</p>
+          <div className="meta">19:42 · GOVERNMENT</div>
+        </Card>
+        <Card interactive accent tone="teal" grad>
+          <Badge tone="teal">Schools</Badge>
+          <div className="ttl">New STEM wing breaks ground</div>
+          <p>Cosby High adds a 40,000 sq ft lab block for fall 2027.</p>
+          <div className="meta">17:10 · SCHOOLS</div>
+        </Card>
+        <Card interactive accent tone="civic">
+          <Badge tone="civic">Civic</Badge>
+          <div className="ttl">Your guide to the county budget</div>
+          <p>Where the $1.9B goes, line by line, in plain language.</p>
+          <div className="meta">08:00 · EXPLAINER</div>
+        </Card>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="340" height="64" role="img" aria-label="The Chesterfield Report — Chesterfield County, Virginia">
+  <!-- Designed for the navy header; transparent background -->
+
+  <!-- ICON: heron badge -->
+  <g transform="translate(2 4)">
+    <circle cx="28" cy="28" r="27" fill="#15243b"/>
+    <circle cx="28" cy="28" r="27" fill="none" stroke="#d8a23a" stroke-width="1.3"/>
+    <circle cx="28" cy="28" r="23" fill="none" stroke="#1f6b53" stroke-width="0.9" opacity="0.5"/>
+
+    <!-- River bend -->
+    <path d="M9 42 Q19 38.5 28 41 T47 40" fill="none" stroke="#1f6b53" stroke-width="1.7" stroke-linecap="round" opacity="0.9"/>
+
+    <!-- Heron (matches mark) -->
+    <g fill="#b5462f">
+      <path d="M16.6 35.9
+               C16.2 33.7 18 32.2 21 31.8
+               C24.5 31.3 27.2 31.2 29.3 29.6
+               C30.5 28.7 30.9 27.7 30.7 26.4
+               C32 27.4 32.3 28.9 31.5 30.1
+               C30.1 32.3 26.7 33.4 23.2 34.3
+               C20.5 35 18.4 35.4 17 36.3
+               C16.9 36.2 16.7 36.1 16.6 35.9 Z"/>
+      <path d="M30.3 27.1
+               C28.5 23.6 29.2 19.6 31.2 16.6
+               C32.5 14.5 32.9 12 32.1 9.7
+               C33.3 10.7 33.8 12.5 33.2 14.2
+               C32.4 17 30.6 18.9 30.4 21.5
+               C30.27 23.5 31.1 25.2 32.1 26.6
+               C31.5 26.7 30.9 26.9 30.3 27.1 Z"/>
+      <circle cx="32.4" cy="9.6" r="2.4"/>
+    </g>
+    <path d="M34.5 9 L42 7.8 L34.7 10.6 Z" fill="#d8a23a"/>
+    <path d="M30.8 8.2 C28.5 7 27.1 7.6 26.2 8.9" fill="none" stroke="#b5462f" stroke-width="1.3" stroke-linecap="round"/>
+    <g stroke="#b5462f" stroke-width="1.5" stroke-linecap="round">
+      <line x1="21" y1="35.4" x2="19.7" y2="43"/>
+      <line x1="25" y1="35" x2="25.9" y2="43"/>
+    </g>
+  </g>
+
+  <!-- WORDMARK -->
+  <g>
+    <text x="68" y="37"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="18" font-weight="700" letter-spacing="0.1"
+          fill="#f7f5ef">The Chesterfield<tspan dx="5" fill="#b5462f" font-style="italic" font-weight="400">Report</tspan></text>
+
+    <!-- Tagline with flanking rule -->
+    <line x1="69" y1="48.5" x2="79" y2="48.5" stroke="#d8a23a" stroke-width="1"/>
+    <text x="83" y="52"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="9" letter-spacing="2.1"
+          fill="#d8a23a">CHESTERFIELD COUNTY, VIRGINIA</text>
+  </g>
+</svg>

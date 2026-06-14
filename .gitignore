@@ -1,0 +1,46 @@
+# ---- Secrets (NEVER commit) ----
+.env
+.env.*
+scripts/.deploy.env
+
+# ---- Pipeline state & caches (per-locality; forks start clean) ----
+pipeline/seen.db
+pipeline/last_ingest.txt
+pipeline/geocode_cache.json
+pipeline/meetings_cache.json
+pipeline/dining_cache.json
+pipeline/es_cache.json
+pipeline/ogimage_cache.json
+pipeline/linkqueue_seen.json
+pipeline/review_feedback.jsonl
+
+# ---- Generated site output (rebuilt by `run.py build`; keep public/assets/) ----
+public/*.html
+public/story/
+public/es/
+public/topics/
+public/page/
+public/feed.xml
+public/sitemap.xml
+public/robots.txt
+
+# ---- Workflow churn (review queue / reversible bins) ----
+content/drafts/
+content/removed/
+content/merged/
+
+# ---- Internal research / notes (NOT for publication) ----
+pipeline/research/
+docs/salary-research.md
+
+# ---- Logs ----
+logs/
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- OS ----
+.DS_Store

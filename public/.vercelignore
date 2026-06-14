@@ -1,0 +1,3 @@
+# Never deploy the local-only draft review preview — approval happens locally
+# (via `python run.py serve`), not on the public site.
+drafts.html

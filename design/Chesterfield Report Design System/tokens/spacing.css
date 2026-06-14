@@ -1,0 +1,46 @@
+/* ============================================================
+   SPACING & LAYOUT — The Chesterfield Report
+   8px base grid. Use --space-* for padding/margins/gap.
+   ============================================================ */
+:root {
+  --space-0:  0;
+  --space-1:  0.25rem;  /* 4  */
+  --space-2:  0.5rem;   /* 8  */
+  --space-3:  0.75rem;  /* 12 */
+  --space-4:  1rem;     /* 16 */
+  --space-5:  1.5rem;   /* 24 */
+  --space-6:  2rem;     /* 32 */
+  --space-7:  3rem;     /* 48 */
+  --space-8:  4rem;     /* 64 */
+  --space-9:  6rem;     /* 96 */
+  --space-10: 8rem;     /* 128 */
+
+  /* ---- Container widths ---- */
+  --container-narrow: 42rem;   /* article measure */
+  --container-base:   64rem;   /* main column */
+  --container-wide:   80rem;   /* full feed grid */
+  --container-max:    90rem;   /* shell */
+  --gutter:           var(--space-5);
+
+  /* ---- Radii (mostly sharp — cyber HUD = crisp corners) ---- */
+  --radius-0:  0;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-pill: 999px;
+  --radius-card: var(--radius-sm); /* cards stay crisp */
+
+  /* ---- Border widths ---- */
+  --bw-hair: 1px;
+  --bw-1:    1px;
+  --bw-2:    2px;
+  --bw-3:    3px; /* neon emphasis edge */
+
+  /* ---- Z layers ---- */
+  --z-base: 0;        /* @kind other */
+  --z-raised: 10;     /* @kind other */
+  --z-sticky: 100;    /* @kind other */
+  --z-overlay: 1000;  /* @kind other */
+  --z-toast: 2000;    /* @kind other */
+}

@@ -1,0 +1,19 @@
+<!-- @dsCard group="Spacing" viewport="700x160" name="Shadows & neon glow" subtitle="Cool elevation shadows + teal / magenta / amber signal glows" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; padding:26px; background:var(--bg-page); }
+  .row { display:flex; gap:22px; align-items:center; flex-wrap:wrap; }
+  .box { width:96px; height:62px; background:var(--surface-raised); border-radius:var(--radius-sm); display:grid; place-items:center; }
+  .tok { font:var(--fs-3xs)/1.3 var(--font-mono); color:var(--text-muted); text-align:center; }
+</style></head>
+<body>
+  <div class="row">
+    <div class="box" style="box-shadow:var(--shadow-sm)"><span class="tok">shadow-sm</span></div>
+    <div class="box" style="box-shadow:var(--shadow-md)"><span class="tok">shadow-md</span></div>
+    <div class="box" style="box-shadow:var(--shadow-lg)"><span class="tok">shadow-lg</span></div>
+    <div class="box" style="box-shadow:var(--glow-md-teal)"><span class="tok" style="color:var(--neon-teal)">glow teal</span></div>
+    <div class="box" style="box-shadow:var(--glow-md-magenta)"><span class="tok" style="color:var(--neon-magenta)">glow magenta</span></div>
+    <div class="box" style="box-shadow:var(--glow-md-amber)"><span class="tok" style="color:var(--neon-amber)">glow amber</span></div>
+  </div>
+</body></html>

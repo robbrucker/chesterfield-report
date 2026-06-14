@@ -1,0 +1,50 @@
+/* ============================================================
+   EFFECTS — shadows, glows, textures, motion
+   The visual signature: neon edges, scanlines, grid washes.
+   ============================================================ */
+:root {
+  /* ---- Elevation shadows (cool, never warm) ---- */
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.5);
+  --shadow-md:  0 4px 14px rgba(0,0,0,0.55);
+  --shadow-lg:  0 16px 40px rgba(0,0,0,0.6);
+
+  /* ---- Neon glows (use as box-shadow / drop-shadow) ---- */
+  --glow-sm-teal:    0 0 0 1px rgba(34,245,212,0.5), 0 0 12px var(--glow-teal);
+  --glow-md-teal:    0 0 0 1px rgba(34,245,212,0.6), 0 0 22px var(--glow-teal);
+  --glow-md-magenta: 0 0 0 1px rgba(255,46,136,0.6), 0 0 22px var(--glow-magenta);
+  --glow-md-amber:   0 0 0 1px rgba(255,210,63,0.55), 0 0 20px var(--glow-amber);
+  --glow-text-teal:  0 0 10px var(--glow-teal);
+  --glow-text-magenta: 0 0 10px var(--glow-magenta);
+
+  /* ---- Focus ring ---- */
+  --ring: 0 0 0 2px var(--ink-800), 0 0 0 4px var(--neon-teal), 0 0 14px var(--glow-teal);
+
+  /* ---- Gradients / washes ---- */
+  --grad-teal:    linear-gradient(135deg, #22f5d4 0%, #0fb89e 100%); /* @kind color */
+  --grad-magenta: linear-gradient(135deg, #ff2e88 0%, #b5462f 100%); /* @kind color */
+  --grad-civic:   linear-gradient(135deg, #ffd23f 0%, #d8a23a 100%); /* @kind color */
+  --grad-fog:     linear-gradient(180deg, rgba(6,20,26,0) 0%, var(--ink-800) 85%);
+  --grad-panel:   linear-gradient(180deg, rgba(34,245,212,0.05) 0%, rgba(6,20,26,0) 40%); /* @kind color */
+
+  /* ---- Textures (apply as background-image) ---- */
+  --tex-scanlines: repeating-linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0px,
+      rgba(0,0,0,0) 2px,
+      rgba(0,0,0,0.16) 3px,
+      rgba(0,0,0,0) 4px); /* @kind other */
+  --tex-grid: linear-gradient(rgba(34,245,212,0.06) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(34,245,212,0.06) 1px, transparent 1px); /* @kind other */
+  --tex-grid-size: 32px 32px; /* @kind other */
+
+  /* ---- Motion (restrained: fast, eased, purposeful) ---- */
+  --ease-out:  cubic-bezier(0.22, 1, 0.36, 1);      /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);    /* @kind other */
+  --dur-fast:  120ms;  /* @kind other */
+  --dur-base:  200ms;  /* @kind other */
+  --dur-slow:  360ms;  /* @kind other */
+  --transition-base: all var(--dur-base) var(--ease-out); /* @kind other */
+}
+
+/* Selection */
+::selection { background: var(--selection-bg); color: var(--text-strong); }

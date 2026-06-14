@@ -1,0 +1,36 @@
+<!-- @dsCard group="Brand" viewport="700x230" name="Voice & tone" subtitle="How The Chesterfield Report writes — plain, local, a little wired" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; padding:24px; background:var(--bg-page); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .col h4 { font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono); letter-spacing:var(--ls-wider); text-transform:uppercase; margin:0 0 10px; }
+  .yes h4 { color:var(--neon-teal); }
+  .no h4 { color:var(--neon-magenta); }
+  ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; }
+  li { font:var(--fs-sm)/1.4 var(--font-sans); color:var(--text-body); padding-left:18px; position:relative; }
+  .yes li::before { content:"+"; position:absolute; left:0; color:var(--neon-teal); font-family:var(--font-mono); }
+  .no li::before { content:"\00d7"; position:absolute; left:0; color:var(--neon-magenta); font-family:var(--font-mono); }
+</style></head>
+<body>
+  <div class="grid">
+    <div class="col yes">
+      <h4>// We write</h4>
+      <ul>
+        <li>Plain, declarative sentences. The fact first.</li>
+        <li>"The county" — never "officials say" filler.</li>
+        <li>Active voice: <em>Supervisors approved</em>, not <em>was approved</em>.</li>
+        <li>Mono timestamps &amp; numbers as receipts: 19:42 · 4–1 vote.</li>
+      </ul>
+    </div>
+    <div class="col no">
+      <h4>// We avoid</h4>
+      <ul>
+        <li>Hype, clickbait, or "you won't believe."</li>
+        <li>Emoji in headlines or body.</li>
+        <li>National-politics framing on local stories.</li>
+        <li>Jargon without a plain-language gloss.</li>
+      </ul>
+    </div>
+  </div>
+</body></html>

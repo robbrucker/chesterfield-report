@@ -1,0 +1,77 @@
+/* ============================================================
+   COLORS — The Chesterfield Report  ·  "bioluminescent wetland"
+   Deep teal-black base + heron-teal neon, with heritage
+   river/gold/rust tones grounding the cyberpunk in Chesterfield.
+   ============================================================ */
+:root {
+  /* ---- Base surfaces (deep teal-black, river at night) ---- */
+  --ink-900: #03090c;   /* void / page backdrop behind panels */
+  --ink-800: #06141a;   /* base background (matches live site theme) */
+  --ink-700: #0a1f26;   /* panel / card surface */
+  --ink-600: #0e2a33;   /* raised panel, inputs */
+  --ink-500: #123640;   /* hover surface, wells */
+  --ink-400: #1c4a55;   /* hairline / divider */
+  --ink-300: #2a6470;   /* strong border */
+
+  /* ---- Neon accents (heron bioluminescence) ---- */
+  --neon-teal:      #22f5d4;  /* PRIMARY — links, focus, signal */
+  --neon-teal-dim:  #0fb89e;  /* pressed / secondary teal */
+  --neon-teal-deep: #0a6f63;  /* teal on light, tracks */
+  --neon-magenta:   #ff2e88;  /* BREAKING / alert / live */
+  --neon-magenta-dim:#c61f68;
+  --neon-amber:     #ffd23f;  /* civic highlight, beak gold */
+  --neon-amber-dim: #d9a81f;
+  --neon-lime:      #8dff5e;  /* fresh / positive data */
+
+  /* ---- Heritage nature tones (from the heron seal) ---- */
+  --river-green:    #1f6b53;  /* wetland line, eco beat */
+  --heritage-gold:  #d8a23a;  /* seal ring, official gold */
+  --heron-rust:     #b5462f;  /* the bird, warm earth */
+  --reed:           #6f8f4a;  /* muted marsh green */
+  --fog:            #9fb8b2;  /* river fog, muted gray-green */
+
+  /* ---- Text ---- */
+  --text-strong: #eafff9;  /* headlines, teal-tinted near-white */
+  --text-body:   #b8d4cd;  /* body copy */
+  --text-muted:  #7a948e;  /* captions, secondary */
+  --text-faint:  #4d6661;  /* timestamps, disabled */
+  --text-on-neon:#06141a;  /* text on a neon fill */
+
+  /* ---- Glow / signal colors (rgba for shadows & washes) ---- */
+  --glow-teal:    rgba(34, 245, 212, 0.45);
+  --glow-magenta: rgba(255, 46, 136, 0.45);
+  --glow-amber:   rgba(255, 210, 63, 0.40);
+  --teal-wash:    rgba(34, 245, 212, 0.08);
+  --magenta-wash: rgba(255, 46, 136, 0.08);
+  --amber-wash:   rgba(255, 210, 63, 0.10);
+
+  /* ============================================================
+     SEMANTIC ALIASES — author against these, not raw scale
+     ============================================================ */
+  --bg-page:        var(--ink-800);
+  --bg-void:        var(--ink-900);
+  --surface-card:   var(--ink-700);
+  --surface-raised: var(--ink-600);
+  --surface-well:   var(--ink-500);
+
+  --border-hair:    var(--ink-400);
+  --border-strong:  var(--ink-300);
+  --border-neon:    var(--neon-teal);
+
+  --text-heading:   var(--text-strong);
+  --text-default:   var(--text-body);
+  --text-secondary: var(--text-muted);
+  --text-disabled:  var(--text-faint);
+
+  --accent:         var(--neon-teal);    /* primary brand signal */
+  --accent-pressed: var(--neon-teal-dim);
+  --link:           var(--neon-teal);
+
+  --breaking:       var(--neon-magenta); /* breaking / live / danger */
+  --civic:          var(--neon-amber);   /* civic gold highlight */
+  --positive:       var(--neon-lime);
+  --eco:            var(--river-green);
+
+  --focus-ring:     var(--neon-teal);
+  --selection-bg:   rgba(34, 245, 212, 0.25);
+}

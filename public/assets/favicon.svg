@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="The Chesterfield Report">
+  <rect width="32" height="32" rx="7" fill="#15243b"/>
+
+  <!-- River bend -->
+  <path d="M4 26 Q11 23 16 25 T28 24.5" fill="none" stroke="#1f6b53" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- Bold heron, chunky enough for 32px -->
+  <g fill="#b5462f">
+    <!-- Body -->
+    <path d="M6.5 21.5
+             C6 19 7.8 17.4 11 17
+             C14.6 16.5 16.8 16.4 18.4 14.8
+             C19.3 13.9 19.6 13 19.4 11.9
+             C21 12.8 21.3 14.6 20.3 16
+             C18.7 18.2 15.2 19.2 12 19.9
+             C9.8 20.4 8 20.8 7 21.7
+             C6.8 21.6 6.6 21.6 6.5 21.5 Z"/>
+    <!-- Neck (thicker S) -->
+    <path d="M19 12.6
+             C16.6 9 17.4 4.8 20.6 2
+             C19.6 4.2 19.6 6 20 7.8
+             C20.4 9.4 21.2 10.6 22.2 11.8
+             C21.1 11.9 20 12.2 19 12.6 Z"/>
+  </g>
+  <circle cx="20.9" cy="3" r="2.5" fill="#b5462f"/>
+  <!-- Beak -->
+  <path d="M23 2.2 L30 1 L23.3 4 Z" fill="#d8a23a"/>
+
+  <!-- Legs (bold) -->
+  <g stroke="#b5462f" stroke-width="2.2" stroke-linecap="round">
+    <line x1="11" y1="20.5" x2="9.8" y2="28"/>
+    <line x1="15" y1="20" x2="16" y2="28"/>
+  </g>
+</svg>

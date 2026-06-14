@@ -1,0 +1,9 @@
+/* ============================================================
+   FONTS — The Chesterfield Report
+   Display : Chakra Petch  (techno grotesk, squared terminals)
+   Body    : Public Sans   (USWDS civic typeface — government heritage)
+   Mono    : Space Mono     (data readouts, timestamps, labels)
+   NOTE: Webfonts are loaded from Google Fonts. Original site fonts
+   were unavailable; these are intentional brand substitutions.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');

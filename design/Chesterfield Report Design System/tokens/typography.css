@@ -1,0 +1,51 @@
+/* ============================================================
+   TYPOGRAPHY — The Chesterfield Report
+   ============================================================ */
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Chakra Petch', 'Bahnschrift', sans-serif; /* headlines, techno */
+  --font-sans:    'Public Sans', system-ui, sans-serif;       /* body, civic */
+  --font-mono:    'Space Mono', ui-monospace, monospace;      /* data readouts */
+
+  /* ---- Type scale (1.250 major-third-ish, tuned) ---- */
+  --fs-3xs: 0.6875rem;  /* 11px — micro labels, kicker tags */
+  --fs-2xs: 0.75rem;    /* 12px — metadata, mono timestamps */
+  --fs-xs:  0.8125rem;  /* 13px — captions, eyebrow */
+  --fs-sm:  0.9375rem;  /* 15px — small body */
+  --fs-md:  1.0625rem;  /* 17px — base body */
+  --fs-lg:  1.25rem;    /* 20px — lead / standfirst */
+  --fs-xl:  1.625rem;   /* 26px — card headline */
+  --fs-2xl: 2.125rem;   /* 34px — section title */
+  --fs-3xl: 2.875rem;   /* 46px — page headline */
+  --fs-4xl: 3.75rem;    /* 60px — hero */
+  --fs-5xl: 5rem;       /* 80px — display blowout */
+
+  /* ---- Weights ---- */
+  --fw-regular: 400; /* @kind font */
+  --fw-medium:  500; /* @kind font */
+  --fw-semibold:600; /* @kind font */
+  --fw-bold:    700; /* @kind font */
+
+  /* ---- Line heights ---- */
+  --lh-tight:   1.04;   /* @kind font */
+  --lh-snug:    1.18;   /* @kind font */
+  --lh-normal:  1.5;    /* @kind font */
+  --lh-relaxed: 1.65;   /* @kind font */
+
+  /* ---- Letter spacing ---- */
+  --ls-tight:  -0.02em; /* @kind font */
+  --ls-normal: 0;       /* @kind font */
+  --ls-wide:   0.04em;  /* @kind font */
+  --ls-wider:  0.12em;  /* @kind font */
+  --ls-widest: 0.22em;  /* @kind font */
+
+  /* ---- Semantic roles ---- */
+  --text-hero:    var(--fw-bold) var(--fs-4xl)/var(--lh-tight) var(--font-display);
+  --text-h1:      var(--fw-bold) var(--fs-3xl)/var(--lh-snug) var(--font-display);
+  --text-h2:      var(--fw-semibold) var(--fs-2xl)/var(--lh-snug) var(--font-display);
+  --text-h3:      var(--fw-semibold) var(--fs-xl)/var(--lh-snug) var(--font-display);
+  --text-lead:    var(--fw-regular) var(--fs-lg)/var(--lh-relaxed) var(--font-sans);
+  --text-body-r:  var(--fw-regular) var(--fs-md)/var(--lh-normal) var(--font-sans);
+  --text-small:   var(--fw-regular) var(--fs-sm)/var(--lh-normal) var(--font-sans);
+  --text-label:   var(--fw-700) var(--fs-2xs)/1 var(--font-mono);
+}

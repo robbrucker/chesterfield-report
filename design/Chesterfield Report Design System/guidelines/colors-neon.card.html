@@ -1,0 +1,21 @@
+<!-- @dsCard group="Colors" viewport="700x160" name="Neon accents" subtitle="Heron bioluminescence — teal primary, magenta breaking, amber civic, lime" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; padding:20px; background:var(--bg-page); }
+  .row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .sw { border-radius:var(--radius-sm); padding:14px; position:relative; overflow:hidden; }
+  .chip { height:40px; border-radius:var(--radius-xs); margin-bottom:10px; }
+  .name { font:var(--fw-bold) var(--fs-2xs)/1.2 var(--font-mono); letter-spacing:.06em; }
+  .hex { font:var(--fs-3xs)/1.5 var(--font-mono); color:var(--text-muted); }
+  .use { font:var(--fs-3xs)/1.4 var(--font-sans); color:var(--text-faint); margin-top:3px; }
+  .card { background:var(--surface-card); border:1px solid var(--ink-400); }
+</style></head>
+<body>
+  <div class="row">
+    <div class="sw card"><div class="chip" style="background:var(--neon-teal);box-shadow:var(--glow-md-teal)"></div><div class="name" style="color:var(--neon-teal)">neon-teal</div><div class="hex">#22f5d4</div><div class="use">Primary · links · focus</div></div>
+    <div class="sw card"><div class="chip" style="background:var(--neon-magenta);box-shadow:var(--glow-md-magenta)"></div><div class="name" style="color:var(--neon-magenta)">neon-magenta</div><div class="hex">#ff2e88</div><div class="use">Breaking · live · alert</div></div>
+    <div class="sw card"><div class="chip" style="background:var(--neon-amber);box-shadow:var(--glow-md-amber)"></div><div class="name" style="color:var(--neon-amber)">neon-amber</div><div class="hex">#ffd23f</div><div class="use">Civic gold · highlight</div></div>
+    <div class="sw card"><div class="chip" style="background:var(--neon-lime)"></div><div class="name" style="color:var(--neon-lime)">neon-lime</div><div class="hex">#8dff5e</div><div class="use">Fresh · positive data</div></div>
+  </div>
+</body></html>
