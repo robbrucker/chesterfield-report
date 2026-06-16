@@ -350,9 +350,11 @@ def build_directory() -> Path:
         + f'<p class="ah-summary"><span id="hd-count">{len(comms)}</span> communities</p>'
         + f'<div class="ah-grid">{cards}</div>'
         + '<div class="ah-src">This directory lists market-rate communities in Chesterfield County '
-          '(it excludes Richmond city and income-restricted housing, which has its own page). Rents, '
-          'availability, and amenities change constantly and live on each community’s own site, so always '
-          'check there. Run a community we missed or got wrong? <a href="/tip.html">Let us know.</a></div>'
+          '(it excludes Richmond city and income-restricted housing, which has its own page). Bed types '
+          'and amenities are shown where we could confirm them from the community’s own site, so the bed '
+          'and feature filters show confirmed matches and may not be exhaustive. Rents and availability '
+          'change constantly and live on each community’s own site, so always check there. Run a '
+          'community we missed or got wrong? <a href="/tip.html">Let us know.</a></div>'
         + '</div>'
         + _DIR_JS
     )
