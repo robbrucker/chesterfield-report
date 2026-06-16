@@ -55,6 +55,7 @@ from chesterfield import taxes as taxes_mod
 from chesterfield import schools as schools_mod
 from chesterfield import cases as cases_mod
 from chesterfield import school_board as school_board_mod
+from chesterfield import events as events_mod
 from chesterfield import letters as letters_mod
 from chesterfield.db import Store
 from chesterfield.sources import active_sources
@@ -196,6 +197,7 @@ def cmd_build() -> None:
     schools_mod.build_schools()                    # CCPS directory + map from committed data
     school_board_mod.build_school_board()          # School Board tracker
     cases_mod.build_cases()                        # live development/zoning cases (graceful on fetch fail)
+    events_mod.build_events()                      # county events calendar (graceful on fetch fail)
     from chesterfield import seo as seo_mod
     seo_mod.build_seo()
     letters_mod.build_form()

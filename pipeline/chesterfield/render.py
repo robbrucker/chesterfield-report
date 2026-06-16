@@ -2203,7 +2203,7 @@ _TEMPLATE = """<!doctype html>
     </div>
     <nav class="footer-nav" aria-label="All sections">
       <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a>
-      <a href="/map.html">News map</a><a href="/neighborhoods.html">Neighborhoods</a>
+      <a href="/events.html">Events</a><a href="/map.html">News map</a><a href="/neighborhoods.html">Neighborhoods</a>
       <a href="/dining.html">Dining</a><a href="/business.html">Business</a>
       <a href="/meetings.html">Meetings</a><a href="/board.html">Board of Supervisors</a>
       <a href="/schools.html">Schools</a><a href="/school-board.html">School Board</a><a href="/taxes.html">Taxes</a>

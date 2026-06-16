@@ -114,7 +114,7 @@ def _sitemap_urls() -> list[tuple[str, str]]:
         add(f"/story/{slug}.html", story_dir / f"{slug}.html")
 
     # Standalone pages.
-    for name in ("digest.html", "map.html", "board.html", "meetings.html", "dining.html",
+    for name in ("digest.html", "events.html", "map.html", "board.html", "meetings.html", "dining.html",
                  "neighborhoods.html", "business.html", "taxes.html", "schools.html",
                  "school-board.html", "development.html", "shoosmith.html", "about.html",
                  "letters.html", "tip.html", "subscribe.html"):
