@@ -15,7 +15,21 @@
       "manager": "Drucker + Falk",
       "kind": "luxury",
       "lat": 37.507726,
-      "lng": -77.663724
+      "lng": -77.663724,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": true,
+      "fitness": true,
+      "laundry": false,
+      "amenities": [
+        "Resort-Style Pool",
+        "24-Hour Fitness Center",
+        "Resident Clubhouse with Billiards",
+        "Catering Kitchen",
+        "Amazon Hub",
+        "Business Center"
+      ]
     },
     {
       "name": "The Vue at Westchester Commons",
@@ -30,7 +44,14 @@
       "manager": "",
       "kind": "luxury",
       "lat": 37.514247,
-      "lng": -77.689566
+      "lng": -77.689566,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "The Bella at Westchester",
@@ -45,7 +66,14 @@
       "manager": "",
       "kind": "luxury",
       "lat": 37.514508,
-      "lng": -77.698507
+      "lng": -77.698507,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Bainbridge Midlothian",
@@ -60,7 +88,21 @@
       "manager": "The Bainbridge Companies",
       "kind": "luxury",
       "lat": null,
-      "lng": null
+      "lng": null,
+      "amenities_done": true,
+      "beds": [],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": false,
+      "amenities": [
+        "Fitness center",
+        "Resort-style pool",
+        "Pickle-ball court",
+        "Walking trail",
+        "Pet parks",
+        "Indoor amenity spaces"
+      ]
     },
     {
       "name": "Old Buckingham Station",
@@ -75,7 +117,25 @@
       "manager": "General Services Corporation",
       "kind": "market-rate",
       "lat": 37.506219,
-      "lng": -77.642234
+      "lng": -77.642234,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": true,
+      "amenities": [
+        "Clubhouse",
+        "Pool",
+        "Dog park",
+        "Fitness center",
+        "Barbecue area",
+        "Sauna"
+      ]
     },
     {
       "name": "Colony at Centerpointe",
@@ -90,7 +150,14 @@
       "manager": "Preferred Apartment Communities",
       "kind": "luxury",
       "lat": 37.474589,
-      "lng": -77.662628
+      "lng": -77.662628,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Sapphire at Centerpointe",
@@ -105,7 +172,14 @@
       "manager": "Capital Square Living",
       "kind": "luxury",
       "lat": 37.474935,
-      "lng": -77.659941
+      "lng": -77.659941,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Luxe 360 on Centerpointe",
@@ -120,7 +194,14 @@
       "manager": "",
       "kind": "luxury",
       "lat": 37.47012,
-      "lng": -77.662794
+      "lng": -77.662794,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Abberly CenterPointe",
@@ -135,7 +216,14 @@
       "manager": "HHHunt",
       "kind": "luxury",
       "lat": 37.463807,
-      "lng": -77.66512
+      "lng": -77.66512,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Enclave at Midlothian",
@@ -150,7 +238,14 @@
       "manager": "Edward Rose & Sons",
       "kind": "market-rate",
       "lat": 37.497123,
-      "lng": -77.647158
+      "lng": -77.647158,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Creekpointe Apartments",
@@ -165,7 +260,8 @@
       "manager": "",
       "kind": "market-rate",
       "lat": 37.466171,
-      "lng": -77.675556
+      "lng": -77.675556,
+      "amenities_done": true
     },
     {
       "name": "The Grove at Swift Creek",
@@ -180,7 +276,25 @@
       "manager": "NTS Development",
       "kind": "market-rate",
       "lat": 37.464995,
-      "lng": -77.675664
+      "lng": -77.675664,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": true,
+      "amenities": [
+        "Resort-inspired pool",
+        "24-hour fitness center",
+        "Outdoor chef's kitchen",
+        "Tennis court",
+        "Business lounge",
+        "Walking trail"
+      ]
     },
     {
       "name": "Commonwealth Apartments",
@@ -195,7 +309,17 @@
       "manager": "Mesa Capital Partners",
       "kind": "luxury",
       "lat": 37.416928,
-      "lng": -77.625079
+      "lng": -77.625079,
+      "amenities_done": true,
+      "beds": [],
+      "pet": true,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": [
+        "Clubhouse",
+        "On-site marketplace"
+      ]
     },
     {
       "name": "Swift Creek Commons Apartments",
@@ -210,7 +334,14 @@
       "manager": "Crowne Partners",
       "kind": "market-rate",
       "lat": 37.415409,
-      "lng": -77.634661
+      "lng": -77.634661,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Crowne Village at Swift Creek",
@@ -225,7 +356,16 @@
       "manager": "Crowne Partners",
       "kind": "luxury",
       "lat": 37.412213,
-      "lng": -77.640939
+      "lng": -77.640939,
+      "amenities_done": true,
+      "beds": [
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "MAA Pavilion Place",
@@ -240,7 +380,25 @@
       "manager": "MAA",
       "kind": "market-rate",
       "lat": 37.453497,
-      "lng": -77.64563
+      "lng": -77.64563,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": true,
+      "amenities": [
+        "Tennis court",
+        "Dog park",
+        "Smart home technology",
+        "Vaulted ceilings",
+        "Fireplace",
+        "Walk-in closet"
+      ]
     },
     {
       "name": "Addison at Swift Creek",
@@ -255,7 +413,14 @@
       "manager": "Weinstein Properties",
       "kind": "luxury",
       "lat": 37.420771,
-      "lng": -77.62121
+      "lng": -77.62121,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Towns at Swift Creek",
@@ -270,7 +435,22 @@
       "manager": "Boyd Homes",
       "kind": "luxury",
       "lat": 37.442754,
-      "lng": -77.64168
+      "lng": -77.64168,
+      "amenities_done": true,
+      "beds": [
+        "3 BR",
+        "4 BR"
+      ],
+      "pet": true,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": [
+        "Attached garage",
+        "Private driveway",
+        "Automatic garage door opener",
+        "Controlled access entry"
+      ]
     },
     {
       "name": "Hamlet Falling Creek",
@@ -285,7 +465,25 @@
       "manager": "",
       "kind": "market-rate",
       "lat": 37.451229,
-      "lng": -77.623068
+      "lng": -77.623068,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": true,
+      "amenities": [
+        "Saltwater Pool",
+        "Fitness Center",
+        "Clubhouse",
+        "Dog Park",
+        "Pet Spa",
+        "Outdoor Greenspaces"
+      ]
     },
     {
       "name": "Woodlake Village - Waterpointe",
@@ -300,7 +498,14 @@
       "manager": "",
       "kind": "market-rate",
       "lat": 37.409308,
-      "lng": -77.685668
+      "lng": -77.685668,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Hunter's Chase Apartments",
@@ -315,7 +520,14 @@
       "manager": "",
       "kind": "market-rate",
       "lat": 37.41926,
-      "lng": -77.636162
+      "lng": -77.636162,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Mallard Cove Apartments",
@@ -330,7 +542,16 @@
       "manager": "",
       "kind": "market-rate",
       "lat": 37.434684,
-      "lng": -77.58983
+      "lng": -77.58983,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": true,
+      "fitness": false,
+      "laundry": false,
+      "amenities": [
+        "Pool"
+      ]
     },
     {
       "name": "Genito Glen Apartments",
@@ -345,7 +566,14 @@
       "manager": "",
       "kind": "market-rate",
       "lat": 37.435905,
-      "lng": -77.59029
+      "lng": -77.59029,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Glenmoor Oaks",
@@ -360,7 +588,8 @@
       "manager": "Pegasus Residential",
       "kind": "luxury",
       "lat": null,
-      "lng": null
+      "lng": null,
+      "amenities_done": true
     },
     {
       "name": "Livingston Apartment Flats",
@@ -375,7 +604,14 @@
       "manager": "Capital Square",
       "kind": "luxury",
       "lat": 37.402164,
-      "lng": -77.711409
+      "lng": -77.711409,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Sterling Glen Apartments",
@@ -390,7 +626,8 @@
       "manager": "Multifamily Management Services",
       "kind": "market-rate",
       "lat": 37.400592,
-      "lng": -77.698039
+      "lng": -77.698039,
+      "amenities_done": true
     },
     {
       "name": "The Lawton Townhomes",
@@ -405,7 +642,14 @@
       "manager": "Pegasus Residential",
       "kind": "market-rate",
       "lat": 37.378452,
-      "lng": -77.498474
+      "lng": -77.498474,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Belmont Hills Apartments",
@@ -420,7 +664,14 @@
       "manager": "Levco Management",
       "kind": "market-rate",
       "lat": 37.459002,
-      "lng": -77.507055
+      "lng": -77.507055,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Crystal Lakes Apartments & Townhomes",
@@ -435,7 +686,14 @@
       "manager": "Levco Management",
       "kind": "market-rate",
       "lat": 37.436959,
-      "lng": -77.458689
+      "lng": -77.458689,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Falling Creek Apartments and Townhomes",
@@ -450,7 +708,14 @@
       "manager": "Drucker + Falk",
       "kind": "market-rate",
       "lat": 37.43802,
-      "lng": -77.437183
+      "lng": -77.437183,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Meridian Watermark",
@@ -465,7 +730,24 @@
       "manager": "CapREIT",
       "kind": "market-rate",
       "lat": 37.418385,
-      "lng": -77.504836
+      "lng": -77.504836,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": false,
+      "amenities": [
+        "Pet-Friendly",
+        "Fitness Center",
+        "Modern Kitchen",
+        "BBQ Area",
+        "Swimming Pool"
+      ]
     },
     {
       "name": "Austin Woods Apartment Homes",
@@ -480,7 +762,24 @@
       "manager": "S.L. Nusbaum Realty",
       "kind": "market-rate",
       "lat": 37.421237,
-      "lng": -77.499101
+      "lng": -77.499101,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": false,
+      "pool": true,
+      "fitness": true,
+      "laundry": false,
+      "amenities": [
+        "Resort-style swimming pool",
+        "Theater room",
+        "24/7 fitness center",
+        "Business center",
+        "Garages"
+      ]
     },
     {
       "name": "Meadowbrook Apartments",
@@ -495,7 +794,26 @@
       "manager": "W.S. Carnes",
       "kind": "market-rate",
       "lat": null,
-      "lng": null
+      "lng": null,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR",
+        "4 BR"
+      ],
+      "pet": false,
+      "pool": true,
+      "fitness": false,
+      "laundry": true,
+      "amenities": [
+        "Playground",
+        "Swimming pool",
+        "Individual parking",
+        "Washer/dryer connections",
+        "Balconies and terraces",
+        "On-site management"
+      ]
     },
     {
       "name": "The Vinings at Iron Bridge",
@@ -510,7 +828,14 @@
       "manager": "Edward Rose & Sons",
       "kind": "market-rate",
       "lat": 37.449645,
-      "lng": -77.495242
+      "lng": -77.495242,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Cloverleaf Lake Townhouse Apartments",
@@ -525,7 +850,18 @@
       "manager": "Landmark Property Services",
       "kind": "market-rate",
       "lat": 37.490298,
-      "lng": -77.521945
+      "lng": -77.521945,
+      "amenities_done": true,
+      "beds": [],
+      "pet": true,
+      "pool": false,
+      "fitness": false,
+      "laundry": true,
+      "amenities": [
+        "Granite Counters",
+        "Washer & Dryer Included",
+        "Stainless-Steel Appliances"
+      ]
     },
     {
       "name": "Chesterfield Village",
@@ -540,7 +876,25 @@
       "manager": "General Services Corporation",
       "kind": "market-rate",
       "lat": 37.50233,
-      "lng": -77.535354
+      "lng": -77.535354,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": false,
+      "amenities": [
+        "Pools",
+        "Fitness center",
+        "Grilling patios",
+        "Tennis courts",
+        "Playgrounds",
+        "Volleyball court"
+      ]
     },
     {
       "name": "Element at Stonebridge",
@@ -555,7 +909,23 @@
       "manager": "American Landmark",
       "kind": "luxury",
       "lat": 37.497421,
-      "lng": -77.52734
+      "lng": -77.52734,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": true,
+      "amenities": [
+        "Saltwater pool",
+        "24-hour fitness center",
+        "Covered lounge",
+        "Firepit courtyard",
+        "Gas grills"
+      ]
     },
     {
       "name": "Aura Stonebridge",
@@ -570,7 +940,25 @@
       "manager": "Drucker + Falk",
       "kind": "luxury",
       "lat": 37.497183,
-      "lng": -77.525565
+      "lng": -77.525565,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": false,
+      "pool": true,
+      "fitness": true,
+      "laundry": false,
+      "amenities": [
+        "Resort-style pool",
+        "Fitness center",
+        "Business center",
+        "Clubroom",
+        "Elevators",
+        "Air-conditioned corridors"
+      ]
     },
     {
       "name": "Boulders Lakeside",
@@ -585,7 +973,24 @@
       "manager": "American Landmark",
       "kind": "luxury",
       "lat": 37.511569,
-      "lng": -77.532501
+      "lng": -77.532501,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": true,
+      "amenities": [
+        "Resort-Style Pool",
+        "24-Hour Fitness Center",
+        "Cyber Cafe with WiFi",
+        "Gaming Lounge",
+        "TV Lounge with Fireplace",
+        "Grilling Stations & Alfresco Dining"
+      ]
     },
     {
       "name": "Birchwood at Boulders Apartments",
@@ -600,7 +1005,14 @@
       "manager": "BH Management",
       "kind": "market-rate",
       "lat": 37.505812,
-      "lng": -77.531672
+      "lng": -77.531672,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "The James at Springline",
@@ -615,7 +1027,14 @@
       "manager": "Collins Enterprises",
       "kind": "luxury",
       "lat": 37.506842,
-      "lng": -77.585938
+      "lng": -77.585938,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Summit at Bon Air",
@@ -630,7 +1049,14 @@
       "manager": "Jones Street Investment Partners",
       "kind": "market-rate",
       "lat": 37.516997,
-      "lng": -77.611589
+      "lng": -77.611589,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "The Timbers",
@@ -645,7 +1071,14 @@
       "manager": "PRG Real Estate",
       "kind": "market-rate",
       "lat": 37.522671,
-      "lng": -77.572485
+      "lng": -77.572485,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Cross Creek Apartments and Townhomes",
@@ -660,7 +1093,14 @@
       "manager": "TSB Management Group",
       "kind": "market-rate",
       "lat": 37.462514,
-      "lng": -77.533115
+      "lng": -77.533115,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "The Belvedere",
@@ -675,7 +1115,22 @@
       "manager": "Pegasus Residential",
       "kind": "market-rate",
       "lat": 37.521734,
-      "lng": -77.607315
+      "lng": -77.607315,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": [
+        "Pet Friendly",
+        "Detached garages",
+        "Mail Room"
+      ]
     },
     {
       "name": "Clairmont at Chesterfield",
@@ -690,7 +1145,14 @@
       "manager": "KPM LLC",
       "kind": "luxury",
       "lat": 37.516453,
-      "lng": -77.604823
+      "lng": -77.604823,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Marcella at Gateway",
@@ -705,7 +1167,24 @@
       "manager": "Boyd Homes",
       "kind": "luxury",
       "lat": 37.500352,
-      "lng": -77.555208
+      "lng": -77.555208,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": true,
+      "amenities": [
+        "Saltwater lap pool",
+        "Fitness center",
+        "Covered TV lounge",
+        "Nature trail",
+        "EV charging",
+        "Landscaped grounds"
+      ]
     },
     {
       "name": "Rockwood Park Apartments",
@@ -720,7 +1199,8 @@
       "manager": "Bonaventure",
       "kind": "market-rate",
       "lat": 37.446777,
-      "lng": -77.584189
+      "lng": -77.584189,
+      "amenities_done": true
     },
     {
       "name": "Aston Ridge Apartments",
@@ -735,7 +1215,25 @@
       "manager": "Gates Hudson",
       "kind": "market-rate",
       "lat": 37.5043,
-      "lng": -77.589454
+      "lng": -77.589454,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": false,
+      "pool": true,
+      "fitness": true,
+      "laundry": true,
+      "amenities": [
+        "Community pool",
+        "Sun deck",
+        "Exercise room",
+        "Updated appliances",
+        "Gas stoves",
+        "Wood plank flooring"
+      ]
     },
     {
       "name": "North Arch Village Apartments",
@@ -750,7 +1248,14 @@
       "manager": "Onyx Partners",
       "kind": "market-rate",
       "lat": 37.495255,
-      "lng": -77.568282
+      "lng": -77.568282,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Colony Village",
@@ -765,7 +1270,14 @@
       "manager": "Gallery Residential",
       "kind": "market-rate",
       "lat": null,
-      "lng": null
+      "lng": null,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "The Maisonette Apartments",
@@ -780,7 +1292,14 @@
       "manager": "",
       "kind": "market-rate",
       "lat": null,
-      "lng": null
+      "lng": null,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Huntwood Apartments",
@@ -795,7 +1314,14 @@
       "manager": "Evernest",
       "kind": "market-rate",
       "lat": 37.423144,
-      "lng": -77.436678
+      "lng": -77.436678,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "The Station Apartments",
@@ -810,7 +1336,18 @@
       "manager": "Thalhimer Multifamily",
       "kind": "luxury",
       "lat": null,
-      "lng": null
+      "lng": null,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "The Jane at Moore's Lake",
@@ -825,7 +1362,14 @@
       "manager": "The Breeden Company",
       "kind": "luxury",
       "lat": 37.361701,
-      "lng": -77.411
+      "lng": -77.411,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Garden Springs Apartments",
@@ -840,7 +1384,14 @@
       "manager": "Westminster Management",
       "kind": "market-rate",
       "lat": 37.366525,
-      "lng": -77.493803
+      "lng": -77.493803,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Festival Park",
@@ -855,7 +1406,14 @@
       "manager": "Gallery Residential",
       "kind": "market-rate",
       "lat": 37.358157,
-      "lng": -77.445843
+      "lng": -77.445843,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Chester Village Green",
@@ -870,7 +1428,14 @@
       "manager": "Gallery Residential",
       "kind": "market-rate",
       "lat": 37.35824,
-      "lng": -77.445842
+      "lng": -77.445842,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Ashton Creek",
@@ -885,7 +1450,14 @@
       "manager": "PRG Real Estate",
       "kind": "market-rate",
       "lat": 37.343741,
-      "lng": -77.441953
+      "lng": -77.441953,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Colony at Chester (Chester Townhomes)",
@@ -900,7 +1472,24 @@
       "manager": "Colony Management Corp",
       "kind": "market-rate",
       "lat": 37.357619,
-      "lng": -77.449116
+      "lng": -77.449116,
+      "amenities_done": true,
+      "beds": [
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": true,
+      "amenities": [
+        "Green spaces",
+        "In-unit washer/dryer",
+        "Large closets",
+        "Walk to restaurants",
+        "Walk to library",
+        "Walk to childcare"
+      ]
     },
     {
       "name": "Hyde Park Townhomes",
@@ -915,7 +1504,14 @@
       "manager": "PRG Real Estate",
       "kind": "market-rate",
       "lat": 37.345161,
-      "lng": -77.443232
+      "lng": -77.443232,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Waterside at Ironbridge",
@@ -930,7 +1526,24 @@
       "manager": "UDR",
       "kind": "market-rate",
       "lat": 37.357943,
-      "lng": -77.490012
+      "lng": -77.490012,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": true,
+      "amenities": [
+        "Private patio or balcony",
+        "In-unit washer and dryer",
+        "Large closets",
+        "Fireplace",
+        "Lakefront views"
+      ]
     },
     {
       "name": "The Reserve at Rivington",
@@ -945,7 +1558,24 @@
       "manager": "Cathcart Property Management",
       "kind": "luxury",
       "lat": 37.350397,
-      "lng": -77.488444
+      "lng": -77.488444,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": false,
+      "amenities": [
+        "Clubhouse",
+        "Fitness center",
+        "Saltwater pool",
+        "Hot tub",
+        "Dog park",
+        "Private theater"
+      ]
     },
     {
       "name": "Madison Ironbridge",
@@ -960,7 +1590,17 @@
       "manager": "Madison Capital Group",
       "kind": "luxury",
       "lat": null,
-      "lng": null
+      "lng": null,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR"
+      ],
+      "pet": true,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "The River",
@@ -975,7 +1615,14 @@
       "manager": "Capital Square Living",
       "kind": "luxury",
       "lat": 37.366281,
-      "lng": -77.335605
+      "lng": -77.335605,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "White Oak Luxury Apartments",
@@ -990,7 +1637,23 @@
       "manager": "Gallery Residential",
       "kind": "luxury",
       "lat": 37.356603,
-      "lng": -77.398685
+      "lng": -77.398685,
+      "amenities_done": true,
+      "beds": [
+        "1 BR",
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": false,
+      "amenities": [
+        "Swimming pool",
+        "24-hour fitness center",
+        "Clubhouse",
+        "Outdoor spaces"
+      ]
     },
     {
       "name": "River's Bend Apartment Homes",
@@ -1005,7 +1668,14 @@
       "manager": "King Properties",
       "kind": "market-rate",
       "lat": 37.360689,
-      "lng": -77.348281
+      "lng": -77.348281,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     },
     {
       "name": "Rivermont Crossing Townhomes & Apartments",
@@ -1020,7 +1690,24 @@
       "manager": "The Donaldson Group",
       "kind": "luxury",
       "lat": 37.337263,
-      "lng": -77.334281
+      "lng": -77.334281,
+      "amenities_done": true,
+      "beds": [
+        "2 BR",
+        "3 BR"
+      ],
+      "pet": true,
+      "pool": true,
+      "fitness": true,
+      "laundry": true,
+      "amenities": [
+        "Saltwater pools",
+        "24-hour fitness studio",
+        "Bark park",
+        "Outdoor grilling deck",
+        "In-home washer & dryer",
+        "Playground"
+      ]
     },
     {
       "name": "Chesterfield Gardens",
@@ -1035,7 +1722,14 @@
       "manager": "Gallery Residential",
       "kind": "market-rate",
       "lat": 37.325107,
-      "lng": -77.317644
+      "lng": -77.317644,
+      "amenities_done": true,
+      "beds": [],
+      "pet": false,
+      "pool": false,
+      "fitness": false,
+      "laundry": false,
+      "amenities": []
     }
   ]
 }

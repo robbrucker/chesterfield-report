@@ -206,6 +206,10 @@ _DIR_CSS = """<style>
 .ah-kind{font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono);text-transform:uppercase;letter-spacing:var(--ls-wide);
   color:#fff;border-radius:4px;padding:.22rem .5rem;}
 .ah-kind.luxury{background:#9a3322;}.ah-kind.market{background:#2f7d8f;}
+.ah-beds{font:var(--fw-semibold) var(--fs-2xs)/1.3 var(--font-sans);color:var(--text-secondary);margin:.4rem 0 .2rem;}
+.ah-feats{display:flex;flex-wrap:wrap;gap:5px;margin:.35rem 0 .1rem;}
+.ah-feat{font:var(--fw-semibold) var(--fs-3xs)/1.3 var(--font-sans);color:var(--text-secondary);
+  border:1px solid var(--border);border-radius:4px;padding:.18rem .42rem;}
 @media(max-width:560px){#hd-map{height:300px;}}
 </style>"""
 
@@ -213,6 +217,15 @@ _DIR_CSS = """<style>
 def _region(city: str) -> str:
     c = (city or "").strip()
     return c if c in ("Midlothian", "North Chesterfield", "Chester", "Moseley") else "Other"
+
+
+_FEATURES = [("pet", "Pet-friendly"), ("pool", "Pool"), ("fitness", "Fitness center"),
+             ("laundry", "In-unit W/D")]
+_BEDS = ["Studio", "1 BR", "2 BR", "3 BR"]
+
+
+def _bedkey(b: str) -> str:
+    return b.lower().replace(" ", "")
 
 
 def _dir_card(x: dict) -> str:
@@ -226,20 +239,32 @@ def _dir_card(x: dict) -> str:
     if (x.get("manager") or "").strip():
         facts.append(html.escape(x["manager"]))
     facts_html = f'<div class="ah-facts">{" &middot; ".join(facts)}</div>' if facts else ""
+
+    beds = [b for b in (x.get("beds") or []) if b in _BEDS]
+    beds_html = (f'<div class="ah-beds">{html.escape(" · ".join(beds))}</div>' if beds else "")
+    feats = [lab for key, lab in _FEATURES if x.get(key)]
+    am = (x.get("amenities") or [])[:5]
+    chips = feats + [a for a in am if a not in feats]
+    amen_html = ('<div class="ah-feats">' + "".join(f'<span class="ah-feat">{html.escape(c)}</span>'
+                 for c in chips[:6]) + '</div>') if chips else ""
+
     links = [f'<a href="{_maps_link(x)}" target="_blank" rel="noopener">Map ↗</a>']
     if x.get("website"):
         links.append(f'<a href="{html.escape(x["website"])}" target="_blank" rel="noopener">Website ↗</a>')
     if x.get("phone"):
         links.append(f'<a href="tel:{x["phone"].replace("(","").replace(")","").replace(" ","").replace("-","")}">{html.escape(x["phone"])}</a>')
     search = html.escape(f'{x["name"]} {x.get("area","")} {x.get("manager","")}'.lower(), quote=True)
+    dattr = (f'data-region="{html.escape(_region(x["city"]))}" data-kind="{kind}" '
+             f'data-pet="{int(bool(x.get("pet")))}" data-pool="{int(bool(x.get("pool")))}" '
+             f'data-fitness="{int(bool(x.get("fitness")))}" data-laundry="{int(bool(x.get("laundry")))}" '
+             f'data-beds="{html.escape(" ".join(_bedkey(b) for b in beds))}" data-search="{search}"')
     return (
-        f'<article class="ah-card" data-region="{html.escape(_region(x["city"]))}" '
-        f'data-kind="{kind}" data-search="{search}">'
+        f'<article class="ah-card" {dattr}>'
         f'<div class="ah-head"><span class="ah-area">{html.escape(x.get("area",""))}</span>'
         f'<span class="ah-kind {kind}">{klabel}</span></div>'
         f'<h3 class="ah-name">{html.escape(x["name"])}</h3>'
         f'<div class="ah-addr">{html.escape(x["address"])}, {html.escape(x["city"])}</div>'
-        f'{facts_html}'
+        f'{beds_html}{facts_html}{amen_html}'
         f'<div class="ah-links">{" &middot; ".join(links)}</div>'
         '</article>'
     )
@@ -249,21 +274,28 @@ _DIR_JS = """
 <script>
 (function(){
   var s=document.getElementById('hd-search'),
-      rb=[].slice.call(document.querySelectorAll('.hd-region button')),
-      kb=[].slice.call(document.querySelectorAll('.hd-kind button')),
-      cards=[].slice.call(document.querySelectorAll('.ah-card')),region='all',kind='all';
-  function apply(){var q=(s.value||'').trim().toLowerCase(),n=0;
+      cards=[].slice.call(document.querySelectorAll('.ah-card')),
+      region='all',kind='all',bed='all',feats={};
+  function single(sel,set){[].slice.call(document.querySelectorAll(sel+' button')).forEach(function(b){
+    b.addEventListener('click',function(){
+      [].slice.call(document.querySelectorAll(sel+' button')).forEach(function(x){x.classList.remove('is-on');});
+      b.classList.add('is-on');set(b);apply();});});}
+  single('.hd-region',function(b){region=b.getAttribute('data-region');});
+  single('.hd-kind',function(b){kind=b.getAttribute('data-kind');});
+  single('.hd-bed',function(b){bed=b.getAttribute('data-bed');});
+  [].slice.call(document.querySelectorAll('.hd-feat button')).forEach(function(b){
+    b.addEventListener('click',function(){var f=b.getAttribute('data-feat');
+      if(feats[f]){delete feats[f];b.classList.remove('is-on');}else{feats[f]=1;b.classList.add('is-on');}apply();});});
+  if(s) s.addEventListener('input',apply);
+  function apply(){var q=(s&&s.value||'').trim().toLowerCase(),n=0;
     cards.forEach(function(c){
-      var okR=region==='all'||c.getAttribute('data-region')===region,
-          okK=kind==='all'||c.getAttribute('data-kind')===kind,
-          okQ=!q||c.getAttribute('data-search').indexOf(q)!==-1,on=okR&&okK&&okQ;
+      var on = (region==='all'||c.getAttribute('data-region')===region)
+            && (kind==='all'||c.getAttribute('data-kind')===kind)
+            && (bed==='all'||(' '+c.getAttribute('data-beds')+' ').indexOf(' '+bed+' ')!==-1)
+            && (!q||c.getAttribute('data-search').indexOf(q)!==-1);
+      for(var f in feats){ if(c.getAttribute('data-'+f)!=='1'){on=false;break;} }
       c.style.display=on?'':'none';if(on)n++;});
     document.getElementById('hd-count').textContent=n;}
-  rb.forEach(function(b){b.addEventListener('click',function(){rb.forEach(function(x){x.classList.remove('is-on');});
-    b.classList.add('is-on');region=b.getAttribute('data-region');apply();});});
-  kb.forEach(function(b){b.addEventListener('click',function(){kb.forEach(function(x){x.classList.remove('is-on');});
-    b.classList.add('is-on');kind=b.getAttribute('data-kind');apply();});});
-  s.addEventListener('input',apply);
 })();
 </script>
 """
@@ -287,6 +319,20 @@ def build_directory() -> Path:
                  '<button class="is-on" data-kind="all">All</button>'
                  '<button data-kind="luxury">Luxury</button>'
                  '<button data-kind="market">Market-rate</button></div>')
+    # Bed + feature filters only render for the values we actually have data on.
+    have_beds = any(c.get("beds") for c in comms)
+    bed_btns = ""
+    if have_beds:
+        bed_btns = ('<div class="hd-filters hd-bed"><span class="hd-flabel">Beds</span>'
+                    '<button class="is-on" data-bed="all">Any</button>'
+                    + "".join(f'<button data-bed="{_bedkey(b)}">{html.escape(b)}</button>' for b in _BEDS)
+                    + '</div>')
+    feat_present = [(k, lab) for k, lab in _FEATURES if any(c.get(k) for c in comms)]
+    feat_btns = ""
+    if feat_present:
+        feat_btns = ('<div class="hd-filters hd-feat"><span class="hd-flabel">Features</span>'
+                     + "".join(f'<button data-feat="{k}">{html.escape(lab)}</button>' for k, lab in feat_present)
+                     + '</div>')
     cards = "".join(_dir_card(c) for c in comms)
 
     body = (
@@ -300,7 +346,7 @@ def build_directory() -> Path:
         + map_html
         + '<div class="hd-controls"><input id="hd-search" type="search" '
           'placeholder="Search by name, area, or manager…" aria-label="Search apartments"></div>'
-        + region_btns + kind_btns
+        + region_btns + kind_btns + bed_btns + feat_btns
         + f'<p class="ah-summary"><span id="hd-count">{len(comms)}</span> communities</p>'
         + f'<div class="ah-grid">{cards}</div>'
         + '<div class="ah-src">This directory lists market-rate communities in Chesterfield County '
