@@ -857,9 +857,12 @@ body {
    (<nav class="topnav cr-header__nav">), so these are COMPOUND selectors
    (.cr-header__nav.topnav), not descendant — otherwise padding never applies
    and the links collapse together. */
-.cr-header__nav.topnav { display: flex; gap: 2px; flex-wrap: nowrap;
+.cr-header__nav.topnav { display: flex; gap: 2px 14px; flex-wrap: wrap;
   align-items: center; border-bottom: none; max-width: var(--container-max);
-  overflow-x: auto; scrollbar-width: none; }
+  scrollbar-width: none; }
+@media (max-width: 820px) {
+  .cr-header__nav.topnav { flex-wrap: nowrap; overflow-x: auto; gap: 2px; }
+}
 .cr-header__nav.topnav::-webkit-scrollbar { display: none; }
 .cr-header__nav.topnav a {
   appearance: none; background: none; border: none; cursor: pointer;
