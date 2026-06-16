@@ -1,0 +1,46 @@
+{
+  "_comment": "Chesterfield County FY2026 Adopted Budget. Figures verified against the official 442-page budget book (see source_url). General Fund view (p.88 / consolidated p.84) is used as the primary 'where local tax dollars go' picture, per the all-funds caveat. Percentages reconcile to the General Fund total of $1,043,555,400.",
+  "fiscal_year": "FY2026",
+  "fiscal_year_label": "FY2026 · July 1, 2025 to June 30, 2026",
+  "adopted": "Adopted by the Board of Supervisors on April 9, 2025",
+  "general_fund_total": 1043555400,
+  "all_funds_total": 2403160900,
+  "headline_stats": [
+    {"value": "$1.04B", "label": "General Fund budget"},
+    {"value": "$0.89", "label": "Real estate rate (per $100)"},
+    {"value": "71%", "label": "Comes from property taxes"},
+    {"value": "67%", "label": "Goes to schools + public safety"}
+  ],
+  "revenue": [
+    {"name": "Property taxes", "dollars": 742009000, "percent": 71.1, "note": "Real estate 56.9% ($593.7M) + personal property 11.5% ($119.7M) + other"},
+    {"name": "Other local taxes", "dollars": 144678500, "percent": 13.9, "note": "Local sales tax, business license (BPOL), lodging, utility, recordation"},
+    {"name": "State & federal aid", "dollars": 96230500, "percent": 9.2, "note": "Intergovernmental revenue from the Commonwealth and federal government"},
+    {"name": "Service charges, fees & permits", "dollars": 42199500, "percent": 4.0, "note": "Charges for services, use of money/property, permits and fees"},
+    {"name": "Reserves & other", "dollars": 18437900, "percent": 1.8, "note": "Use of reserves, transfers in, recovered costs, fines"}
+  ],
+  "spending": [
+    {"name": "Schools (transfer to CCPS)", "dollars": 413004300, "percent": 39.6},
+    {"name": "Public safety (police, fire/EMS, sheriff)", "dollars": 287828400, "percent": 27.6},
+    {"name": "General government / administration", "dollars": 94348100, "percent": 9.0},
+    {"name": "Health & welfare / human services", "dollars": 76781500, "percent": 7.4},
+    {"name": "Parks, recreation & libraries", "dollars": 37701500, "percent": 3.6},
+    {"name": "Transfers to other funds", "dollars": 36123800, "percent": 3.5},
+    {"name": "Debt service", "dollars": 34152800, "percent": 3.3},
+    {"name": "Public works", "dollars": 28852100, "percent": 2.8},
+    {"name": "Community development", "dollars": 18966600, "percent": 1.8},
+    {"name": "Courts (administration of justice)", "dollars": 15796300, "percent": 1.5}
+  ],
+  "tax_rates": [
+    {"name": "Real estate (real property)", "rate": "$0.89 per $100", "note": "Calendar year 2025. Fourth straight annual cut (was $0.90)."},
+    {"name": "Personal property (vehicles)", "rate": "$3.35 per $100", "note": "Down from $3.60. 2025 personal property tax relief: 40%."},
+    {"name": "Sales & use tax", "rate": "6.0% total", "note": "4.3% state + 1.0% local + 0.7% regional (CVTA)."},
+    {"name": "Machinery & tools", "rate": "$1.00 per $100", "note": "Tax year 2025."},
+    {"name": "Data center computer equipment", "rate": "$0.24 per $100", "note": "Reduced rate for data center hardware."},
+    {"name": "Lodging (transient occupancy)", "rate": "8%", "note": "6% to tourism, 2% to the General Fund."},
+    {"name": "Meals / food & beverage", "rate": "None", "note": "Chesterfield County does not levy a meals tax."}
+  ],
+  "source_title": "Chesterfield County FY2026 Adopted Budget and FY2026–FY2030 Capital Improvement Program",
+  "source_url": "https://www.chesterfield.gov/DocumentCenter/View/42310/FY2026-Budget-and-FY2026-FY2030-Capital-Improvement-Program-PDF",
+  "index_title": "Budget Development and Documents (Chesterfield County)",
+  "index_url": "https://www.chesterfield.gov/251/Budget-Development-and-Documents"
+}

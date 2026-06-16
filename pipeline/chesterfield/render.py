@@ -7,6 +7,7 @@ renderer turns the *published* files into a browsable index.html.
 from __future__ import annotations
 
 import json
+import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -2074,6 +2075,44 @@ def build_tip() -> Path:
     return out
 
 
+def build_subscribe() -> Path:
+    """A dedicated newsletter signup page (email only). Submissions email the
+    operator via Web3Forms, like the tip/letters forms."""
+    key = os.environ.get("WEB3FORMS_KEY", "").strip()
+    notice = "" if key else (
+        '<div class="form-notice">⚠️ Signup isn\'t active yet — add WEB3FORMS_KEY '
+        'in scripts/.deploy.env and rebuild.</div>')
+    form = (
+        '<form class="site-form" action="https://api.web3forms.com/submit" method="POST">'
+        f'<input type="hidden" name="access_key" value="{key or "MISSING_WEB3FORMS_KEY"}">'
+        '<input type="hidden" name="subject" value="Newsletter signup — The Chesterfield Report">'
+        '<input type="hidden" name="from_name" value="Chesterfield Report Newsletter">'
+        '<input type="hidden" name="redirect" value="https://chesterfieldreport.com/subscribe.html?ok=1">'
+        '<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">'
+        '<label>Email address</label>'
+        '<input type="email" name="email" required placeholder="you@email.com">'
+        '<button type="submit" class="cr-btn cr-btn--primary" style="margin-top:1.2rem">Subscribe</button>'
+        '</form>')
+    thanks_js = (
+        "<script>if(location.search.indexOf('ok=1')>-1){"
+        "var f=document.querySelector('.site-form');"
+        "if(f){f.outerHTML='<div class=\\\"thanks\\\"><h2>You\\u2019re on the list.</h2>'"
+        "+'<p>Thanks for subscribing to The Chesterfield Report. "
+        "<a href=\\\"/\\\">\\u2190 Back to the news</a></p></div>';}}</script>")
+    body = (
+        _SITE_FORM_CSS
+        + '<h1 class="page-title">Subscribe</h1>'
+        '<p class="lead">Get Chesterfield County news in your inbox. Free, no ads, '
+        'unsubscribe anytime.</p>'
+        '<div class="tipwrap">' + notice + form +
+        '<p class="tip-note" style="color:var(--text-faint);font-size:.85rem;margin-top:1rem">'
+        'We only email you Chesterfield news and never share your address.</p></div>'
+        + thanks_js)
+    out = PUBLIC / "subscribe.html"
+    out.write_text(_shell(body), encoding="utf-8")
+    return out
+
+
 _TEMPLATE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -2082,9 +2121,7 @@ _TEMPLATE = """<!doctype html>
 (function() {{
   try {{
     var t = localStorage.getItem('cr-theme');
-    if (t !== 'light' && t !== 'dark') {{
-      t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
-    }}
+    if (t !== 'light' && t !== 'dark') {{ t = 'light'; }}   /* default everyone to light */
     document.documentElement.setAttribute('data-theme', t);
   }} catch (e) {{}}
 }})();
@@ -2108,7 +2145,7 @@ _TEMPLATE = """<!doctype html>
 <link rel="alternate" type="application/rss+xml" title="The Chesterfield Report" href="/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Chakra+Petch:wght@400;500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/report-ds.css">
 </head>
 <body>
@@ -2137,7 +2174,7 @@ _TEMPLATE = """<!doctype html>
     </div></div>
   </div>
   <nav class="topnav cr-header__nav">
-    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">Map</a><a href="/board.html">Board</a><a href="/meetings.html">Meetings</a><a href="/dining.html">Dining</a><a href="/shoosmith.html">Shoosmith</a><a href="/letters.html">Opinion</a><a href="/tip.html">Send a tip</a>
+    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a><a href="/taxes.html">Taxes</a><a href="/meetings.html">Meetings</a><a href="/board.html">Board of Supervisors</a><a href="/shoosmith.html">Shoosmith investigation</a>
   </nav>
   <div class="dateline">
     <span class="place">Chesterfield County &middot; Virginia</span>
@@ -2152,13 +2189,33 @@ _TEMPLATE = """<!doctype html>
     <div class="footer-brand"><img src="/assets/logo-mark.svg" alt="">The Chesterfield Report</div>
     <p>Independent, community-rooted coverage of Chesterfield County, Virginia &mdash;
        growth &amp; development, schools, public safety, government and community life.</p>
+    <div class="footer-signup">
+      <strong>Get Chesterfield news in your inbox.</strong>
+      <form class="signup-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="__W3FKEY__">
+        <input type="hidden" name="subject" value="Newsletter signup — The Chesterfield Report">
+        <input type="hidden" name="from_name" value="Chesterfield Report Newsletter">
+        <input type="hidden" name="redirect" value="https://chesterfieldreport.com/subscribe.html?ok=1">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+        <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <nav class="footer-nav" aria-label="All sections">
+      <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a>
+      <a href="/map.html">News map</a><a href="/neighborhoods.html">Neighborhoods</a>
+      <a href="/dining.html">Dining</a><a href="/business.html">Business</a>
+      <a href="/meetings.html">Meetings</a><a href="/board.html">Board of Supervisors</a>
+      <a href="/schools.html">Schools</a><a href="/taxes.html">Taxes</a>
+      <a href="/shoosmith.html">Shoosmith investigation</a>
+      <a href="/subscribe.html">Subscribe</a>
+      <a href="/letters.html">Opinion</a><a href="/tip.html">Send a tip</a>
+      <a href="/about.html">About</a><a href="/feed.xml">RSS</a>
+    </nav>
     <p>Stories are aggregated and summarized with links back to the original reporting.
        Please follow the <strong>[source]</strong> and &ldquo;Read the source&rdquo; links to support
        the outlets and agencies that do the original work.</p>
     <div class="footer-meta">
-      <a href="/about.html">About &amp; how this works</a> &middot;
-      <a href="/shoosmith.html">Shoosmith landfill investigation</a> &middot;
-      <a href="/feed.xml">RSS</a> &middot;
       {count} stories &middot; Updated {generated} &middot;
       <span class="footer-domain">chesterfieldreport.com</span>
     </div>
@@ -2210,13 +2267,6 @@ _TEMPLATE = """<!doctype html>
     try {{ localStorage.setItem('cr-theme', t); }} catch (e) {{}}
     paint();
   }});
-  if (window.matchMedia) {{
-    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function(e) {{
-      try {{ if (localStorage.getItem('cr-theme')) return; }} catch (_e) {{}}
-      root.setAttribute('data-theme', e.matches ? 'light' : 'dark');
-      paint();
-    }});
-  }}
 }})();
 </script>
 <script>
@@ -2295,3 +2345,8 @@ def _css_version() -> str:
 _TEMPLATE = _TEMPLATE.replace(
     '/assets/report-ds.css"',
     '/assets/report-ds.css?v=' + _css_version() + '"', 1)
+
+# Bake the Web3Forms key into the footer newsletter signup at build time (the
+# cron sources scripts/.deploy.env before building, so it's in os.environ).
+_TEMPLATE = _TEMPLATE.replace(
+    '__W3FKEY__', os.environ.get("WEB3FORMS_KEY", "").strip() or "MISSING_WEB3FORMS_KEY")

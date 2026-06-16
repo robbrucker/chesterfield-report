@@ -21,7 +21,7 @@ echo "→ Building site…"
 ( cd pipeline && python3 run.py build )
 
 echo "→ Deploying public/ to Vercel (production)…"
-URL=$(npx -y vercel@latest deploy public --prod --yes --token="$TOKEN" | tail -1)
+URL=$(npx -y vercel@latest deploy public --prod --yes --archive=tgz --token="$TOKEN" | tail -1)
 echo "Deployment URL: $URL"
 
 echo "→ Attaching domain chesterfieldreport.com…"

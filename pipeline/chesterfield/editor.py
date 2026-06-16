@@ -51,6 +51,17 @@ MAX_DEEPEN = 40                          # cap web-research deepens per run. Hig
                                          # backfills the Quick-facts box on the next pass.
 FRESHNESS_DAYS = 0                        # 0 = no age limit (user: keep everything, never delete)
 
+# QUIET-DAY FILL: on slow news days the strict significance bar can leave the
+# feed empty for hours. When fewer than QUIET_THRESHOLD stories have published in
+# the last 24h, let up to QUIET_FILL_MAX "lighter" items through PER RUN — items
+# that are genuinely newsworthy + Chesterfield-specific + not promo/junk/sensitive
+# but didn't clear the `significant` bar (a library program, a minor road project,
+# a small-business note, a community event). Every other guardrail still applies.
+# On busy days (>= QUIET_THRESHOLD already published) this does nothing.
+QUIET_DAY_FILL = True
+QUIET_THRESHOLD = 3                       # < this many published in last 24h => quiet day
+QUIET_FILL_MAX = 3                        # cap on lighter fill items per run
+
 # AUTONOMOUS: no human in the critical path. Anything newsworthy+significant that
 # the editor doesn't outright reject gets PUBLISHED (the pre-publish qa.py agent
 # is the safety net); rejects and duplicates are moved out of the queue instead
@@ -92,9 +103,17 @@ _RUBRIC = (
     "Set significant=true for real news value to residents: a decision or vote, a "
     "development/opening/closure, a budget or policy change, a public-safety or "
     "court/crime development, an event with broad impact, or anything consequential "
-    "and new. Set significant=FALSE for routine filler: bare calendars/meeting "
-    "notices, recruitment, promotional/PR content, thin stubs, and status updates "
-    "with no real news.\n"
+    "and new. ALSO treat as significant: (a) LOCAL SPORTS RESULTS and achievements "
+    "— a local team winning or losing a notable game, a title or playoff run, a "
+    "record or streak, a player's college commitment or all-state honor — but NOT "
+    "bare game schedules or previews that have no result; and (b) clearly-LOCAL "
+    "COMMUNITY and human-interest stories — youth programs and camps, volunteer or "
+    "student recognition, fundraisers and drives, scholarships, neighborhood events, "
+    "a named local business milestone — even when they are feel-good rather than "
+    "hard news. Set significant=FALSE for routine filler: bare calendars/meeting "
+    "notices, bare sports schedules or previews with no result, recruitment, "
+    "real-estate or property listings, generic promotional/PR content with no named "
+    "specifics, thin stubs, and status updates with no real news.\n"
     "Set sensitive=true for crime, police, courts, arrests, accidents, death, "
     "lawsuits, named individuals in a negative light, or strong opinion.\n"
     "verdict: 'approve' = newsworthy and fit to publish as-is; 'review' = needs a "
@@ -170,6 +189,26 @@ def _too_old(meta: dict, path) -> bool:
     if not d:
         return False
     return (datetime.date.today() - d).days > FRESHNESS_DAYS
+
+
+def _published_last_24h() -> int:
+    """Count stories in content/published whose `published` timestamp is within
+    the last 24 hours. Best-effort (items with no/unparseable date are skipped);
+    used only to decide whether it's a 'quiet day' for the fill logic."""
+    cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=24)
+    n = 0
+    for p in render.PUBLISHED.glob("*.md"):
+        try:
+            meta, _ = render._parse_frontmatter(p.read_text(encoding="utf-8"))
+            raw = (meta.get("published") or "").strip().strip('"')
+            d = datetime.datetime.fromisoformat(raw)
+            if d.tzinfo is None:
+                d = d.replace(tzinfo=datetime.timezone.utc)
+            if d >= cutoff:
+                n += 1
+        except (ValueError, OSError):
+            continue
+    return n
 
 
 def _looks_duplicate(path, pub: list) -> bool:
@@ -324,6 +363,11 @@ def triage(model: str = "claude-haiku-4-5", deepen: bool = True,
     system = _RUBRIC + _taste_block()
     pub = _published_stories() if DUP_GUARD else []
 
+    # Quiet-day fill: if the last 24h have been slow, allow a few lighter items
+    # through (see the QUIET_* knobs at the top of this module).
+    quiet_day = QUIET_DAY_FILL and _published_last_24h() < QUIET_THRESHOLD
+    quiet_filled = 0
+
     processed_files = 0
     for path in drafts:
         if processed_files >= limit:
@@ -366,8 +410,22 @@ def triage(model: str = "claude-haiku-4-5", deepen: bool = True,
             and v.get("chesterfield_specific")   # must be Chesterfield County, VA —
             and not v.get("duplicate_or_promo")  # not a "Chesterfield" elsewhere (e.g.
         )                                        # Chesterfield Ave, Lancaster SC)
+        # Quiet-day fill: a lighter (not "significant") but genuinely local item,
+        # only when the day's been slow and we're under the per-run cap. Keeps
+        # every other guardrail (newsworthy, on-topic, not promo/junk/sensitive).
+        quiet_ok = (
+            quiet_day
+            and quiet_filled < QUIET_FILL_MAX
+            and model_verdict != "reject"
+            and meta.get("ai_provider") in ("claude-cli", "claude-api")
+            and v.get("newsworthy")
+            and v.get("chesterfield_specific")
+            and not v.get("duplicate_or_promo")
+            and not v.get("sensitive")
+        )
         too_old = _too_old(meta, path)
-        want_publish = (can_approve or autonomous_ok) and not too_old
+        want_publish = (can_approve or autonomous_ok or quiet_ok) and not too_old
+        via_quiet = bool(want_publish and quiet_ok and not (can_approve or autonomous_ok))
         is_dup = bool(want_publish and DUP_GUARD and _looks_duplicate(path, pub))
 
         if want_publish and not is_dup:
@@ -404,8 +462,11 @@ def triage(model: str = "claude-haiku-4-5", deepen: bool = True,
             approved += 1
             if did_deepen:
                 deepened += 1
+            if via_quiet:
+                quiet_filled += 1
             tail = " (deepened)" if did_deepen else ""
-            print(f"{path.name} — approve{tail} — {reason}")
+            qmark = " [quiet-fill]" if via_quiet else ""
+            print(f"{path.name} — approve{tail}{qmark} — {reason}")
         elif is_dup:
             # Duplicates a published story. Autonomous: drop it (the canonical is
             # already live). Otherwise: route to a human to verify/merge.
@@ -455,5 +516,6 @@ def triage(model: str = "claude-haiku-4-5", deepen: bool = True,
         "review": review,
         "rejected": rejected,
         "duplicate": duplicate,
+        "quiet_fill": quiet_filled,
         "processed": approved + review + rejected + duplicate,
     }

@@ -1,6 +1,6 @@
 # This Week in Chesterfield
 
-_33 stories • generated 2026-06-13_
+_31 stories • generated 2026-06-14_
 
 
 ## Growth & Development
@@ -43,12 +43,6 @@ _33 stories • generated 2026-06-13_
   https://chesterfieldreport.com/story/3-hospitalized-in-chesterfield-shopping-center-crash.html
 - **Community rallies around Chesterfield officers after shooting** — Chesterfield residents showed support for police officers following a shooting incident.
   https://chesterfieldreport.com/story/community-rallies-around-chesterfield-officers-after-shooting.html
-- **Two Chesterfield officers shot; suspect charged, K-9 Knight killed** — Chesterfield County police officers Jacob Clark and Jacob Wells, shot during a May 31 domestic violence response, are recovering from critical injuries as community raises over $60,000 through a GoFundMe campaign.
-  https://chesterfieldreport.com/story/two-chesterfield-officers-shot-suspect-charged-k-9-knight-killed.html
-- **Fatal Two-Vehicle Crash in Chesterfield Kills One** — A passenger in a Honda sedan died Friday night in Chesterfield County after the car collided with a Dodge Ram turning onto Watchrun Drive at the 6400 block of Hopkins Road.
-  https://chesterfieldreport.com/story/fatal-two-vehicle-crash-in-chesterfield-kills-one.html
-- **Chesterfield Woman Missing Since Saturday Morning** — Julie Ann Branan, 42, was located safely after being reported missing from her Chesterfield home early Saturday morning, June 6, 2026.
-  https://chesterfieldreport.com/story/chesterfield-woman-missing-since-saturday-morning.html
 
 ## Fire & EMS
 
@@ -57,6 +51,8 @@ _33 stories • generated 2026-06-13_
 
 ## Government
 
+- **Data center 'listening tour' comes to Chesterfield on June 16** — Virginia state Sens. Louise Lucas and Mike Jones will host a free public "Data Center Listening Tour" at Manchester Middle School in North Chesterfield on Tuesday, June 16, part of a statewide push to debate the tax breaks and rising electricity costs tied to Virginia's data center boom.
+  https://chesterfieldreport.com/story/data-center-listening-tour-comes-to-chesterfield-on-june-16.html
 - **Tall Ships Sail Into Chesterfield for 250th Celebration** — Chesterfield is hosting events to mark America's 250th anniversary, with tall ships arriving this Thursday.
   https://chesterfieldreport.com/story/tall-ships-sail-into-chesterfield-for-250th-celebration.html
 - **Chesterfield Honors 44th Annual Senior Volunteer Hall of Fame** — Chesterfield County celebrated its 44th annual Senior Volunteer Hall of Fame ceremony, recognizing local seniors for outstanding community service.

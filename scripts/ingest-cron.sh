@@ -47,7 +47,7 @@ if [ -f "$ROOT/scripts/.deploy.env" ]; then
   # shellcheck disable=SC1091
   source "$ROOT/scripts/.deploy.env"
   if [ -n "$VERCEL_TOKEN" ]; then
-    npx -y vercel@latest deploy "$ROOT/public" --prod --yes \
+    npx -y vercel@latest deploy "$ROOT/public" --prod --yes --archive=tgz \
       --scope "${VERCEL_SCOPE:-rob-bruckers-projects}" --token "$VERCEL_TOKEN" \
       >> "$LOG" 2>&1 && log "deploy OK" || log "deploy FAILED"
   else

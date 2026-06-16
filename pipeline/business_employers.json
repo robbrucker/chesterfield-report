@@ -1,0 +1,407 @@
+{
+  "source": "VirginiaWorks 50 Largest Employers (QCEW Q3 2025) for rank order; size bands & sectors from Chesterfield Economic Development / VEC QCEW Q4 2023 list (chesterfieldfits.com, report dated 2024-06-14)",
+  "as_of": "Rank order: QCEW 2025 Q3 (Jul-Sep 2025). Size bands/sectors: QCEW 2023 Q4.",
+  "notes": "QCEW publishes employment size BANDS (1000+, 500-999, 250-499), not exact headcounts. Ranking is from the newer Q3 2025 VirginiaWorks PDF (virginiaworks.gov/wp-content/uploads/2026/04/Chesterfield-County.pdf). Bands/sectors carried over from the Q4 2023 list by name match; employers new to the 2025 list (e.g., Amazon Logistics, Lego Manufacturing Richmond, Carvana, UHS of Delaware, Hospital To Home, Federal Express, Swim Metro Management, Virginia Information Technology Agency) have no published band. Note Lego Manufacturing Richmond is ramping its new Chesterfield plant.",
+  "employers": [
+    {
+      "rank": 1,
+      "name": "Chesterfield County School Board",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Educational Services"
+    },
+    {
+      "rank": 2,
+      "name": "County of Chesterfield",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Government Support"
+    },
+    {
+      "rank": 3,
+      "name": "U.S. Department of Defense",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "National Security"
+    },
+    {
+      "rank": 4,
+      "name": "Amazon Fulfillment Services Inc.",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Admin & Support Services"
+    },
+    {
+      "rank": 5,
+      "name": "U.P.S.",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Couriers & Messengers"
+    },
+    {
+      "rank": 6,
+      "name": "Bon Secours Health System Inc",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Management/Enterprises"
+    },
+    {
+      "rank": 7,
+      "name": "Amazon Logistics, Inc",
+      "employees": "",
+      "band": "",
+      "band_source": "not in Q4 2023 list (band unknown)",
+      "sector": ""
+    },
+    {
+      "rank": 8,
+      "name": "DuPont Specialty Products USA, LLC",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Chemical Manufacturing"
+    },
+    {
+      "rank": 9,
+      "name": "Wal Mart",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "General Merchandise"
+    },
+    {
+      "rank": 10,
+      "name": "Kroger",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Food & Beverage Stores"
+    },
+    {
+      "rank": 11,
+      "name": "HCA Virginia Health System",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Hospitals"
+    },
+    {
+      "rank": 12,
+      "name": "Food Lion",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Food & Beverage Stores"
+    },
+    {
+      "rank": 13,
+      "name": "Hill Phoenix",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Machinery Manufacturing"
+    },
+    {
+      "rank": 14,
+      "name": "Virginia State University",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Educational Services"
+    },
+    {
+      "rank": 15,
+      "name": "Virginia Department of State Police",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Justice & Safety"
+    },
+    {
+      "rank": 16,
+      "name": "Interpsan Inc",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Admin & Support Services"
+    },
+    {
+      "rank": 17,
+      "name": "YMCA",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Recreation Industries"
+    },
+    {
+      "rank": 18,
+      "name": "Atlantic Constructors Inc",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Construction"
+    },
+    {
+      "rank": 19,
+      "name": "The Whiting Turner Contra Inc",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Construction"
+    },
+    {
+      "rank": 20,
+      "name": "John Tyler Community College",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Educational Services"
+    },
+    {
+      "rank": 21,
+      "name": "Virginia Credit Union, Inc.",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Credit & Banking"
+    },
+    {
+      "rank": 22,
+      "name": "Hospital To Home LLC",
+      "employees": "",
+      "band": "",
+      "band_source": "not in Q4 2023 list (band unknown)",
+      "sector": ""
+    },
+    {
+      "rank": 23,
+      "name": "Fiorucci Foods",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Food Manufacturing"
+    },
+    {
+      "rank": 24,
+      "name": "Publix Nc Employee Services, LLC",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Food & Beverage Stores"
+    },
+    {
+      "rank": 25,
+      "name": "West End Orthopaedic Clinic",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Health Care Services"
+    },
+    {
+      "rank": 26,
+      "name": "Maximus Services LLC",
+      "employees": "",
+      "band": "1000+",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Admin & Support Services"
+    },
+    {
+      "rank": 27,
+      "name": "Timmons Group",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Professional Services"
+    },
+    {
+      "rank": 28,
+      "name": "Target Corp",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "General Merchandise"
+    },
+    {
+      "rank": 29,
+      "name": "Old Dominion Insulation Inc",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Specialty Contractors"
+    },
+    {
+      "rank": 30,
+      "name": "Lego Manufacturing Richmond INC",
+      "employees": "",
+      "band": "",
+      "band_source": "not in Q4 2023 list (band unknown)",
+      "sector": ""
+    },
+    {
+      "rank": 31,
+      "name": "The Home Depot",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Building Materials"
+    },
+    {
+      "rank": 32,
+      "name": "Discount Tire",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Motor Vehicle Dealers"
+    },
+    {
+      "rank": 33,
+      "name": "Lowes' Home Centers, Inc.",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Building Materials"
+    },
+    {
+      "rank": 34,
+      "name": "Uhs Of Delaware Inc.",
+      "employees": "",
+      "band": "",
+      "band_source": "not in Q4 2023 list (band unknown)",
+      "sector": ""
+    },
+    {
+      "rank": 35,
+      "name": "Virginia Department of Juvenile Justice",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Justice & Safety"
+    },
+    {
+      "rank": 36,
+      "name": "Carvana",
+      "employees": "",
+      "band": "",
+      "band_source": "not in Q4 2023 list (band unknown)",
+      "sector": ""
+    },
+    {
+      "rank": 37,
+      "name": "Super Radiator Company",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Metal Product Manufacturing"
+    },
+    {
+      "rank": 38,
+      "name": "WaWa",
+      "employees": "",
+      "band": "500-999",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Gasoline Stations"
+    },
+    {
+      "rank": 39,
+      "name": "Wegmans Store #07",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Food & Beverage Stores"
+    },
+    {
+      "rank": 40,
+      "name": "McDonald's",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Food Services"
+    },
+    {
+      "rank": 41,
+      "name": "Industrial Turnaround Corp",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Professional Services"
+    },
+    {
+      "rank": 42,
+      "name": "Sabra Dipping Co LLC",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Merchant Wholesalers"
+    },
+    {
+      "rank": 43,
+      "name": "Pepsico Beverage Sales LLC",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Merchant Wholesalers"
+    },
+    {
+      "rank": 44,
+      "name": "Care Advantage",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Health Care Services"
+    },
+    {
+      "rank": 45,
+      "name": "Federal Express",
+      "employees": "",
+      "band": "",
+      "band_source": "not in Q4 2023 list (band unknown)",
+      "sector": ""
+    },
+    {
+      "rank": 46,
+      "name": "Lucy Corr Village",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Nursing & Care Facilities"
+    },
+    {
+      "rank": 47,
+      "name": "Swim Metro Management",
+      "employees": "",
+      "band": "",
+      "band_source": "not in Q4 2023 list (band unknown)",
+      "sector": ""
+    },
+    {
+      "rank": 48,
+      "name": "Virginia Information Technology Agency",
+      "employees": "",
+      "band": "",
+      "band_source": "not in Q4 2023 list (band unknown)",
+      "sector": ""
+    },
+    {
+      "rank": 49,
+      "name": "Starbucks Coffee",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Food Services"
+    },
+    {
+      "rank": 50,
+      "name": "AdvanSix Inc.",
+      "employees": "",
+      "band": "250-499",
+      "band_source": "QCEW Q4 2023 (chesterfieldfits.com)",
+      "sector": "Chemical Manufacturing"
+    }
+  ]
+}

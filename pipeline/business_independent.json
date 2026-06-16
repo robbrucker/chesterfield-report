@@ -1,0 +1,7458 @@
+{
+  "source": "OpenStreetMap Overpass",
+  "note": "chains (brand tag) excluded; Chesterfield County VA area rel 2534172 (FIPS 51041); restaurants/fast_food/cafe NOT queried (covered by dining guide); deduped by name+rounded coords",
+  "as_of": "2026-06-14T14:33:32Z",
+  "chains_dropped": 725,
+  "count": 930,
+  "category_counts": {
+    "Professional services": 165,
+    "Retail & shops": 264,
+    "Health & wellness": 143,
+    "Home & trades": 68,
+    "Beauty & personal care": 189,
+    "Food & drink": 25,
+    "Auto & repair": 76
+  },
+  "businesses": [
+    {
+      "name": "Allen Tire",
+      "category": "Auto & repair",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3577395,
+      "lon": -77.4428924
+    },
+    {
+      "name": "Allen Tire",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.5072153,
+      "lon": -77.5844356
+    },
+    {
+      "name": "Allen Tire",
+      "category": "Auto & repair",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5030407,
+      "lon": -77.6434799
+    },
+    {
+      "name": "Audio Express",
+      "category": "Auto & repair",
+      "street": "Alverser Drive",
+      "city": "",
+      "lat": 37.506873,
+      "lon": -77.6171997
+    },
+    {
+      "name": "AutoDiscounters.net",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.5049591,
+      "lon": -77.7273504
+    },
+    {
+      "name": "AutoWorld of Chester",
+      "category": "Auto & repair",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3553407,
+      "lon": -77.4093139
+    },
+    {
+      "name": "AutoZone",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.3660682,
+      "lon": -77.4176744
+    },
+    {
+      "name": "Bruce's Super Body Shops",
+      "category": "Auto & repair",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5065744,
+      "lon": -77.6040808
+    },
+    {
+      "name": "Buddy South Auto Parts & Service",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4427715,
+      "lon": -77.5822581
+    },
+    {
+      "name": "C & J",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.35597,
+      "lon": -77.4448166
+    },
+    {
+      "name": "Car Corral",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.3044535,
+      "lon": -77.4083706
+    },
+    {
+      "name": "Car Pool",
+      "category": "Auto & repair",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4421815,
+      "lon": -77.5877536
+    },
+    {
+      "name": "Car-n-Go",
+      "category": "Auto & repair",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4341679,
+      "lon": -77.6083598
+    },
+    {
+      "name": "CarLotz",
+      "category": "Auto & repair",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5049559,
+      "lon": -77.6206094
+    },
+    {
+      "name": "CarToyz",
+      "category": "Auto & repair",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5034986,
+      "lon": -77.60983
+    },
+    {
+      "name": "Chester Body Shop",
+      "category": "Auto & repair",
+      "street": "Chester Road",
+      "city": "",
+      "lat": 37.3799532,
+      "lon": -77.452516
+    },
+    {
+      "name": "Chester Muffler and Brake",
+      "category": "Auto & repair",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3564379,
+      "lon": -77.4444506
+    },
+    {
+      "name": "Chester Road Car Wash",
+      "category": "Auto & repair",
+      "street": "Chester Road",
+      "city": "",
+      "lat": 37.3798739,
+      "lon": -77.4537834
+    },
+    {
+      "name": "Clover Hill Tire and Auto Center",
+      "category": "Auto & repair",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4337236,
+      "lon": -77.6088492
+    },
+    {
+      "name": "CLS Auto & Truck Rental",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4595929,
+      "lon": -77.5441508
+    },
+    {
+      "name": "Coastal Towing & Recovery",
+      "category": "Auto & repair",
+      "street": "Old Stage Road",
+      "city": "",
+      "lat": 37.3609075,
+      "lon": -77.3982244
+    },
+    {
+      "name": "Colonial Honda",
+      "category": "Auto & repair",
+      "street": "Walthall Center Drive",
+      "city": "",
+      "lat": 37.3077252,
+      "lon": -77.394376
+    },
+    {
+      "name": "Colonial Hyundai",
+      "category": "Auto & repair",
+      "street": "Walthall Center Drive",
+      "city": "",
+      "lat": 37.308763,
+      "lon": -77.3951287
+    },
+    {
+      "name": "Colonial Kia",
+      "category": "Auto & repair",
+      "street": "Walthall Center Drive",
+      "city": "",
+      "lat": 37.3092343,
+      "lon": -77.3935292
+    },
+    {
+      "name": "Colonial Subaru",
+      "category": "Auto & repair",
+      "street": "Ruffin Mill Road",
+      "city": "",
+      "lat": 37.3100467,
+      "lon": -77.3911343
+    },
+    {
+      "name": "Crown Motors",
+      "category": "Auto & repair",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3058454,
+      "lon": -77.4085393
+    },
+    {
+      "name": "Dave's Auto Spa",
+      "category": "Auto & repair",
+      "street": "Robious Road",
+      "city": "",
+      "lat": 37.5213303,
+      "lon": -77.6104719
+    },
+    {
+      "name": "Dave's Car Wash",
+      "category": "Auto & repair",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4107195,
+      "lon": -77.6521084
+    },
+    {
+      "name": "Diamond Motor",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.3874219,
+      "lon": -77.7553689
+    },
+    {
+      "name": "Flag Stop",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.349247,
+      "lon": -77.3536004
+    },
+    {
+      "name": "Flagstop",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4271088,
+      "lon": -77.4944184
+    },
+    {
+      "name": "Flagstop Car Wash",
+      "category": "Auto & repair",
+      "street": "Bermuda Crossroad Lane",
+      "city": "",
+      "lat": 37.3620693,
+      "lon": -77.4162671
+    },
+    {
+      "name": "Flagstop Car Wash",
+      "category": "Auto & repair",
+      "street": "Southland Drive",
+      "city": "",
+      "lat": 37.3557201,
+      "lon": -77.4113617
+    },
+    {
+      "name": "Flagstop Carwash",
+      "category": "Auto & repair",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3642912,
+      "lon": -77.4967572
+    },
+    {
+      "name": "Go Car Wash",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.497922,
+      "lon": -77.5486351
+    },
+    {
+      "name": "GO Car Wash",
+      "category": "Auto & repair",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4380042,
+      "lon": -77.6005738
+    },
+    {
+      "name": "Go Carwash",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4713441,
+      "lon": -77.5290093
+    },
+    {
+      "name": "Greg's Garage",
+      "category": "Auto & repair",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.433536,
+      "lon": -77.6093581
+    },
+    {
+      "name": "Hanchey's Certified Audio",
+      "category": "Auto & repair",
+      "street": "US-1",
+      "city": "Richmond",
+      "lat": 37.4018294,
+      "lon": -77.4319582
+    },
+    {
+      "name": "Heritage Chevrolet",
+      "category": "Auto & repair",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3555253,
+      "lon": -77.4141601
+    },
+    {
+      "name": "Hyman Bros. Automobiles",
+      "category": "Auto & repair",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5055804,
+      "lon": -77.6186441
+    },
+    {
+      "name": "In N Out",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4619152,
+      "lon": -77.5438325
+    },
+    {
+      "name": "Leete Tire and Auto",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4733025,
+      "lon": -77.5236188
+    },
+    {
+      "name": "Loyalty Nissan",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.3049947,
+      "lon": -77.392402
+    },
+    {
+      "name": "Loyalty Toyota",
+      "category": "Auto & repair",
+      "street": "Walthall Center Drive",
+      "city": "",
+      "lat": 37.3069501,
+      "lon": -77.3935863
+    },
+    {
+      "name": "Loyalty Volkswagen",
+      "category": "Auto & repair",
+      "street": "Priority Way",
+      "city": "",
+      "lat": 37.3059663,
+      "lon": -77.3930577
+    },
+    {
+      "name": "Luckys",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4072701,
+      "lon": -77.6825792
+    },
+    {
+      "name": "Lyman Automotive",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4318237,
+      "lon": -77.6142468
+    },
+    {
+      "name": "Marathon",
+      "category": "Auto & repair",
+      "street": "Harrowgate Road",
+      "city": "",
+      "lat": 37.3234528,
+      "lon": -77.4357027
+    },
+    {
+      "name": "Midlothian Express Lube",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.506733,
+      "lon": -77.6687923
+    },
+    {
+      "name": "Ms. TMZ",
+      "category": "Auto & repair",
+      "street": "Branchway Road",
+      "city": "",
+      "lat": 37.5045511,
+      "lon": -77.6082208
+    },
+    {
+      "name": "Patton's Auto & Tire",
+      "category": "Auto & repair",
+      "street": "Chester Road",
+      "city": "",
+      "lat": 37.3804793,
+      "lon": -77.4538446
+    },
+    {
+      "name": "Pearson Honda",
+      "category": "Auto & repair",
+      "street": "North Spring Run Road",
+      "city": "",
+      "lat": 37.4029483,
+      "lon": -77.6666556
+    },
+    {
+      "name": "Pro Tint Richmond",
+      "category": "Auto & repair",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3494161,
+      "lon": -77.4647393
+    },
+    {
+      "name": "Publix",
+      "category": "Auto & repair",
+      "street": "Charter Colony Parkway",
+      "city": "Midlothian",
+      "lat": 37.5032433,
+      "lon": -77.6597467
+    },
+    {
+      "name": "Roy Hendrick's Muffler & Automotive",
+      "category": "Auto & repair",
+      "street": "Hull Street Road",
+      "city": "Moseley",
+      "lat": 37.3933634,
+      "lon": -77.7274174
+    },
+    {
+      "name": "S & O Automotive",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4750298,
+      "lon": -77.5208734
+    },
+    {
+      "name": "Sams Xpress Carwash",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4352437,
+      "lon": -77.6085355
+    },
+    {
+      "name": "Seredin Tire",
+      "category": "Auto & repair",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.4275785,
+      "lon": -77.4936804
+    },
+    {
+      "name": "Southside Virginia Auto Auction",
+      "category": "Auto & repair",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3574674,
+      "lon": -77.4128998
+    },
+    {
+      "name": "Splash In",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4204006,
+      "lon": -77.6360939
+    },
+    {
+      "name": "Splash In",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4280359,
+      "lon": -77.6215773
+    },
+    {
+      "name": "Steel Horse Harley Davidson",
+      "category": "Auto & repair",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4335624,
+      "lon": -77.6077597
+    },
+    {
+      "name": "Terry's Small Engine Repair",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4408311,
+      "lon": -77.5841413
+    },
+    {
+      "name": "The Tire Depot",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4401901,
+      "lon": -77.5903395
+    },
+    {
+      "name": "Tire Enigneers",
+      "category": "Auto & repair",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3611823,
+      "lon": -77.4972871
+    },
+    {
+      "name": "Titan Auto",
+      "category": "Auto & repair",
+      "street": "Baldwin Creek Road",
+      "city": "",
+      "lat": 37.3915272,
+      "lon": -77.7292025
+    },
+    {
+      "name": "Tommy's Express Car Wash",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4436818,
+      "lon": -77.582377
+    },
+    {
+      "name": "Tri-city Truck Accessories",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.2849317,
+      "lon": -77.4125143
+    },
+    {
+      "name": "Twisted Grip Cycles",
+      "category": "Auto & repair",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.2976184,
+      "lon": -77.4103689
+    },
+    {
+      "name": "USAuto Center",
+      "category": "Auto & repair",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.2934494,
+      "lon": -77.4110424
+    },
+    {
+      "name": "Victory Lane Auto",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.4421593,
+      "lon": -77.5804224
+    },
+    {
+      "name": "Village Laserwash",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.3546944,
+      "lon": -77.447681
+    },
+    {
+      "name": "Virginia Tire & Auto",
+      "category": "Auto & repair",
+      "street": "",
+      "city": "",
+      "lat": 37.3974623,
+      "lon": -77.7093306
+    },
+    {
+      "name": "Wells Auto Repair",
+      "category": "Auto & repair",
+      "street": "Graves Road",
+      "city": "",
+      "lat": 37.2626852,
+      "lon": -77.5336624
+    },
+    {
+      "name": "Woodard\"s Auto Body & Paint Shop",
+      "category": "Auto & repair",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.2948148,
+      "lon": -77.4109924
+    },
+    {
+      "name": "#1 Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.2400087,
+      "lon": -77.4322716
+    },
+    {
+      "name": "A Day Spa & Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3725102,
+      "lon": -77.4993615
+    },
+    {
+      "name": "About Your Hair",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4226661,
+      "lon": -77.636845
+    },
+    {
+      "name": "Ahead of Hair",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5047047,
+      "lon": -77.6529401
+    },
+    {
+      "name": "Alora",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4044135,
+      "lon": -77.6762303
+    },
+    {
+      "name": "Alora Hair Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5080713,
+      "lon": -77.6039488
+    },
+    {
+      "name": "Amber Nails & Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4058518,
+      "lon": -77.66265
+    },
+    {
+      "name": "Angels Beauty Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.444137,
+      "lon": -77.5823748
+    },
+    {
+      "name": "Asia Massage",
+      "category": "Beauty & personal care",
+      "street": "Courthouse Road",
+      "city": "",
+      "lat": 37.4735476,
+      "lon": -77.5990619
+    },
+    {
+      "name": "Asian Health Massage",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4057186,
+      "lon": -77.6661463
+    },
+    {
+      "name": "Authentic Massage",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4513131,
+      "lon": -77.6483239
+    },
+    {
+      "name": "Balance Massage",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4337609,
+      "lon": -77.6122749
+    },
+    {
+      "name": "Barber's Chair",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5017677,
+      "lon": -77.6463544
+    },
+    {
+      "name": "Beauty Nail Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5061985,
+      "lon": -77.6283265
+    },
+    {
+      "name": "Beauty Nails",
+      "category": "Beauty & personal care",
+      "street": "Commonwealth Centre Parkway",
+      "city": "",
+      "lat": 37.4204112,
+      "lon": -77.6350312
+    },
+    {
+      "name": "Beauty Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4057198,
+      "lon": -77.6663032
+    },
+    {
+      "name": "Beauty Nails & Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.40211,
+      "lon": -77.6749445
+    },
+    {
+      "name": "Beauty Spot",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.504475,
+      "lon": -77.575788
+    },
+    {
+      "name": "Beauty Supply",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4979826,
+      "lon": -77.5325071
+    },
+    {
+      "name": "Beauty Systems",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4374586,
+      "lon": -77.5950519
+    },
+    {
+      "name": "Beauty World",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5081405,
+      "lon": -77.5891407
+    },
+    {
+      "name": "Beauty Zone",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4270264,
+      "lon": -77.4920112
+    },
+    {
+      "name": "Beauty Zone",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4365758,
+      "lon": -77.5975281
+    },
+    {
+      "name": "Believe",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.359406,
+      "lon": -77.4990443
+    },
+    {
+      "name": "Ben's Beauty Supply",
+      "category": "Beauty & personal care",
+      "street": "Meadowdale Boulevard",
+      "city": "",
+      "lat": 37.4389181,
+      "lon": -77.470778
+    },
+    {
+      "name": "Black Swan Hair Salon",
+      "category": "Beauty & personal care",
+      "street": "Charter Colony Parkway",
+      "city": "Chesterfield County",
+      "lat": 37.5042849,
+      "lon": -77.6606318
+    },
+    {
+      "name": "Bloom",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5019127,
+      "lon": -77.6509896
+    },
+    {
+      "name": "Bombshell",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4210845,
+      "lon": -77.6310496
+    },
+    {
+      "name": "Bondi Blonde Hair Salon",
+      "category": "Beauty & personal care",
+      "street": "Iron Bridge Plaza",
+      "city": "",
+      "lat": 37.3516849,
+      "lon": -77.4849413
+    },
+    {
+      "name": "Bonitas Hair Studio",
+      "category": "Beauty & personal care",
+      "street": "Centre Street",
+      "city": "",
+      "lat": 37.3573308,
+      "lon": -77.4467427
+    },
+    {
+      "name": "Brovado",
+      "category": "Beauty & personal care",
+      "street": "raised antler circle",
+      "city": "",
+      "lat": 37.4023082,
+      "lon": -77.6642462
+    },
+    {
+      "name": "C & C Hair Company",
+      "category": "Beauty & personal care",
+      "street": "Busy Street",
+      "city": "",
+      "lat": 37.5032051,
+      "lon": -77.6092362
+    },
+    {
+      "name": "California Nails",
+      "category": "Beauty & personal care",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.353975,
+      "lon": -77.4115236
+    },
+    {
+      "name": "CaNails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3530461,
+      "lon": -77.4135176
+    },
+    {
+      "name": "Ciao Bella Salon and Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.450751,
+      "lon": -77.6493518
+    },
+    {
+      "name": "Cindy's Hair Pros",
+      "category": "Beauty & personal care",
+      "street": "Chester Village Drive",
+      "city": "",
+      "lat": 37.3575429,
+      "lon": -77.4459972
+    },
+    {
+      "name": "Creative Hair & Co.",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.509513,
+      "lon": -77.6159164
+    },
+    {
+      "name": "CT Nails & Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3571911,
+      "lon": -77.4472082
+    },
+    {
+      "name": "Cutz for Guys",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5136704,
+      "lon": -77.6986915
+    },
+    {
+      "name": "Day Nails Spa",
+      "category": "Beauty & personal care",
+      "street": "Chattanooga Plaza",
+      "city": "Midlothian",
+      "lat": 37.4307342,
+      "lon": -77.6237565
+    },
+    {
+      "name": "Deeply Rooted",
+      "category": "Beauty & personal care",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3565478,
+      "lon": -77.4441731
+    },
+    {
+      "name": "Divas-n-Dudes Kid's Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4147569,
+      "lon": -77.6398095
+    },
+    {
+      "name": "Divine Touch Beauty Salon",
+      "category": "Beauty & personal care",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3577688,
+      "lon": -77.4404053
+    },
+    {
+      "name": "Do My Hair",
+      "category": "Beauty & personal care",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3558835,
+      "lon": -77.4475449
+    },
+    {
+      "name": "Dolce Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.497991,
+      "lon": -77.5326734
+    },
+    {
+      "name": "Dye-Namic Hair Designs",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4409831,
+      "lon": -77.5833917
+    },
+    {
+      "name": "East Coast Tans",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.503958,
+      "lon": -77.6434213
+    },
+    {
+      "name": "Elegance Nail Spa",
+      "category": "Beauty & personal care",
+      "street": "Busy Street",
+      "city": "North Chesterfield",
+      "lat": 37.5023855,
+      "lon": -77.6087094
+    },
+    {
+      "name": "Elegant Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3482125,
+      "lon": -77.3579357
+    },
+    {
+      "name": "Empress Hair & Beyond",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4388239,
+      "lon": -77.5996831
+    },
+    {
+      "name": "Epic Touch Barber Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3480622,
+      "lon": -77.3579855
+    },
+    {
+      "name": "Escape Massage",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5135519,
+      "lon": -77.6930005
+    },
+    {
+      "name": "Escape Nails & Day Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5016953,
+      "lon": -77.6279046
+    },
+    {
+      "name": "Evelyn's Nail Beutique",
+      "category": "Beauty & personal care",
+      "street": "West Hundred Road",
+      "city": "Chester",
+      "lat": 37.3557901,
+      "lon": -77.4477354
+    },
+    {
+      "name": "Evolution Salon",
+      "category": "Beauty & personal care",
+      "street": "Woodlake Commons Loop",
+      "city": "",
+      "lat": 37.4050285,
+      "lon": -77.685903
+    },
+    {
+      "name": "Foxy Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5136853,
+      "lon": -77.6987893
+    },
+    {
+      "name": "Gabe's Barber Shop",
+      "category": "Beauty & personal care",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3539885,
+      "lon": -77.4114657
+    },
+    {
+      "name": "Genito Massage",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4389471,
+      "lon": -77.6021077
+    },
+    {
+      "name": "Glamor Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4962319,
+      "lon": -77.5662695
+    },
+    {
+      "name": "Glitz A Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5023264,
+      "lon": -77.6508549
+    },
+    {
+      "name": "Glo Med Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5168965,
+      "lon": -77.6943622
+    },
+    {
+      "name": "Grand Nail Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.413683,
+      "lon": -77.6410944
+    },
+    {
+      "name": "Greater Than Sparrows Salon And Med Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.514801,
+      "lon": -77.6915308
+    },
+    {
+      "name": "Hair & Nail",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4375481,
+      "lon": -77.5948373
+    },
+    {
+      "name": "Hair 4 All",
+      "category": "Beauty & personal care",
+      "street": "Iron Bridge Plaza",
+      "city": "",
+      "lat": 37.3509285,
+      "lon": -77.4842882
+    },
+    {
+      "name": "Hair Arts",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5046997,
+      "lon": -77.6649013
+    },
+    {
+      "name": "Hair Handlers",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4389138,
+      "lon": -77.6023296
+    },
+    {
+      "name": "Hair It Is",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4274808,
+      "lon": -77.4912606
+    },
+    {
+      "name": "Hand & Stone",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5018422,
+      "lon": -77.6271391
+    },
+    {
+      "name": "Hand & Stone",
+      "category": "Beauty & personal care",
+      "street": "Hancock Village Drive",
+      "city": "Chesterfield",
+      "lat": 37.4031221,
+      "lon": -77.6753262
+    },
+    {
+      "name": "Harbour Pointe Nails & Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4104709,
+      "lon": -77.6548975
+    },
+    {
+      "name": "Haven Hair",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5019998,
+      "lon": -77.6433484
+    },
+    {
+      "name": "HC",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5016655,
+      "lon": -77.627993
+    },
+    {
+      "name": "Head & Hand Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5019675,
+      "lon": -77.6509936
+    },
+    {
+      "name": "Healing Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4103489,
+      "lon": -77.6486053
+    },
+    {
+      "name": "His or Hers Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4043413,
+      "lon": -77.6735026
+    },
+    {
+      "name": "Huguenot Barber Shop",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5050351,
+      "lon": -77.6515835
+    },
+    {
+      "name": "Infinity Barber & Beauty Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.381997,
+      "lon": -77.4538519
+    },
+    {
+      "name": "Irongate Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4275988,
+      "lon": -77.4911482
+    },
+    {
+      "name": "Jade Nails",
+      "category": "Beauty & personal care",
+      "street": "Woodlake Commons Loop",
+      "city": "",
+      "lat": 37.4046895,
+      "lon": -77.6861436
+    },
+    {
+      "name": "JD Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4938972,
+      "lon": -77.554096
+    },
+    {
+      "name": "Jenny's Hair Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4388522,
+      "lon": -77.4699928
+    },
+    {
+      "name": "Joy Claughton at Hair Goals Studio",
+      "category": "Beauty & personal care",
+      "street": "Kingston Avenue",
+      "city": "Chester",
+      "lat": 37.3477586,
+      "lon": -77.3434414
+    },
+    {
+      "name": "Julie Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4375183,
+      "lon": -77.5949043
+    },
+    {
+      "name": "K & S Studios",
+      "category": "Beauty & personal care",
+      "street": "Chester Square Road",
+      "city": "",
+      "lat": 37.3534991,
+      "lon": -77.4523538
+    },
+    {
+      "name": "Kidtopia",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5031949,
+      "lon": -77.640658
+    },
+    {
+      "name": "Kut Kings Barber Shop",
+      "category": "Beauty & personal care",
+      "street": "Harrowgate Road",
+      "city": "Chester",
+      "lat": 37.3555279,
+      "lon": -77.4462439
+    },
+    {
+      "name": "Kut N It Up",
+      "category": "Beauty & personal care",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3100836,
+      "lon": -77.4103083
+    },
+    {
+      "name": "L'Amour Nails & Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5256649,
+      "lon": -77.6092643
+    },
+    {
+      "name": "Lavish Nails & Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.401074,
+      "lon": -77.709997
+    },
+    {
+      "name": "Lee Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4982849,
+      "lon": -77.5272522
+    },
+    {
+      "name": "Lee Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3686956,
+      "lon": -77.5018384
+    },
+    {
+      "name": "Lee's Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5068571,
+      "lon": -77.6092503
+    },
+    {
+      "name": "Legends Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.410046,
+      "lon": -77.6492289
+    },
+    {
+      "name": "Leposh Hair Studio",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5209783,
+      "lon": -77.6099044
+    },
+    {
+      "name": "Les & Company Hair Designs",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3547193,
+      "lon": -77.4497215
+    },
+    {
+      "name": "LT Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5132314,
+      "lon": -77.6935691
+    },
+    {
+      "name": "Luckyly Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4396429,
+      "lon": -77.5919591
+    },
+    {
+      "name": "Mass Flow Salon",
+      "category": "Beauty & personal care",
+      "street": "Meadowdale Boulevard",
+      "city": "",
+      "lat": 37.4389656,
+      "lon": -77.472296
+    },
+    {
+      "name": "Maya Nails & Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5201208,
+      "lon": -77.6130894
+    },
+    {
+      "name": "Maya Nails and Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4151925,
+      "lon": -77.6393412
+    },
+    {
+      "name": "Medissage Integrative Therapies",
+      "category": "Beauty & personal care",
+      "street": "Twinridge Lane",
+      "city": "Richmond",
+      "lat": 37.4995818,
+      "lon": -77.5479043
+    },
+    {
+      "name": "Midguards Rest",
+      "category": "Beauty & personal care",
+      "street": "Osborne Road",
+      "city": "Chester",
+      "lat": 37.3674874,
+      "lon": -77.4191567
+    },
+    {
+      "name": "Mimi Nails Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4100811,
+      "lon": -77.6491366
+    },
+    {
+      "name": "Mintcha Hair Braiding",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5098227,
+      "lon": -77.6091477
+    },
+    {
+      "name": "Mirage Day Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3841586,
+      "lon": -77.4507281
+    },
+    {
+      "name": "Mirage Hair Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.384117,
+      "lon": -77.4507481
+    },
+    {
+      "name": "Misfits",
+      "category": "Beauty & personal care",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3074717,
+      "lon": -77.4096743
+    },
+    {
+      "name": "Miya Nails & Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5131408,
+      "lon": -77.6934037
+    },
+    {
+      "name": "Modern Nail Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4032794,
+      "lon": -77.6895432
+    },
+    {
+      "name": "My Day Nails & Spa",
+      "category": "Beauty & personal care",
+      "street": "East Hundred Road",
+      "city": "",
+      "lat": 37.3473589,
+      "lon": -77.3545539
+    },
+    {
+      "name": "My Hair Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5037206,
+      "lon": -77.6436878
+    },
+    {
+      "name": "My Salon Suite",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5066716,
+      "lon": -77.6087909
+    },
+    {
+      "name": "Nail Club",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5060378,
+      "lon": -77.5880153
+    },
+    {
+      "name": "Nail Elite & Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5046613,
+      "lon": -77.5751656
+    },
+    {
+      "name": "Nail Envy",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4579038,
+      "lon": -77.6550706
+    },
+    {
+      "name": "Nail Mystique",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3722825,
+      "lon": -77.5005136
+    },
+    {
+      "name": "Nail Us",
+      "category": "Beauty & personal care",
+      "street": "Iron Bridge Plaza",
+      "city": "",
+      "lat": 37.3509395,
+      "lon": -77.484354
+    },
+    {
+      "name": "Nail Wrap",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4977644,
+      "lon": -77.5340461
+    },
+    {
+      "name": "Nails & Day Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5081536,
+      "lon": -77.6039523
+    },
+    {
+      "name": "Nails by Stormy",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4510959,
+      "lon": -77.6480355
+    },
+    {
+      "name": "Native Sun",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4585699,
+      "lon": -77.6550399
+    },
+    {
+      "name": "Natural Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5024244,
+      "lon": -77.6508269
+    },
+    {
+      "name": "New Beginnings",
+      "category": "Beauty & personal care",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4370109,
+      "lon": -77.6023476
+    },
+    {
+      "name": "New Beginnings",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4369955,
+      "lon": -77.6023878
+    },
+    {
+      "name": "New Flow",
+      "category": "Beauty & personal care",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4727025,
+      "lon": -77.526548
+    },
+    {
+      "name": "New Vision Salon and Spa",
+      "category": "Beauty & personal care",
+      "street": "Gill Street",
+      "city": "",
+      "lat": 37.3594344,
+      "lon": -77.434709
+    },
+    {
+      "name": "Nu Tribe Barbershop",
+      "category": "Beauty & personal care",
+      "street": "Midlothian Turnpike",
+      "city": "Richmond",
+      "lat": 37.4992468,
+      "lon": -77.5416383
+    },
+    {
+      "name": "Oasis Salon Suites",
+      "category": "Beauty & personal care",
+      "street": "Courthouse Road",
+      "city": "",
+      "lat": 37.4737073,
+      "lon": -77.5985404
+    },
+    {
+      "name": "Ocean Spa and Massage",
+      "category": "Beauty & personal care",
+      "street": "Hull Street Road",
+      "city": "North Chesterfield",
+      "lat": 37.4426666,
+      "lon": -77.5785171
+    },
+    {
+      "name": "Pearl Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4367053,
+      "lon": -77.5977014
+    },
+    {
+      "name": "Perfect Nails",
+      "category": "Beauty & personal care",
+      "street": "Meadowdale Boulevard",
+      "city": "",
+      "lat": 37.4390841,
+      "lon": -77.4722775
+    },
+    {
+      "name": "Perfume Place",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5079823,
+      "lon": -77.6085281
+    },
+    {
+      "name": "Phenix Salon Suites",
+      "category": "Beauty & personal care",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4097793,
+      "lon": -77.6568864
+    },
+    {
+      "name": "Pigtails & Crewcuts",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5046464,
+      "lon": -77.6650514
+    },
+    {
+      "name": "Premier",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.433729,
+      "lon": -77.61239
+    },
+    {
+      "name": "Professional Barbers",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4516772,
+      "lon": -77.6482624
+    },
+    {
+      "name": "Q nails",
+      "category": "Beauty & personal care",
+      "street": "Chester Village Drive",
+      "city": "",
+      "lat": 37.3574341,
+      "lon": -77.4459139
+    },
+    {
+      "name": "Quality Cuts & Styles",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4981145,
+      "lon": -77.5324292
+    },
+    {
+      "name": "Queen Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5097333,
+      "lon": -77.608858
+    },
+    {
+      "name": "Relax the Feet",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5209405,
+      "lon": -77.6097843
+    },
+    {
+      "name": "Rhett's Salon",
+      "category": "Beauty & personal care",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5036392,
+      "lon": -77.5738526
+    },
+    {
+      "name": "Rio Skin Care",
+      "category": "Beauty & personal care",
+      "street": "Woodlake Commons Loop",
+      "city": "",
+      "lat": 37.4058054,
+      "lon": -77.6856867
+    },
+    {
+      "name": "Ripple Effect Massage",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3597147,
+      "lon": -77.4377758
+    },
+    {
+      "name": "River City Tattoo",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5067439,
+      "lon": -77.6092174
+    },
+    {
+      "name": "Robious Hair",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5080542,
+      "lon": -77.5808624
+    },
+    {
+      "name": "Robious Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5059184,
+      "lon": -77.5782626
+    },
+    {
+      "name": "Royal Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5079791,
+      "lon": -77.5807064
+    },
+    {
+      "name": "Sage & Vine",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5203426,
+      "lon": -77.6134479
+    },
+    {
+      "name": "Sally Beauty",
+      "category": "Beauty & personal care",
+      "street": "Iron Bridge Plaza",
+      "city": "",
+      "lat": 37.3509182,
+      "lon": -77.4842166
+    },
+    {
+      "name": "Salon Centric",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5079436,
+      "lon": -77.5806291
+    },
+    {
+      "name": "Salon Universal",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4976805,
+      "lon": -77.5344577
+    },
+    {
+      "name": "Salon Yorya",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3524347,
+      "lon": -77.4149549
+    },
+    {
+      "name": "Scents of Serenity Organic Spa",
+      "category": "Beauty & personal care",
+      "street": "Winterview Parkway",
+      "city": "Midlothian",
+      "lat": 37.5072815,
+      "lon": -77.665911
+    },
+    {
+      "name": "Sea Breeze Tanning Beachhouse",
+      "category": "Beauty & personal care",
+      "street": "Amherst Ridge Lane",
+      "city": "",
+      "lat": 37.2924278,
+      "lon": -77.4113244
+    },
+    {
+      "name": "Serendipity Salon",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5032281,
+      "lon": -77.6564605
+    },
+    {
+      "name": "Serene Salon",
+      "category": "Beauty & personal care",
+      "street": "Chester Village Lane",
+      "city": "",
+      "lat": 37.3590194,
+      "lon": -77.4476629
+    },
+    {
+      "name": "Shear Genius",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3816518,
+      "lon": -77.4538559
+    },
+    {
+      "name": "Sheer Tan",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3815026,
+      "lon": -77.4538586
+    },
+    {
+      "name": "Shiny Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.382257,
+      "lon": -77.4538155
+    },
+    {
+      "name": "Sola Salon Studios",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.506452,
+      "lon": -77.6279324
+    },
+    {
+      "name": "Sona Medspa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4108619,
+      "lon": -77.6484179
+    },
+    {
+      "name": "Southern Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4409812,
+      "lon": -77.5834361
+    },
+    {
+      "name": "Sovanna Nail Studio",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3596466,
+      "lon": -77.4990587
+    },
+    {
+      "name": "Special Nails and Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3496094,
+      "lon": -77.3543337
+    },
+    {
+      "name": "Studio B Hair Gallery",
+      "category": "Beauty & personal care",
+      "street": "Branders Creek Drive",
+      "city": "",
+      "lat": 37.3519203,
+      "lon": -77.4872707
+    },
+    {
+      "name": "Stylish Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5046438,
+      "lon": -77.6651535
+    },
+    {
+      "name": "Sunnails & Spa",
+      "category": "Beauty & personal care",
+      "street": "Iron Bridge Plaza",
+      "city": "",
+      "lat": 37.3517815,
+      "lon": -77.4849113
+    },
+    {
+      "name": "Tammy Nails",
+      "category": "Beauty & personal care",
+      "street": "Raised Antler Circle",
+      "city": "",
+      "lat": 37.4022885,
+      "lon": -77.6636909
+    },
+    {
+      "name": "Tammy Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5049605,
+      "lon": -77.6073527
+    },
+    {
+      "name": "Tan 'N Time",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.3540462,
+      "lon": -77.4147939
+    },
+    {
+      "name": "Tech Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.352721,
+      "lon": -77.4152327
+    },
+    {
+      "name": "The Barber's Chair",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4389278,
+      "lon": -77.6001422
+    },
+    {
+      "name": "The Hair Place",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4979901,
+      "lon": -77.5350014
+    },
+    {
+      "name": "The Lily Pad",
+      "category": "Beauty & personal care",
+      "street": "Old Hundred Road",
+      "city": "",
+      "lat": 37.3544409,
+      "lon": -77.4484698
+    },
+    {
+      "name": "The Pink Lash Room",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4501798,
+      "lon": -77.6488311
+    },
+    {
+      "name": "Top Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.5044811,
+      "lon": -77.6429961
+    },
+    {
+      "name": "Turquoise Partners",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4956168,
+      "lon": -77.5648574
+    },
+    {
+      "name": "Ubora Barber Shop",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4597199,
+      "lon": -77.5445398
+    },
+    {
+      "name": "VA Nails",
+      "category": "Beauty & personal care",
+      "street": "Midlothian Turnpike",
+      "city": "North Chesterfield",
+      "lat": 37.508746,
+      "lon": -77.5884127
+    },
+    {
+      "name": "VA Nails",
+      "category": "Beauty & personal care",
+      "street": "Commonwealth Centre Parkway",
+      "city": "",
+      "lat": 37.4175386,
+      "lon": -77.6315472
+    },
+    {
+      "name": "VA Nails",
+      "category": "Beauty & personal care",
+      "street": "Hull Street Road",
+      "city": "North Chesterfield",
+      "lat": 37.4594587,
+      "lon": -77.5438002
+    },
+    {
+      "name": "Vibes & Co.",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4587628,
+      "lon": -77.655029
+    },
+    {
+      "name": "Victoria Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4427011,
+      "lon": -77.5785969
+    },
+    {
+      "name": "Vu Nails",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.4389193,
+      "lon": -77.6001114
+    },
+    {
+      "name": "Warm Ocean Spa",
+      "category": "Beauty & personal care",
+      "street": "",
+      "city": "",
+      "lat": 37.506955,
+      "lon": -77.6092748
+    },
+    {
+      "name": "Yaneli Hair & Beauty Supply",
+      "category": "Beauty & personal care",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3551916,
+      "lon": -77.4494727
+    },
+    {
+      "name": "Yvette's Beauty Salon",
+      "category": "Beauty & personal care",
+      "street": "Harrowgate Road",
+      "city": "",
+      "lat": 37.3549522,
+      "lon": -77.4469936
+    },
+    {
+      "name": "YY Massage",
+      "category": "Beauty & personal care",
+      "street": "Robious Road",
+      "city": "Richmond",
+      "lat": 37.5080691,
+      "lon": -77.5809082
+    },
+    {
+      "name": "123 DZO Sports Bar",
+      "category": "Food & drink",
+      "street": "Robious Road",
+      "city": "",
+      "lat": 37.5205731,
+      "lon": -77.6103206
+    },
+    {
+      "name": "7Brew",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.5057427,
+      "lon": -77.6620498
+    },
+    {
+      "name": "Brecotea",
+      "category": "Food & drink",
+      "street": "Busy Street",
+      "city": "",
+      "lat": 37.5031152,
+      "lon": -77.6096312
+    },
+    {
+      "name": "Brecotea",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.4104258,
+      "lon": -77.6551762
+    },
+    {
+      "name": "Brew Gastropub",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.3722218,
+      "lon": -77.5007325
+    },
+    {
+      "name": "Cafe & Sabor Bakery and Restaurant",
+      "category": "Food & drink",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4725481,
+      "lon": -77.5268055
+    },
+    {
+      "name": "Capital Ale House",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.503323,
+      "lon": -77.6568011
+    },
+    {
+      "name": "Central Park Deli",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.3538223,
+      "lon": -77.4148663
+    },
+    {
+      "name": "Chester Junction",
+      "category": "Food & drink",
+      "street": "Centre Street",
+      "city": "",
+      "lat": 37.3572074,
+      "lon": -77.4466585
+    },
+    {
+      "name": "K-Bakery",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.4982156,
+      "lon": -77.5324575
+    },
+    {
+      "name": "Kickback Jack's",
+      "category": "Food & drink",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5074797,
+      "lon": -77.5879073
+    },
+    {
+      "name": "Mazaya Hookah Lounge",
+      "category": "Food & drink",
+      "street": "Hull Street Road",
+      "city": "Midlothian",
+      "lat": 37.4390109,
+      "lon": -77.6018402
+    },
+    {
+      "name": "O'Tooles Restaurant & Irish Pub",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.5045628,
+      "lon": -77.6610705
+    },
+    {
+      "name": "Padow's",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.4585036,
+      "lon": -77.6550334
+    },
+    {
+      "name": "Padow's Hams & Deli",
+      "category": "Food & drink",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5033921,
+      "lon": -77.5741474
+    },
+    {
+      "name": "Prairie Grain Bread Co.",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.5043075,
+      "lon": -77.6422628
+    },
+    {
+      "name": "Silvia's Cakes",
+      "category": "Food & drink",
+      "street": "Chester Road",
+      "city": "",
+      "lat": 37.3824383,
+      "lon": -77.4538319
+    },
+    {
+      "name": "South Beach Bar and Grill",
+      "category": "Food & drink",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4051355,
+      "lon": -77.6607246
+    },
+    {
+      "name": "Sportspage Bar & Grille",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.5047686,
+      "lon": -77.6660099
+    },
+    {
+      "name": "Sweet Bites",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.5046728,
+      "lon": -77.6523903
+    },
+    {
+      "name": "Sweet Creations Bakery",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.4057252,
+      "lon": -77.6655145
+    },
+    {
+      "name": "The Shamrock Pub",
+      "category": "Food & drink",
+      "street": "Robious Road",
+      "city": "",
+      "lat": 37.5073938,
+      "lon": -77.5793656
+    },
+    {
+      "name": "The Taphouse @ River's Bend",
+      "category": "Food & drink",
+      "street": "Rivers Bend Boulevard",
+      "city": "Chester",
+      "lat": 37.3506857,
+      "lon": -77.354872
+    },
+    {
+      "name": "Three Leg Run",
+      "category": "Food & drink",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3550995,
+      "lon": -77.4495413
+    },
+    {
+      "name": "Wood & Iron Gameday",
+      "category": "Food & drink",
+      "street": "",
+      "city": "",
+      "lat": 37.5255582,
+      "lon": -77.6095164
+    },
+    {
+      "name": "4 Ever Young Anti-Aging",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5153308,
+      "lon": -77.692649
+    },
+    {
+      "name": "A Child's Place Learning & Day Care",
+      "category": "Health & wellness",
+      "street": "Walton Bluff Parkway",
+      "city": "",
+      "lat": 37.4707235,
+      "lon": -77.6326919
+    },
+    {
+      "name": "A T2LA Babies",
+      "category": "Health & wellness",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3075257,
+      "lon": -77.4096665
+    },
+    {
+      "name": "A Time 2 Learn Academy",
+      "category": "Health & wellness",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3069612,
+      "lon": -77.4096857
+    },
+    {
+      "name": "Absolute Dermatology & Skin Cancer Center",
+      "category": "Health & wellness",
+      "street": "Ashlake Parkway",
+      "city": "",
+      "lat": 37.4019936,
+      "lon": -77.6807715
+    },
+    {
+      "name": "Advanced Family Practice",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5102525,
+      "lon": -77.6165033
+    },
+    {
+      "name": "American Family Care",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5016054,
+      "lon": -77.628384
+    },
+    {
+      "name": "Anderson Dental",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.450492,
+      "lon": -77.6492609
+    },
+    {
+      "name": "Ascend Health Adult Retreat",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3702193,
+      "lon": -77.4989305
+    },
+    {
+      "name": "Bates Orthodontics",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3526631,
+      "lon": -77.4851363
+    },
+    {
+      "name": "Bermuda Hundred Veterinary Hospital",
+      "category": "Health & wellness",
+      "street": "East Hundred Road",
+      "city": "",
+      "lat": 37.3487443,
+      "lon": -77.3544146
+    },
+    {
+      "name": "Better Med Urgent Care",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.359459,
+      "lon": -77.4970488
+    },
+    {
+      "name": "Bon Secours Sleep Disorders Centers",
+      "category": "Health & wellness",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4111573,
+      "lon": -77.6510692
+    },
+    {
+      "name": "Bon Secours St. Francis Watkins Centre",
+      "category": "Health & wellness",
+      "street": "Watkins Centre Parkway",
+      "city": "Midlothian",
+      "lat": 37.5099656,
+      "lon": -77.6959976
+    },
+    {
+      "name": "Brandermill Pediatric & Adolescent Medicine, P.C.",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4218924,
+      "lon": -77.6373937
+    },
+    {
+      "name": "Brandermill Veterinary Clinic",
+      "category": "Health & wellness",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4276467,
+      "lon": -77.6240066
+    },
+    {
+      "name": "Brightsmile",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4031634,
+      "lon": -77.6740269
+    },
+    {
+      "name": "Brush Up Dental",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4006905,
+      "lon": -77.7095164
+    },
+    {
+      "name": "Buford Road Pharmacy",
+      "category": "Health & wellness",
+      "street": "Buford Road",
+      "city": "Bon Air",
+      "lat": 37.5337109,
+      "lon": -77.5618635
+    },
+    {
+      "name": "Callery & Maurer",
+      "category": "Health & wellness",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3542106,
+      "lon": -77.4501869
+    },
+    {
+      "name": "Cedarwood Dentistry",
+      "category": "Health & wellness",
+      "street": "Allecingie Parkway",
+      "city": "North Chesterfield",
+      "lat": 37.5187215,
+      "lon": -77.6139861
+    },
+    {
+      "name": "Centralia Animal Hospital",
+      "category": "Health & wellness",
+      "street": "Celebration Avenue",
+      "city": "",
+      "lat": 37.3575244,
+      "lon": -77.4447626
+    },
+    {
+      "name": "CentralMed",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4578514,
+      "lon": -77.6550728
+    },
+    {
+      "name": "Chester Child Development Center",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3298605,
+      "lon": -77.4399052
+    },
+    {
+      "name": "Chester Dental Care",
+      "category": "Health & wellness",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3540013,
+      "lon": -77.4114131
+    },
+    {
+      "name": "Chester Optical",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3528389,
+      "lon": -77.4153364
+    },
+    {
+      "name": "Chester Oral Surgery",
+      "category": "Health & wellness",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3537958,
+      "lon": -77.4841319
+    },
+    {
+      "name": "Chester Orthodontics",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3702133,
+      "lon": -77.4990552
+    },
+    {
+      "name": "Chester Road Family Dental",
+      "category": "Health & wellness",
+      "street": "Chester Road",
+      "city": "",
+      "lat": 37.3624759,
+      "lon": -77.4437456
+    },
+    {
+      "name": "Chester Woman's Health",
+      "category": "Health & wellness",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3503167,
+      "lon": -77.4782214
+    },
+    {
+      "name": "Chester Youth Center",
+      "category": "Health & wellness",
+      "street": "Happy Hill Road",
+      "city": "",
+      "lat": 37.3288959,
+      "lon": -77.4390066
+    },
+    {
+      "name": "Chesterfield County Health County",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3843927,
+      "lon": -77.5083641
+    },
+    {
+      "name": "Chesterfield Imaging",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4103873,
+      "lon": -77.6555252
+    },
+    {
+      "name": "Chesterfield Meadows Veterinary",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3722987,
+      "lon": -77.5004551
+    },
+    {
+      "name": "Chesterfield Physical Therapy",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.509946,
+      "lon": -77.6167235
+    },
+    {
+      "name": "Childcare Network",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.459688,
+      "lon": -77.5456014
+    },
+    {
+      "name": "Children's Dentistry",
+      "category": "Health & wellness",
+      "street": "Festival Park Plaza",
+      "city": "",
+      "lat": 37.3585802,
+      "lon": -77.445467
+    },
+    {
+      "name": "Children's Dentistry of Virginia",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4583938,
+      "lon": -77.6564096
+    },
+    {
+      "name": "Children's Dentistry of Virginia",
+      "category": "Health & wellness",
+      "street": "Polo Place",
+      "city": "",
+      "lat": 37.5245997,
+      "lon": -77.6067165
+    },
+    {
+      "name": "Children's Hospital of Richmond - Bon Air (South) Therapy Center",
+      "category": "Health & wellness",
+      "street": "Twinridge Lane",
+      "city": "Richmond",
+      "lat": 37.4986896,
+      "lon": -77.5491311
+    },
+    {
+      "name": "Childrens Dentistry",
+      "category": "Health & wellness",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3502037,
+      "lon": -77.4782518
+    },
+    {
+      "name": "Clear Sigh Ultrasound",
+      "category": "Health & wellness",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5038594,
+      "lon": -77.5736066
+    },
+    {
+      "name": "Commonwealth Dentistry",
+      "category": "Health & wellness",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3568117,
+      "lon": -77.419924
+    },
+    {
+      "name": "Commonwealth Endodonics",
+      "category": "Health & wellness",
+      "street": "East Millridge Parkway",
+      "city": "",
+      "lat": 37.4219159,
+      "lon": -77.6380166
+    },
+    {
+      "name": "Commonwealth Orthodontics",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4054619,
+      "lon": -77.673629
+    },
+    {
+      "name": "Commonwealth Pediatrics",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5134742,
+      "lon": -77.6923592
+    },
+    {
+      "name": "Complete Care for Children",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4184095,
+      "lon": -77.6402787
+    },
+    {
+      "name": "Complete Dental Care of Richmond",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5055552,
+      "lon": -77.6114125
+    },
+    {
+      "name": "Connect Hearing",
+      "category": "Health & wellness",
+      "street": "Festival Park Plaza",
+      "city": "Chester",
+      "lat": 37.3586741,
+      "lon": -77.4452282
+    },
+    {
+      "name": "David & Nyczepir Orthodontics",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4012096,
+      "lon": -77.7101488
+    },
+    {
+      "name": "Davis Dental",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5048408,
+      "lon": -77.66617
+    },
+    {
+      "name": "Dentist Care At Cosby Village",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3998487,
+      "lon": -77.7065847
+    },
+    {
+      "name": "Derma Elite",
+      "category": "Health & wellness",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5037304,
+      "lon": -77.5737527
+    },
+    {
+      "name": "Dominion Endodontics",
+      "category": "Health & wellness",
+      "street": "Harbour Park Drive",
+      "city": "",
+      "lat": 37.4138235,
+      "lon": -77.6463194
+    },
+    {
+      "name": "Dr. Baxton Perkinston & Associates Family & Cosmetic Dentistry",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3526127,
+      "lon": -77.415125
+    },
+    {
+      "name": "Dr. John S. Peery",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5043735,
+      "lon": -77.6416959
+    },
+    {
+      "name": "Dr. Tilghman",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5081016,
+      "lon": -77.5891909
+    },
+    {
+      "name": "Dr.Jeff McLeod",
+      "category": "Health & wellness",
+      "street": "West Village Green Drive",
+      "city": "Midlothian",
+      "lat": 37.4197705,
+      "lon": -77.639832
+    },
+    {
+      "name": "Duex Amis",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3571481,
+      "lon": -77.4451496
+    },
+    {
+      "name": "Eight Creeks Dentistry",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4043441,
+      "lon": -77.6772386
+    },
+    {
+      "name": "Ernest Foot & Ankle Specialist",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5107036,
+      "lon": -77.6161596
+    },
+    {
+      "name": "Faith W. Trent",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4506338,
+      "lon": -77.6523612
+    },
+    {
+      "name": "Family Dentistry",
+      "category": "Health & wellness",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.349999,
+      "lon": -77.4759684
+    },
+    {
+      "name": "Feinstein 360 Orthdontics",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4030245,
+      "lon": -77.6761855
+    },
+    {
+      "name": "Firefly Pediatrics",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4497017,
+      "lon": -77.651472
+    },
+    {
+      "name": "Friend Family Dentistry",
+      "category": "Health & wellness",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3073876,
+      "lon": -77.4096813
+    },
+    {
+      "name": "Harness Health Pharmacy - St. Francis",
+      "category": "Health & wellness",
+      "street": "Saint Francis Boulevard",
+      "city": "Midlothian",
+      "lat": 37.4666255,
+      "lon": -77.6591902
+    },
+    {
+      "name": "Herbalife",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5080286,
+      "lon": -77.5808152
+    },
+    {
+      "name": "Hood E. Biggers DDS",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4511956,
+      "lon": -77.6483246
+    },
+    {
+      "name": "Horsey Orthodontics",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5165769,
+      "lon": -77.6944686
+    },
+    {
+      "name": "Huguenot Animal Hospital",
+      "category": "Health & wellness",
+      "street": "Robious Road",
+      "city": "North Chesterfield",
+      "lat": 37.5208951,
+      "lon": -77.6096403
+    },
+    {
+      "name": "Ideal Family Dentistry",
+      "category": "Health & wellness",
+      "street": "Courthouse Road",
+      "city": "Richmond",
+      "lat": 37.4454473,
+      "lon": -77.581831
+    },
+    {
+      "name": "Iron Bridge Animal Hospital",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4071073,
+      "lon": -77.506172
+    },
+    {
+      "name": "Ivey Memorial Child Development Center",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.287401,
+      "lon": -77.4126886
+    },
+    {
+      "name": "James River Internists",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4583822,
+      "lon": -77.6508848
+    },
+    {
+      "name": "Joint The Chiropractic Place",
+      "category": "Health & wellness",
+      "street": "Charter Colony Parkway",
+      "city": "Chesterfield County",
+      "lat": 37.5042307,
+      "lon": -77.6606464
+    },
+    {
+      "name": "Just 4 Kids",
+      "category": "Health & wellness",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3555063,
+      "lon": -77.4468241
+    },
+    {
+      "name": "Just 4 Kids Dentistry",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5031072,
+      "lon": -77.5745098
+    },
+    {
+      "name": "Kelleher Optometry",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4582631,
+      "lon": -77.6564662
+    },
+    {
+      "name": "Kiddie Academy",
+      "category": "Health & wellness",
+      "street": "Woodlake Commons Loop",
+      "city": "",
+      "lat": 37.4059817,
+      "lon": -77.6836122
+    },
+    {
+      "name": "KidMed",
+      "category": "Health & wellness",
+      "street": "Craig Rath Boulevard",
+      "city": "Midlothian",
+      "lat": 37.413317,
+      "lon": -77.6397399
+    },
+    {
+      "name": "Kultivate Wellness",
+      "category": "Health & wellness",
+      "street": "Midlothian Turnpike",
+      "city": "Midlothian",
+      "lat": 37.5043892,
+      "lon": -77.6419332
+    },
+    {
+      "name": "Lifesmile",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4581153,
+      "lon": -77.6550642
+    },
+    {
+      "name": "Lucks Lane Vet",
+      "category": "Health & wellness",
+      "street": "Courthouse Road",
+      "city": "",
+      "lat": 37.4735912,
+      "lon": -77.5989276
+    },
+    {
+      "name": "Luxury Leaf Wellness",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.370187,
+      "lon": -77.499157
+    },
+    {
+      "name": "Magnolia Green Foot & Ankle Center",
+      "category": "Health & wellness",
+      "street": "Harbour Park Drive",
+      "city": "",
+      "lat": 37.4137348,
+      "lon": -77.6457239
+    },
+    {
+      "name": "MedExpress Urgent Care",
+      "category": "Health & wellness",
+      "street": "Midlothian Turnpike",
+      "city": "Midlothian",
+      "lat": 37.5046121,
+      "lon": -77.6125184
+    },
+    {
+      "name": "Midlothian Apothecary",
+      "category": "Health & wellness",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5032767,
+      "lon": -77.6490953
+    },
+    {
+      "name": "Midlothian Behiavioral Health",
+      "category": "Health & wellness",
+      "street": "Sommerville Court",
+      "city": "Midlothian",
+      "lat": 37.509214,
+      "lon": -77.6751554
+    },
+    {
+      "name": "Midlothian Dental Arts",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5039937,
+      "lon": -77.6621857
+    },
+    {
+      "name": "Midlothian Family Dentistry",
+      "category": "Health & wellness",
+      "street": "Sommerville Court",
+      "city": "Midlothian",
+      "lat": 37.5092873,
+      "lon": -77.6754465
+    },
+    {
+      "name": "Midlothian Family Practice",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5150002,
+      "lon": -77.6919373
+    },
+    {
+      "name": "Midlothian Family Practice",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4510035,
+      "lon": -77.6465709
+    },
+    {
+      "name": "Midlothian Family Practice",
+      "category": "Health & wellness",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5029797,
+      "lon": -77.6460876
+    },
+    {
+      "name": "Miller Dental",
+      "category": "Health & wellness",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5036851,
+      "lon": -77.5738002
+    },
+    {
+      "name": "Minnieland Academy",
+      "category": "Health & wellness",
+      "street": "Schofield Drive",
+      "city": "",
+      "lat": 37.5169341,
+      "lon": -77.6953421
+    },
+    {
+      "name": "Monument Eye Care",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4104162,
+      "lon": -77.6552572
+    },
+    {
+      "name": "Morris Cardiovascular and Risk Reduction Center",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3479301,
+      "lon": -77.3580235
+    },
+    {
+      "name": "Murry & Kuhn Cosmetic Dentistry",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5057013,
+      "lon": -77.6659471
+    },
+    {
+      "name": "Ortho on Call",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5140247,
+      "lon": -77.6934034
+    },
+    {
+      "name": "Ortho on Call",
+      "category": "Health & wellness",
+      "street": "Branders Creek Drive",
+      "city": "",
+      "lat": 37.3516329,
+      "lon": -77.4872193
+    },
+    {
+      "name": "OrthoVirginia Westchester",
+      "category": "Health & wellness",
+      "street": "East West Road",
+      "city": "Midlothian",
+      "lat": 37.5089015,
+      "lon": -77.6922374
+    },
+    {
+      "name": "Otterdale Pet Wellness Center",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4010019,
+      "lon": -77.7099185
+    },
+    {
+      "name": "Patient First",
+      "category": "Health & wellness",
+      "street": "Hull Street Road",
+      "city": "Midlothian",
+      "lat": 37.4383499,
+      "lon": -77.5987636
+    },
+    {
+      "name": "Patient First",
+      "category": "Health & wellness",
+      "street": "South Chalkley Road",
+      "city": "Chester",
+      "lat": 37.3516428,
+      "lon": -77.4801051
+    },
+    {
+      "name": "Pearly Whites",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.413788,
+      "lon": -77.6461192
+    },
+    {
+      "name": "Pediatric & Adult Enterprise",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5100384,
+      "lon": -77.6166528
+    },
+    {
+      "name": "Pediatric Associates, P.C.",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4583275,
+      "lon": -77.6515629
+    },
+    {
+      "name": "Pediatric Dentistry",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5060059,
+      "lon": -77.5873528
+    },
+    {
+      "name": "Pediatric Dentistry and Orthodontics of Virginia",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4116655,
+      "lon": -77.6461935
+    },
+    {
+      "name": "Penterson & Booth Family and Cosmetic Dentistry",
+      "category": "Health & wellness",
+      "street": "Harbour Park Drive",
+      "city": "Midlothian",
+      "lat": 37.4134308,
+      "lon": -77.6478519
+    },
+    {
+      "name": "Primary Health Group Ironbridge",
+      "category": "Health & wellness",
+      "street": "Branders Creek Drive",
+      "city": "",
+      "lat": 37.351098,
+      "lon": -77.4867633
+    },
+    {
+      "name": "Primrose School at Ironbridge Corner",
+      "category": "Health & wellness",
+      "street": "Iron Creek Road",
+      "city": "",
+      "lat": 37.3602008,
+      "lon": -77.4961185
+    },
+    {
+      "name": "Pulmonary Associates of Richmond",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4513514,
+      "lon": -77.6497646
+    },
+    {
+      "name": "Richmond Spine Pain",
+      "category": "Health & wellness",
+      "street": "Sommerville Court",
+      "city": "",
+      "lat": 37.5094812,
+      "lon": -77.6745529
+    },
+    {
+      "name": "Richmond Virginia Orthodontics",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5067059,
+      "lon": -77.6659149
+    },
+    {
+      "name": "River Run Dental",
+      "category": "Health & wellness",
+      "street": "Winterview Parkway",
+      "city": "Chesterfield County",
+      "lat": 37.5067869,
+      "lon": -77.6649378
+    },
+    {
+      "name": "River's Bend Eyecare",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3482757,
+      "lon": -77.3579231
+    },
+    {
+      "name": "RVA Pediatrics",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.509134,
+      "lon": -77.6744685
+    },
+    {
+      "name": "Rx3 Compounding Pharmacy",
+      "category": "Health & wellness",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3507205,
+      "lon": -77.4779123
+    },
+    {
+      "name": "South River Pharmacy",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5238994,
+      "lon": -77.6085612
+    },
+    {
+      "name": "Swift Creek Animal Hospital",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4599334,
+      "lon": -77.6558687
+    },
+    {
+      "name": "Swift Creek Dental",
+      "category": "Health & wellness",
+      "street": "Harbour Park Drive",
+      "city": "",
+      "lat": 37.4139987,
+      "lon": -77.6465351
+    },
+    {
+      "name": "The Hope Center",
+      "category": "Health & wellness",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.350675,
+      "lon": -77.4777908
+    },
+    {
+      "name": "The Learning Experience",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5124541,
+      "lon": -77.6087515
+    },
+    {
+      "name": "The Learning Experience",
+      "category": "Health & wellness",
+      "street": "Chartermark Drive",
+      "city": "Midlothian",
+      "lat": 37.4725871,
+      "lon": -77.6642118
+    },
+    {
+      "name": "Tuttle Family Dentistry",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.5101333,
+      "lon": -77.6165961
+    },
+    {
+      "name": "United Smiles",
+      "category": "Health & wellness",
+      "street": "Meadowdale Boulevard",
+      "city": "",
+      "lat": 37.4389041,
+      "lon": -77.4705967
+    },
+    {
+      "name": "United Smiles Family Dentistry & Orthodontics",
+      "category": "Health & wellness",
+      "street": "Route 1",
+      "city": "Chester",
+      "lat": 37.3523705,
+      "lon": -77.4152402
+    },
+    {
+      "name": "UrgentVet",
+      "category": "Health & wellness",
+      "street": "Winterview Parkway",
+      "city": "Midlothian",
+      "lat": 37.5072873,
+      "lon": -77.6656894
+    },
+    {
+      "name": "Vascular Surgery Associates",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4585618,
+      "lon": -77.6510735
+    },
+    {
+      "name": "VCU / MCV Physicians",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.3721419,
+      "lon": -77.4992147
+    },
+    {
+      "name": "Veternary Emergency & Specialty Center",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4587638,
+      "lon": -77.6565289
+    },
+    {
+      "name": "Virginia Family Dentistry",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.517229,
+      "lon": -77.6153559
+    },
+    {
+      "name": "Virginia Family Dentistry",
+      "category": "Health & wellness",
+      "street": "Harbour View Court",
+      "city": "",
+      "lat": 37.4089451,
+      "lon": -77.6575833
+    },
+    {
+      "name": "Virginia Family Dentistry",
+      "category": "Health & wellness",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3471567,
+      "lon": -77.4110023
+    },
+    {
+      "name": "Virginia Family Physicians",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4596458,
+      "lon": -77.6553228
+    },
+    {
+      "name": "Virginia Oral & Facial Surgery",
+      "category": "Health & wellness",
+      "street": "Harbour Park Drive",
+      "city": "",
+      "lat": 37.4139113,
+      "lon": -77.6464579
+    },
+    {
+      "name": "Virginia Veterinary Center",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4304546,
+      "lon": -77.6167883
+    },
+    {
+      "name": "WB Orthodontics",
+      "category": "Health & wellness",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3507752,
+      "lon": -77.4780531
+    },
+    {
+      "name": "Woodlake Dental Center",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.407412,
+      "lon": -77.6844315
+    },
+    {
+      "name": "Woodlake Family Dentistry",
+      "category": "Health & wellness",
+      "street": "",
+      "city": "",
+      "lat": 37.4066522,
+      "lon": -77.6843223
+    },
+    {
+      "name": "Woodlake Veterinary Clinic",
+      "category": "Health & wellness",
+      "street": "Woodlake Village Parkway",
+      "city": "",
+      "lat": 37.4077225,
+      "lon": -77.6828417
+    },
+    {
+      "name": "Acors Heating & Air Conditioning",
+      "category": "Home & trades",
+      "street": "Pocoshock Way",
+      "city": "North Chesterfield",
+      "lat": 37.466525,
+      "lon": -77.5323762
+    },
+    {
+      "name": "Airmaxx Mechanical",
+      "category": "Home & trades",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.2980055,
+      "lon": -77.4103015
+    },
+    {
+      "name": "All Affordable Appliance Services",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.3482331,
+      "lon": -77.4243872
+    },
+    {
+      "name": "Allison Patel Photography, LLC",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4070608,
+      "lon": -77.4780806
+    },
+    {
+      "name": "Anne Ruth's Wine Bar and Bistro",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4101302,
+      "lon": -77.6490825
+    },
+    {
+      "name": "Apple Door Systems",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4657351,
+      "lon": -77.5358969
+    },
+    {
+      "name": "B&B Mechanical",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.3786385,
+      "lon": -77.453488
+    },
+    {
+      "name": "Bee Charmed",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4098563,
+      "lon": -77.6567014
+    },
+    {
+      "name": "Capital City Glass Shop",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4757156,
+      "lon": -77.5199444
+    },
+    {
+      "name": "Carter's Power Equipment",
+      "category": "Home & trades",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3511747,
+      "lon": -77.4546883
+    },
+    {
+      "name": "Chester Furniture",
+      "category": "Home & trades",
+      "street": "East Hundred Road",
+      "city": "",
+      "lat": 37.3476136,
+      "lon": -77.3538487
+    },
+    {
+      "name": "Clean Care Inc.",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.3109578,
+      "lon": -77.4089426
+    },
+    {
+      "name": "Clover Hill Glass",
+      "category": "Home & trades",
+      "street": "Alverser Drive",
+      "city": "",
+      "lat": 37.50681,
+      "lon": -77.6172698
+    },
+    {
+      "name": "Coalfield Station Antiques",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.5020882,
+      "lon": -77.6522518
+    },
+    {
+      "name": "CPR Cell Phone Repair",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4057177,
+      "lon": -77.6652998
+    },
+    {
+      "name": "Creative Kitchen Specialists",
+      "category": "Home & trades",
+      "street": "Centre Street",
+      "city": "Chester",
+      "lat": 37.3568973,
+      "lon": -77.4470376
+    },
+    {
+      "name": "Cross Creek Nursery & Landscaping Midlothian",
+      "category": "Home & trades",
+      "street": "Courthouse Road",
+      "city": "Richmond",
+      "lat": 37.4830839,
+      "lon": -77.5967198
+    },
+    {
+      "name": "Discount Appliances",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.5059592,
+      "lon": -77.5783371
+    },
+    {
+      "name": "Ductz",
+      "category": "Home & trades",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.297484,
+      "lon": -77.4104015
+    },
+    {
+      "name": "Edible Arrangements",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.3533575,
+      "lon": -77.4150943
+    },
+    {
+      "name": "Ferguson",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4046534,
+      "lon": -77.6736514
+    },
+    {
+      "name": "Fruit Fixed",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.5132571,
+      "lon": -77.6936399
+    },
+    {
+      "name": "Funktastic Meads",
+      "category": "Home & trades",
+      "street": "Alverser Plaza",
+      "city": "Midlothian",
+      "lat": 37.5103684,
+      "lon": -77.6155828
+    },
+    {
+      "name": "Gates Antiques Ltd.",
+      "category": "Home & trades",
+      "street": "Old Buckingham Road",
+      "city": "Midlothian",
+      "lat": 37.5065375,
+      "lon": -77.6349616
+    },
+    {
+      "name": "Glidden",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4991834,
+      "lon": -77.5346829
+    },
+    {
+      "name": "Hardesty Roofing",
+      "category": "Home & trades",
+      "street": "Sommerville Court",
+      "city": "Midlothian",
+      "lat": 37.50957,
+      "lon": -77.6760862
+    },
+    {
+      "name": "Hearth & Patio Shoppe",
+      "category": "Home & trades",
+      "street": "Alverser Drive",
+      "city": "",
+      "lat": 37.5071431,
+      "lon": -77.6171517
+    },
+    {
+      "name": "HHHunt Home Design",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.5137323,
+      "lon": -77.698077
+    },
+    {
+      "name": "Hy-Tech Roofing LLC",
+      "category": "Home & trades",
+      "street": "Greyhound Court",
+      "city": "Midlothian",
+      "lat": 37.4379363,
+      "lon": -77.5910991
+    },
+    {
+      "name": "I-Rite iPhone Repair",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4024069,
+      "lon": -77.674318
+    },
+    {
+      "name": "J&S Flooring",
+      "category": "Home & trades",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4335205,
+      "lon": -77.6128285
+    },
+    {
+      "name": "JDS Bath",
+      "category": "Home & trades",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.297755,
+      "lon": -77.4103439
+    },
+    {
+      "name": "Lazy Daisy Gift Store",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4210448,
+      "lon": -77.630744
+    },
+    {
+      "name": "Lion's Brew",
+      "category": "Home & trades",
+      "street": "Old Hundred Road",
+      "city": "",
+      "lat": 37.355815,
+      "lon": -77.4453227
+    },
+    {
+      "name": "Lumber Liquidators",
+      "category": "Home & trades",
+      "street": "Robious Road",
+      "city": "",
+      "lat": 37.5066548,
+      "lon": -77.57911
+    },
+    {
+      "name": "Luxury Furniture",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4722118,
+      "lon": -77.5256941
+    },
+    {
+      "name": "Luxury Pool & Spa",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.5139685,
+      "lon": -77.6932796
+    },
+    {
+      "name": "Mattress Direct",
+      "category": "Home & trades",
+      "street": "Courthouse Road",
+      "city": "Richmond",
+      "lat": 37.4456818,
+      "lon": -77.581073
+    },
+    {
+      "name": "Mattress Savvy",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4048587,
+      "lon": -77.6673041
+    },
+    {
+      "name": "Mattress Savvy",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4296394,
+      "lon": -77.6224945
+    },
+    {
+      "name": "Mattress Savy",
+      "category": "Home & trades",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5033281,
+      "lon": -77.6125097
+    },
+    {
+      "name": "Megan Garrison Photography",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.3497631,
+      "lon": -77.3542885
+    },
+    {
+      "name": "Murville Cottage Co",
+      "category": "Home & trades",
+      "street": "Old Hundred Road",
+      "city": "",
+      "lat": 37.3557274,
+      "lon": -77.4458243
+    },
+    {
+      "name": "Oh Shoot! Photography",
+      "category": "Home & trades",
+      "street": "Chester Village Lane",
+      "city": "",
+      "lat": 37.3590878,
+      "lon": -77.4475081
+    },
+    {
+      "name": "Old Still",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.3878238,
+      "lon": -77.5520098
+    },
+    {
+      "name": "Orleans Co Tree Services",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.359767,
+      "lon": -77.4377489
+    },
+    {
+      "name": "Petals & Bows",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.3716211,
+      "lon": -77.5003558
+    },
+    {
+      "name": "Pleasants Hardware",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.5020069,
+      "lon": -77.6519839
+    },
+    {
+      "name": "Pleasant’s Hardware",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.3718567,
+      "lon": -77.4991853
+    },
+    {
+      "name": "Rebath",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4436674,
+      "lon": -77.5784521
+    },
+    {
+      "name": "Refresh Cabinets LLC",
+      "category": "Home & trades",
+      "street": "Southlake Boulevard",
+      "city": "North Chesterfield",
+      "lat": 37.5049409,
+      "lon": -77.5986236
+    },
+    {
+      "name": "Richmond's Furniture",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.5089306,
+      "lon": -77.6009238
+    },
+    {
+      "name": "River’s Bend Florist",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.3479933,
+      "lon": -77.3580145
+    },
+    {
+      "name": "Scott's Flooring",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.5040461,
+      "lon": -77.6554509
+    },
+    {
+      "name": "See Through Window Cleaning",
+      "category": "Home & trades",
+      "street": "Midlothian Turnpike",
+      "city": "Midlothian",
+      "lat": 37.5043735,
+      "lon": -77.6641472
+    },
+    {
+      "name": "Stony Counters",
+      "category": "Home & trades",
+      "street": "East Hundred Road",
+      "city": "",
+      "lat": 37.3472504,
+      "lon": -77.3553864
+    },
+    {
+      "name": "Sunny Day Landscaping",
+      "category": "Home & trades",
+      "street": "Warbro Road",
+      "city": "",
+      "lat": 37.4465793,
+      "lon": -77.6263312
+    },
+    {
+      "name": "The Fix",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4317596,
+      "lon": -77.6209806
+    },
+    {
+      "name": "The Great Big Greenhouse",
+      "category": "Home & trades",
+      "street": "Huguenot Road",
+      "city": "",
+      "lat": 37.5194071,
+      "lon": -77.6108354
+    },
+    {
+      "name": "The Original Mattress Factory",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4106129,
+      "lon": -77.6493637
+    },
+    {
+      "name": "Trane, Barnes Heating and Cooling",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.2945976,
+      "lon": -77.4202345
+    },
+    {
+      "name": "Unlimited Landscaping Services",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.2848721,
+      "lon": -77.4123367
+    },
+    {
+      "name": "USA Flowers",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4977015,
+      "lon": -77.5343306
+    },
+    {
+      "name": "Vital Signs of Chester",
+      "category": "Home & trades",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3515694,
+      "lon": -77.4536062
+    },
+    {
+      "name": "Walk-in-Fix",
+      "category": "Home & trades",
+      "street": "Chattanooga Plaza",
+      "city": "Midlothian",
+      "lat": 37.4307862,
+      "lon": -77.6236354
+    },
+    {
+      "name": "Walter D. Witt Roofing",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.3596652,
+      "lon": -77.4378155
+    },
+    {
+      "name": "Wertz",
+      "category": "Home & trades",
+      "street": "",
+      "city": "",
+      "lat": 37.4405197,
+      "lon": -77.5928971
+    },
+    {
+      "name": "With Love Flowers",
+      "category": "Home & trades",
+      "street": "Chester Road",
+      "city": "Richmond",
+      "lat": 37.3990564,
+      "lon": -77.4425625
+    },
+    {
+      "name": "1st Capital Bank",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4139894,
+      "lon": -77.6389422
+    },
+    {
+      "name": "7-Eleven Training Center",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5033248,
+      "lon": -77.6564383
+    },
+    {
+      "name": "A Walk Through Life",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4232185,
+      "lon": -77.6377808
+    },
+    {
+      "name": "A-1 Concrete Leveling & Foundation Repair Richmond",
+      "category": "Professional services",
+      "street": "Midlothian Turnpike",
+      "city": "Midlothian",
+      "lat": 37.5045686,
+      "lon": -77.6632304
+    },
+    {
+      "name": "Adams Home Exteriors",
+      "category": "Professional services",
+      "street": "Greyhound Court",
+      "city": "Midlothian",
+      "lat": 37.4374659,
+      "lon": -77.5909093
+    },
+    {
+      "name": "Advance Technical Systems",
+      "category": "Professional services",
+      "street": "Pocoshock Way",
+      "city": "North Chesterfield",
+      "lat": 37.4666618,
+      "lon": -77.5323094
+    },
+    {
+      "name": "All American Insurers",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4409747,
+      "lon": -77.583756
+    },
+    {
+      "name": "Allen Allen Allen & Allen",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4109493,
+      "lon": -77.6482516
+    },
+    {
+      "name": "Appomattox Insurance Services",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3544647,
+      "lon": -77.448343
+    },
+    {
+      "name": "Appomattox Wealth Managment",
+      "category": "Professional services",
+      "street": "Old Hundred Road",
+      "city": "",
+      "lat": 37.3547157,
+      "lon": -77.4475885
+    },
+    {
+      "name": "Argent Credit Union",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4531929,
+      "lon": -77.4411092
+    },
+    {
+      "name": "Argent Credit Union",
+      "category": "Professional services",
+      "street": "Walmart Way",
+      "city": "",
+      "lat": 37.5066275,
+      "lon": -77.6272871
+    },
+    {
+      "name": "Argent Credit Union",
+      "category": "Professional services",
+      "street": "Chester Village Drive",
+      "city": "",
+      "lat": 37.3569929,
+      "lon": -77.4455991
+    },
+    {
+      "name": "Asher Comprehensive Training",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4976362,
+      "lon": -77.5347036
+    },
+    {
+      "name": "Asian Massage",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5060623,
+      "lon": -77.5884245
+    },
+    {
+      "name": "Aspire to Retire",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "Chester",
+      "lat": 37.3575514,
+      "lon": -77.4407719
+    },
+    {
+      "name": "At Your Service Professional Cleaning Services",
+      "category": "Professional services",
+      "street": "Sweet Willow Drive",
+      "city": "Midlothian",
+      "lat": 37.4721198,
+      "lon": -77.6040959
+    },
+    {
+      "name": "Atlantic Union Bank",
+      "category": "Professional services",
+      "street": "Harbour Park Drive",
+      "city": "",
+      "lat": 37.4129775,
+      "lon": -77.6470609
+    },
+    {
+      "name": "Atlantic Union Bank",
+      "category": "Professional services",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4372314,
+      "lon": -77.5989124
+    },
+    {
+      "name": "Atlantic Union Bank",
+      "category": "Professional services",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3692175,
+      "lon": -77.5009724
+    },
+    {
+      "name": "B&B Mechanical",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3827125,
+      "lon": -77.4537525
+    },
+    {
+      "name": "Bank of Southside Virginia",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3559938,
+      "lon": -77.4470362
+    },
+    {
+      "name": "Blue Ridge Bank",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3534689,
+      "lon": -77.4513618
+    },
+    {
+      "name": "BlueSky Insurance Agency",
+      "category": "Professional services",
+      "street": "Route 1",
+      "city": "Chester",
+      "lat": 37.3539707,
+      "lon": -77.4148484
+    },
+    {
+      "name": "Bon Air Expansion Correctional Center",
+      "category": "Professional services",
+      "street": "Chatsworth Avenue",
+      "city": "",
+      "lat": 37.5175265,
+      "lon": -77.5702608
+    },
+    {
+      "name": "Bon Air School for Girls",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5158634,
+      "lon": -77.5704621
+    },
+    {
+      "name": "Burke & Herbert Bank",
+      "category": "Professional services",
+      "street": "Huguenot Road",
+      "city": "",
+      "lat": 37.5216074,
+      "lon": -77.6112771
+    },
+    {
+      "name": "Burnett & Williams PC",
+      "category": "Professional services",
+      "street": "Huguenot Road",
+      "city": "Midlothian",
+      "lat": 37.514324,
+      "lon": -77.6136634
+    },
+    {
+      "name": "C&F Bank",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5110837,
+      "lon": -77.6152008
+    },
+    {
+      "name": "C&F Bank",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3520767,
+      "lon": -77.4551472
+    },
+    {
+      "name": "Call Federal Credit Union",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4029157,
+      "lon": -77.6740005
+    },
+    {
+      "name": "Call Federal Credit Union",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3687392,
+      "lon": -77.5018299
+    },
+    {
+      "name": "CareMore",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5076372,
+      "lon": -77.5799685
+    },
+    {
+      "name": "Center West Apartments",
+      "category": "Professional services",
+      "street": "Watkins View Drive",
+      "city": "Midlothian",
+      "lat": 37.5056601,
+      "lon": -77.6925021
+    },
+    {
+      "name": "Central Virginia Bank",
+      "category": "Professional services",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.503061,
+      "lon": -77.6428442
+    },
+    {
+      "name": "Chesapeake Bank",
+      "category": "Professional services",
+      "street": "Courtview Lane",
+      "city": "",
+      "lat": 37.3752853,
+      "lon": -77.5080824
+    },
+    {
+      "name": "Chester Village Office Park",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.359351,
+      "lon": -77.4340318
+    },
+    {
+      "name": "Chesterfield County Fire & EMS Administration",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3764177,
+      "lon": -77.5056762
+    },
+    {
+      "name": "Chesterfield County General Services",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.376763,
+      "lon": -77.5059491
+    },
+    {
+      "name": "Chesterfield County Parks and Recreation Headquarters",
+      "category": "Professional services",
+      "street": "Hopkins Road",
+      "city": "North Chesterfield",
+      "lat": 37.4254213,
+      "lon": -77.4695589
+    },
+    {
+      "name": "Chesterfield County Tax Office",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3772167,
+      "lon": -77.5076108
+    },
+    {
+      "name": "Chesterfield Economic Development Authority",
+      "category": "Professional services",
+      "street": "Courthouse Road",
+      "city": "Chesterfield",
+      "lat": 37.387475,
+      "lon": -77.5174772
+    },
+    {
+      "name": "Chesterfield Public Defenders Office",
+      "category": "Professional services",
+      "street": "Ironbridge Parkway",
+      "city": "",
+      "lat": 37.3560641,
+      "lon": -77.489358
+    },
+    {
+      "name": "Chesterfield Security Training Center",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3560183,
+      "lon": -77.4457465
+    },
+    {
+      "name": "Chesterield County Park and Rec Maintenence Offices",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3865275,
+      "lon": -77.5010919
+    },
+    {
+      "name": "Chiropractor",
+      "category": "Professional services",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5035892,
+      "lon": -77.5739036
+    },
+    {
+      "name": "Cole Real Estate Inc.",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3596751,
+      "lon": -77.4383049
+    },
+    {
+      "name": "College Hunks",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4998738,
+      "lon": -77.6050032
+    },
+    {
+      "name": "Commonwealth Mortgage",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3597502,
+      "lon": -77.4378204
+    },
+    {
+      "name": "Core Technologies Federated",
+      "category": "Professional services",
+      "street": "Branchway Road",
+      "city": "",
+      "lat": 37.4985884,
+      "lon": -77.6051941
+    },
+    {
+      "name": "Corey Pollard Law",
+      "category": "Professional services",
+      "street": "Midlothian Turnpike",
+      "city": "Richmond",
+      "lat": 37.5077729,
+      "lon": -77.5973474
+    },
+    {
+      "name": "Costal Consultants PC",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3593065,
+      "lon": -77.432881
+    },
+    {
+      "name": "Counts Accounting",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4428516,
+      "lon": -77.5785045
+    },
+    {
+      "name": "D.K. Walters Custom Builders",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3597167,
+      "lon": -77.4320208
+    },
+    {
+      "name": "Daniels, Williams Tuck & Ritter Attorneys at Law",
+      "category": "Professional services",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.353818,
+      "lon": -77.4885952
+    },
+    {
+      "name": "Dignitrac, LLC",
+      "category": "Professional services",
+      "street": "Beaufont Springs Drive",
+      "city": "Richmond",
+      "lat": 37.5079793,
+      "lon": -77.5282435
+    },
+    {
+      "name": "DMV - Department of Motor Vehicles",
+      "category": "Professional services",
+      "street": "Branders Creek Drive",
+      "city": "Chester",
+      "lat": 37.3521359,
+      "lon": -77.4863381
+    },
+    {
+      "name": "Element at Stonebridge Leasing Office",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.497399,
+      "lon": -77.527527
+    },
+    {
+      "name": "Elite Force Staffing",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3511743,
+      "lon": -77.4796905
+    },
+    {
+      "name": "Emerson",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3503659,
+      "lon": -77.3558735
+    },
+    {
+      "name": "Fame All Stars",
+      "category": "Professional services",
+      "street": "Oak Lake Boulevard",
+      "city": "Midlothian",
+      "lat": 37.4590972,
+      "lon": -77.629093
+    },
+    {
+      "name": "Farm Bureau Insurance",
+      "category": "Professional services",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4084772,
+      "lon": -77.6538082
+    },
+    {
+      "name": "First Capitol Bank",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5120454,
+      "lon": -77.6113659
+    },
+    {
+      "name": "First Community Bank",
+      "category": "Professional services",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5063768,
+      "lon": -77.6063453
+    },
+    {
+      "name": "First Community Bank",
+      "category": "Professional services",
+      "street": "Commons Plaza",
+      "city": "",
+      "lat": 37.3755892,
+      "lon": -77.5112189
+    },
+    {
+      "name": "First Community Bank",
+      "category": "Professional services",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.4991989,
+      "lon": -77.5694029
+    },
+    {
+      "name": "Front Door Reality",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3528113,
+      "lon": -77.452128
+    },
+    {
+      "name": "Gather.",
+      "category": "Professional services",
+      "street": "Winter Breeze Drive",
+      "city": "",
+      "lat": 37.5074094,
+      "lon": -77.6664398
+    },
+    {
+      "name": "Grand Lodge of the VA Odd Fellows",
+      "category": "Professional services",
+      "street": "Harrowgate Road",
+      "city": "",
+      "lat": 37.3537636,
+      "lon": -77.4473504
+    },
+    {
+      "name": "Hamlet Watkins Centre",
+      "category": "Professional services",
+      "street": "American Elm Drive",
+      "city": "Midlothian",
+      "lat": 37.5055079,
+      "lon": -77.689524
+    },
+    {
+      "name": "Harris and Associates Inc.",
+      "category": "Professional services",
+      "street": "Harrowgate Road",
+      "city": "",
+      "lat": 37.2947423,
+      "lon": -77.4204566
+    },
+    {
+      "name": "Harry G. Daniel Park Office",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3996043,
+      "lon": -77.5044112
+    },
+    {
+      "name": "Harvey & Driggs, Attorneys",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3507095,
+      "lon": -77.3550077
+    },
+    {
+      "name": "Harvey L. Parks inc. Land Surveying",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3542528,
+      "lon": -77.4498847
+    },
+    {
+      "name": "HCA",
+      "category": "Professional services",
+      "street": "Wadsworth Drive",
+      "city": "",
+      "lat": 37.4933217,
+      "lon": -77.5593051
+    },
+    {
+      "name": "HCA Capital Division",
+      "category": "Professional services",
+      "street": "Beaufont Spring Drive",
+      "city": "Richmond",
+      "lat": 37.5059432,
+      "lon": -77.5283641
+    },
+    {
+      "name": "Heinz Insurance",
+      "category": "Professional services",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3508173,
+      "lon": -77.4781761
+    },
+    {
+      "name": "Highmark Engineering",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.350307,
+      "lon": -77.3558898
+    },
+    {
+      "name": "Honey Tree Realty",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4578135,
+      "lon": -77.6550716
+    },
+    {
+      "name": "Hourglass",
+      "category": "Professional services",
+      "street": "Centre Street",
+      "city": "",
+      "lat": 37.3588491,
+      "lon": -77.4473302
+    },
+    {
+      "name": "HP Investigations",
+      "category": "Professional services",
+      "street": "Pocoshock Way",
+      "city": "Richmond",
+      "lat": 37.4669709,
+      "lon": -77.5324449
+    },
+    {
+      "name": "Hughes Henderson",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5105071,
+      "lon": -77.616297
+    },
+    {
+      "name": "Information Station",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3696136,
+      "lon": -77.5758467
+    },
+    {
+      "name": "Ingram & Associates Real Estate Company",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3520376,
+      "lon": -77.4554873
+    },
+    {
+      "name": "Insurance Doctor",
+      "category": "Professional services",
+      "street": "Chattanooga Plaza",
+      "city": "Midlothian",
+      "lat": 37.4302355,
+      "lon": -77.6227336
+    },
+    {
+      "name": "Intrepid",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3564854,
+      "lon": -77.4118959
+    },
+    {
+      "name": "J Drake Web Design",
+      "category": "Professional services",
+      "street": "Poplar Ridge Road",
+      "city": "Richmond",
+      "lat": 37.4852057,
+      "lon": -77.6126587
+    },
+    {
+      "name": "James River Taxes",
+      "category": "Professional services",
+      "street": "Huguenot Road",
+      "city": "Midlothian",
+      "lat": 37.5172411,
+      "lon": -77.6134242
+    },
+    {
+      "name": "JES",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3565295,
+      "lon": -77.4105033
+    },
+    {
+      "name": "Johnson Brothers Security",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4229522,
+      "lon": -77.6381014
+    },
+    {
+      "name": "JOY Fellowship Outreach",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.2848539,
+      "lon": -77.4121391
+    },
+    {
+      "name": "Joyner Realty",
+      "category": "Professional services",
+      "street": "Wc Main Street",
+      "city": "",
+      "lat": 37.5155931,
+      "lon": -77.6915293
+    },
+    {
+      "name": "KBD Kitchen & Bath",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3826124,
+      "lon": -77.4537443
+    },
+    {
+      "name": "Law Offices Tommy P. Baer,P.L.C.",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4232634,
+      "lon": -77.6377153
+    },
+    {
+      "name": "Maid Pro",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4511519,
+      "lon": -77.6482027
+    },
+    {
+      "name": "Maids 4 U",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5045397,
+      "lon": -77.642651
+    },
+    {
+      "name": "Mapcom",
+      "category": "Professional services",
+      "street": "Southlake Boulevard",
+      "city": "",
+      "lat": 37.5006434,
+      "lon": -77.5963237
+    },
+    {
+      "name": "Mariner Finance",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3529456,
+      "lon": -77.4155559
+    },
+    {
+      "name": "Mariner Finance",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5031892,
+      "lon": -77.6408562
+    },
+    {
+      "name": "Marks & Harrison",
+      "category": "Professional services",
+      "street": "Dogwood Villas Drive",
+      "city": "",
+      "lat": 37.4030249,
+      "lon": -77.6916164
+    },
+    {
+      "name": "MJR & Associates",
+      "category": "Professional services",
+      "street": "Village Mill Drive",
+      "city": "Midlothian",
+      "lat": 37.5039841,
+      "lon": -77.6555316
+    },
+    {
+      "name": "Music & Arts",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5032698,
+      "lon": -77.5743419
+    },
+    {
+      "name": "North State Acceptance",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5060458,
+      "lon": -77.5882227
+    },
+    {
+      "name": "OMS Insurance & More",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4393195,
+      "lon": -77.471778
+    },
+    {
+      "name": "One Dream Reality Group",
+      "category": "Professional services",
+      "street": "Festival Park Plaza",
+      "city": "Chester",
+      "lat": 37.3582821,
+      "lon": -77.444828
+    },
+    {
+      "name": "OneMain Financial",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5063852,
+      "lon": -77.6280343
+    },
+    {
+      "name": "OneMain Financial",
+      "category": "Professional services",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3540242,
+      "lon": -77.4112991
+    },
+    {
+      "name": "People Realty",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4938819,
+      "lon": -77.5541686
+    },
+    {
+      "name": "PIEtech",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5114096,
+      "lon": -77.6983506
+    },
+    {
+      "name": "Prestige Reality",
+      "category": "Professional services",
+      "street": "Centre Street",
+      "city": "",
+      "lat": 37.3578724,
+      "lon": -77.446586
+    },
+    {
+      "name": "Primercia",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4467274,
+      "lon": -77.5699422
+    },
+    {
+      "name": "PRIMIS",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3487377,
+      "lon": -77.3538343
+    },
+    {
+      "name": "Queensgate Property Owner's Association",
+      "category": "Professional services",
+      "street": "Miners Trail Road",
+      "city": "",
+      "lat": 37.4766373,
+      "lon": -77.6579603
+    },
+    {
+      "name": "Rumble & Associates, CPAs",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3481355,
+      "lon": -77.3579566
+    },
+    {
+      "name": "Sanford",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4131877,
+      "lon": -77.6401273
+    },
+    {
+      "name": "Scottrade",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5060926,
+      "lon": -77.6285071
+    },
+    {
+      "name": "Select Staffing",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4409794,
+      "lon": -77.583498
+    },
+    {
+      "name": "Sheraton Hotels",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5103953,
+      "lon": -77.6163953
+    },
+    {
+      "name": "Smart Marketing Services",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5108012,
+      "lon": -77.6160949
+    },
+    {
+      "name": "Smith & Wells PC",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5105916,
+      "lon": -77.6162516
+    },
+    {
+      "name": "Smith-Wagner Building",
+      "category": "Professional services",
+      "street": "Lucy Corr Circle",
+      "city": "",
+      "lat": 37.3830101,
+      "lon": -77.5037292
+    },
+    {
+      "name": "Sona Bank",
+      "category": "Professional services",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.407597,
+      "lon": -77.6585684
+    },
+    {
+      "name": "St. Anns Office",
+      "category": "Professional services",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.2868187,
+      "lon": -77.4105722
+    },
+    {
+      "name": "St. Edward's Parish Offices",
+      "category": "Professional services",
+      "street": "Dolfield Drive",
+      "city": "",
+      "lat": 37.530593,
+      "lon": -77.5924698
+    },
+    {
+      "name": "Stantec Consulting",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5098595,
+      "lon": -77.5334613
+    },
+    {
+      "name": "Stewart Moving & Storage",
+      "category": "Professional services",
+      "street": "Wylderose Court",
+      "city": "Midlothian",
+      "lat": 37.5113967,
+      "lon": -77.6726377
+    },
+    {
+      "name": "StratusDial, LLC",
+      "category": "Professional services",
+      "street": "Moorefield Park Drive",
+      "city": "Richmond",
+      "lat": 37.4983793,
+      "lon": -77.5813165
+    },
+    {
+      "name": "Tara Ulysse Luxury Real Estate",
+      "category": "Professional services",
+      "street": "Winter Breeze Drive",
+      "city": "Midlothian",
+      "lat": 37.5080287,
+      "lon": -77.6654257
+    },
+    {
+      "name": "The Exercise Coach",
+      "category": "Professional services",
+      "street": "Busy Street",
+      "city": "",
+      "lat": 37.5031315,
+      "lon": -77.6095638
+    },
+    {
+      "name": "The Negaard Group - RE/MAX Commonwealth",
+      "category": "Professional services",
+      "street": "Alverser Drive",
+      "city": "Midlothian",
+      "lat": 37.5086232,
+      "lon": -77.6158229
+    },
+    {
+      "name": "The Winterfield at Midlothian",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5079269,
+      "lon": -77.6639369
+    },
+    {
+      "name": "Timmons Group",
+      "category": "Professional services",
+      "street": "Boulders Parkway",
+      "city": "Richmond",
+      "lat": 37.5111286,
+      "lon": -77.5287887
+    },
+    {
+      "name": "Toombs Company LLC",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.2850839,
+      "lon": -77.4121423
+    },
+    {
+      "name": "Touchstone Bank",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3483461,
+      "lon": -77.3578923
+    },
+    {
+      "name": "TowneBank",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3764531,
+      "lon": -77.5090012
+    },
+    {
+      "name": "TowneBank Mortgage",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5135841,
+      "lon": -77.6978015
+    },
+    {
+      "name": "Trinity Real Estate",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3599357,
+      "lon": -77.4367342
+    },
+    {
+      "name": "Tronfeld West & Durrett",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4958311,
+      "lon": -77.5541077
+    },
+    {
+      "name": "Truist",
+      "category": "Professional services",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.4982045,
+      "lon": -77.5398057
+    },
+    {
+      "name": "Uphoff Ventures",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.3517141,
+      "lon": -77.4566154
+    },
+    {
+      "name": "Verizon",
+      "category": "Professional services",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4112999,
+      "lon": -77.6474133
+    },
+    {
+      "name": "Village Bank",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5113537,
+      "lon": -77.6985663
+    },
+    {
+      "name": "Village Bank",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.503086,
+      "lon": -77.6507347
+    },
+    {
+      "name": "Village Bank",
+      "category": "Professional services",
+      "street": "Southshore Drive",
+      "city": "",
+      "lat": 37.4048017,
+      "lon": -77.668398
+    },
+    {
+      "name": "Village Bank",
+      "category": "Professional services",
+      "street": "Huguenot Road",
+      "city": "",
+      "lat": 37.5077899,
+      "lon": -77.6134152
+    },
+    {
+      "name": "Village Bank",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3561575,
+      "lon": -77.4454013
+    },
+    {
+      "name": "Virginia Credit Union",
+      "category": "Professional services",
+      "street": "Courthouse Landing Lane",
+      "city": "Chesterfield",
+      "lat": 37.3888488,
+      "lon": -77.5120343
+    },
+    {
+      "name": "Virginia Credit Union",
+      "category": "Professional services",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4380197,
+      "lon": -77.59971
+    },
+    {
+      "name": "Virginia Credit Union",
+      "category": "Professional services",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.348719,
+      "lon": -77.4103082
+    },
+    {
+      "name": "Virginia Credit Union",
+      "category": "Professional services",
+      "street": "Hancock Village Street",
+      "city": "",
+      "lat": 37.4033251,
+      "lon": -77.672528
+    },
+    {
+      "name": "Virginia Credit Union",
+      "category": "Professional services",
+      "street": "Winterview Parkway",
+      "city": "Midlothian",
+      "lat": 37.5067552,
+      "lon": -77.6669076
+    },
+    {
+      "name": "Virginia Credit Union Operations Center",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.456636,
+      "lon": -77.6512424
+    },
+    {
+      "name": "Virginia Department of Correctional Education - Oak Ridge Juvenile Correctional Center",
+      "category": "Professional services",
+      "street": "Old Bon Air Road",
+      "city": "",
+      "lat": 37.5209585,
+      "lon": -77.5707465
+    },
+    {
+      "name": "Virginia Department of Transportation - Chesterfield Residency",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4431946,
+      "lon": -77.5947522
+    },
+    {
+      "name": "Virginia Dept of Emergency Management",
+      "category": "Professional services",
+      "street": "Trade Court",
+      "city": "",
+      "lat": 37.4998061,
+      "lon": -77.589366
+    },
+    {
+      "name": "Virginia Dept of Motor Vehicles",
+      "category": "Professional services",
+      "street": "Johnston Willis Drive",
+      "city": "",
+      "lat": 37.5013128,
+      "lon": -77.5918728
+    },
+    {
+      "name": "Virginia Emergency Operations Center",
+      "category": "Professional services",
+      "street": "Midlothian Turnpike",
+      "city": "Richmond",
+      "lat": 37.5001711,
+      "lon": -77.53934
+    },
+    {
+      "name": "Virginia SEO",
+      "category": "Professional services",
+      "street": "Middle Loop",
+      "city": "North Chesterfield",
+      "lat": 37.48023,
+      "lon": -77.5517344
+    },
+    {
+      "name": "VSU Federal Credit Union",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.2363114,
+      "lon": -77.4224888
+    },
+    {
+      "name": "WB Elite Tax & Accounting",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "Chester",
+      "lat": 37.3587136,
+      "lon": -77.4323632
+    },
+    {
+      "name": "WB Elite Tax & Accounting",
+      "category": "Professional services",
+      "street": "Old Hundred Road",
+      "city": "",
+      "lat": 37.3552495,
+      "lon": -77.4473884
+    },
+    {
+      "name": "Welcome Home Financial Partners",
+      "category": "Professional services",
+      "street": "West Hundred Road",
+      "city": "Chester",
+      "lat": 37.3575911,
+      "lon": -77.44073
+    },
+    {
+      "name": "Winslow McCurry & MacCormac",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.5044451,
+      "lon": -77.6510485
+    },
+    {
+      "name": "XYMid LLC",
+      "category": "Professional services",
+      "street": "",
+      "city": "",
+      "lat": 37.4138387,
+      "lon": -77.6391742
+    },
+    {
+      "name": "Your Total Wealth",
+      "category": "Professional services",
+      "street": "Bircham Loop",
+      "city": "Midlothian",
+      "lat": 37.550691,
+      "lon": -77.6353699
+    },
+    {
+      "name": "$2.50 Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4405816,
+      "lon": -77.5927216
+    },
+    {
+      "name": "2nd & Charles",
+      "category": "Retail & shops",
+      "street": "Chattanooga Plaza",
+      "city": "",
+      "lat": 37.4311457,
+      "lon": -77.6228532
+    },
+    {
+      "name": "4 the Love of Dogs Grooming Salon",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3813811,
+      "lon": -77.4538573
+    },
+    {
+      "name": "A Pet’s Tale",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "Chester",
+      "lat": 37.357661,
+      "lon": -77.4426206
+    },
+    {
+      "name": "A-1 Door Company",
+      "category": "Retail & shops",
+      "street": "Whitepine Road",
+      "city": "Richmond",
+      "lat": 37.4034514,
+      "lon": -77.5279044
+    },
+    {
+      "name": "A-Ok Laundry",
+      "category": "Retail & shops",
+      "street": "Meadowdale Boulevard",
+      "city": "",
+      "lat": 37.438905,
+      "lon": -77.4723054
+    },
+    {
+      "name": "AAAA Self Storage & Moving",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4957265,
+      "lon": -77.5474895
+    },
+    {
+      "name": "ABEC Electronics",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5039683,
+      "lon": -77.6403701
+    },
+    {
+      "name": "Ace Custom Tailoring",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5080571,
+      "lon": -77.5893398
+    },
+    {
+      "name": "Adonai Alterations",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5068163,
+      "lon": -77.6094803
+    },
+    {
+      "name": "Aiden Wholesale",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4595087,
+      "lon": -77.5438925
+    },
+    {
+      "name": "Amanacer Latino Market",
+      "category": "Retail & shops",
+      "street": "Robious Road",
+      "city": "",
+      "lat": 37.5073296,
+      "lon": -77.57919
+    },
+    {
+      "name": "Ample Storage",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.44097,
+      "lon": -77.5939858
+    },
+    {
+      "name": "Ample Storage",
+      "category": "Retail & shops",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.2971041,
+      "lon": -77.4103246
+    },
+    {
+      "name": "Ample Storage",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4298172,
+      "lon": -77.6112447
+    },
+    {
+      "name": "Ample Storage",
+      "category": "Retail & shops",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3627594,
+      "lon": -77.4974682
+    },
+    {
+      "name": "Ample Storage",
+      "category": "Retail & shops",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.2968066,
+      "lon": -77.4103849
+    },
+    {
+      "name": "Angels",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4594355,
+      "lon": -77.5436126
+    },
+    {
+      "name": "Ann’s Tailoring & Shoe Repair",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3701223,
+      "lon": -77.4994395
+    },
+    {
+      "name": "Area 51",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4060067,
+      "lon": -77.6731025
+    },
+    {
+      "name": "Area 51",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5037415,
+      "lon": -77.6098772
+    },
+    {
+      "name": "Area 51 Smoke and Vape",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4492424,
+      "lon": -77.6498789
+    },
+    {
+      "name": "Art Factory",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4231327,
+      "lon": -77.6378875
+    },
+    {
+      "name": "Art Tobacco & Vape",
+      "category": "Retail & shops",
+      "street": "Courthouse Road",
+      "city": "",
+      "lat": 37.4736686,
+      "lon": -77.5986747
+    },
+    {
+      "name": "Artisan's",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5035857,
+      "lon": -77.6566789
+    },
+    {
+      "name": "Artistry in Motion",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3702456,
+      "lon": -77.4988338
+    },
+    {
+      "name": "Ashley Dorton Photography",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4506745,
+      "lon": -77.6526469
+    },
+    {
+      "name": "B&L Coin Laundry",
+      "category": "Retail & shops",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3071295,
+      "lon": -77.4096643
+    },
+    {
+      "name": "Bargain Books",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.472022,
+      "lon": -77.5278713
+    },
+    {
+      "name": "Bark and Sparkle",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4057174,
+      "lon": -77.6666808
+    },
+    {
+      "name": "Beary Crafty",
+      "category": "Retail & shops",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.2884482,
+      "lon": -77.4116445
+    },
+    {
+      "name": "Beauti-Full",
+      "category": "Retail & shops",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4397111,
+      "lon": -77.594832
+    },
+    {
+      "name": "Bellgrade Dry Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5252327,
+      "lon": -77.609586
+    },
+    {
+      "name": "Bennett Funeral Home",
+      "category": "Retail & shops",
+      "street": "Ashbrook Parkway",
+      "city": "",
+      "lat": 37.3983433,
+      "lon": -77.6733444
+    },
+    {
+      "name": "Better Homes and Gardens",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.405297,
+      "lon": -77.6736007
+    },
+    {
+      "name": "Betty Brite Cleaners",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "Chester",
+      "lat": 37.3557453,
+      "lon": -77.4478308
+    },
+    {
+      "name": "Bird Watchers",
+      "category": "Retail & shops",
+      "street": "Woodlake Commons Loop",
+      "city": "",
+      "lat": 37.4049321,
+      "lon": -77.6859694
+    },
+    {
+      "name": "Birdwatchers",
+      "category": "Retail & shops",
+      "street": "Woodlake Commons Loop",
+      "city": "Midlothian",
+      "lat": 37.4049286,
+      "lon": -77.6859798
+    },
+    {
+      "name": "Blue and Gray Storage",
+      "category": "Retail & shops",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4016861,
+      "lon": -77.695531
+    },
+    {
+      "name": "Blue Ribbon Pet Styling",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5047184,
+      "lon": -77.6658754
+    },
+    {
+      "name": "Bows & Bones",
+      "category": "Retail & shops",
+      "street": "Waterford Place",
+      "city": "Chesterfield County",
+      "lat": 37.4518715,
+      "lon": -77.6486133
+    },
+    {
+      "name": "Bows and Bones Pet Grooming",
+      "category": "Retail & shops",
+      "street": "Buford Road",
+      "city": "Bon Air",
+      "lat": 37.5334871,
+      "lon": -77.5618027
+    },
+    {
+      "name": "Brown House Candle Company",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.410365,
+      "lon": -77.6485431
+    },
+    {
+      "name": "Buckingham Antique Mall",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5043075,
+      "lon": -77.6423984
+    },
+    {
+      "name": "Buff City Soap",
+      "category": "Retail & shops",
+      "street": "Stone Village Way",
+      "city": "",
+      "lat": 37.5018117,
+      "lon": -77.6273194
+    },
+    {
+      "name": "Buy It Wyatt",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3558572,
+      "lon": -77.4475991
+    },
+    {
+      "name": "Carriage Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5037322,
+      "lon": -77.643489
+    },
+    {
+      "name": "Carytown Tobacco",
+      "category": "Retail & shops",
+      "street": "Chattanooga Plaza",
+      "city": "Midlothian",
+      "lat": 37.4308148,
+      "lon": -77.6235626
+    },
+    {
+      "name": "Carytown Tobacco",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "Chester",
+      "lat": 37.3577583,
+      "lon": -77.4424758
+    },
+    {
+      "name": "Carytown Tobacco",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5019985,
+      "lon": -77.6432993
+    },
+    {
+      "name": "CaryTown Tobacoo",
+      "category": "Retail & shops",
+      "street": "East Hundred Road",
+      "city": "",
+      "lat": 37.3460673,
+      "lon": -77.3404424
+    },
+    {
+      "name": "Cash For Gold",
+      "category": "Retail & shops",
+      "street": "Meadowdale Boulevard",
+      "city": "",
+      "lat": 37.4388693,
+      "lon": -77.472311
+    },
+    {
+      "name": "CBD & Vape",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4021563,
+      "lon": -77.6749456
+    },
+    {
+      "name": "Celebrity Bridal and Formals",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3595946,
+      "lon": -77.4391616
+    },
+    {
+      "name": "Chanello's",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5036286,
+      "lon": -77.6098657
+    },
+    {
+      "name": "Chester Aquaria",
+      "category": "Retail & shops",
+      "street": "Chester Square Road",
+      "city": "",
+      "lat": 37.3539099,
+      "lon": -77.4520262
+    },
+    {
+      "name": "Chester Cleaners",
+      "category": "Retail & shops",
+      "street": "Centre Street",
+      "city": "Chester",
+      "lat": 37.3567815,
+      "lon": -77.4469489
+    },
+    {
+      "name": "Chester Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3700838,
+      "lon": -77.4995159
+    },
+    {
+      "name": "Chester Food Mart",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3560539,
+      "lon": -77.4170005
+    },
+    {
+      "name": "Chester Optical",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3544172,
+      "lon": -77.4496614
+    },
+    {
+      "name": "Chesterfield Pest Control",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3785771,
+      "lon": -77.4534631
+    },
+    {
+      "name": "Chesterfield Towne Center",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5086204,
+      "lon": -77.6093465
+    },
+    {
+      "name": "Cigarettes Plus",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5037346,
+      "lon": -77.643402
+    },
+    {
+      "name": "Cigars",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3722663,
+      "lon": -77.5005899
+    },
+    {
+      "name": "Clean Eatz",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4511123,
+      "lon": -77.6480939
+    },
+    {
+      "name": "Cleaners",
+      "category": "Retail & shops",
+      "street": "North Courthouse Road",
+      "city": "",
+      "lat": 37.5042448,
+      "lon": -77.6119306
+    },
+    {
+      "name": "Cogbill Market",
+      "category": "Retail & shops",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.4326688,
+      "lon": -77.4914031
+    },
+    {
+      "name": "Cole’s Coins",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3508258,
+      "lon": -77.3555968
+    },
+    {
+      "name": "Collectors Gallery",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5024689,
+      "lon": -77.6508108
+    },
+    {
+      "name": "Crater Community Hospice & Thrift Shop",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5048757,
+      "lon": -77.6061966
+    },
+    {
+      "name": "Create Pottery Shop",
+      "category": "Retail & shops",
+      "street": "Commonwealth Centre Parkway",
+      "city": "",
+      "lat": 37.4183247,
+      "lon": -77.6336725
+    },
+    {
+      "name": "Crumps Store",
+      "category": "Retail & shops",
+      "street": "Beach Road",
+      "city": "",
+      "lat": 37.3613313,
+      "lon": -77.6794642
+    },
+    {
+      "name": "Diamond Billards",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5044297,
+      "lon": -77.6434274
+    },
+    {
+      "name": "Dollar & Cents",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3839922,
+      "lon": -77.4508236
+    },
+    {
+      "name": "Dr. Dank's Tobacco Vape and Hookah",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3543538,
+      "lon": -77.4487208
+    },
+    {
+      "name": "Dynasty Pools",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3596855,
+      "lon": -77.4377341
+    },
+    {
+      "name": "Eco Inspired",
+      "category": "Retail & shops",
+      "street": "Buford Road",
+      "city": "Bon Air",
+      "lat": 37.5345445,
+      "lon": -77.562217
+    },
+    {
+      "name": "Edible Arrangments",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5037922,
+      "lon": -77.5736801
+    },
+    {
+      "name": "Elim Tailor & Shoe Repair",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5037282,
+      "lon": -77.6435568
+    },
+    {
+      "name": "Elite Kickz",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5074184,
+      "lon": -77.6086702
+    },
+    {
+      "name": "Elsa's Jewelery & Gifts",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4388234,
+      "lon": -77.4697608
+    },
+    {
+      "name": "Equipment Solutions",
+      "category": "Retail & shops",
+      "street": "Centre Street",
+      "city": "",
+      "lat": 37.3568359,
+      "lon": -77.4469963
+    },
+    {
+      "name": "Eureka Market",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4053785,
+      "lon": -77.6736195
+    },
+    {
+      "name": "ExtraSpace Storage",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5073503,
+      "lon": -77.6710004
+    },
+    {
+      "name": "Family Coin & Jewelry",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5087167,
+      "lon": -77.5884543
+    },
+    {
+      "name": "Fink's Jewelers",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5085686,
+      "lon": -77.6085287
+    },
+    {
+      "name": "Flagstop",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4272011,
+      "lon": -77.4942447
+    },
+    {
+      "name": "Flynn & O'Hara",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5034343,
+      "lon": -77.5740902
+    },
+    {
+      "name": "Food Mart",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4281656,
+      "lon": -77.4926068
+    },
+    {
+      "name": "Food Mart",
+      "category": "Retail & shops",
+      "street": "East River Road",
+      "city": "",
+      "lat": 37.2442211,
+      "lon": -77.4187962
+    },
+    {
+      "name": "Food Mart",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4205072,
+      "lon": -77.636294
+    },
+    {
+      "name": "Foot Care",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5046483,
+      "lon": -77.5752263
+    },
+    {
+      "name": "Football Heaven",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5091608,
+      "lon": -77.6089947
+    },
+    {
+      "name": "Foremost Sales",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4975485,
+      "lon": -77.5333163
+    },
+    {
+      "name": "Franco's Leather Repair",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5067248,
+      "lon": -77.6094534
+    },
+    {
+      "name": "Frazzles to Dazzles",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4401674,
+      "lon": -77.5905611
+    },
+    {
+      "name": "Friend & Hand",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.503827,
+      "lon": -77.5736418
+    },
+    {
+      "name": "FTW Games",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5044884,
+      "lon": -77.6430916
+    },
+    {
+      "name": "Gardner's Shoes",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4939968,
+      "lon": -77.5536802
+    },
+    {
+      "name": "General Security",
+      "category": "Retail & shops",
+      "street": "Raised Antler Circle",
+      "city": "",
+      "lat": 37.4023235,
+      "lon": -77.6636268
+    },
+    {
+      "name": "Get N Go",
+      "category": "Retail & shops",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.395573,
+      "lon": -77.779795
+    },
+    {
+      "name": "Gift Shop",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3695677,
+      "lon": -77.5758996
+    },
+    {
+      "name": "Gift Shop",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3830614,
+      "lon": -77.7661352
+    },
+    {
+      "name": "Go Store It",
+      "category": "Retail & shops",
+      "street": "Hull Street Road",
+      "city": "Moseley",
+      "lat": 37.3938783,
+      "lon": -77.7251412
+    },
+    {
+      "name": "Go Vape & Tobacco",
+      "category": "Retail & shops",
+      "street": "Commonwealth Centre Parkway",
+      "city": "",
+      "lat": 37.4203509,
+      "lon": -77.6350328
+    },
+    {
+      "name": "Golf Tec",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5033269,
+      "lon": -77.6126205
+    },
+    {
+      "name": "Good Health Herbs",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.448786,
+      "lon": -77.6494426
+    },
+    {
+      "name": "Gracie's Cottage",
+      "category": "Retail & shops",
+      "street": "Busy Street",
+      "city": "North Chesterfield",
+      "lat": 37.5024258,
+      "lon": -77.6088274
+    },
+    {
+      "name": "Hancock Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5018664,
+      "lon": -77.6514751
+    },
+    {
+      "name": "Hancock Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4024701,
+      "lon": -77.6742934
+    },
+    {
+      "name": "Harbour Pointe Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4104135,
+      "lon": -77.6553462
+    },
+    {
+      "name": "Harrowgate Convinence Store",
+      "category": "Retail & shops",
+      "street": "Harrowgate Road",
+      "city": "Chester",
+      "lat": 37.2980265,
+      "lon": -77.4232325
+    },
+    {
+      "name": "Havana Connection",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4100395,
+      "lon": -77.6493433
+    },
+    {
+      "name": "Healthy Habits",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4436074,
+      "lon": -77.5785569
+    },
+    {
+      "name": "Henderson Printing",
+      "category": "Retail & shops",
+      "street": "Pocoshock Way",
+      "city": "Richmond",
+      "lat": 37.4669078,
+      "lon": -77.5325294
+    },
+    {
+      "name": "Heritage Antiques",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.438841,
+      "lon": -77.599871
+    },
+    {
+      "name": "Hobby Xtreme",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4409803,
+      "lon": -77.5835668
+    },
+    {
+      "name": "HobbyTown + RadioShack Express",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "North Chesterfield",
+      "lat": 37.5046125,
+      "lon": -77.5754429
+    },
+    {
+      "name": "Hodge Podge",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.2876029,
+      "lon": -77.4118112
+    },
+    {
+      "name": "Huguenot-Robious Mini Storage",
+      "category": "Retail & shops",
+      "street": "Robious Road",
+      "city": "Richmond",
+      "lat": 37.5229076,
+      "lon": -77.6079771
+    },
+    {
+      "name": "Impress Dry Clean",
+      "category": "Retail & shops",
+      "street": "Woodlake Commons Loop",
+      "city": "",
+      "lat": 37.4056031,
+      "lon": -77.6857379
+    },
+    {
+      "name": "In & Out Convenience Store",
+      "category": "Retail & shops",
+      "street": "Celebration Avenue",
+      "city": "Chester",
+      "lat": 37.3564136,
+      "lon": -77.4469263
+    },
+    {
+      "name": "Inspiration House",
+      "category": "Retail & shops",
+      "street": "Courthouse Road",
+      "city": "",
+      "lat": 37.4735694,
+      "lon": -77.5989901
+    },
+    {
+      "name": "It's Simply Divine",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5035298,
+      "lon": -77.6564046
+    },
+    {
+      "name": "Ivymont Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5046663,
+      "lon": -77.664977
+    },
+    {
+      "name": "J.T. Morriss & Son Funeral Home",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3571222,
+      "lon": -77.4214941
+    },
+    {
+      "name": "James Mart",
+      "category": "Retail & shops",
+      "street": "Harrowgate Road",
+      "city": "",
+      "lat": 37.3235517,
+      "lon": -77.4357481
+    },
+    {
+      "name": "Jefferson Davis Flea Market",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4459465,
+      "lon": -77.443169
+    },
+    {
+      "name": "Jeweler’s Services",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3719973,
+      "lon": -77.500763
+    },
+    {
+      "name": "Jiffy Mart",
+      "category": "Retail & shops",
+      "street": "Kingston Avenue",
+      "city": "Chester",
+      "lat": 37.3455106,
+      "lon": -77.3440632
+    },
+    {
+      "name": "Joy Cleaners",
+      "category": "Retail & shops",
+      "street": "Raised Antler Circle",
+      "city": "",
+      "lat": 37.4022463,
+      "lon": -77.6637927
+    },
+    {
+      "name": "Joy Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4487483,
+      "lon": -77.6500068
+    },
+    {
+      "name": "Kate Styles",
+      "category": "Retail & shops",
+      "street": "Harrowgate Road",
+      "city": "",
+      "lat": 37.3549789,
+      "lon": -77.4469244
+    },
+    {
+      "name": "Kathy's Kopies",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5043589,
+      "lon": -77.6420718
+    },
+    {
+      "name": "KEBaubles and Company",
+      "category": "Retail & shops",
+      "street": "Buford Road",
+      "city": "Bon Air",
+      "lat": 37.5345012,
+      "lon": -77.5622012
+    },
+    {
+      "name": "Kid to Kid",
+      "category": "Retail & shops",
+      "street": "Commonwealth Centre Parkway",
+      "city": "",
+      "lat": 37.4206067,
+      "lon": -77.6350563
+    },
+    {
+      "name": "King Tobacco",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4274977,
+      "lon": -77.4912209
+    },
+    {
+      "name": "King's Tailor",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4389036,
+      "lon": -77.6023809
+    },
+    {
+      "name": "Knotty too Shabby",
+      "category": "Retail & shops",
+      "street": "Woodlake Commons Loop",
+      "city": "",
+      "lat": 37.4058794,
+      "lon": -77.6856751
+    },
+    {
+      "name": "La Casita",
+      "category": "Retail & shops",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.2859225,
+      "lon": -77.4120602
+    },
+    {
+      "name": "Laundry Land",
+      "category": "Retail & shops",
+      "street": "Robious Road",
+      "city": "",
+      "lat": 37.507449,
+      "lon": -77.5794516
+    },
+    {
+      "name": "Lee's Alterations",
+      "category": "Retail & shops",
+      "street": "Harrowgate Road",
+      "city": "",
+      "lat": 37.3547174,
+      "lon": -77.4470119
+    },
+    {
+      "name": "Legends Smoke & Vape",
+      "category": "Retail & shops",
+      "street": "Raised Antler Circle",
+      "city": "",
+      "lat": 37.4021899,
+      "lon": -77.6641995
+    },
+    {
+      "name": "LRZ Legacy Scrubs",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3498406,
+      "lon": -77.3542651
+    },
+    {
+      "name": "Lucky Dog Pet Spa",
+      "category": "Retail & shops",
+      "street": "Iron Bridge Plaza",
+      "city": "",
+      "lat": 37.3514805,
+      "lon": -77.4849933
+    },
+    {
+      "name": "M3 Thrift Store",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.504332,
+      "lon": -77.6413847
+    },
+    {
+      "name": "Manchester Cleaners",
+      "category": "Retail & shops",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3540128,
+      "lon": -77.4113576
+    },
+    {
+      "name": "Market Bazaar",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4377568,
+      "lon": -77.594164
+    },
+    {
+      "name": "Material Things",
+      "category": "Retail & shops",
+      "street": "Courthouse Road",
+      "city": "North Chesterfield",
+      "lat": 37.4454963,
+      "lon": -77.5816572
+    },
+    {
+      "name": "Maya's Market",
+      "category": "Retail & shops",
+      "street": "Hull Street Road",
+      "city": "Moseley",
+      "lat": 37.3935899,
+      "lon": -77.7269654
+    },
+    {
+      "name": "Mecca Market",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4955015,
+      "lon": -77.5645903
+    },
+    {
+      "name": "Mexican Grocery",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4388383,
+      "lon": -77.4699097
+    },
+    {
+      "name": "Midlothian Jewelry",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5036871,
+      "lon": -77.6098812
+    },
+    {
+      "name": "Mini Price Storage",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4404577,
+      "lon": -77.5894725
+    },
+    {
+      "name": "Moisture and Mold Solutions",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3785165,
+      "lon": -77.4534368
+    },
+    {
+      "name": "Monster Self Storage",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4303736,
+      "lon": -77.4936775
+    },
+    {
+      "name": "Montage Consignment Boutique",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.524928,
+      "lon": -77.6096748
+    },
+    {
+      "name": "Morrissett Funeral and Cremation Service",
+      "category": "Retail & shops",
+      "street": "Iron Bridge Road",
+      "city": "Richmond",
+      "lat": 37.4276558,
+      "lon": -77.4960666
+    },
+    {
+      "name": "Mryna's Boot & Leather",
+      "category": "Retail & shops",
+      "street": "Carmia Way",
+      "city": "",
+      "lat": 37.5072513,
+      "lon": -77.603456
+    },
+    {
+      "name": "Murphy’s Law",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3702861,
+      "lon": -77.4986887
+    },
+    {
+      "name": "Musey J Boutique",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4057308,
+      "lon": -77.6655735
+    },
+    {
+      "name": "MVP",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5057039,
+      "lon": -77.6657126
+    },
+    {
+      "name": "Na Nin Bon Air",
+      "category": "Retail & shops",
+      "street": "Buford Road",
+      "city": "Bon Air",
+      "lat": 37.5342066,
+      "lon": -77.562067
+    },
+    {
+      "name": "Neighborhood Laundromat",
+      "category": "Retail & shops",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.440105,
+      "lon": -77.5944564
+    },
+    {
+      "name": "New Grand Mart",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "Richmond",
+      "lat": 37.4987477,
+      "lon": -77.5327407
+    },
+    {
+      "name": "New Image",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3565746,
+      "lon": -77.4440834
+    },
+    {
+      "name": "Orange Market",
+      "category": "Retail & shops",
+      "street": "Newbys Bridge Road",
+      "city": "",
+      "lat": 37.4069888,
+      "lon": -77.565446
+    },
+    {
+      "name": "Oreck Vacuum",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4435728,
+      "lon": -77.5786929
+    },
+    {
+      "name": "Our Town Treasures",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4426901,
+      "lon": -77.5787679
+    },
+    {
+      "name": "Packard's Rocks and Stamps",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5021095,
+      "lon": -77.6418876
+    },
+    {
+      "name": "Painted Tree Boutiques",
+      "category": "Retail & shops",
+      "street": "Commonwealth Centre Parkway",
+      "city": "",
+      "lat": 37.4177516,
+      "lon": -77.6324269
+    },
+    {
+      "name": "Paisley Kate's Boutique",
+      "category": "Retail & shops",
+      "street": "Woodlake Commons Loop",
+      "city": "",
+      "lat": 37.4049883,
+      "lon": -77.6859375
+    },
+    {
+      "name": "Peabody's Piano Company",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5064301,
+      "lon": -77.6173807
+    },
+    {
+      "name": "Penelope",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5046527,
+      "lon": -77.6652709
+    },
+    {
+      "name": "Penelope's",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4030784,
+      "lon": -77.6740238
+    },
+    {
+      "name": "Pet World",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.372244,
+      "lon": -77.5006638
+    },
+    {
+      "name": "PostNet",
+      "category": "Retail & shops",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4056642,
+      "lon": -77.6630095
+    },
+    {
+      "name": "Premier Pools & Spas",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5062211,
+      "lon": -77.6174708
+    },
+    {
+      "name": "Pump It Up!",
+      "category": "Retail & shops",
+      "street": "Hull Street Road",
+      "city": "",
+      "lat": 37.4328367,
+      "lon": -77.6089969
+    },
+    {
+      "name": "Puritan Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4057221,
+      "lon": -77.666036
+    },
+    {
+      "name": "Quick Shop",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.4977997,
+      "lon": -77.546863
+    },
+    {
+      "name": "Raise the Roost",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4497729,
+      "lon": -77.6269128
+    },
+    {
+      "name": "Rambo Dry Cleaners",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "Midlothian",
+      "lat": 37.5027415,
+      "lon": -77.6456869
+    },
+    {
+      "name": "Re-Use Thrift Store",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.502372,
+      "lon": -77.6508448
+    },
+    {
+      "name": "Red Poppy Pickin'",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4020729,
+      "lon": -77.6749491
+    },
+    {
+      "name": "Richmond Camera",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5037242,
+      "lon": -77.6436223
+    },
+    {
+      "name": "Richmond Comix",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4968624,
+      "lon": -77.5694125
+    },
+    {
+      "name": "Richmond Computer Guy",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5103376,
+      "lon": -77.6155195
+    },
+    {
+      "name": "Row House",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4023268,
+      "lon": -77.6749612
+    },
+    {
+      "name": "Run And Walk",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.513295,
+      "lon": -77.6937337
+    },
+    {
+      "name": "RVA Cannabis Co.",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3544624,
+      "lon": -77.4495565
+    },
+    {
+      "name": "RVA Electronics",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3507982,
+      "lon": -77.3554552
+    },
+    {
+      "name": "RVA Flea Market",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4975999,
+      "lon": -77.5349252
+    },
+    {
+      "name": "RVA Vape & Tobacco",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3559524,
+      "lon": -77.4474153
+    },
+    {
+      "name": "RVA Wireless",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4981623,
+      "lon": -77.5324363
+    },
+    {
+      "name": "Ryan Uniforms",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4940535,
+      "lon": -77.5534217
+    },
+    {
+      "name": "Safe Haven",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4367238,
+      "lon": -77.5981258
+    },
+    {
+      "name": "Sam’s Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.349325,
+      "lon": -77.3544006
+    },
+    {
+      "name": "Sassy Bee",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.525098,
+      "lon": -77.6096213
+    },
+    {
+      "name": "Schwarzschild Jewelers",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5104357,
+      "lon": -77.6154355
+    },
+    {
+      "name": "Scrap U",
+      "category": "Retail & shops",
+      "street": "Courthouse Road",
+      "city": "Richmond",
+      "lat": 37.4457185,
+      "lon": -77.5809594
+    },
+    {
+      "name": "Seahorse Scuba Shop",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5038871,
+      "lon": -77.643409
+    },
+    {
+      "name": "Sew My Monogram",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.405744,
+      "lon": -77.6656573
+    },
+    {
+      "name": "She Chester Boutique",
+      "category": "Retail & shops",
+      "street": "Chester Village Drive",
+      "city": "",
+      "lat": 37.3572777,
+      "lon": -77.4452417
+    },
+    {
+      "name": "Shoes 4 U",
+      "category": "Retail & shops",
+      "street": "Meadowdale Boulevard",
+      "city": "",
+      "lat": 37.4388101,
+      "lon": -77.4695618
+    },
+    {
+      "name": "Sizemore, Inc.",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3495289,
+      "lon": -77.3543464
+    },
+    {
+      "name": "Ski Center",
+      "category": "Retail & shops",
+      "street": "WC Main Street",
+      "city": "Midlothian",
+      "lat": 37.5152431,
+      "lon": -77.692495
+    },
+    {
+      "name": "Sloppy Kisses Pet Grooming",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4222941,
+      "lon": -77.636742
+    },
+    {
+      "name": "Smokers World",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4381832,
+      "lon": -77.5964066
+    },
+    {
+      "name": "Snow White Cleaners",
+      "category": "Retail & shops",
+      "street": "Meadowdale Boulevard",
+      "city": "",
+      "lat": 37.4390275,
+      "lon": -77.4722863
+    },
+    {
+      "name": "Spencer's",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5100142,
+      "lon": -77.6094829
+    },
+    {
+      "name": "Spinoff Records",
+      "category": "Retail & shops",
+      "street": "Alverser Drive",
+      "city": "",
+      "lat": 37.5069277,
+      "lon": -77.6171297
+    },
+    {
+      "name": "Spotlight Studio",
+      "category": "Retail & shops",
+      "street": "Woodlake Commons Loop",
+      "city": "",
+      "lat": 37.4052767,
+      "lon": -77.6857951
+    },
+    {
+      "name": "Step N Style",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5098823,
+      "lon": -77.6097458
+    },
+    {
+      "name": "Stephanie's Pet Grooming",
+      "category": "Retail & shops",
+      "street": "Route 1",
+      "city": "",
+      "lat": 37.3075734,
+      "lon": -77.4096626
+    },
+    {
+      "name": "Street Rockets",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3823442,
+      "lon": -77.4538094
+    },
+    {
+      "name": "Style Bi-Rite",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4371005,
+      "lon": -77.6020946
+    },
+    {
+      "name": "Swan Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3102216,
+      "lon": -77.4101681
+    },
+    {
+      "name": "Swan Cleaners",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3718638,
+      "lon": -77.5007045
+    },
+    {
+      "name": "Swan Cleaners",
+      "category": "Retail & shops",
+      "street": "Commonwealth Centre Parkway",
+      "city": "",
+      "lat": 37.4204636,
+      "lon": -77.6350302
+    },
+    {
+      "name": "Swift Creek Cleaners",
+      "category": "Retail & shops",
+      "street": "Chattanooga Plaza",
+      "city": "Midlothian",
+      "lat": 37.4308456,
+      "lon": -77.6234939
+    },
+    {
+      "name": "Swim World",
+      "category": "Retail & shops",
+      "street": "Midlothian Turnpike",
+      "city": "",
+      "lat": 37.5051595,
+      "lon": -77.6572795
+    },
+    {
+      "name": "Sycamore Jewelers",
+      "category": "Retail & shops",
+      "street": "Commonwealth Centre Parkway",
+      "city": "",
+      "lat": 37.4182024,
+      "lon": -77.6336046
+    },
+    {
+      "name": "T Mania",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5071141,
+      "lon": -77.6085522
+    },
+    {
+      "name": "Tailored Data Solutions Computer Repair",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.353007,
+      "lon": -77.4156068
+    },
+    {
+      "name": "The A.R.T.S.",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4409367,
+      "lon": -77.5838622
+    },
+    {
+      "name": "The Book Exchange",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5041462,
+      "lon": -77.6434274
+    },
+    {
+      "name": "The Lazy Daisy Gift Store",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5037581,
+      "lon": -77.6403516
+    },
+    {
+      "name": "The Link To The Past",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3594793,
+      "lon": -77.4990558
+    },
+    {
+      "name": "The Olive Oil Taproom",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5250199,
+      "lon": -77.6096333
+    },
+    {
+      "name": "The Shops at Ivey",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.2877337,
+      "lon": -77.4116188
+    },
+    {
+      "name": "Thrifty Quaker",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5018233,
+      "lon": -77.6511599
+    },
+    {
+      "name": "Tip Tap Toes",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.350812,
+      "lon": -77.3555245
+    },
+    {
+      "name": "Tobacco Express",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4597345,
+      "lon": -77.5445875
+    },
+    {
+      "name": "Tobacco Hut",
+      "category": "Retail & shops",
+      "street": "Iron Bridge Plaza",
+      "city": "",
+      "lat": 37.3509508,
+      "lon": -77.484414
+    },
+    {
+      "name": "Tobacco Hut",
+      "category": "Retail & shops",
+      "street": "East Hundred Road",
+      "city": "",
+      "lat": 37.3472273,
+      "lon": -77.3552393
+    },
+    {
+      "name": "Tobacco Hut",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4056214,
+      "lon": -77.6630964
+    },
+    {
+      "name": "Town Police Supply",
+      "category": "Retail & shops",
+      "street": "Courthouse Road",
+      "city": "",
+      "lat": 37.4456341,
+      "lon": -77.5804886
+    },
+    {
+      "name": "Triple Delight",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3842052,
+      "lon": -77.450705
+    },
+    {
+      "name": "Trophies Unlimited",
+      "category": "Retail & shops",
+      "street": "Hull Street Road",
+      "city": "Midlothian",
+      "lat": 37.4389278,
+      "lon": -77.6004164
+    },
+    {
+      "name": "uBreakiFix",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5023562,
+      "lon": -77.6090957
+    },
+    {
+      "name": "Uncle Dave's Kettle Corn",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3565242,
+      "lon": -77.4442537
+    },
+    {
+      "name": "Uptown Cheapskate",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5128956,
+      "lon": -77.613549
+    },
+    {
+      "name": "Uptown Cheapskate",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4201425,
+      "lon": -77.6350817
+    },
+    {
+      "name": "Uptown Cheapskate",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5121424,
+      "lon": -77.6136549
+    },
+    {
+      "name": "VA Club",
+      "category": "Retail & shops",
+      "street": "Iron Bridge Plaza",
+      "city": "",
+      "lat": 37.350838,
+      "lon": -77.483746
+    },
+    {
+      "name": "Vac City",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.3527678,
+      "lon": -77.4152734
+    },
+    {
+      "name": "Vac City",
+      "category": "Retail & shops",
+      "street": "Forest Hill Avenue",
+      "city": "Bon Air",
+      "lat": 37.5344675,
+      "lon": -77.5624237
+    },
+    {
+      "name": "Vapor Connection VA",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5061164,
+      "lon": -77.6284529
+    },
+    {
+      "name": "Vapor World & Tobacco",
+      "category": "Retail & shops",
+      "street": "Iron Bridge Plaza",
+      "city": "",
+      "lat": 37.3515293,
+      "lon": -77.4849799
+    },
+    {
+      "name": "Venus Time Trap",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3537408,
+      "lon": -77.4498463
+    },
+    {
+      "name": "Vera's Fine Jewelers",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5059248,
+      "lon": -77.7147655
+    },
+    {
+      "name": "Virginia Diner Shoppe",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5080206,
+      "lon": -77.6087587
+    },
+    {
+      "name": "Voltage Vapin'",
+      "category": "Retail & shops",
+      "street": "Chester Road",
+      "city": "",
+      "lat": 37.3818755,
+      "lon": -77.4538631
+    },
+    {
+      "name": "Watch Pen & Pencil",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4435561,
+      "lon": -77.578808
+    },
+    {
+      "name": "West Chester Pet Resort",
+      "category": "Retail & shops",
+      "street": "Iron Bridge Road",
+      "city": "",
+      "lat": 37.3536981,
+      "lon": -77.4820461
+    },
+    {
+      "name": "Wilson Graphics",
+      "category": "Retail & shops",
+      "street": "West Hundred Road",
+      "city": "",
+      "lat": 37.3543799,
+      "lon": -77.4486261
+    },
+    {
+      "name": "Winston's Humidor",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.5034066,
+      "lon": -77.6564141
+    },
+    {
+      "name": "Winterpock Grocery",
+      "category": "Retail & shops",
+      "street": "Coalboro Road",
+      "city": "",
+      "lat": 37.3460252,
+      "lon": -77.7196959
+    },
+    {
+      "name": "Woody's Funeral Home",
+      "category": "Retail & shops",
+      "street": "Huguenot Road",
+      "city": "Midlothian",
+      "lat": 37.5064457,
+      "lon": -77.6132275
+    },
+    {
+      "name": "Your Store",
+      "category": "Retail & shops",
+      "street": "Adkins Road",
+      "city": "",
+      "lat": 37.4809245,
+      "lon": -77.5832073
+    },
+    {
+      "name": "Your Store",
+      "category": "Retail & shops",
+      "street": "Adkins Road",
+      "city": "North Chesterfield",
+      "lat": 37.4809438,
+      "lon": -77.5832924
+    },
+    {
+      "name": "Yummo",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4493787,
+      "lon": -77.6505468
+    },
+    {
+      "name": "Zaza Smoke and Vape",
+      "category": "Retail & shops",
+      "street": "",
+      "city": "",
+      "lat": 37.4508382,
+      "lon": -77.6494314
+    }
+  ]
+}

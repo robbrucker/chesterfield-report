@@ -913,6 +913,17 @@ footer { border-top: 1px solid var(--ink-400); margin-top: var(--space-9);
   font: var(--fs-2xs)/1.4 var(--font-mono); color: var(--text-faint);
   text-transform: uppercase; letter-spacing: var(--ls-wide); }
 .footer-domain { color: var(--neon-teal); font-weight: 700; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 9px 18px; margin: .2rem 0 1.1rem; }
+.footer-nav a { font: var(--fw-medium) var(--fs-sm)/1 var(--font-sans); color: var(--text-muted); text-decoration: none; }
+.footer-nav a:hover { color: var(--neon-teal); }
+.footer-signup { margin: .3rem 0 1.2rem; }
+.footer-signup strong { display: block; font: var(--fw-bold) var(--fs-md)/1.3 var(--font-sans); color: var(--text-strong); margin-bottom: 9px; }
+.signup-form { display: flex; flex-wrap: wrap; gap: 8px; max-width: 440px; }
+.signup-form input[type=email] { flex: 1 1 210px; background: var(--surface-raised); border: 1px solid var(--border-hair); border-radius: var(--radius-xs); padding: 11px 13px; color: var(--text-default); font: var(--text-body-r); }
+.signup-form input[type=email]:focus { outline: none; border-color: var(--neon-teal); }
+.signup-form button { background: var(--neon-teal); color: var(--text-on-neon); border: none; border-radius: var(--radius-xs); padding: 11px 20px; font: var(--fw-bold) var(--fs-sm)/1 var(--font-sans); cursor: pointer; }
+.signup-form button:hover { background: var(--neon-teal-dim); }
+.signup-form .hp { position: absolute; left: -9999px; }
 
 /* ============================================================
    FILTER BAR  (legacy .filterbar / .filter — JS hooks preserved)
@@ -1510,3 +1521,81 @@ ol.timeline li.tl-event:last-child::before { background: var(--neon-amber);
   transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out); }
 .cr-themetoggle:hover { color: var(--accent); border-color: var(--accent); }
 .cr-themetoggle:focus-visible { outline: none; box-shadow: var(--glow-sm-teal); }
+
+
+/* ============================================================
+   EDITORIAL THEME (overrides the cyberpunk base above)
+   Paper light (default) + warm night dark. Serif headlines,
+   one restrained accent (brick), no neon/glow/scanlines.
+   Fraunces is loaded in the page <head>.
+   ============================================================ */
+:root {
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Public Sans', system-ui, sans-serif;
+  --font-mono: 'Public Sans', system-ui, sans-serif;
+  --tex-scanlines: linear-gradient(transparent, transparent);
+  --tex-grid: none;
+  --glow-teal: transparent; --glow-magenta: transparent; --glow-amber: transparent;
+  --grad-fog: none; --grad-panel: none;
+  --radius-xs: 3px; --radius-sm: 4px; --radius-md: 5px; --radius-lg: 6px;
+}
+.cr-scanlines::after, .cr-grid-bg, .cr-photo__grid, .cr-photo__scan { background: none !important; opacity: 0 !important; }
+.cr-photo__b { display: none !important; }
+.cr-header__brand .cr-wm__mark, .footer-brand img { filter: none !important; }
+h1, h2, h3, h4, .page-title, .cr-hero__title, .cr-sechead__title, .cr-story__title,
+.cr-article__title, .cr-week__title, .cr-listrow__title, .biz-sec h2, .biz-cat h3,
+.din-cat h2, .nb-wrap h1, .nb-cat h3, .sho-wrap h1, .sho-wrap h2 {
+  font-family: var(--font-display) !important; font-weight: 600; letter-spacing: -.012em; }
+.cr-hero__title { font-weight: 700; line-height: 1.06; }
+.cr-wm__main, .footer-brand { font-family: var(--font-display) !important; font-weight: 700; letter-spacing: -.02em; }
+.cr-kicker, .cr-sechead__kicker, .cr-twrail__kicker, .cr-week__kicker, .cr-photo__cap,
+.cr-badge, .cr-tag, .cr-meta, .cr-ticker__item, .cr-twrail__label, .cr-ticker__tag {
+  font-family: var(--font-sans) !important; letter-spacing: .06em; }
+.cr-header__nav.topnav a { font-family: var(--font-sans) !important; text-transform: none; letter-spacing: 0; font-weight: 600; }
+.cr-card--bracket::before, .cr-card--bracket::after { display: none !important; }
+.cr-card, .cr-story, .cr-hero { box-shadow: none !important; border-radius: 4px; }
+.cr-badge { background: transparent !important; border: 1px solid var(--accent); color: var(--accent) !important; border-radius: 2px; }
+.cr-header { backdrop-filter: none; border-bottom-width: 2px; border-bottom-style: solid; }
+footer { border-top-width: 2px; border-top-style: solid; }
+
+/* ---- LIGHT (default): paper ---- */
+:root, :root[data-theme="light"] {
+  --ink-900:#efe9dc; --ink-800:#faf8f2; --ink-700:#ffffff; --ink-600:#ffffff;
+  --ink-500:#f2eee3; --ink-400:#e4ddcd; --ink-300:#cdc3ac;
+  --text-strong:#1b1a17; --text-body:#403d36; --text-muted:#6f685b; --text-faint:#978f7e; --text-on-neon:#ffffff;
+  --accent:#9a3322; --accent-pressed:#7c2818;
+  --neon-teal:#9a3322; --neon-teal-dim:#7c2818; --neon-magenta:#9a3322; --neon-amber:#9a6a16; --neon-lime:#3c6a3a;
+  --teal-wash:rgba(154,51,34,.06); --magenta-wash:rgba(154,51,34,.06); --amber-wash:rgba(154,106,22,.08);
+  --selection-bg:rgba(154,51,34,.16);
+}
+:root .cr-header, :root[data-theme="light"] .cr-header { background:#faf8f2 !important; border-bottom-color:#1b1a17; }
+:root .cr-ticker, :root[data-theme="light"] .cr-ticker { background:#f3efe5 !important; }
+:root .dateline, :root[data-theme="light"] .dateline { background:#faf8f2; }
+:root footer, :root[data-theme="light"] footer { background:#f3efe5 !important; border-top-color:#1b1a17; }
+:root .cr-card, :root .cr-story, :root .cr-hero,
+:root[data-theme="light"] .cr-card, :root[data-theme="light"] .cr-story, :root[data-theme="light"] .cr-hero { background:#ffffff; border:1px solid #e4ddcd !important; }
+:root .cr-hero__overlay, :root[data-theme="light"] .cr-hero__overlay { background:linear-gradient(0deg, rgba(250,248,242,.97) 0%, rgba(250,248,242,.62) 46%, rgba(250,248,242,0) 82%) !important; }
+:root .cr-hero__title, :root[data-theme="light"] .cr-hero__title { color:#1b1a17 !important; text-shadow:none !important; }
+:root .cr-hero__dek, :root[data-theme="light"] .cr-hero__dek { color:#403d36 !important; }
+:root .cr-photo--fallback, :root[data-theme="light"] .cr-photo--fallback { background:linear-gradient(135deg,#efe8d9,#e2dac8 72%) !important; }
+
+/* ---- DARK: warm night editorial ---- */
+:root[data-theme="dark"] {
+  --ink-900:#15130f; --ink-800:#1c1a15; --ink-700:#252119; --ink-600:#2b271e;
+  --ink-500:#322d22; --ink-400:#3c362a; --ink-300:#544c3b;
+  --text-strong:#efe9dc; --text-body:#cfc7b6; --text-muted:#9a907c; --text-faint:#6f685b; --text-on-neon:#1c1a15;
+  --accent:#d2694f; --accent-pressed:#b8543c;
+  --neon-teal:#d2694f; --neon-teal-dim:#b8543c; --neon-magenta:#d2694f; --neon-amber:#d8a23a; --neon-lime:#7faf6a;
+  --teal-wash:rgba(210,105,79,.10); --magenta-wash:rgba(210,105,79,.10); --amber-wash:rgba(216,162,58,.12);
+  --selection-bg:rgba(210,105,79,.22);
+}
+:root[data-theme="dark"] .cr-header { background:#1c1a15 !important; border-bottom-color:#d2694f; }
+:root[data-theme="dark"] .cr-ticker { background:#211d16 !important; }
+:root[data-theme="dark"] .dateline { background:#1c1a15; }
+:root[data-theme="dark"] footer { background:#1c1a15 !important; border-top-color:#3c362a; }
+:root[data-theme="dark"] .cr-card, :root[data-theme="dark"] .cr-story, :root[data-theme="dark"] .cr-hero { background:#252119; border:1px solid #3c362a !important; }
+:root[data-theme="dark"] .cr-hero__overlay { background:linear-gradient(0deg, rgba(28,26,21,.96) 0%, rgba(28,26,21,.55) 46%, rgba(28,26,21,0) 82%) !important; }
+:root[data-theme="dark"] .cr-hero__title { color:#efe9dc !important; text-shadow:none !important; }
+:root[data-theme="dark"] .cr-hero__dek { color:#cfc7b6 !important; }
+:root[data-theme="dark"] .cr-photo--fallback { background:linear-gradient(135deg,#2b271e,#1f1c16 72%) !important; }
+:root[data-theme="dark"] .cr-kicker, :root[data-theme="dark"] .cr-sechead__kicker { color:#d2694f !important; }

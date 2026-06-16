@@ -309,6 +309,28 @@ SOURCES = [
         "default_focus": ["community"],
         "license": "government",
     },
+    # Official county Alert Center feeds (ModID=63). Verified valid RSS 2.0 and
+    # Chesterfield-scoped, but EMPTY most of the time — they populate during real
+    # events (snow days, boil-water advisories, office closures), which is exactly
+    # the timely, actionable info residents want. Government license.
+    {
+        "id": "county-closures",
+        "name": "Chesterfield Office & Facility Closures",
+        "kind": "rss",
+        "url": "https://www.chesterfield.gov/RSSFeed.aspx?ModID=63&CID=Office-and-Facility-Closures-10",
+        "geo_filter": False,
+        "default_focus": ["community"],
+        "license": "government",
+    },
+    {
+        "id": "county-advisories",
+        "name": "Chesterfield Announcements & Advisories",
+        "kind": "rss",
+        "url": "https://www.chesterfield.gov/RSSFeed.aspx?ModID=63&CID=Announcements-and-Advisories-16",
+        "geo_filter": False,
+        "default_focus": ["community", "weather"],
+        "license": "government",
+    },
 
     # --- Local / regional outlet RSS (press license; geo_filter on the
     # regional ones to keep only Chesterfield-area stories). Each verified to
@@ -353,6 +375,17 @@ SOURCES = [
         # The legacy /arcio/rss/ path is dead (404); this Arc outbound feed
         # works (HTTP 200, 20 items, Chesterfield content).
         "url": "https://www.12onyourside.com/arc/outboundfeeds/rss/category/news/?outputType=xml",
+        "geo_filter": True,
+        "default_focus": [],
+        "license": "press",
+    },
+    {
+        "id": "wtvr-traffic",
+        "name": "WTVR CBS 6 Traffic",
+        "kind": "rss",
+        # Central-VA traffic incidents; geo_filter keeps only the ones that name
+        # a Chesterfield place (I-95 South, Hull Street, Iron Bridge, etc.).
+        "url": "https://www.wtvr.com/traffic.rss",
         "geo_filter": True,
         "default_focus": [],
         "license": "press",
@@ -527,32 +560,29 @@ SOURCES = [
     },
 
     # --- Community signal (Reddit) ---------------------------------------
-    # VERIFIED the feeds return content (r/ChesterfieldVA = 25 Atom entries
-    # with the pipeline User-Agent), BUT they are Atom feeds using <entry>,
-    # not RSS <item>: fetch_rss finds 0 items, and fetch_youtube needs a
-    # <link rel="alternate"> that Reddit doesn't emit (so item URLs come back
-    # empty and get dropped). No existing fetcher parses Reddit correctly and
-    # this task only edits sources.py, so these stay disabled until an Atom
-    # fetcher exists in fetch.py. Reddit also rate-limits (HTTP 429) hard.
+    # ENABLED 2026-06-15: fetch.py now has a generic `atom` fetcher (Reddit
+    # emits Atom <entry> with a plain <link href>, which fetch_atom handles).
+    # Verified: r/ChesterfieldVA returns 25 entries with the pipeline UA. The
+    # autonomous editor filters non-newsworthy chatter; a genuinely local post
+    # (road closure, outage, Shoosmith update) becomes real signal. At one fetch
+    # per 2h the rate-limit (429) risk is negligible.
     {
         "id": "reddit-chesterfieldva",
         "name": "r/ChesterfieldVA",
-        "kind": "rss",
+        "kind": "atom",
         "url": "https://www.reddit.com/r/ChesterfieldVA/.rss",
         "geo_filter": False,         # subreddit is Chesterfield by definition
         "default_focus": [],
         "license": "press",
-        "enabled": False,            # needs an Atom fetcher (see note above)
     },
     {
         "id": "reddit-rva",
         "name": "r/rva",
-        "kind": "rss",
+        "kind": "atom",
         "url": "https://www.reddit.com/r/rva/.rss",
-        "geo_filter": True,
+        "geo_filter": True,          # regional subreddit; keep Chesterfield items
         "default_focus": [],
         "license": "press",
-        "enabled": False,            # needs an Atom fetcher (see note above)
     },
 
     # --- Local newspaper (optional; enable once feed/cert verified) -------

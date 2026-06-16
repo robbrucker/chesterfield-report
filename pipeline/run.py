@@ -44,10 +44,15 @@ from chesterfield import classify, enrich as enrich_mod, fetch as fetch_mod, geo
 from chesterfield import board as board_mod, maps as maps_mod
 from chesterfield import meetings as meetings_mod
 from chesterfield import dining as dining_mod
+from chesterfield import neighborhoods as neighborhoods_mod
+from chesterfield import business as business_mod
 from chesterfield import serve as serve_mod
 from chesterfield import newsletter as newsletter_mod, linkqueue as linkqueue_mod
 from chesterfield import editor as editor_mod, alerts as alerts_mod, qa as qa_mod
 from chesterfield import employees as employees_mod, dedup as dedup_mod
+from chesterfield import expire as expire_mod
+from chesterfield import taxes as taxes_mod
+from chesterfield import schools as schools_mod
 from chesterfield import letters as letters_mod
 from chesterfield.db import Store
 from chesterfield.sources import active_sources
@@ -166,10 +171,16 @@ def cmd_ingest(backend: str = "auto", model: str = "claude-haiku-4-5",
 
 
 def cmd_build() -> None:
+    # Drop expired weather watches/warnings/advisories before rendering so passed
+    # alerts don't pile up on the homepage. Reversible (-> content/removed/).
+    exp = expire_mod.run(apply=True)
+    if exp["expired"]:
+        print(f"Expired {exp['expired']} stale weather alert(s) before build.")
     out = render.build_site()
     n = render.build_topics()
     render.build_digest()
     render.build_tip()
+    render.build_subscribe()
     render.build_about()
     render.build_shoosmith()
     render.build_feed()
@@ -177,6 +188,10 @@ def cmd_build() -> None:
     board_out = board_mod.build_board()
     meetings_out = meetings_mod.build_meetings()  # graceful: [] -> still builds
     dining_mod.build_dining()                      # graceful: cached OSM data
+    neighborhoods_mod.build_neighborhoods()        # directory from committed GIS data
+    business_mod.build_business()                  # employers + independent directory
+    taxes_mod.build_taxes()                        # county budget viz from committed data
+    schools_mod.build_schools()                    # CCPS directory + map from committed data
     from chesterfield import seo as seo_mod
     seo_mod.build_seo()
     letters_mod.build_form()
@@ -367,6 +382,13 @@ def main() -> None:
         # unpublish empty stubs/junk. --dry-run reports without changing files.
         result = qa_mod.run(apply="--dry-run" not in args)
         print(f"QA: {result['merged_away']} merged, {result['unpublished']} unpublished")
+    elif cmd == "expire":
+        # Deterministic: unpublish weather watches/warnings/advisories older than
+        # EXPIRE_HOURS so passed alerts don't pile up on the homepage. Reversible.
+        result = expire_mod.run(apply="--dry-run" not in args)
+        print(f"Expire: {result['expired']} stale weather alert(s) unpublished")
+        for it in result["items"]:
+            print(f"  - [{it['type']}] {it['headline']} ({it['age_hours']}h old)")
     elif cmd == "triage":
         # AI editor: auto-approve safe/newsworthy drafts, flag the rest.
         lim = _opt(args, "--limit", "12")

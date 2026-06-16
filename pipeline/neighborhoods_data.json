@@ -1,0 +1,7388 @@
+{
+"source": "Chesterfield County ArcGIS ParcelsEnriched (home counts) + VA DPOR CIC registry (HOA flags)",
+"note": "HOA=true means a state-registered HOA was matched to this neighborhood. HOA=false means no confident match (not a guarantee there is no HOA). Home counts are residential parcels, refreshable weekly.",
+"neighborhoods": [
+{
+"name": "BRANDERMILL",
+"homes": 3699,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "WOODLAKE",
+"homes": 2354,
+"hoa": true,
+"hoa_name": "WOODLAKE COMMUNITY ASSOCIATION, INC.",
+"type": "community"
+},
+{
+"name": "MAGNOLIA GREEN",
+"homes": 1996,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "DEER RUN",
+"homes": 1814,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "HARPERS MILL",
+"homes": 1795,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "SALISBURY",
+"homes": 1555,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "CHARTER COLONY",
+"homes": 1494,
+"hoa": true,
+"hoa_name": "THE CHARTER COLONY FOUNDATION INC",
+"type": "community"
+},
+{
+"name": "COLLINGTON",
+"homes": 1180,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "RIVERS BEND",
+"homes": 1120,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "THE HIGHLANDS",
+"homes": 1092,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "EVERGREEN",
+"homes": 1055,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "FOXCREEK",
+"homes": 978,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "WALTON PARK",
+"homes": 821,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HALLSLEY",
+"homes": 799,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "BAYHILL POINTE",
+"homes": 794,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMPTON PARK",
+"homes": 749,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHBROOK",
+"homes": 711,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TARRINGTON",
+"homes": 698,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FIVE FORKS VILLAGE",
+"homes": 679,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "ROUNTREY",
+"homes": 675,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE GROVE",
+"homes": 664,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "BIRKDALE",
+"homes": 657,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LONGMEADOW",
+"homes": 652,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "WOODLAND POND",
+"homes": 643,
+"hoa": true,
+"hoa_name": "WOODLAND POND HOMEOWNERS ASSOCIATION, INC.",
+"type": "community"
+},
+{
+"name": "FERNBROOK",
+"homes": 631,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "SMOKETREE",
+"homes": 618,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HUNTINGCREEK HILLS",
+"homes": 569,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MINEOLA",
+"homes": 563,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "SUMMER LAKE",
+"homes": 547,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CREEKWOOD",
+"homes": 539,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOWDALE",
+"homes": 521,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOUTHBEND",
+"homes": 495,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "WYNWOOD AT FOXCREEK",
+"homes": 490,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROXSHIRE",
+"homes": 486,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SETTLERS LANDING",
+"homes": 484,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOODMONT",
+"homes": 480,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREENFIELD",
+"homes": 475,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGS FOREST",
+"homes": 470,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRANDY OAKS",
+"homes": 464,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "QUEENSMILL",
+"homes": 462,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUNNYBROOK",
+"homes": 462,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRIGHTON GREEN",
+"homes": 461,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CLARENDON",
+"homes": 449,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERDOWNS",
+"homes": 447,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "STONEHENGE",
+"homes": 445,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WATERMARK",
+"homes": 435,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ST JAMES WOODS",
+"homes": 432,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EDGEWATER AT THE RESERVOIR",
+"homes": 412,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NEWMARKET",
+"homes": 406,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ANTLER RIDGE",
+"homes": 403,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ARBOR LANDING",
+"homes": 403,
+"hoa": true,
+"hoa_name": "Arbor Landing Homeowners Association"
+},
+{
+"name": "STONEY GLEN SOUTH",
+"homes": 393,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OLDE COACH VILLAGE",
+"homes": 387,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTER",
+"homes": 386,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOUTHCREEK",
+"homes": 380,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WATERMILL",
+"homes": 379,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "STONEY GLEN",
+"homes": 377,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "MEADOWVILLE LANDING AT RIVERS BEND",
+"homes": 373,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOXCROFT",
+"homes": 360,
+"hoa": true,
+"hoa_name": "Foxcroft Homeowners Association"
+},
+{
+"name": "QUAIL OAKS",
+"homes": 357,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SALEM WOODS",
+"homes": 348,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARPERS MILL SOUTHWEST",
+"homes": 347,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOWBROOK",
+"homes": 342,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COLONIAL PINE ESTATES",
+"homes": 337,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHENANDOAH",
+"homes": 336,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLEN TARA",
+"homes": 329,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TRIPLE CROWN",
+"homes": 329,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SILVERLEAF",
+"homes": 326,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARPERS MILL NORTHEAST",
+"homes": 324,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOMERSET",
+"homes": 320,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAKE GENITO",
+"homes": 319,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOWBROOK FARM",
+"homes": 318,
+"hoa": true,
+"hoa_name": "Meadowbrook Farm Homeowners Association"
+},
+{
+"name": "HARPERS MILL SOUTHEAST",
+"homes": 316,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SURREYWOOD",
+"homes": 316,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HIDDEN VALLEY ESTATES",
+"homes": 312,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEXLEY",
+"homes": 308,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PENNWOOD",
+"homes": 308,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WESTERLEIGH",
+"homes": 302,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAKE MARGARET",
+"homes": 299,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "QUALLA FARMS",
+"homes": 298,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLEN WOOD",
+"homes": 297,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FIVE FORKS VILLAGE SOUTH",
+"homes": 284,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROVIDENCE CREEK",
+"homes": 283,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MASON WOODS",
+"homes": 277,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRISTOL VILLAGE AT CHARTER COLONY",
+"homes": 276,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONEY GLEN WEST",
+"homes": 272,
+"hoa": true,
+"hoa_name": "STONEY GLEN WEST ASSOCIATION INC.",
+"type": "community"
+},
+{
+"name": "FOXBERRY",
+"homes": 271,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGS GROVE",
+"homes": 261,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CRESTWOOD FARMS",
+"homes": 256,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MONACAN HILLS",
+"homes": 253,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALNUT GROVE",
+"homes": 253,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PRESTWOULD FARMS",
+"homes": 252,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OLD HUNDRED MILL",
+"homes": 248,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BAILEY RIDGE ESTATES",
+"homes": 242,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRIARCLIFF",
+"homes": 242,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COURTHOUSE GREEN",
+"homes": 241,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUNDIAL FARMS",
+"homes": 240,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALTON LAKE",
+"homes": 240,
+"hoa": true,
+"hoa_name": "Walton Lake Homeowners Association"
+},
+{
+"name": "THE WOODS AT SUMMERFORD",
+"homes": 236,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TREEMONT",
+"homes": 236,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HUNTERS LANDING",
+"homes": 235,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LOST FOREST",
+"homes": 232,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WELLINGTON FARMS",
+"homes": 231,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KENDALE ACRES",
+"homes": 230,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MARLBORO",
+"homes": 230,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOXFIRE",
+"homes": 229,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "IRONGATE",
+"homes": 229,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOREST VIEW",
+"homes": 229,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "CLAY POINTE",
+"homes": 228,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MISTWOOD FOREST",
+"homes": 228,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POWDERHAM",
+"homes": 228,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JESSUP FARMS",
+"homes": 227,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SPRING TRACE",
+"homes": 227,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JESSUP MEADOWS",
+"homes": 225,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "REEDS LANDING",
+"homes": 221,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERS TRACE",
+"homes": 220,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREAT OAKS",
+"homes": 217,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ORCHARDHILL",
+"homes": 217,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROSEMONT",
+"homes": 217,
+"hoa": true,
+"hoa_name": "The Rosemont Homeowners Association of Virginia"
+},
+{
+"name": "KINGSLAND GLEN",
+"homes": 214,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALTHALL CREEK",
+"homes": 214,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WESCOTT",
+"homes": 214,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FAIRPINES",
+"homes": 212,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CAMBRIA COVE",
+"homes": 211,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COLLINGTON EAST",
+"homes": 210,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OLD CREEK WEST",
+"homes": 210,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CABIN CREEK",
+"homes": 209,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESDIN LANDING",
+"homes": 208,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTNUT HILLS",
+"homes": 207,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HYLTON PARK",
+"homes": 207,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "INDIAN SPRINGS",
+"homes": 207,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WATERMARK TOWNHOMES",
+"homes": 207,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COALFIELD STATION",
+"homes": 206,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOLAR I",
+"homes": 205,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOREST ACRES",
+"homes": 204,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "QUEENSPARK",
+"homes": 204,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SMOKETREE SOUTH",
+"homes": 204,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NEWBERRY TOWNE",
+"homes": 201,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRANDON",
+"homes": 200,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WILLOW CREEK",
+"homes": 200,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GARLAND HEIGHTS",
+"homes": 199,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HILMAR",
+"homes": 199,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WESTWOOD VILLAGE AT CHARTER COLONY",
+"homes": 197,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESSWOOD",
+"homes": 194,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAND O PINES",
+"homes": 194,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERTON",
+"homes": 194,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SCOTTINGHAM",
+"homes": 194,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELMONT HILLS WEST",
+"homes": 193,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAKEWOOD FARMS",
+"homes": 193,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHLEY WOOD",
+"homes": 192,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREENBRIAR",
+"homes": 192,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELFAIR TOWNHOUSES",
+"homes": 191,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOUNDERS BRIDGE",
+"homes": 191,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SURREYWOOD NORTH",
+"homes": 187,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WELLSPRING",
+"homes": 187,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONEBRIDGE",
+"homes": 186,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CAMERON RUN",
+"homes": 184,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CLOVER HILL FARMS",
+"homes": 184,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EAGLE COVE",
+"homes": 183,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAK FOREST ESTATES",
+"homes": 183,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CYPRESS WOODS",
+"homes": 182,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FALLING CREEK FARMS",
+"homes": 182,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAUREL BRANCH FARM",
+"homes": 182,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MAYFAIR ESTATES",
+"homes": 181,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ARCHBROOKE",
+"homes": 180,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CAMERON BAY",
+"homes": 180,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FORESTDALE",
+"homes": 179,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POCONO",
+"homes": 179,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TINSBERRY TRACE",
+"homes": 179,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MOUNT BLANCO ON THE JAMES",
+"homes": 178,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SILVER MEWS",
+"homes": 176,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RAMBLEWOOD FOREST",
+"homes": 175,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHTON WOODS NORTH",
+"homes": 174,
+"hoa": true,
+"hoa_name": "Ashton Woods Owners Association"
+},
+{
+"name": "BEXLEY WEST",
+"homes": 174,
+"hoa": true,
+"hoa_name": "Bexley West Community Association"
+},
+{
+"name": "FOREST LAKE",
+"homes": 173,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOLLY RIDGE",
+"homes": 173,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POINT OF ROCKS ESTATES",
+"homes": 173,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHENANDOAH HILLS",
+"homes": 173,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EXBURY",
+"homes": 172,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HEATHERIDGE",
+"homes": 171,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOW OAKS",
+"homes": 171,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOWBROOK MANOR",
+"homes": 171,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE MEADOWS",
+"homes": 171,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THREE PINES",
+"homes": 171,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINDSOR PARK",
+"homes": 171,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROOKCREEK CROSSING",
+"homes": 170,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PINE VALLEY AT MAGNOLIA GREEN",
+"homes": 169,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHLEY FOREST",
+"homes": 168,
+"hoa": true,
+"hoa_name": "Ashley Forest Homeowners Association"
+},
+{
+"name": "CARTERS MILL",
+"homes": 168,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AFTON",
+"homes": 164,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRENTWOOD",
+"homes": 164,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELMONT HILLS",
+"homes": 163,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROOKFIELD",
+"homes": 163,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BERWICK VILLAGE",
+"homes": 162,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OLD BUCKINGHAM FOREST",
+"homes": 162,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STEVENS HOLLOW",
+"homes": 162,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOXFIELD",
+"homes": 161,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PHYSIC HILL",
+"homes": 161,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ARCHWAY",
+"homes": 160,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FALLING CREEK HILLS",
+"homes": 159,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LOCH BRAEMAR",
+"homes": 159,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONEMILL",
+"homes": 158,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LONGWOOD ACRES",
+"homes": 157,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE TOWNS AT SWIFT CREEK",
+"homes": 157,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOWBROOK WEST",
+"homes": 156,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WATCH RUN",
+"homes": 155,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BUCKINGHAM",
+"homes": 154,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DEERFIELD ESTATES",
+"homes": 154,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROVIDENCE GREEN",
+"homes": 153,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CENTRAL PARK",
+"homes": 151,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGS FARM AT RIVERDOWNS",
+"homes": 150,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "QUEENS GRANT AT RIVERDOWNS",
+"homes": 150,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AMBERLEIGH",
+"homes": 149,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FUQUA FARMS",
+"homes": 149,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MICHAUX CREEK",
+"homes": 149,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOLLYMEADE",
+"homes": 148,
+"hoa": true,
+"hoa_name": "Hollymeade Association of Chesterfield"
+},
+{
+"name": "REAMS RUN",
+"homes": 148,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LENOX FOREST AT RIVERDOWNS",
+"homes": 147,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALTHALLMILL",
+"homes": 147,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROCK SPRING FARMS",
+"homes": 146,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FREDERICK FARMS",
+"homes": 145,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MORRISDALE",
+"homes": 144,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RAYON PARK",
+"homes": 143,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROCKHAVEN",
+"homes": 142,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRANCHS TRACE",
+"homes": 139,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OTTERDALE",
+"homes": 138,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COSBY VILLAGE TOWNHOMES",
+"homes": 137,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AMSTEL BLUFF",
+"homes": 136,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EDGEHILL",
+"homes": 136,
+"hoa": true,
+"hoa_name": "Edgehill Condominium Association"
+},
+{
+"name": "OAKMONT",
+"homes": 136,
+"hoa": true,
+"hoa_name": "Oakmont Villas Neighborhood Association"
+},
+{
+"name": "TWIN RIVERS",
+"homes": 136,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESDIN SHORES",
+"homes": 135,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CRADDOCK POINT",
+"homes": 135,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WHITESTONE",
+"homes": 135,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRANCHS BLUFF",
+"homes": 134,
+"hoa": true,
+"hoa_name": "Branch's Bluff Property Owners Association"
+},
+{
+"name": "BRAXTON",
+"homes": 134,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREENBRIAR WOODS",
+"homes": 134,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREENWICH WALK",
+"homes": 134,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAKE CRYSTAL FARMS",
+"homes": 134,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CLIFTON FARMS",
+"homes": 133,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TRUEHEART HEIGHTS",
+"homes": 133,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WILLIAM GWYN ESTATES",
+"homes": 133,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRIARWOOD",
+"homes": 132,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRIARWOOD HEARTH",
+"homes": 132,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SECOND BRANCH",
+"homes": 132,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SWIFT CREEK CROSSING",
+"homes": 132,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINDY CREEK",
+"homes": 132,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORMANDALE TERRACE",
+"homes": 131,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR",
+"homes": 130,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "VILLAGE OF BENSLEY",
+"homes": 130,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALKERS CHASE AT FOXCREEK",
+"homes": 130,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COALBROOK AT THE GROVE",
+"homes": 129,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGSWOOD",
+"homes": 129,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SAGEWOOD",
+"homes": 128,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CLOVERHILL ESTATES",
+"homes": 127,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WILKINSON TERRACE",
+"homes": 127,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINDERMERE",
+"homes": 127,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAPPY HILL FARMS",
+"homes": 126,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROVIDENCE",
+"homes": 126,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTER VILLAGE GREEN",
+"homes": 125,
+"hoa": true,
+"hoa_name": "Chester Village Association"
+},
+{
+"name": "GRAVITY HILL AT THE GROVE",
+"homes": 125,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SEARCY",
+"homes": 125,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOUTHAMPTON ACRES",
+"homes": 125,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BECKENHAM",
+"homes": 124,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROOKS CHAPEL",
+"homes": 124,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JACOBS GLENN",
+"homes": 124,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MILLSIDE",
+"homes": 124,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE VILLAS OF NORWOOD POND",
+"homes": 124,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WEDGEWOOD",
+"homes": 124,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EDGEHILL CONDO",
+"homes": 123,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGHAM AT THE GROVE",
+"homes": 123,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HICKORY HILL ESTATES",
+"homes": 122,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOLAR II",
+"homes": 122,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WESTBURY",
+"homes": 122,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARROWGATE PLACE",
+"homes": 120,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DONEGAL GLEN",
+"homes": 119,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ENON STATION",
+"homes": 119,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVER RIDGE",
+"homes": 119,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHLEY VILLAGE",
+"homes": 118,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MOUNT BLANCO",
+"homes": 118,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROSSINGTON",
+"homes": 118,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STURBRIDGE VILLAGE",
+"homes": 118,
+"hoa": true,
+"hoa_name": "Sturbridge Village Townhouses Association"
+},
+{
+"name": "ALICE HEIGHTS",
+"homes": 117,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLEN OAKS",
+"homes": 117,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINDSOR FOREST",
+"homes": 117,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARROWGATE MEADOWS",
+"homes": 116,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "REEDY MILL",
+"homes": 116,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE OAKS",
+"homes": 116,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOLLY TRACE",
+"homes": 115,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KENTWOOD FOREST",
+"homes": 115,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGSLAND PARK",
+"homes": 115,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EAGLEWOOD",
+"homes": 114,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FALLING CREEK COURT",
+"homes": 114,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SAVANNAH TRACE",
+"homes": 114,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOMACK ROAD",
+"homes": 114,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AMHERST",
+"homes": 113,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GRINDALL CREEK PARK",
+"homes": 113,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUMMERFORD",
+"homes": 113,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TANNER VILLAGE AT CHARTER COLONY",
+"homes": 113,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WEXLEY AT FOXCREEK",
+"homes": 113,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "VILLAGE AT SWIFT CREEK",
+"homes": 113,
+"hoa": true,
+"hoa_name": "Master-planned community association",
+"type": "community"
+},
+{
+"name": "AUSTIN WOODS",
+"homes": 112,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RAVENSDALE",
+"homes": 112,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHADY CREEK",
+"homes": 112,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MONTCLAIR AT SOUTHBEND",
+"homes": 111,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POPLAR CREEK",
+"homes": 111,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR TERRACE ADDITION",
+"homes": 110,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGSLAND WOODS",
+"homes": 110,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TREE TOP CONDOMINIUM",
+"homes": 110,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WYNTREBROOKE",
+"homes": 110,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREENSIDE AT RIVERS BEND",
+"homes": 109,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SALISBURY MICHAUX",
+"homes": 108,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LEGACY PARK AT MAGNOLIA GREEN",
+"homes": 107,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHERBOURNE HEIGHTS",
+"homes": 107,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE PARK",
+"homes": 107,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WARFIELD ESTATES",
+"homes": 107,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PLUM CREEK AT SOUTH RIDGE",
+"homes": 106,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SYCAMORE VILLAGE",
+"homes": 106,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ABBOTS MILL",
+"homes": 105,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASTON OAKS AT MAGNOLIA GREEN",
+"homes": 105,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEXLEY COSMOPOLITAN",
+"homes": 105,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORTH OAKS",
+"homes": 105,
+"hoa": true,
+"hoa_name": "North Oaks Homeowners Association"
+},
+{
+"name": "RIVER ROAD ESTATES",
+"homes": 105,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SACHEMS HEAD",
+"homes": 105,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOUTHAM",
+"homes": 105,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELFAIR",
+"homes": 104,
+"hoa": true,
+"hoa_name": "The Belfair Homeowners Association"
+},
+{
+"name": "CLUB CREST AT RIVERS BEND",
+"homes": 104,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POCOSHOCK HILLS",
+"homes": 104,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "REEDY SPRINGS",
+"homes": 104,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOOLRIDGE LANDING",
+"homes": 104,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEECHWOOD FOREST",
+"homes": 103,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELLEWOOD MANOR",
+"homes": 103,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HEART QUAKE AT FOXCREEK",
+"homes": 103,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORTH SETTLERS LANDING",
+"homes": 103,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PLANTERS WOOD",
+"homes": 103,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHIPCHASE AT MINEOLA",
+"homes": 102,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GAY FARMS",
+"homes": 102,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLEBE POINT",
+"homes": 102,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PALISADES COVE AT MAGNOLIA GREEN",
+"homes": 102,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AMPTHILL GARDENS",
+"homes": 101,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ARROWHEAD",
+"homes": 101,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELMONT ACRES",
+"homes": 101,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CASCADE CREEK",
+"homes": 101,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CENTERPOINTE TOWNES",
+"homes": 101,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TRADITIONS OF AMERICA AT CHESTERFIELD",
+"homes": 101,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HIGHBERRY WOODS",
+"homes": 100,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STAFFORD PARK AT MAGNOLIA GREEN",
+"homes": 100,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CAMBRIDGE",
+"homes": 99,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOUTH RIDGE",
+"homes": 99,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINTERFIELD PARK",
+"homes": 99,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COLONY POINTE",
+"homes": 98,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MILLCREEK",
+"homes": 98,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROCTORS POINT",
+"homes": 98,
+"hoa": true,
+"hoa_name": "Proctors Point Homeowners Association"
+},
+{
+"name": "BAILEYS GROVE",
+"homes": 97,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEDFORD",
+"homes": 97,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CENTRALIA STATION",
+"homes": 97,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PHEASANT RUN",
+"homes": 97,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RAMSGATE",
+"homes": 97,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINTERBERRY RIDGE",
+"homes": 97,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREYFIELD PLACE",
+"homes": 96,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KRIM POINT AT THE GROVE",
+"homes": 96,
+"hoa": true,
+"hoa_name": "Krim Point Homeowners Association"
+},
+{
+"name": "MERIDIAN AT MAGNOLIA GREEN",
+"homes": 96,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TUCKMAR",
+"homes": 96,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ANDERSONS FORGE",
+"homes": 95,
+"hoa": true,
+"hoa_name": "Anderson's Forge Homeowner's Association"
+},
+{
+"name": "HANCOCK VILLAGE CONDOMINIUMS",
+"homes": 95,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LIPPINGHAM",
+"homes": 95,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOW CREEK",
+"homes": 95,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OXFORD",
+"homes": 95,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE LANDINGS AT MEADOWVILLE",
+"homes": 95,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GENITO FOREST",
+"homes": 94,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREGORYS CHARTER",
+"homes": 94,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEAVER POINT",
+"homes": 93,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRADEN TOWNES",
+"homes": 93,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROOKSTONE",
+"homes": 93,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FAN COURT",
+"homes": 93,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ORANGE HILL",
+"homes": 93,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "QUAIL HILL",
+"homes": 93,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KIMBERLY ACRES",
+"homes": 91,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NAIRN",
+"homes": 91,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROCKY RUN",
+"homes": 91,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NUTTREE WOODS",
+"homes": 90,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WHALE ROCK",
+"homes": 90,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GENITO ESTATES",
+"homes": 89,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MOORE'S LAKE CONDOMINIUM",
+"homes": 89,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROVIDENCE COURT",
+"homes": 89,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "VICTORIA HILLS",
+"homes": 89,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BERMUDA ORCHARD",
+"homes": 88,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BUCKINGHAM WOOD",
+"homes": 88,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CENTRALIA GARDENS",
+"homes": 88,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RAMBLEWOOD ESTATES",
+"homes": 88,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SPRING RUN",
+"homes": 88,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COVE RIDGE",
+"homes": 87,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "IRON MILL",
+"homes": 87,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OLD COACH HILLS",
+"homes": 87,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRUCE FARM",
+"homes": 86,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHARTER WOODS",
+"homes": 86,
+"hoa": true,
+"hoa_name": "Charter Woods Community Association"
+},
+{
+"name": "GLEN ABBEY AT MAGNOLIA GREEN",
+"homes": 86,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMPSTEAD PLACE",
+"homes": 86,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HILLTOP FARMS",
+"homes": 86,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "IVYSTONE AT SOUTHBEND",
+"homes": 86,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOWDALE TOWNHOUSE PARK",
+"homes": 86,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STANDING OAK",
+"homes": 86,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE GARDENS AT BELLGRADE",
+"homes": 86,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR TERRACE ADDITION RESUBDIVISION",
+"homes": 85,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CEDAR CLIFF",
+"homes": 85,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DEER MEADOW",
+"homes": 85,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGSLAND ACRES",
+"homes": 85,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WAGSTAFF CIRCLE",
+"homes": 85,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "IVYRIDGE",
+"homes": 84,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROLLING RIDGE",
+"homes": 84,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WESTCHESTER TOWNHOUSES",
+"homes": 84,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AUTUMN OAKS",
+"homes": 83,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEULAH OAKS",
+"homes": 83,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COLLEGE PARK",
+"homes": 83,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FALLING CREEK",
+"homes": 83,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RANDOLPH POND",
+"homes": 83,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WYNSTONE PARK AT MAGNOLIA GREEN",
+"homes": 83,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ARBOR MEADOWS",
+"homes": 82,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROOKWOOD ESTATES",
+"homes": 82,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HERITAGE WOODS",
+"homes": 82,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POCOSHOCK HEIGHTS",
+"homes": 82,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ST REGENTS LAKE",
+"homes": 82,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE SANCTUARY AT WATERMILL",
+"homes": 82,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE VILLAS AT ASHLAKE",
+"homes": 82,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BERMUDA GARDENS",
+"homes": 81,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CENTERPOINTE CROSSING",
+"homes": 81,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOX CHASE",
+"homes": 81,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROCKWOOD TERRACE",
+"homes": 81,
+"hoa": true,
+"hoa_name": "Rockwood Terrace Homeowners Association"
+},
+{
+"name": "RUNNYMEDE",
+"homes": 81,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SPRING HILL",
+"homes": 81,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONEHENGE WEST",
+"homes": 81,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEECHWOOD",
+"homes": 80,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CRESCENT PARK",
+"homes": 80,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HERON POINTE",
+"homes": 80,
+"hoa": true,
+"hoa_name": "Heron Pointe Property Owners Association"
+},
+{
+"name": "MILL SPRING",
+"homes": 80,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GATES BLUFF",
+"homes": 79,
+"hoa": true,
+"hoa_name": "Gates Bluff Community Association"
+},
+{
+"name": "GRAYSON ESTATES",
+"homes": 79,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARTLEY VILLAGE AT CHARTER COLONY",
+"homes": 79,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROVIDENCE PINES",
+"homes": 79,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SLEEPY HOLLOW",
+"homes": 79,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOUTHAVEN",
+"homes": 79,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUMMIT POINT",
+"homes": 79,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHLEY GROVE",
+"homes": 78,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AUTUMN GROVE",
+"homes": 78,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HIGHLAND HILLS",
+"homes": 78,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WILLOWHURST",
+"homes": 78,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BENDAHL VALLEY",
+"homes": 77,
+"hoa": true,
+"hoa_name": "Bendahl Valley Property Owners Association"
+},
+{
+"name": "CEDAR CROSSING",
+"homes": 77,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BERKLEY VILLAGE AT CHARTER COLONY",
+"homes": 76,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMPTON POINTE AT MAGNOLIA GREEN",
+"homes": 76,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLEBE POINT WEST",
+"homes": 75,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MATOACA MANOR",
+"homes": 75,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAK PARK",
+"homes": 75,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POPLAR GROVE",
+"homes": 75,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "QUEENSGATE",
+"homes": 75,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOREST HILLS AT MAGNOLIA GREEN",
+"homes": 74,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GATEWOOD",
+"homes": 74,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PENNWOOD ESTATES",
+"homes": 74,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TIMBER RIDGE",
+"homes": 74,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TRAMPLING FARMS",
+"homes": 74,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "VILLAS AT MAGNOLIA LAKES",
+"homes": 74,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINTERS HILL PLACE",
+"homes": 74,
+"hoa": true,
+"hoa_name": "Winters Hill Homeowners Association"
+},
+{
+"name": "BRANDYWINE FOREST",
+"homes": 73,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTNUT BLUFF",
+"homes": 73,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DEERWOOD",
+"homes": 73,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERVIEW PARK",
+"homes": 73,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINDY RIDGE",
+"homes": 73,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CROWN PARK",
+"homes": 72,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CYPRESS GLEN",
+"homes": 72,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EDGEWOOD",
+"homes": 72,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MACLACHLAN AT THE HIGHLANDS",
+"homes": 72,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NEWBYS WOOD",
+"homes": 72,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAKDALE",
+"homes": 72,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PATTERSON PARK",
+"homes": 72,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOUNDRY RUN",
+"homes": 71,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAWKINS WOOD AT THE GROVE",
+"homes": 71,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALNUT BEND",
+"homes": 71,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WEST CHESTERFIELD HEIGHTS",
+"homes": 71,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WHITLEY MANOR AT THE HIGHLANDS",
+"homes": 71,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHTON WOODS SOUTH",
+"homes": 70,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAWTHORNE VILLAGE AT CHARTER COLONY",
+"homes": 70,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HUNTSBRIDGE",
+"homes": 70,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STERLING COVE AT THE HIGHLANDS",
+"homes": 70,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ARMISTEAD VILLAGE AT CHARTER COLONY",
+"homes": 69,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CAMERON HILLS",
+"homes": 69,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAKE FARMS",
+"homes": 69,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MCTYRES COVE & PATIO LOTS",
+"homes": 69,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PALMILLA AT MAGNOLIA GREEN",
+"homes": 69,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEECHWOOD POINT",
+"homes": 68,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR HEIGHTS",
+"homes": 68,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ENGLEWOOD",
+"homes": 68,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FIDDLERS RIDGE",
+"homes": 68,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MORNINGSIDE WOODS",
+"homes": 68,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "REEDS HILL",
+"homes": 68,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHEPHERDS WATCH",
+"homes": 68,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BIRNAM WOODS",
+"homes": 67,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTERFIELD MANOR",
+"homes": 67,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARPERS MILL NORTHWEST",
+"homes": 67,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LELAND VILLAGE AT CHARTER COLONY",
+"homes": 67,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PENN ACRES",
+"homes": 67,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRAEBROOK VILLAGE",
+"homes": 66,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LITTLEBURY",
+"homes": 66,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE VINEYARD AT FOREST VIEW",
+"homes": 66,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THORNHILL",
+"homes": 66,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TURTLE HILL",
+"homes": 66,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELFAIR VILLAGE",
+"homes": 65,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CAMELOT FOREST",
+"homes": 65,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CARRISBROOK AT MINEOLA",
+"homes": 65,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EDGEHILL TOWNHOUSES",
+"homes": 65,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FALCONBRIDGE",
+"homes": 65,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOREST GLENN",
+"homes": 65,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLEN KILCHURN AT THE HIGHLANDS",
+"homes": 65,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAYWOOD VILLAGE AT CHARTER COLONY",
+"homes": 65,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "IVEY TRACT",
+"homes": 65,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOODBRIDGE CROSSING CONDO",
+"homes": 65,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR HILLS",
+"homes": 64,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CARTERS MILL EAST",
+"homes": 64,
+"hoa": true,
+"hoa_name": "Property Owners Association of Carters Mill East"
+},
+{
+"name": "CROSS CREEK",
+"homes": 64,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MALLORY VILLAGE AT CHARTER COLONY",
+"homes": 64,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADWOOD",
+"homes": 64,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAK RUN",
+"homes": 64,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROCK CREEK PARK",
+"homes": 64,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHADY SPRINGS",
+"homes": 64,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE TOWNES AT NOTTING PLACE",
+"homes": 64,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CARLTON RIDGE AT MAGNOLIA GREEN",
+"homes": 63,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOUR SEASONS",
+"homes": 63,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LONG SHADOW",
+"homes": 63,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PRIMROSE AT FOXCREEK",
+"homes": 63,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STEWART VILLAGE AT CHARTER COLONY",
+"homes": 63,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE VILLAS AT IRON MILL",
+"homes": 63,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ACORN RIDGE",
+"homes": 62,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTERBROOK FARMS",
+"homes": 62,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GILRITCHIE",
+"homes": 62,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOW PARK",
+"homes": 62,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROBERTSON PLACE",
+"homes": 62,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SALISBURY-HATFIELD",
+"homes": 62,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ST IVES",
+"homes": 62,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONE MANOR VILLAGE",
+"homes": 62,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CAMERON FARMS",
+"homes": 61,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CLAYBORNE VILLAGE AT CHARTER COLONY",
+"homes": 61,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CROSSTIMBERS",
+"homes": 61,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GARDEN CITY HEIGHTS",
+"homes": 61,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GENITO WOODS",
+"homes": 61,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HERITAGE COMMONS",
+"homes": 61,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SALISBURY-FALKIRK",
+"homes": 61,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUMMERS TRACE",
+"homes": 61,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE COLONY",
+"homes": 61,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WEST BAY",
+"homes": 61,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASCOT POINTE",
+"homes": 60,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COURTHOUSE WOODS",
+"homes": 60,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ESTRIDGE",
+"homes": 60,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FAWN CREEK",
+"homes": 60,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARBOUR GREEN",
+"homes": 60,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HUNTERS GREEN",
+"homes": 60,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MINEOLA HEIGHTS",
+"homes": 60,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUSSEX ESTATES",
+"homes": 60,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE LANDING AT SWIFT CREEK",
+"homes": 60,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BETHANY CREEK PARK",
+"homes": 59,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR FOREST",
+"homes": 59,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CAROLE HEIGHTS",
+"homes": 59,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DUPONT SQUARE",
+"homes": 59,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLEBE POINT ESTATES",
+"homes": 59,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LORA LYNN HEIGHTS",
+"homes": 59,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOW RIDGE",
+"homes": 59,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NUTTREE",
+"homes": 59,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHELTER COVE",
+"homes": 59,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TOWNES AT IRONBRIDGE",
+"homes": 59,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BANYAN COVE AT MAGNOLIA GREEN",
+"homes": 58,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NEW ROCHELLE AT ROCHEDALE HUNDRED",
+"homes": 58,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAKVIEW",
+"homes": 58,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHADOW RIDGE",
+"homes": 58,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SPRING GATE",
+"homes": 58,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ST CLAIR",
+"homes": 58,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STOCKLEIGH",
+"homes": 58,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUTTERS MILL REVISED",
+"homes": 58,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SWIFT CREEK ESTATES",
+"homes": 58,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINTERFIELD STATION",
+"homes": 58,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRIGHTON GREEN WEST",
+"homes": 57,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHIMNEY HOUSE",
+"homes": 57,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GILLS GATE",
+"homes": 57,
+"hoa": true,
+"hoa_name": "Gills Gate Homeowners Association"
+},
+{
+"name": "NORTHWICH",
+"homes": 57,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SPRINGRIDGE AT SWIFT CREEK",
+"homes": 57,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WHITTINGTON FOREST",
+"homes": 57,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DUNNOTTAR AT THE HIGHLANDS",
+"homes": 56,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HILLANNE",
+"homes": 56,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JESSUP PLACE",
+"homes": 56,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORTHLAKE HILLS",
+"homes": 56,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROBINWOOD",
+"homes": 56,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TERRACES AT SWIFT CREEK",
+"homes": 56,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "APPLEFORD",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BARNES SPRING",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEVERLY ACRES",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COURTHOUSE GREEN SOUTH",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OLD FOX TRAIL",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RADCLIFFE",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RANCH ACRES",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROLLING HILLS",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SPRING GROVE",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUNRISE BLUFF",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SYCAMORE MEWS CONDO",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TROJAN WOODS",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WHISPERING OAKS",
+"homes": 55,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOREST RIDGE",
+"homes": 54,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GARRISON PLACE",
+"homes": 54,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MCCORMICK WOODS",
+"homes": 54,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STAFFORD PLACE",
+"homes": 54,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONEWOOD MANOR",
+"homes": 54,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROADMOOR PARK",
+"homes": 53,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HUGUENOT HUNDRED",
+"homes": 53,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "IVEY ACRES",
+"homes": 53,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LONG COVE",
+"homes": 53,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OASIS TOWNHOMES",
+"homes": 53,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROSEBAY FOREST",
+"homes": 53,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STEEPLE CHASE",
+"homes": 53,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WENTWORTH HOME SITES",
+"homes": 53,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEAVERWOOD",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROOKWOOD",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTER STATION",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CROFTON VILLAGE AT CHARTER COLONY",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CROOKED CREEK",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GATES MILL",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HENING HEIGHTS",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORTH CHESTERWOOD",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PAGET",
+"homes": 52,
+"hoa": true,
+"hoa_name": "Paget Homeowners Association"
+},
+{
+"name": "PEACEFIELD",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POCOSHOCK SUBDIVISION",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROCK HARBOUR",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHALLOWFORD TRACE",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "VALHALLA AT MAGNOLIA GREEN",
+"homes": 52,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BREVARD",
+"homes": 51,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FARMVIEW ESTATES",
+"homes": 51,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIGGERS STATION",
+"homes": 51,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERMONT RIDGE",
+"homes": 51,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SALEM OAKS",
+"homes": 51,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THORNRIDGE",
+"homes": 51,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOODBINE",
+"homes": 51,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOODS EDGE",
+"homes": 51,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BERMUDA PLACE",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRITTONWOOD",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRYNMORE",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BUFORD ESTATES",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CARRIAGE PINES",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CASTLE GLEN",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTER GROVE",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTERWOOD",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CLIPPER COVE",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COTTAGE MILL",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DENSE WOOD HILL",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EAGLES CREST AT CHESTERFIELD MEADOWS",
+"homes": 50,
+"hoa": true,
+"hoa_name": "Eagles Crest Townhome Association"
+},
+{
+"name": "ELM CREST",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FORTUNES RIDGE",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLAMORGAN",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HUNTERS RIDGE",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HUNTGATE WOODS",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAUREL TRAIL",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POWELL GROVE",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROVIDENCE FARMS",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "QUEENSBLUFF",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SANDSTONE RIDGE",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SEDWICK VILLAGE AT CHARTER COLONY",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SEVEN OAKS",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE POINTE AT WALTON LAKE",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALTON BLUFF",
+"homes": 50,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROWNS BLUFF",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTER HEIGHTS",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOREST HEIGHTS",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMLIN ESTATES",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HEDGELAWN",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JAHNKE PLACE",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MACANDREW GLEN AT THE HIGHLAND",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MANSFIELD CROSSING",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MASON ORCHARD",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAK SPRINGS",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OTTERDALE POINTE",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POCOSHOCK TOWNHOUSES",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROVIDENCE MEADOWS",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "REGATTA POINTE",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINDSOR HILLS",
+"homes": 49,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ABBEY VILLAGE AT CHARTER COLONY",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEL ARBOR",
+"homes": 48,
+"hoa": true,
+"hoa_name": "Bel Arbor Community Association"
+},
+{
+"name": "BRIGHT OAKS ESTATES",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FIELDSTONE",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FINCHLEY",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOLLY CREEK",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HUNTWOOD",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LITTLE TOMAHAWK STATION",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MADISON VILLAGE AT CHARTER COLONY",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STERLINGS BRIDGE",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUGAR CREEK",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "W E GILL ESTATE",
+"homes": 48,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AMBER FOREST",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BIGGIN POND AT THE GROVE",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR TERRACE",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BUXTON",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CENTRALIA GARDENS ANNEX",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COBBS POINT",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FIRST BRANCH AT WOODLAND POND",
+"homes": 47,
+"hoa": true,
+"hoa_name": "First Branch at Woodland Pond Community Association"
+},
+{
+"name": "HOLLY ACRES",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LANSGATE",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORTH CHASE",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PARKWOOD",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PATTERSON PARK RESUB",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PEBBLE CREEK",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SANDY OAK",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SANDY RIDGE",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SEAVIEW AT THE HIGHLANDS",
+"homes": 47,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR MANOR",
+"homes": 46,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COBBLESTONE CREEK",
+"homes": 46,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DEVENWOOD",
+"homes": 46,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MOSS CREEK",
+"homes": 46,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIDGE POINT",
+"homes": 46,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SALEM ESTATES",
+"homes": 46,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SYCAMORE RIDGE",
+"homes": 46,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOODS WALK",
+"homes": 46,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEACON HILL",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR ESTATES",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRANDERS ESTATES",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CANDLELAMP",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHATHAM",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHATMOSS",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CRIMSON CREST",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DANHURST WOODS",
+"homes": 45,
+"hoa": true,
+"hoa_name": "Danhurst Woods Association"
+},
+{
+"name": "DAVIS POND",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GRAND SUMMIT",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JESSUP STATION",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JOHN TYLER WOODS",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOW CHASE",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAKTON",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONEY RIDGE",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINNERS CIRCLE",
+"homes": 45,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AMPTHILL HEIGHTS",
+"homes": 44,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ARCHWOOD",
+"homes": 44,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROADMOOR NORTH",
+"homes": 44,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CABIN CREEK WEST",
+"homes": 44,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COUNTRY PLACE",
+"homes": 44,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MUIRFIELD GREEN",
+"homes": 44,
+"hoa": true,
+"hoa_name": "Muirfield Green Association"
+},
+{
+"name": "TWILIGHT BLUFF",
+"homes": 44,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WREXHAM ESTATES",
+"homes": 44,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELLWOOD HEIGHTS DEVELOPMENT",
+"homes": 43,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR MANOR RESUB",
+"homes": 43,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COPPER GROVE AT HARPERS MILL",
+"homes": 43,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JAMES RIVER WEST",
+"homes": 43,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MANOR GATE",
+"homes": 43,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOWBROOK CLUB SITES",
+"homes": 43,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MILLSTONE CREEK",
+"homes": 43,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAK KNOLL",
+"homes": 43,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROVIDENCE FOREST",
+"homes": 43,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ARROWOOD",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELMONT PARKWAY",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BURY",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CANDLEWICK",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTERFIELD DOWNS",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COXENDALE",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLENMORE VILLAGE AT CHARTER COLONY",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LYNDHURST",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MILHORN TRACT",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOMERSBY",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOUTHSHORE",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUNSET HILLS",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WILLOW GLENN",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINDSOR PLACE",
+"homes": 42,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BAYPORT LANDING",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BOLLINGER ESTATES",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GENITO SQUARE",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GROVE FOREST",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HERITAGE VILLAGE",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORTH HUNDRED",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PRESCOTTS LEVEL AT FOXCREEK",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "QUAIL HOLLOW",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "QUEENSMILL NORTH",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVER OAKS",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SCOTTMAR",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "VILLAS AT ASHFORD HILL",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WENDOVER HILLS",
+"homes": 41,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHTON VILLAGE AT CHARTER COLONY",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEXLEY EAST",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BOSCHEN WOODS",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRYAN RIDGE",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ENON OAKS",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ERINTON AT THE HIGHLANDS",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLEN CONNER",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HALFWAY HOUSE HEIGHTS",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HILLANDALE",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RABBIT RUN",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "REGALIA AT THE HIGHLANDS",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE VILLAS AT WATERMILL",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THREE BRIDGES",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TWILIGHT LANDING",
+"homes": 40,
+"hoa": true,
+"hoa_name": "Twilight Landing Homeowners Association"
+},
+{
+"name": "TWO NOTCH",
+"homes": 40,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BLACK ISLE AT THE HIGHLANDS",
+"homes": 39,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ECHO RIDGE",
+"homes": 39,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLENEAGLES",
+"homes": 39,
+"hoa": true,
+"hoa_name": "Gleneagles Homeowners Association"
+},
+{
+"name": "MARTIN GLEN",
+"homes": 39,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NEWBYS MILL",
+"homes": 39,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE EDGE AT WESTCHESTER",
+"homes": 39,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TREELAND HEIGHTS",
+"homes": 39,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALNUT CREEK",
+"homes": 39,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ALLERDICE AT THE HIGHLANDS",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASCOT FOREST",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AUTUMN WOODS",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELLSHIRE",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELMONT FARMS",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DAKINS LANDING",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GENITO TOWNS",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMPTON FARMS",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HANCOCKS QUARTER AT FOXCREEK",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KEITHWOOD",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROLLING HILL AT BON AIR",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROLLING HILL AT BUFORD",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOMERVILLE GROVE",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WESTOVER FARMS",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOODFIELD",
+"homes": 38,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ARABELLA AT THE HIGHLANDS",
+"homes": 37,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEULAH VILLAGE",
+"homes": 37,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BOYCES COVE",
+"homes": 37,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHANDON AT THE HIGHLANDS",
+"homes": 37,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CLARKES FORGE",
+"homes": 37,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KENDALE ACRES ADDITION",
+"homes": 37,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIDGEMOOR AT THE GROVE",
+"homes": 37,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WEST SHORE",
+"homes": 37,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESDIN RIDGE",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DUCK COVE",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EVERGREEN HILLS",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MAPLE BROOK",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORTH CREEK CONDOMINIUM",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAK BROOK",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROBIOUS FOREST",
+"homes": 36,
+"hoa": true,
+"hoa_name": "Robious Forest Homeowners Association"
+},
+{
+"name": "SADDLE HILL",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SCOTTER HILLS AT THE GROVE",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SILVER BIRCH",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONEBRIDGE GARDENS WEST AT IRONBRIDGE P",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE VILLAS AT WESTERLEIGH",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TIMSBERRY GARDENS",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WATERS EDGE",
+"homes": 36,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BENT CREEK",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BOULEVARD HEIGHTS",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COPPER HILL",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EAST CHESTER",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GROVE PLACE",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARPERS MILL TOWNHOMES",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HILLENWOOD",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIDGEFIELD",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RUTHERFORD VILLAGE AT CHARTER COLONY",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOUTH CHESTER",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUMMERTREE",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALKERS FERRY",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WORSHAM GREEN",
+"homes": 35,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHBROOK LANDING",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AUGUSTUS WRIGHT ESTATE",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CARRIAGE CREEK",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CARTERS RUN",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHARTER COLONY WEST",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTER RUN",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COUNTRY HOME ESTATES",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CRANBROOK",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMILTON",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARBOUR BLUFF",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOPKINS FOREST",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LYNDENWOOD AT THE HIGHLANDS",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PARRISH BRANCH",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RACHELS WAY",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SEDGEFIELD",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SIDLAW HILLS AT THE HIGHLANDS",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ST GEORGE",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE POINTE AT BELLGRADE",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE VILLAS AT RIVERS BEND",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THOMPSON ESTATES",
+"homes": 34,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "APAMATICA",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESDIN HARBOR",
+"homes": 33,
+"hoa": true,
+"hoa_name": "Chesdin Harbor Homeowner Association"
+},
+{
+"name": "CRADLE HILL",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CUTTER COURT",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DALEWOOD",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EAGLE BEND AT MAGNOLIA GREEN",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FIELDCREST",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GRAVELBROOK FARMS",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROMONTORY POINTE",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SALISBURY VILLAGE TOWNHOUSES",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHADOWBROOK HEIGHTS",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TAYLOR HALL ESTATES",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WESTON",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOODVALE",
+"homes": 33,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROOKFIELD SOUTH",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BROOKSIDE",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CARRIAGE HILL",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CEDAR HEIGHTS",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EAST ESTATES AT MOUNT HERMON",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ELKHARDT PARK",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOREST WOOD",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMPTON PARK CONDOMINIUMS",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "J H CHASE",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORMANDALE TERRACE ADDITION",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NUNNALLYS ADDITION",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PROMENADE AT WINTERFIELD",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SYCAMORE SPRINGS AT SOUTHBEND",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THORNSETT",
+"homes": 32,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELLE SPRING TOWNES",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELLWOOD ADDITION",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COURT RIDGE",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EASTFAIR AT THE HIGHLANDS",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAKEPOINTE",
+"homes": 31,
+"hoa": true,
+"hoa_name": "Lakepointe Homeowners Association"
+},
+{
+"name": "LAUREL SPRING",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OXFORD VILLAGE AT CHARTER COLONY",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PLEASANT DALE",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TERJO VILLAGE",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE SANCTUARY AT ROSELAND",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "VILLAGE WOODS",
+"homes": 31,
+"hoa": true,
+"hoa_name": "Village Woods Homeowners Association of Chesterfield"
+},
+{
+"name": "WATCH HILL",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WATERVIEWS AT THE RESERVOIR",
+"homes": 31,
+"hoa": true,
+"hoa_name": "Waterviews at the Reservoir Civic Association"
+},
+{
+"name": "WHIPPOORWILL",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINSTON PARK",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WYNTREBROOK VILLAGE",
+"homes": 31,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELLMEADE",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BLACK HEATH",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COSBY ESTATES AT TURNER FARM",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COURTHOUSE ACRES",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DONEGAL FOREST",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EASTBLUFF",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FAIR ISLE AT THE HIGHLANDS",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HUGUENOT RIDGE",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "L P D ENTERPRISES",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MANSFIELD LANDING",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OLD TOWN CREEK",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PLEASANT GROVE",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PLEASANT RIDGE",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TIMBERMILL",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALNUT PLACE",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WATERPOINTE CONDO",
+"homes": 30,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DUXTON",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ELKO FARMS",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FIVE SPRINGS",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOLLYBERRY HILLS",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LYNDALE",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MATOAX HUNDRED",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MERRIEWOOD",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ORCHARD GROVE",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIEVES POINTE",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SCHLOSS MANOR",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TILLERS RIDGE",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALTHALL RIDGE",
+"homes": 29,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BANWELL",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BUFORD OAKS",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CASTLEBURY HILLS",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CEDAR ACRES",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHARLESTON VILLAGE AT MAGNOLIA GREEN",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DALEBLUFF MANOR",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DWAYNE PARK",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FAIRWAY WOODS AT RIVERS BEND",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GRAMPIAN AT THE HIGHLANDS",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARTFORD HILL TOWNES",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OXLEY",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PRESTON PLACE",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PYPERS POINTE",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVER HILLS AT RIVERS BEND",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROSEMEAD AT THE HIGHLANDS",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TWIN CEDARS",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WATERCREST",
+"homes": 28,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHTON DELL",
+"homes": 27,
+"hoa": true,
+"hoa_name": "Ashton Dell Community Association"
+},
+{
+"name": "AVON PARK",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BURLEY RIDGE",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHARLESTON ESTATES",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESHIRE",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COMMODORE POINT",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARBOURWOOD",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LOGAN TRACE",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MANCHESTER HEIGHTS",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MILLCREST AT BRANDERMILL",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PERDUE PROPERTY",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PONDS & EANES",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROCKPORT LANDING",
+"homes": 27,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR CREST",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR KNOLLS",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR VILLAS",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BURRAY AT THE HIGHLANDS",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CARDEN PARK AT MAGNOLIA GREEN",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ERIN GREEN",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLADSTONE GLEN",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREENHAM",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HILL SPRING",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOLIDAY ACRES",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "IRVIN DALE",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LOCUST GROVE ADDITION",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LONGHILL",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MCKESSON PLACE",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POPLAR VILLAGE",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROSE GLEN",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHEFFIELD COURT",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SYCAMORE PLACE",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE COTTAGE AT MILLWOOD",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINFREES COLONY",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOOD DALE",
+"homes": 26,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AMBER HEIGHTS",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AMBERWOOD",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRIDLEWOOD FOREST",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DUNOLLIE AT THE HIGHLANDS",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FINSTOWN LANDING AT THE HIGHLANDS",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOXWOOD",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOLLY HILL",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MAGINOAK",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NASH GROVE",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORTH BEULAH VILLAGE",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POCAHONTAS ACRES",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RANDOM WOODS",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SMOKETREE RIDGE",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOUTH CHESTER FOREST",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE WOODS",
+"homes": 25,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRECHIN WOODS AT THE HIGHLANDS",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "EDGEHILL NORTH",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINTAIL FOREST AT THE HIGHLAND",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NOWETA GARDENS",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OLD BON AIR PLACE",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PIEDMONT ESTATES",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "POPULAR HILLS",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SQUAREFIELD PARK FARMS",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STRATFORD HILLS",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TANGLEBROOK",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE TIMBERS AT SUMMERFORD",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TIMBER MILL WEST",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WILLESDEN AT STONEHENGE",
+"homes": 24,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHINGTON AT STONEHENGE",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEECHNUT ACRES",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BERKLEY PLACE",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESDIN PARK",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DALE VILLAGE",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DEERFIELD ESTATES RESUB",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREEN VISTA AT RIVERS BEND",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LYLWOOD AT THE HIGHLANDS",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MOHAWK",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PLANTATION ESTATES",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONEHENGE AMESBURY",
+"homes": 23,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ARSENAL HILLS",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BERMUDA COUNTRY ESTATES",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FAIRWAYS VILLAS",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GRASSLAND",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LEES FOREST",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LITTLE CREEK",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LONDON PARK",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MAGNOLIA CROSSING AT CENTRALIA",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MOCKINGBIRD HILL",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORTH RIVERMONT",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAK HAVEN FARMS",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAK HILL",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAK HILL ESTATES",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OAK HOLLOW",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PERKINSON HEIGHTS",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "QUALLA TRACE",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIDGE CREEK",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERBIRCH TRACE",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROBERTS FOREST",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SALISBURY HILLS",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOMERS LARK",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SPINNAKER COVE - 2",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONE HARBOR",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUNBURY TWO",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE COVE AT MAGNOLIA LAKES",
+"homes": 22,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TIMSBERRY TOWNHOUSES",
+"homes": 22,
+"hoa": true,
+"hoa_name": "Timsberry Townhouses Community Association"
+},
+{
+"name": "BUCKRUDY POINT",
+"homes": 21,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HICKORY GROVE",
+"homes": 21,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAKE GEORGE HAMLET",
+"homes": 21,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LOCUST GROVE ADD",
+"homes": 21,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "REVERE ESTATES",
+"homes": 21,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHADY ACRES",
+"homes": 21,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONEHENGE HILLS",
+"homes": 21,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TIMBERCREEK",
+"homes": 21,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "VICTORIA COMMONS",
+"homes": 21,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHLAKE TRAILS & ASHLAKE CROSSING",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BERMUDA OCHRE",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR COURT",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHELTENHAM AT SALISBURY",
+"homes": 20,
+"hoa": true,
+"hoa_name": "Cheltenham at Salisbury Homeowners Association"
+},
+{
+"name": "COUNTRY WALK",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DALE MEADOWS",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARROWGATE SUBDIVISION",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOLLY PINE HEIGHTS",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KESWICK HILLS",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LOCH HAVEN",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "NORTH POINT",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SYLVANIA",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TIMSBURY POINTE",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WOODCROFT",
+"homes": 20,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CEDAR RUN",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FRANKLIN FOREST",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMLINS REACH",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARBOUR HILL",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HEATHER GLEN",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGS LYNN",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LA MAR PLACE",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RED FERN STATION",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SALISBURY BARROW PLACE",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SOUTH CHESTER MANOR",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TOWNHOMES AT HARBOUR POINTE",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "UNION GROVE",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALTHALL PARK",
+"homes": 19,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ADKINS VILLAGE",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "AMBERGATE",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FALLING CREEK VILLA",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMPTON RIDGE",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARTLAND",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "IVANWOODS",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JEAN COURT",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGSLAND HEIGHTS",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KRENMOR FARM",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LUNSWOOD",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ORCHARD ACRES",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERS BEND TOWNHOMES",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROCKVALLEY AT THE HIGHLANDS",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SMOKETREE WOODS",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TWIN OAKS WEST",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WATKINS GLEN",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WEATHERBURY",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WILDWOOD ESTATES",
+"homes": 18,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BARRINGTON AT MAGNOLIA GREEN",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CARVER HOME SITES",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COBBLE GLEN",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HARBOUR RIDGE",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HEATHER HILL",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MISTY GLEN",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PLANTATION TRACE",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVER WALK AT RIVERMONT CROSSING",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SQUAREFIELD PARK",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE VILLAGE AT MIDLOTHIAN",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TIMBERMILL NORTH",
+"homes": 17,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BONCREEK",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRIGHTON PLACE",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESTERFIELD PLACE EXTENSION",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMLIN CREEK BLUFF",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAMMOCK CREEK",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PLAYERS COURT AT RIVERS BEND",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "REEDS BLUFF",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERMONT ANNEX",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUMMIT ACRES",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUNRISE VALLEY",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUNVIEW",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WERTHS ADDITION",
+"homes": 16,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ASHLEY WOODS EAST",
+"homes": 15,
+"hoa": true,
+"hoa_name": "Ashley Woods Community Association"
+},
+{
+"name": "BALLARD OAKS",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BELLWOOD ESTATES",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR PLACE",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BUCKINGHAM MANOR",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "C H HORNER PLAN",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GEM ACRES",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GLEN RIDGE",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GOYNES",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HALLIE",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KELLERSLEY",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAMMERMOOR AT THE HIGHLANDS",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OLD GUN ACRES",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PERDUE PLAN",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SNEAD-CURTIS ADDITION",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WREXHAM TOWNES",
+"homes": 15,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ADKINS RIDGE",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEECHWOOD FARM",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRANSFORD",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BUFORD SQUARE",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CAVAN",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CRESCENT PARK RESUB",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ELKHARDT HEIGHTS",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FIELD VIEW",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KIN-REY",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGSLAND GARDENS",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LITCHFIELD BLUFF",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PATROMDALE",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SANDY BROOK AT BRANDERMILL",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STANWICK",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "TRENTS FARM",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WEST BRANCH",
+"homes": 14,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BOISSEAU",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR RIDGE",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR STATION",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BOXWOOD",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BREEZEWOOD",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CLIFFLAWN",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CONCORD",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DUNVEGAN WOODS AT THE HIGHLANDS",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "E C SHIELDS PROPERTY",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FLINTSHIRE",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOX HILLS ESTATES",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GRAND MANOR AT LAKE EVERGREEN",
+"homes": 13,
+"hoa": true,
+"hoa_name": "Grand Manor at Lake Evergreen Homeowners Association"
+},
+{
+"name": "HICKORY HOLLOW",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOLLY TRAIL",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "OLD STAGE",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PINIFER PARK AT QUEENSPARK",
+"homes": 13,
+"hoa": true,
+"hoa_name": "Pinifer Park Owners Association"
+},
+{
+"name": "REDFORDS SUBDIVISION",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERS CREST",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SCHMIDT",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHADY POINTE AT BRANDERMILL",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "STONEHENGE COMMONS",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WHISPERING PINES",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WILDWOOD",
+"homes": 13,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR KNOLLS ANNEX",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON AIR VISTA",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COOKS PLAN",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DALEWOOD ANNEX",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOMEACRES",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JORDAN CROSSING",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "LAKE HILLS",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERMONT",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SUNBURY ONE",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALKERS COVE",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WINTERFIELD RIDGE",
+"homes": 12,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ALEXANDRIA STATION",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "C F PARTIN ESTATES",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "CHESDIN HEIGHTS",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "GREENS AT WOODBRIDGE CROSSING",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HENRICUS GREEN",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "KINGSLAND MEADOWS",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SILVER LAKE AT WATERMILL",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SWIFT CREEK FARMS",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "W J JONES",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WALTHALL HILLS",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "WENDALL ACRES",
+"homes": 11,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BEACH ESTATES",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BON WOOD",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "BRIDGEWATER POINT",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "COLUMBIA PARK",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "DUPUY COURT",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ETTRICK LANDING",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "FOREST HILL MANOR",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HAROLD FULCHER",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "HOLIDAY PLAZA",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "INGE WOOD ACRES",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "JAMES FRIEND PROP",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "MEADOWBROOK SPRINGS",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "PINELAND",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "RIVERMONT HILLS",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "ROBINDALE",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "SHADOW CREEK AT MAGNOLIA GREEN",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+},
+{
+"name": "THE VILLAGE TOWN HOMES",
+"homes": 10,
+"hoa": false,
+"hoa_name": null
+}
+]
+}

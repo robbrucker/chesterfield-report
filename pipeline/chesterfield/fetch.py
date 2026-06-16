@@ -143,6 +143,41 @@ def fetch_youtube(source: dict) -> list[Item]:
     return items
 
 
+_ENTRY_RE2 = re.compile(r"<entry\b[^>]*>(.*?)</entry>", re.DOTALL)
+_ALT_LINK_RE = re.compile(r'<link[^>]+rel="alternate"[^>]+href="([^"]+)"', re.IGNORECASE)
+_ANY_LINK_RE = re.compile(r'<link[^>]*\bhref="([^"]+)"', re.IGNORECASE)
+
+
+def fetch_atom(source: dict) -> list[Item]:
+    """Generic Atom feed (<entry>) parser for non-YouTube Atom sources such as
+    Reddit's `/.rss`. Pulls title, the alternate (or first) link, published or
+    updated time, and the content/summary. Reddit emits ISO timestamps already."""
+    data = _get(source["url"]).decode("utf-8", errors="replace")
+    items: list[Item] = []
+    for e in _ENTRY_RE2.findall(data):
+        title = _tag(e, "title")
+        lm = _ALT_LINK_RE.search(e) or _ANY_LINK_RE.search(e)
+        link = html.unescape(lm.group(1)) if lm else ""
+        if not title or not link:
+            continue
+        desc = _tag(e, "content") or _tag(e, "summary")
+        pub = _tag(e, "published") or _tag(e, "updated")
+        items.append(
+            Item(
+                source_id=source["id"],
+                source_name=source["name"],
+                title=title,
+                url=link,
+                raw_summary=desc,
+                published=pub,
+                focus=list(source.get("default_focus", [])),
+                license=source.get("license", "press"),
+                image=_img_from(e, desc),
+            )
+        )
+    return items
+
+
 def fetch_nws(source: dict) -> list[Item]:
     """National Weather Service active alerts (GeoJSON)."""
     data = json.loads(_get(source["url"]))
@@ -165,7 +200,8 @@ def fetch_nws(source: dict) -> list[Item]:
     return items
 
 
-FETCHERS = {"rss": fetch_rss, "nws": fetch_nws, "youtube": fetch_youtube}
+FETCHERS = {"rss": fetch_rss, "nws": fetch_nws, "youtube": fetch_youtube,
+            "atom": fetch_atom}
 
 
 def fetch(source: dict) -> list[Item]:

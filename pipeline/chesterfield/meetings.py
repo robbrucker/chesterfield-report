@@ -517,6 +517,54 @@ def _section(title: str, kicker: str, meetings: list, empty: str) -> str:
     return render._sechead(kicker, title) + grid
 
 
+# Plain-language, county-verified explainer (sources: chesterfield.gov Procedures,
+# Public-Comments, Zoning Process pages + Va. Code 15.2-2204). Facts checked
+# 2026-06-15; deliberately avoids unverified specifics (room capacity, etc.).
+_EXPLAINER = (
+    '<section class="mtg-explainer">'
+    '<style>'
+    '.mtg-explainer{margin:2.2rem 0;padding:1.4rem 1.5rem;border:1px solid var(--border);'
+    'border-radius:var(--radius-sm);background:var(--surface-card);}'
+    '.mtg-explainer h2{margin:0 0 .6rem;}'
+    '.mtg-explainer h3{font:var(--fw-bold) var(--fs-sm)/1.2 var(--font-sans);'
+    'text-transform:uppercase;letter-spacing:var(--ls-wide);color:var(--accent);'
+    'margin:1.2rem 0 .3rem;}'
+    '.mtg-explainer p{font:var(--fs-sm)/var(--lh-relaxed) var(--font-sans);'
+    'color:var(--text-secondary);margin:.2rem 0;max-width:68ch;}'
+    '.mtg-explainer a{color:var(--accent);font-weight:600;}'
+    '</style>'
+    '<h2 class="mtg-h">How to weigh in on county decisions</h2>'
+    '<p>Two bodies handle land use. The <strong>Planning Commission</strong> reviews '
+    'zoning and development cases and makes recommendations; the <strong>Board of '
+    'Supervisors</strong> makes the final call.</p>'
+    '<h3>When they meet</h3>'
+    '<p>The Planning Commission meets the third Tuesday of the month at 6 p.m. The '
+    'Board of Supervisors meets at 2 p.m., with an evening session at 6 p.m., in the '
+    'Public Meeting Room at 10001 Iron Bridge Road.</p>'
+    '<h3>How to speak</h3>'
+    '<p>At the Planning Commission, signing up is optional. You can sign up in the '
+    'hallway beforehand or step to the podium when your item is called. At the Board '
+    'of Supervisors, you must register with the Clerk; the window opens at 8:30 a.m. '
+    'the first business day after the prior meeting and closes at noon the day of the '
+    'meeting. In-person speakers get three minutes; a representative for a group of '
+    'three or more gets five; each citizen comment period is capped at 15 minutes.</p>'
+    '<h3>Comment without attending</h3>'
+    '<p>The Board&rsquo;s online Citizen Comment Portal opens the Thursday before a '
+    'meeting and closes at 5 p.m. the Tuesday before. Comments (up to 400 words) '
+    'become part of the public record.</p>'
+    '<h3>Notice rules</h3>'
+    '<p>For zoning hearings, the county publishes notice in the newspaper twice (first '
+    'no more than 28 days, second no less than five days before) and mails adjacent '
+    'property owners at least 15 days ahead, more than the five-day state minimum.</p>'
+    '<h3>Stay informed</h3>'
+    '<p>Subscribe to <a href="https://www.chesterfield.gov/list.aspx?ListID=399" '
+    'target="_blank" rel="noopener">Planning email alerts</a> and track pending cases '
+    'on the county&rsquo;s <a href="https://www.chesterfield.gov/982/Active-Development-and-Zoning-Cases" '
+    'target="_blank" rel="noopener">Active Development and Zoning Cases</a> page.</p>'
+    '</section>'
+)
+
+
 def build_meetings():
     """Build public/meetings.html. NEVER raises — returns the path (page is
     still written, with a graceful 'unavailable' note, if the source is down)."""
@@ -565,6 +613,7 @@ def build_meetings():
             'unavailable. Please check the '
             '<a href="' + AGENDA_CENTER + '" target="_blank" rel="noopener">'
             'official Agenda Center</a> directly.</p>'
+            + _EXPLAINER
             + "<style>" + _MTG_CSS + "</style>"
         )
         out = PUBLIC / "meetings.html"
@@ -587,6 +636,7 @@ def build_meetings():
         '<li><a href="https://www.chesterfield.gov/1231/Board-Meetings" '
         'target="_blank" rel="noopener">Board of Supervisors meeting schedule</a>.'
         '</li></ul></section>'
+        + _EXPLAINER
         + "<style>" + _MTG_CSS + "</style>"
     )
 
