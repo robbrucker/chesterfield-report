@@ -266,6 +266,10 @@ def build_schools() -> Path:
         + f'<p class="sch-lead">Every Chesterfield County public school: {len(schools)} '
           'elementary, middle, high, and specialty schools, with location, contact info, '
           'and links to each school’s rating and report card.</p>'
+        + '<p class="sch-lead" style="font-size:.98rem;">Who runs the schools? See the '
+          '<a href="/school-board.html" style="color:var(--accent);font-weight:600;">'
+          'Chesterfield County School Board</a>: the five elected members by district, the '
+          'superintendent, and how to weigh in.</p>'
         + _map_html(schools)
         + legend
         + controls
