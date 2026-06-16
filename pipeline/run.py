@@ -200,6 +200,7 @@ def cmd_build() -> None:
     cases_mod.build_cases()                        # live development/zoning cases (graceful on fetch fail)
     events_mod.build_events()                      # county events calendar (graceful on fetch fail)
     housing_mod.build_affordable()                 # affordable-housing finder from committed data
+    housing_mod.build_directory()                  # market-rate apartment community directory
     from chesterfield import seo as seo_mod
     seo_mod.build_seo()
     letters_mod.build_form()

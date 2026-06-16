@@ -22,6 +22,7 @@ from . import render
 from .render import PUBLIC
 
 DATA = Path(__file__).resolve().parents[1] / "affordable_housing.json"
+APTS = Path(__file__).resolve().parents[1] / "apartments_data.json"
 COUNTY_VOUCHERS = "https://www.chesterfield.gov/5778/Housing-Assistance"
 
 
@@ -183,5 +184,138 @@ def build_affordable() -> Path:
         "program, contact, and eligibility info.",
         "https://chesterfieldreport.com/affordable-housing.html")
     out = PUBLIC / "affordable-housing.html"
+    out.write_text(page, encoding="utf-8")
+    return out
+
+
+# --------------------------------------------------------------------------- #
+# Market-rate apartment community directory
+# --------------------------------------------------------------------------- #
+
+_DIR_CSS = """<style>
+#hd-map{height:400px;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--border);margin:0 0 1.2rem;}
+.hd-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 .7rem;}
+#hd-search{flex:1;min-width:220px;padding:.6rem .8rem;border:1px solid var(--border);border-radius:var(--radius-xs);
+  background:var(--surface-card);color:var(--text-primary);font:var(--fs-sm) var(--font-sans);}
+.hd-filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 1.2rem;}
+.hd-filters button{padding:.45rem .8rem;border:1px solid var(--border);background:var(--surface-card);color:var(--text-secondary);
+  border-radius:999px;font:var(--fw-semibold) var(--fs-3xs) var(--font-sans);cursor:pointer;}
+.hd-filters button.is-on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.hd-flabel{font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono);text-transform:uppercase;letter-spacing:var(--ls-wide);
+  color:var(--text-tertiary);margin-right:4px;align-self:center;}
+.ah-kind{font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono);text-transform:uppercase;letter-spacing:var(--ls-wide);
+  color:#fff;border-radius:4px;padding:.22rem .5rem;}
+.ah-kind.luxury{background:#9a3322;}.ah-kind.market{background:#2f7d8f;}
+@media(max-width:560px){#hd-map{height:300px;}}
+</style>"""
+
+
+def _region(city: str) -> str:
+    c = (city or "").strip()
+    return c if c in ("Midlothian", "North Chesterfield", "Chester", "Moseley") else "Other"
+
+
+def _dir_card(x: dict) -> str:
+    kind = "luxury" if x.get("kind") == "luxury" else "market"
+    klabel = "Luxury" if kind == "luxury" else "Market-rate"
+    facts = []
+    if x.get("units"):
+        facts.append(f'{x["units"]} units')
+    if x.get("year"):
+        facts.append(f'built {x["year"]}')
+    if (x.get("manager") or "").strip():
+        facts.append(html.escape(x["manager"]))
+    facts_html = f'<div class="ah-facts">{" &middot; ".join(facts)}</div>' if facts else ""
+    links = [f'<a href="{_maps_link(x)}" target="_blank" rel="noopener">Map ↗</a>']
+    if x.get("website"):
+        links.append(f'<a href="{html.escape(x["website"])}" target="_blank" rel="noopener">Website ↗</a>')
+    if x.get("phone"):
+        links.append(f'<a href="tel:{x["phone"].replace("(","").replace(")","").replace(" ","").replace("-","")}">{html.escape(x["phone"])}</a>')
+    search = html.escape(f'{x["name"]} {x.get("area","")} {x.get("manager","")}'.lower(), quote=True)
+    return (
+        f'<article class="ah-card" data-region="{html.escape(_region(x["city"]))}" '
+        f'data-kind="{kind}" data-search="{search}">'
+        f'<div class="ah-head"><span class="ah-area">{html.escape(x.get("area",""))}</span>'
+        f'<span class="ah-kind {kind}">{klabel}</span></div>'
+        f'<h3 class="ah-name">{html.escape(x["name"])}</h3>'
+        f'<div class="ah-addr">{html.escape(x["address"])}, {html.escape(x["city"])}</div>'
+        f'{facts_html}'
+        f'<div class="ah-links">{" &middot; ".join(links)}</div>'
+        '</article>'
+    )
+
+
+_DIR_JS = """
+<script>
+(function(){
+  var s=document.getElementById('hd-search'),
+      rb=[].slice.call(document.querySelectorAll('.hd-region button')),
+      kb=[].slice.call(document.querySelectorAll('.hd-kind button')),
+      cards=[].slice.call(document.querySelectorAll('.ah-card')),region='all',kind='all';
+  function apply(){var q=(s.value||'').trim().toLowerCase(),n=0;
+    cards.forEach(function(c){
+      var okR=region==='all'||c.getAttribute('data-region')===region,
+          okK=kind==='all'||c.getAttribute('data-kind')===kind,
+          okQ=!q||c.getAttribute('data-search').indexOf(q)!==-1,on=okR&&okK&&okQ;
+      c.style.display=on?'':'none';if(on)n++;});
+    document.getElementById('hd-count').textContent=n;}
+  rb.forEach(function(b){b.addEventListener('click',function(){rb.forEach(function(x){x.classList.remove('is-on');});
+    b.classList.add('is-on');region=b.getAttribute('data-region');apply();});});
+  kb.forEach(function(b){b.addEventListener('click',function(){kb.forEach(function(x){x.classList.remove('is-on');});
+    b.classList.add('is-on');kind=b.getAttribute('data-kind');apply();});});
+  s.addEventListener('input',apply);
+})();
+</script>
+"""
+
+
+def build_directory() -> Path:
+    d = json.loads(APTS.read_text(encoding="utf-8"))
+    comms = sorted(d["communities"], key=lambda c: (_region(c["city"]), c["name"]))
+    pts = [[c["name"], c["lat"], c["lng"], html.escape(c.get("area", ""))]
+           for c in comms if c.get("lat") and c.get("lng")]
+    map_html = (_MAP_JS.replace("ah-map", "hd-map").replace("__DATA__", json.dumps(pts, separators=(",", ":")))
+                if pts else "")
+
+    regions = ["Midlothian", "North Chesterfield", "Chester", "Moseley", "Other"]
+    present = [r for r in regions if any(_region(c["city"]) == r for c in comms)]
+    region_btns = ('<div class="hd-filters hd-region"><span class="hd-flabel">Area</span>'
+                   '<button class="is-on" data-region="all">All</button>'
+                   + "".join(f'<button data-region="{r}">{html.escape(r)}</button>' for r in present)
+                   + '</div>')
+    kind_btns = ('<div class="hd-filters hd-kind"><span class="hd-flabel">Type</span>'
+                 '<button class="is-on" data-kind="all">All</button>'
+                 '<button data-kind="luxury">Luxury</button>'
+                 '<button data-kind="market">Market-rate</button></div>')
+    cards = "".join(_dir_card(c) for c in comms)
+
+    body = (
+        _CSS + _DIR_CSS
+        + '<div class="ah-wrap">'
+        + '<h1 class="page-title">Apartment Communities</h1>'
+        + f'<p class="ah-lead">A directory of {len(comms)} market-rate and luxury apartment communities '
+          'across Chesterfield County, by area. Each links to the community’s own site for current floor '
+          'plans, amenities, and pricing. Looking for income-restricted options? See '
+          '<a href="/affordable-housing.html" style="color:var(--accent);font-weight:600;">affordable housing</a>.</p>'
+        + map_html
+        + '<div class="hd-controls"><input id="hd-search" type="search" '
+          'placeholder="Search by name, area, or manager…" aria-label="Search apartments"></div>'
+        + region_btns + kind_btns
+        + f'<p class="ah-summary"><span id="hd-count">{len(comms)}</span> communities</p>'
+        + f'<div class="ah-grid">{cards}</div>'
+        + '<div class="ah-src">This directory lists market-rate communities in Chesterfield County '
+          '(it excludes Richmond city and income-restricted housing, which has its own page). Rents, '
+          'availability, and amenities change constantly and live on each community’s own site, so always '
+          'check there. Run a community we missed or got wrong? <a href="/tip.html">Let us know.</a></div>'
+        + '</div>'
+        + _DIR_JS
+    )
+    page = render._shell(body)
+    page = render._inject_og(
+        page, "Chesterfield Apartment Communities",
+        f"A directory of {len(comms)} market-rate apartment communities in Chesterfield County, by area, "
+        "mapped, each linking to current pricing and floor plans.",
+        "https://chesterfieldreport.com/apartments.html")
+    out = PUBLIC / "apartments.html"
     out.write_text(page, encoding="utf-8")
     return out
