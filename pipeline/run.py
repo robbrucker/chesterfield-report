@@ -384,6 +384,9 @@ def main() -> None:
         # unpublish empty stubs/junk. --dry-run reports without changing files.
         result = qa_mod.run(apply="--dry-run" not in args)
         print(f"QA: {result['merged_away']} merged, {result['unpublished']} unpublished")
+    elif cmd == "cases-backfill":
+        # One-time: enrich every development/zoning case (no per-build cap).
+        print(cases_mod.backfill_cases())
     elif cmd == "expire":
         # Deterministic: unpublish weather watches/warnings/advisories older than
         # EXPIRE_HOURS so passed alerts don't pile up on the homepage. Reversible.

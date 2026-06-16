@@ -24,6 +24,7 @@ import json
 import shutil
 import ssl
 import subprocess
+import time
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -252,21 +253,34 @@ def enrich_case(case: dict, report_text: str | None) -> dict | None:
     )
     cmd = ["claude", "-p", prompt, "--output-format", "json",
            "--json-schema", json.dumps(_ENRICH_SCHEMA), "--model", MODEL]
-    try:
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
-        if proc.returncode != 0:
-            print(f"  ! cases enrich CLI failed for {case['casenum']}: {proc.stderr.strip()[:120]}")
+    # Retry once on a transient CLI hiccup (the subscription CLI occasionally
+    # returns non-zero with no stderr).
+    for attempt in range(2):
+        try:
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+            if proc.returncode != 0:
+                if attempt == 0:
+                    time.sleep(4)
+                    continue
+                print(f"  ! cases enrich CLI failed for {case['casenum']}: {proc.stderr.strip()[:120]}")
+                return None
+            env = json.loads(proc.stdout)
+            if env.get("is_error"):
+                if attempt == 0:
+                    time.sleep(4)
+                    continue
+                return None
+            data = env.get("structured_output")
+            if not data or not data.get("summary"):
+                return None
+            return _sanitize_ai(data)
+        except Exception as e:                   # noqa: BLE001
+            if attempt == 0:
+                time.sleep(4)
+                continue
+            print(f"  ! cases enrich errored for {case['casenum']}: {type(e).__name__}: {e}")
             return None
-        env = json.loads(proc.stdout)
-        if env.get("is_error"):
-            return None
-        data = env.get("structured_output")
-        if not data or not data.get("summary"):
-            return None
-        return _sanitize_ai(data)
-    except Exception as e:                       # noqa: BLE001
-        print(f"  ! cases enrich errored for {case['casenum']}: {type(e).__name__}: {e}")
-        return None
+    return None
 
 
 def _load_cache() -> dict:
@@ -322,6 +336,48 @@ def _apply_enrichment(cases: list[dict]) -> None:
     _save_cache(cache)
     if enriched_this_run:
         print(f"  cases: enriched {enriched_this_run} case(s) this run")
+
+
+def backfill_cases() -> dict:
+    """One-time: enrich EVERY case not already cached at its current status, with
+    no per-build cap and incremental saves. Run once to populate; the capped
+    build-time path then handles new cases and status changes going forward."""
+    cases = fetch_cases()
+    if not cases:
+        print("backfill: no cases fetched")
+        return {"enriched": 0, "failed": 0, "total": 0}
+    cache = _load_cache()
+    jar = None
+    done = failed = skipped = 0
+    for i, c in enumerate(cases, 1):
+        if cache.get(c["casenum"], {}).get("status_code") == c["status_code"]:
+            skipped += 1
+            continue
+        if jar is None:
+            try:
+                jar = laserfiche.new_session()
+            except Exception:                    # noqa: BLE001
+                jar = False
+        report = None
+        if jar:
+            try:
+                report = laserfiche.fetch_staff_report(c["casenum"], jar=jar)
+            except Exception:                    # noqa: BLE001
+                report = None
+        data = enrich_case(c, report)
+        if data:
+            data["_has_report"] = bool(report)
+            cache[c["casenum"]] = {"status_code": c["status_code"], "data": data}
+            _save_cache(cache)                   # incremental: survive interruption
+            done += 1
+            tag = "report" if report else "structured-only"
+            print(f"  [{i}/{len(cases)}] ok {c['casenum']} ({tag}): {data.get('headline','')[:64]}", flush=True)
+        else:
+            failed += 1
+            print(f"  [{i}/{len(cases)}] FAIL {c['casenum']}", flush=True)
+        time.sleep(1)
+    print(f"backfill done: {done} enriched, {failed} failed, {skipped} already cached")
+    return {"enriched": done, "failed": failed, "skipped": skipped, "total": len(cases)}
 
 
 # --------------------------------------------------------------------------- #
