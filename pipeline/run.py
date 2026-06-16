@@ -53,6 +53,7 @@ from chesterfield import employees as employees_mod, dedup as dedup_mod
 from chesterfield import expire as expire_mod
 from chesterfield import taxes as taxes_mod
 from chesterfield import schools as schools_mod
+from chesterfield import cases as cases_mod
 from chesterfield import letters as letters_mod
 from chesterfield.db import Store
 from chesterfield.sources import active_sources
@@ -192,6 +193,7 @@ def cmd_build() -> None:
     business_mod.build_business()                  # employers + independent directory
     taxes_mod.build_taxes()                        # county budget viz from committed data
     schools_mod.build_schools()                    # CCPS directory + map from committed data
+    cases_mod.build_cases()                        # live development/zoning cases (graceful on fetch fail)
     from chesterfield import seo as seo_mod
     seo_mod.build_seo()
     letters_mod.build_form()

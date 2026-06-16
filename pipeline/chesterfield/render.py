@@ -2207,6 +2207,7 @@ _TEMPLATE = """<!doctype html>
       <a href="/dining.html">Dining</a><a href="/business.html">Business</a>
       <a href="/meetings.html">Meetings</a><a href="/board.html">Board of Supervisors</a>
       <a href="/schools.html">Schools</a><a href="/taxes.html">Taxes</a>
+      <a href="/development.html">Development & Zoning</a>
       <a href="/shoosmith.html">Shoosmith investigation</a>
       <a href="/subscribe.html">Subscribe</a>
       <a href="/letters.html">Opinion</a><a href="/tip.html">Send a tip</a>

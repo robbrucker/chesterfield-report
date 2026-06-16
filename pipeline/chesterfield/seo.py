@@ -116,13 +116,19 @@ def _sitemap_urls() -> list[tuple[str, str]]:
     # Standalone pages.
     for name in ("digest.html", "map.html", "board.html", "meetings.html", "dining.html",
                  "neighborhoods.html", "business.html", "taxes.html", "schools.html",
-                 "shoosmith.html", "about.html", "letters.html", "tip.html", "subscribe.html"):
+                 "development.html", "shoosmith.html", "about.html", "letters.html",
+                 "tip.html", "subscribe.html"):
         add(f"/{name}", PUBLIC / name)
     # Per-neighborhood pages (big long-tail SEO surface).
     nb_dir = PUBLIC / "neighborhoods"
     if nb_dir.is_dir():
         for f in sorted(nb_dir.glob("*.html")):
             add(f"/neighborhoods/{f.name}", f)
+    # Per-case development/zoning pages (long-tail SEO).
+    cz_dir = PUBLIC / "cases"
+    if cz_dir.is_dir():
+        for f in sorted(cz_dir.glob("*.html")):
+            add(f"/cases/{f.name}", f)
 
     return urls
 
