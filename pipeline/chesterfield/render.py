@@ -2354,6 +2354,9 @@ _TEMPLATE = """<!doctype html>
     <div class="nav-g"><button class="nav-t" type="button">News <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia &amp; Region</a></div></div>
     <a class="nav-x" href="/events.html">Events</a>
     <div class="nav-g"><button class="nav-t" type="button">Community <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable Housing</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a></div></div>
+    <a class="nav-x" href="/schools.html">Schools</a>
+    <a class="nav-x" href="/board.html">Supervisors</a>
+    <a class="nav-x" href="/meetings.html">Meetings</a>
     <div class="nav-g"><button class="nav-t" type="button">Government <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/board.html">Board of Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development &amp; Zoning</a></div></div>
     <div class="nav-g"><button class="nav-t" type="button">Investigations <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/shoosmith.html">Shoosmith landfill</a></div></div>
   </nav>
