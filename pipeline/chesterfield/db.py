@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS items (
     focus        TEXT,
     tags         TEXT,
     license      TEXT,
+    track        TEXT,
     location     TEXT,
     lat          TEXT,
     lon          TEXT,
@@ -49,7 +50,7 @@ class Store:
         # Lightweight migration for DBs created before a column was added.
         have = {r[1] for r in self.conn.execute("PRAGMA table_info(items)")}
         for col in ("ai_tldr", "location", "lat", "lon", "image", "video_url",
-                    "media_kind", "tags"):
+                    "media_kind", "tags", "track"):
             if col not in have:
                 self.conn.execute(f"ALTER TABLE items ADD COLUMN {col} TEXT")
         self.conn.commit()
