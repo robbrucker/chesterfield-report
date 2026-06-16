@@ -1,0 +1,187 @@
+"""Affordable / income-restricted housing finder -> public/affordable-housing.html.
+
+Renders the verified income-restricted apartment communities in Chesterfield
+County (data in pipeline/affordable_housing.json) as a filterable, mapped
+directory. Data is sourced from the county's official Housing Assistance list,
+the Better Housing Coalition, and HUD LIHTC/subsidized records; this page lists
+income-restricted housing only (market-rate properties that merely accept
+vouchers are excluded). Each listing links to the property and the county
+resource; eligibility and waitlists must be confirmed with each property.
+
+Stdlib only. Reuses render._shell(). A later phase adds the market-rate
+community directory (build_directory).
+"""
+from __future__ import annotations
+
+import html
+import json
+import urllib.parse
+from pathlib import Path
+
+from . import render
+from .render import PUBLIC
+
+DATA = Path(__file__).resolve().parents[1] / "affordable_housing.json"
+COUNTY_VOUCHERS = "https://www.chesterfield.gov/5778/Housing-Assistance"
+
+
+def _load() -> dict:
+    return json.loads(DATA.read_text(encoding="utf-8"))
+
+
+def _pop_bucket(pop: str) -> str:
+    p = (pop or "").lower()
+    has_s, has_f = "senior" in p, "family" in p
+    if has_s and has_f:
+        return "family senior"
+    return "senior" if has_s else "family"
+
+
+def _maps_link(x: dict) -> str:
+    q = urllib.parse.quote(f"{x['address']} {x['city']} VA {x['zip']}")
+    return f"https://www.google.com/maps/search/?api=1&query={q}"
+
+
+def _card(x: dict) -> str:
+    pop = x.get("population", "")
+    badges = "".join(f'<span class="ah-prog">{html.escape(p)}</span>' for p in x.get("programs", []))
+    facts = []
+    if x.get("units"):
+        facts.append(f'{x["units"]} units')
+    if (x.get("ami") or "").strip():
+        facts.append(html.escape(x["ami"]))
+    facts_html = f'<div class="ah-facts">{" &middot; ".join(facts)}</div>' if facts else ""
+    links = [f'<a href="{_maps_link(x)}" target="_blank" rel="noopener">Map ↗</a>']
+    if x.get("website"):
+        links.append(f'<a href="{html.escape(x["website"])}" target="_blank" rel="noopener">Website ↗</a>')
+    if x.get("phone"):
+        links.append(f'<a href="tel:{x["phone"].replace("-", "")}">{html.escape(x["phone"])}</a>')
+    search = html.escape(f'{x["name"]} {x.get("area","")} {pop}'.lower(), quote=True)
+    pop_label = f'<span class="ah-pop">{html.escape(pop)}</span>' if pop else ""
+    return (
+        f'<article class="ah-card" data-pop="{_pop_bucket(pop)}" data-search="{search}">'
+        f'<div class="ah-head"><span class="ah-area">{html.escape(x.get("area",""))}</span>{pop_label}</div>'
+        f'<h3 class="ah-name">{html.escape(x["name"])}</h3>'
+        f'<div class="ah-addr">{html.escape(x["address"]) }, {html.escape(x["city"])}</div>'
+        f'<div class="ah-progs">{badges}</div>'
+        f'{facts_html}'
+        f'<div class="ah-links">{" &middot; ".join(links)}</div>'
+        '</article>'
+    )
+
+
+_CSS = """<style>
+.ah-wrap{max-width:1000px;margin:0 auto;}
+.ah-lead{font:var(--fs-lg)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);max-width:64ch;margin:.4rem 0 1.1rem;}
+#ah-map{height:380px;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--border);margin:0 0 1.2rem;}
+.ah-filter{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 1.2rem;}
+.ah-filter button{padding:.5rem .85rem;border:1px solid var(--border);background:var(--surface-card);color:var(--text-secondary);
+  border-radius:999px;font:var(--fw-semibold) var(--fs-2xs) var(--font-sans);cursor:pointer;}
+.ah-filter button.is-on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.ah-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+.ah-card{border:1px solid var(--border);border-radius:var(--radius-sm);padding:1rem 1.1rem;background:var(--surface-card);}
+.ah-head{display:flex;justify-content:space-between;gap:8px;align-items:center;}
+.ah-area{font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--text-tertiary);}
+.ah-pop{font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono);text-transform:uppercase;letter-spacing:var(--ls-wide);
+  color:#fff;background:var(--accent);border-radius:4px;padding:.22rem .5rem;}
+.ah-name{font:var(--fw-bold) var(--fs-md)/1.2 var(--font-display);margin:.45rem 0 .15rem;}
+.ah-addr{font:var(--fs-2xs)/1.4 var(--font-sans);color:var(--text-tertiary);margin-bottom:.5rem;}
+.ah-progs{display:flex;flex-wrap:wrap;gap:5px;margin:.3rem 0;}
+.ah-prog{font:var(--fw-semibold) var(--fs-3xs)/1.3 var(--font-sans);color:var(--text-secondary);
+  border:1px solid var(--border);border-radius:4px;padding:.2rem .45rem;}
+.ah-facts{font:var(--fs-2xs)/1.4 var(--font-sans);color:var(--text-secondary);margin:.4rem 0 .2rem;}
+.ah-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:.5rem;font:var(--fw-semibold) var(--fs-2xs) var(--font-sans);}
+.ah-links a{color:var(--accent);}
+.ah-summary{font:var(--fs-2xs)/1 var(--font-mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--text-tertiary);margin:0 0 1rem;}
+.ah-src{margin-top:2rem;padding:1rem 1.1rem;border-left:3px solid var(--accent);background:var(--surface-card);
+  border-radius:var(--radius-xs);font:var(--fs-sm)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);}
+.ah-src a{color:var(--accent);font-weight:600;}
+@media(max-width:560px){#ah-map{height:300px;}}
+</style>"""
+
+_MAP_JS = """
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+<div id="ah-map"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script>
+(function(){
+  if(!window.L) return;
+  var pts=__DATA__;
+  function tile(){var l=document.documentElement.getAttribute('data-theme')==='light';
+    return l?'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png':'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';}
+  var map=L.map('ah-map',{scrollWheelZoom:false}).setView([37.41,-77.54],11);
+  var layer=L.tileLayer(tile(),{attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:19}).addTo(map);
+  var cl=L.markerClusterGroup({maxClusterRadius:35,showCoverageOnHover:false});
+  pts.forEach(function(p){
+    L.circleMarker([p[1],p[2]],{radius:8,color:'#fff',weight:1.5,fillColor:'#9a3322',fillOpacity:.9})
+      .bindPopup('<strong>'+p[0]+'</strong><br>'+p[3]).addTo(cl);
+  });
+  map.addLayer(cl);
+  new MutationObserver(function(){layer.setUrl(tile());}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+})();
+</script>
+"""
+
+_FILTER_JS = """
+<script>
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.ah-filter button')),
+      cards=[].slice.call(document.querySelectorAll('.ah-card')),pop='all';
+  function apply(){var n=0;cards.forEach(function(c){
+    var on=pop==='all'||c.getAttribute('data-pop').indexOf(pop)!==-1;c.style.display=on?'':'none';if(on)n++;});
+    document.getElementById('ah-count').textContent=n;}
+  btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('is-on');});
+    b.classList.add('is-on');pop=b.getAttribute('data-pop');apply();});});
+})();
+</script>
+"""
+
+
+def build_affordable() -> Path:
+    d = _load()
+    props = d["properties"]
+    pts = [[p["name"], p["lat"], p["lng"], html.escape(p.get("area", ""))]
+           for p in props if p.get("lat") and p.get("lng")]
+    map_html = _MAP_JS.replace("__DATA__", json.dumps(pts, separators=(",", ":"))) if pts else ""
+
+    filters = ('<div class="ah-filter">'
+               '<button class="is-on" data-pop="all">All</button>'
+               '<button data-pop="family">Family</button>'
+               '<button data-pop="senior">Senior</button>'
+               '</div>')
+    cards = "".join(_card(p) for p in props)
+
+    body = (
+        _CSS
+        + '<div class="ah-wrap">'
+        + '<h1 class="page-title">Affordable Housing</h1>'
+        + '<p class="ah-lead">Income-restricted apartment communities in Chesterfield County, where '
+          'rent is capped or based on income. Most use the federal Low-Income Housing Tax Credit (LIHTC) '
+          'or HUD subsidies, and many serve families or seniors specifically. Income limits, eligibility, '
+          'and waitlists vary by property, so confirm directly with each one.</p>'
+        + map_html
+        + filters
+        + f'<p class="ah-summary"><span id="ah-count">{len(props)}</span> communities</p>'
+        + f'<div class="ah-grid">{cards}</div>'
+        + '<div class="ah-src">This list covers <strong>income-restricted</strong> housing, verified '
+          'against the county’s '
+          f'<a href="{COUNTY_VOUCHERS}" target="_blank" rel="noopener">Housing Assistance</a> resources, '
+          'the Better Housing Coalition, and HUD records. It is not exhaustive, and eligibility, rents, and '
+          'waitlists change, so always confirm with the property. Many market-rate communities also accept '
+          'Housing Choice (Section 8) vouchers; the county keeps that list on the same page. '
+          'Spotted something to add or fix? <a href="/tip.html">Let us know.</a></div>'
+        + '</div>'
+        + _FILTER_JS
+    )
+    page = render._shell(body)
+    page = render._inject_og(
+        page, "Affordable Housing in Chesterfield County",
+        f"{len(props)} income-restricted apartment communities in Chesterfield County, mapped, with "
+        "program, contact, and eligibility info.",
+        "https://chesterfieldreport.com/affordable-housing.html")
+    out = PUBLIC / "affordable-housing.html"
+    out.write_text(page, encoding="utf-8")
+    return out

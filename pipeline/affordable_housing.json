@@ -1,0 +1,252 @@
+{
+  "_comment": "Income-restricted / affordable apartment communities in Chesterfield County, VA. Verified against the county's official Housing Assistance list, the Better Housing Coalition (the county's main LIHTC developer), and HUD LIHTC/subsidized data (via Affordable Housing Online). 'verified':true = strongly confirmed income-restricted; 'partial' = on the county list, program details unconfirmed. Market-rate properties that merely accept vouchers are NOT included here. lat/lng geocoded from the street address.",
+  "updated": "2026-06-16",
+  "county_resource": "https://www.chesterfield.gov/5778/Housing-Assistance",
+  "properties": [
+    {
+      "name": "Winchester Greens",
+      "address": "2800 Bensley Commons Boulevard",
+      "city": "North Chesterfield",
+      "zip": "23237",
+      "area": "North Chesterfield",
+      "programs": [
+        "Tax credit (LIHTC)",
+        "Accepts vouchers"
+      ],
+      "population": "Family",
+      "units": 240,
+      "ami": "Low-to-moderate income",
+      "phone": "804-743-7030",
+      "website": "https://www.betterhousingcoalition.org/find-housing/rental-communities/",
+      "verified": true,
+      "lat": 37.423602,
+      "lng": -77.441852
+    },
+    {
+      "name": "Winchester Forest",
+      "address": "2701 Drewry's Bluff Road",
+      "city": "North Chesterfield",
+      "zip": "23237",
+      "area": "North Chesterfield",
+      "programs": [
+        "Tax credit (LIHTC)",
+        "Accessible units"
+      ],
+      "population": "Family",
+      "units": 160,
+      "ami": "40%-60% AMI; rents about $965-$1,300",
+      "phone": "",
+      "website": "https://www.betterhousingcoalition.org/find-housing/rental-communities/",
+      "verified": true,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "name": "Market Square",
+      "address": "7400 Taw Street",
+      "city": "North Chesterfield",
+      "zip": "23237",
+      "area": "Bellwood / North Chesterfield",
+      "programs": [
+        "Tax credit (LIHTC)",
+        "Accepts vouchers"
+      ],
+      "population": "Senior (55+)",
+      "units": 170,
+      "ami": "50%-60% AMI",
+      "phone": "",
+      "website": "https://www.betterhousingcoalition.org/property/market-square/",
+      "verified": true,
+      "lat": 37.422151,
+      "lng": -77.439544
+    },
+    {
+      "name": "Horner Run",
+      "address": "11000 Stigall Way",
+      "city": "Midlothian",
+      "zip": "23112",
+      "area": "Western Chesterfield (Midlothian)",
+      "programs": [
+        "Tax credit (LIHTC)",
+        "Supportive housing"
+      ],
+      "population": "Family",
+      "units": 49,
+      "ami": "30%-60% AMI; rents about $500-$1,453",
+      "phone": "",
+      "website": "https://www.betterhousingcoalition.org/property/horner-run/",
+      "verified": true,
+      "note": "Opened spring 2025.",
+      "lat": 37.43552,
+      "lng": -77.598846
+    },
+    {
+      "name": "Rockwood Village",
+      "address": "3901 Price Club Boulevard",
+      "city": "Midlothian",
+      "zip": "23112",
+      "area": "Western Chesterfield (Midlothian)",
+      "programs": [
+        "HUD subsidized",
+        "Accessible units"
+      ],
+      "population": "Senior (62+)",
+      "units": 82,
+      "ami": "Rent based on 30% of income",
+      "phone": "804-745-0911",
+      "website": "https://www.betterhousingcoalition.org/property/rockwood-village/",
+      "verified": true,
+      "lat": 37.436097,
+      "lng": -77.586692
+    },
+    {
+      "name": "Grand Oaks",
+      "address": "5301 Grand Oaks Forest Circle",
+      "city": "Chester",
+      "zip": "23831",
+      "area": "Chester",
+      "programs": [
+        "Tax credit (LIHTC)",
+        "Subsidized units",
+        "Accepts vouchers"
+      ],
+      "population": "Family and senior (55+)",
+      "units": null,
+      "ami": "Income-based",
+      "phone": "804-706-9435",
+      "website": "https://www.livegrandoaksapartments.com/",
+      "verified": true,
+      "lat": 37.353366,
+      "lng": -77.457099
+    },
+    {
+      "name": "Arbor Lake",
+      "address": "6850 Arbor Lake Drive",
+      "city": "Chester",
+      "zip": "23831",
+      "area": "Chester",
+      "programs": [
+        "Tax credit (LIHTC)"
+      ],
+      "population": "Family",
+      "units": null,
+      "ami": "60% AMI",
+      "phone": "",
+      "website": "https://arborlake-apts.com/",
+      "verified": true,
+      "lat": 37.356047,
+      "lng": -77.492435
+    },
+    {
+      "name": "Iron Bridge Road Apartments",
+      "address": "6700 Iron Creek Circle",
+      "city": "Chester",
+      "zip": "23831",
+      "area": "Chester",
+      "programs": [
+        "Tax credit (LIHTC)",
+        "Accepts Section 8 vouchers"
+      ],
+      "population": "Family",
+      "units": null,
+      "ami": "Income limits by family size",
+      "phone": "804-318-1819",
+      "website": "https://www.ironbridgeapartments.com/",
+      "verified": true,
+      "lat": 37.36169,
+      "lng": -77.496082
+    },
+    {
+      "name": "Colonial Ridge Apartments",
+      "address": "2609 Mangowood Drive",
+      "city": "South Chesterfield",
+      "zip": "23834",
+      "area": "South Chesterfield",
+      "programs": [
+        "Income-restricted"
+      ],
+      "population": "Family",
+      "units": 292,
+      "ami": "Income limits by family size",
+      "phone": "804-520-4570",
+      "website": "",
+      "verified": true,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "name": "Chester Village Senior Living",
+      "address": "11701 Chester Village Drive",
+      "city": "Chester",
+      "zip": "23831",
+      "area": "Chester",
+      "programs": [
+        "Subsidized / income-based",
+        "Accepts vouchers"
+      ],
+      "population": "Senior (55+)",
+      "units": null,
+      "ami": "Income-based",
+      "phone": "833-824-8465",
+      "website": "",
+      "verified": "partial",
+      "lat": 37.359108,
+      "lng": -77.445515
+    },
+    {
+      "name": "Courthouse Senior Apartments",
+      "address": "6500 Fore Circle",
+      "city": "Chesterfield",
+      "zip": "23832",
+      "area": "Chesterfield Courthouse",
+      "programs": [
+        "Affordable"
+      ],
+      "population": "Senior",
+      "units": null,
+      "ami": "",
+      "phone": "",
+      "website": "",
+      "verified": "partial",
+      "lat": 37.377552,
+      "lng": -77.500794
+    },
+    {
+      "name": "Brook Creek Crossings Apartments",
+      "address": "700 Colton Creek Road",
+      "city": "Midlothian",
+      "zip": "23113",
+      "area": "Midlothian",
+      "programs": [
+        "Income-restricted"
+      ],
+      "population": "Family",
+      "units": null,
+      "ami": "Income limits by family size",
+      "phone": "804-794-9440",
+      "website": "",
+      "verified": "partial",
+      "lat": 37.514275,
+      "lng": -77.684616
+    },
+    {
+      "name": "Watermark Garden Apartments",
+      "address": "6050 Hendry Avenue",
+      "city": "North Chesterfield",
+      "zip": "23234",
+      "area": "North Chesterfield",
+      "programs": [
+        "Affordable",
+        "Accepts vouchers"
+      ],
+      "population": "Senior (55+)",
+      "units": null,
+      "ami": "",
+      "phone": "804-500-2300",
+      "website": "",
+      "verified": "partial",
+      "lat": 37.418836,
+      "lng": -77.504877
+    }
+  ]
+}
