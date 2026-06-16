@@ -222,6 +222,8 @@ _CSS = """<style>
 .sb-don-amt{color:var(--text-primary);font-weight:600;white-space:nowrap;}
 .sb-fin-note{font:italic var(--fs-3xs)/1.4 var(--font-sans);color:var(--text-tertiary);margin:.3rem 0;}
 .sb-fin-src{display:block;margin-top:.4rem;font:var(--fw-semibold) var(--fs-3xs) var(--font-sans);color:var(--accent);}
+.sb-fin-flag{margin:1.2rem 0;padding:.7rem 1rem;background:var(--surface-card);border-left:3px solid var(--accent);
+  border-radius:var(--radius-xs);font:var(--fs-2xs)/1.5 var(--font-sans);color:var(--text-secondary);}
 .sb-sec{margin:2.2rem 0;}
 .sb-sec h2{font:var(--fw-bold) var(--fs-xl)/1.15 var(--font-display);margin:0 0 .5rem;}
 .sb-sec p{font:var(--fs-sm)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);max-width:66ch;}
@@ -252,6 +254,12 @@ def build_school_board() -> str:
           f'{SUPERINTENDENT[1]}. The superintendent runs the division day to day and is hired by '
           'and reports to the board.</div>'
         + f'<div class="sb-grid">{cards}</div>'
+
+        + '<p class="sb-fin-flag">Campaign-finance figures above are from the <strong>2023 '
+          'election cycle</strong>, the last time these seats were on the ballot. The next '
+          'regular School Board election is <strong>November 2027</strong>; a special election '
+          'for the appointed Clover Hill seat is expected before then. Figures will be updated '
+          'when new filings are reported.</p>'
 
         + '<div class="sb-sec"><h2>Meetings &amp; how to weigh in</h2>'
           '<p>The board meets roughly monthly at the Public Meeting Room, 10001 Iron Bridge Road: '
