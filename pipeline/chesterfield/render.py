@@ -2173,12 +2173,15 @@ _TEMPLATE = """<!doctype html>
       <span class="cr-ticker__item"><span class="cr-ticker__sep">//</span>Growth &middot; Schools &middot; Public safety &middot; Government &middot; Community</span>
     </div></div>
   </div>
-  <nav class="topnav cr-header__nav" aria-label="Main navigation">
+  <nav class="topnav cr-header__nav nav-desktop" aria-label="Main navigation">
     <a class="nav-x" href="/">Home</a>
     <div class="nav-g"><button class="nav-t" type="button">News <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/events.html">Events</a><a href="/map.html">News map</a></div></div>
     <div class="nav-g"><button class="nav-t" type="button">Community <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable Housing</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a></div></div>
     <div class="nav-g"><button class="nav-t" type="button">Government <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/board.html">Board of Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development &amp; Zoning</a></div></div>
     <a class="nav-x" href="/shoosmith.html">Shoosmith</a>
+  </nav>
+  <nav class="topnav cr-header__nav nav-mobile" aria-label="Sections">
+    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/events.html">Events</a><a href="/map.html">News map</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development</a><a href="/shoosmith.html">Shoosmith</a>
   </nav>
   <div class="dateline">
     <span class="place">Chesterfield County &middot; Virginia</span>

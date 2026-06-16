@@ -893,6 +893,19 @@ body {
 .cr-header__nav.topnav .nav-d a:hover { color: var(--accent);
   background: var(--surface-sunken, rgba(128,128,128,.10)); }
 .cr-header__nav.topnav .nav-d a::after { display: none; }
+/* Mobile: a single horizontal-scroll bar of all sections instead of dropdowns. */
+.cr-header__nav.topnav.nav-mobile { display: none; }
+.cr-header__nav.topnav.nav-mobile a {
+  font-family: var(--font-display); font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm); letter-spacing: var(--ls-wide); color: var(--text-muted);
+  padding: 11px 11px; white-space: nowrap; transition: var(--transition-base); }
+.cr-header__nav.topnav.nav-mobile a:hover { color: var(--text-strong); }
+@media (max-width: 860px) {
+  .cr-header__nav.topnav.nav-desktop { display: none; }
+  .cr-header__nav.topnav.nav-mobile { display: flex; flex-wrap: nowrap; gap: 0;
+    overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .cr-header__nav.topnav.nav-mobile::-webkit-scrollbar { display: none; }
+}
 
 /* Dateline strip under the nav (keeps the toggle-injection marker intact) */
 .dateline { display: flex; flex-wrap: wrap; justify-content: space-between;
