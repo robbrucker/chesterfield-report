@@ -21,13 +21,20 @@ from __future__ import annotations
 import datetime
 import html
 import json
+import shutil
 import ssl
+import subprocess
 import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from . import render
+from . import render, laserfiche
 from .render import PUBLIC
+
+MODEL = "claude-haiku-4-5"
+CLI_TIMEOUT = 180
+ENRICH_CAP = 6   # max new/changed case enrichments per build (cached after)
+CACHE = Path(__file__).resolve().parents[1] / "cases_enrich_cache.json"
 
 SERVICE = ("https://services3.arcgis.com/TsynfzBSE6sXfoLq/arcgis/rest/services/"
            "Planning_ProdA/FeatureServer/21")
@@ -156,6 +163,168 @@ def fetch_cases() -> list[dict]:
 
 
 # --------------------------------------------------------------------------- #
+# AI enrichment (Tier 2): read the staff report, write plain-language detail
+# --------------------------------------------------------------------------- #
+
+_ENRICH_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "headline": {"type": "string"},   # plain-language one line: what is proposed
+        "summary": {"type": "string"},     # 2-3 sentence plain-language explainer
+        "applicant": {"type": "string"},
+        "owner": {"type": "string"},
+        "agent": {"type": "string"},
+        "district": {"type": "string"},
+        "proffers": {"type": "array", "items": {"type": "string"}},
+        "conditions": {"type": "array", "items": {"type": "string"}},
+        "recommendation": {"type": "string"},
+        "why": {"type": "string"},
+        "key_points": {"type": "array", "items": {"type": "string"}},
+    },
+    "required": ["headline", "summary"],
+}
+
+
+def _cli_available() -> bool:
+    return shutil.which("claude") is not None
+
+
+def _clean_field(s: str) -> str:
+    """Strip stray tool-call / XML / code-fence leakage the model occasionally
+    emits into a field (e.g. a trailing '</why><parameter ...>')."""
+    if not isinstance(s, str):
+        return s
+    for cut in ("</", "<parameter", "<function", "<antml", "```"):
+        i = s.find(cut)
+        if i != -1:
+            s = s[:i]
+    return s.strip()
+
+
+def _sanitize_ai(data: dict) -> dict:
+    out = {}
+    for k, v in data.items():
+        if isinstance(v, str):
+            out[k] = _clean_field(v)
+        elif isinstance(v, list):
+            out[k] = [_clean_field(str(x)) for x in v if str(x).strip()]
+        else:
+            out[k] = v
+    return out
+
+
+def enrich_case(case: dict, report_text: str | None) -> dict | None:
+    """Plain-language enrichment of a case via the Claude CLI. Uses the staff
+    report text when available; otherwise works from the structured fields only
+    (and leaves applicant/proffers/recommendation empty rather than inventing).
+    Returns the structured dict or None. Never raises."""
+    if not _cli_available():
+        return None
+    facts = (
+        f"Case number: {case['casenum']}\n"
+        f"Case name: {case['name']}\n"
+        f"Request type: {case['request']}\n"
+        f"Review body: {case['review_body']}\n"
+        f"Current status: {case['status']}\n"
+        f"County code for the change (terse): {case['description']}\n"
+        f"Acres: {case['acres']}\n"
+        f"Proposed units: {case['units'] or 'none listed'}\n"
+        f"Has proffers: {case['proffers']}; conditions: {case['conditions']}\n"
+    )
+    if report_text:
+        facts += ("\nOFFICIAL STAFF REPORT / MINUTES TEXT (authoritative; use this "
+                  "for applicant, owner, agent, district, proffers, conditions, and "
+                  "the recommendation):\n\"\"\"\n" + report_text[:14000] + "\n\"\"\"\n")
+    prompt = (
+        "You are a local-news editor explaining a Chesterfield County, Virginia "
+        "development/zoning case to ordinary residents. Using ONLY the data below, "
+        "fill the schema.\n\n" + facts + "\n"
+        "Rules: 'headline' = one plain sentence on what is actually being proposed "
+        "and where (translate zoning shorthand like 'A TO R-12' into plain English: "
+        "e.g. 'rezone from Agricultural to Residential'). 'summary' = 2 to 3 plain "
+        "sentences a resident would understand. Fill applicant, owner, agent, "
+        "district, proffers (the developer's binding promises), conditions, and "
+        "recommendation ONLY from the staff report text; if a field is not in the "
+        "text, return an empty string or empty list. NEVER invent names, numbers, "
+        "proffers, or a recommendation. 'why' = one sentence on what it means for "
+        "nearby residents. 'key_points' = up to 4 short factual bullets. "
+        "STYLE: do not use em dashes or en dashes; use commas, periods, or colons."
+    )
+    cmd = ["claude", "-p", prompt, "--output-format", "json",
+           "--json-schema", json.dumps(_ENRICH_SCHEMA), "--model", MODEL]
+    try:
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+        if proc.returncode != 0:
+            print(f"  ! cases enrich CLI failed for {case['casenum']}: {proc.stderr.strip()[:120]}")
+            return None
+        env = json.loads(proc.stdout)
+        if env.get("is_error"):
+            return None
+        data = env.get("structured_output")
+        if not data or not data.get("summary"):
+            return None
+        return _sanitize_ai(data)
+    except Exception as e:                       # noqa: BLE001
+        print(f"  ! cases enrich errored for {case['casenum']}: {type(e).__name__}: {e}")
+        return None
+
+
+def _load_cache() -> dict:
+    try:
+        return json.loads(CACHE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def _save_cache(cache: dict) -> None:
+    try:
+        CACHE.write_text(json.dumps(cache, indent=0), encoding="utf-8")
+    except OSError:
+        pass
+
+
+def _apply_enrichment(cases: list[dict]) -> None:
+    """Attach cached enrichment to each case; (re-)enrich up to ENRICH_CAP cases
+    that are new or whose status changed. Cheap after the first backfill."""
+    cache = _load_cache()
+    jar = None
+    enriched_this_run = 0
+    for c in cases:
+        key = c["casenum"]
+        cached = cache.get(key)
+        fresh = cached and cached.get("status_code") == c["status_code"]
+        if fresh:
+            c["ai"] = cached.get("data")
+            continue
+        if enriched_this_run >= ENRICH_CAP:
+            # Over the per-build cap: use any stale cached copy as a fallback.
+            c["ai"] = (cached or {}).get("data")
+            continue
+        if jar is None:
+            try:
+                jar = laserfiche.new_session()
+            except Exception:                    # noqa: BLE001
+                jar = False
+        report = None
+        if jar:
+            try:
+                report = laserfiche.fetch_staff_report(c["casenum"], jar=jar)
+            except Exception:                    # noqa: BLE001
+                report = None
+        data = enrich_case(c, report)
+        enriched_this_run += 1
+        if data:
+            data["_has_report"] = bool(report)
+            cache[key] = {"status_code": c["status_code"], "data": data}
+            c["ai"] = data
+        else:
+            c["ai"] = (cached or {}).get("data")
+    _save_cache(cache)
+    if enriched_this_run:
+        print(f"  cases: enriched {enriched_this_run} case(s) this run")
+
+
+# --------------------------------------------------------------------------- #
 # Rendering
 # --------------------------------------------------------------------------- #
 
@@ -204,6 +373,13 @@ _CSS = """<style>
 .cz-src{margin-top:2rem;padding:1rem 1.1rem;border-left:3px solid var(--accent);background:var(--surface-card);
   border-radius:var(--radius-xs);font:var(--fs-sm)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);}
 .cz-src a{color:var(--accent);font-weight:600;}
+.cz-aih{font:var(--fw-bold) var(--fs-sm)/1.2 var(--font-sans);text-transform:uppercase;
+  letter-spacing:var(--ls-wide);color:var(--accent);margin:1.4rem 0 .4rem;}
+.cz-list{margin:.2rem 0 .6rem;padding-left:1.1rem;}
+.cz-list li{font:var(--fs-sm)/1.5 var(--font-sans);color:var(--text-secondary);margin:.2rem 0;}
+.cz-rec,.cz-why{font:var(--fs-sm)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);
+  margin:.7rem 0;padding:.7rem .9rem;background:var(--surface-card);border-radius:var(--radius-xs);}
+.cz-pending{font:var(--fs-sm)/1.5 var(--font-sans);color:var(--text-tertiary);font-style:italic;margin:.6rem 0 1rem;}
 @media(max-width:560px){#cz-map{height:320px;}}
 </style>"""
 
@@ -276,15 +452,51 @@ def _case_page(c: dict) -> str:
 
     pts = [[c["name"], c["lat"], c["lon"], html.escape(c["request"]), ""]] if c["lat"] else []
 
+    # Tier 2: plain-language analysis from the staff report (when available).
+    ai = c.get("ai") or {}
+    ai_html = ""
+    if ai.get("summary"):
+        parts = []
+        if ai.get("headline"):
+            parts.append(f'<p class="cz-lead">{html.escape(ai["headline"])}</p>')
+        parts.append(f'<p>{html.escape(ai["summary"])}</p>')
+        players = []
+        for label, k in (("Applicant", "applicant"), ("Owner", "owner"),
+                         ("Representative", "agent"), ("District", "district")):
+            v = (ai.get(k) or "").strip()
+            if v:
+                players.append(f'<div class="cz-fact"><b style="font-size:1rem">'
+                               f'{html.escape(v)}</b><span>{label}</span></div>')
+        if players:
+            parts.append(f'<div class="cz-facts">{"".join(players)}</div>')
+        for label, k in (("Developer commitments (proffers)", "proffers"),
+                         ("Conditions", "conditions"), ("Key points", "key_points")):
+            lst = ai.get(k) or []
+            if lst:
+                lis = "".join(f'<li>{html.escape(str(x))}</li>' for x in lst[:8])
+                parts.append(f'<h3 class="cz-aih">{html.escape(label)}</h3><ul class="cz-list">{lis}</ul>')
+        if (ai.get("recommendation") or "").strip():
+            parts.append(f'<p class="cz-rec"><strong>Recommendation:</strong> {html.escape(ai["recommendation"])}</p>')
+        if (ai.get("why") or "").strip():
+            parts.append(f'<p class="cz-why"><strong>Why it matters:</strong> {html.escape(ai["why"])}</p>')
+        ai_html = "".join(parts)
+    else:
+        ai_html = (
+            (f'<p class="cz-lead">Proposed: {html.escape(c["description"])}.</p>' if c["description"] else "")
+            + '<p class="cz-pending">A plain-language breakdown of this case (who is '
+              'behind it, the commitments, and what it means for neighbors) appears here '
+              'once the county publishes its staff report.</p>'
+        )
+
     body = (
         _CSS
         + '<div class="cz-wrap">'
         + '<a class="cz-back" href="/development.html">&larr; All cases</a>'
         + f'<h1 class="cz-h1">{html.escape(c["name"])}</h1>'
         + f'<p class="cz-sub">Case {html.escape(c["casenum"])} &middot; {html.escape(c["review_body"])}</p>'
-        + (f'<p class="cz-lead">Proposed: {html.escape(c["description"])}.</p>' if c["description"] else "")
         + (f'<div class="cz-facts">{"".join(facts)}</div>' if facts else "")
         + unit_lines + flags_html
+        + ai_html
         + '<h2 style="font-family:var(--font-display);margin-top:1.6rem;">Where it is in the process</h2>'
         + f'<p class="cz-meta">Current status: <strong>{html.escape(c["status"])}</strong></p>'
         + _pipeline_html(c["stage"], c["closed"])
@@ -316,11 +528,15 @@ def _index_card(c: dict) -> str:
         bits.append(f"{c['total_units']} homes")
     if c["anticipated"]:
         bits.append(f"hearing {c['anticipated']}")
-    key = html.escape(f'{c["name"]} {c["casenum"]} {c["request"]} {c["description"]}'.lower(), quote=True)
+    ai = c.get("ai") or {}
+    sumline = (f'<div class="cz-meta" style="margin:.35rem 0;color:var(--text-secondary);">'
+               f'{html.escape(ai["headline"])}</div>' if ai.get("headline") else "")
+    key = html.escape(f'{c["name"]} {c["casenum"]} {c["request"]} {c["description"]} {ai.get("headline","")}'.lower(), quote=True)
     return (
         f'<a class="cz-card" href="/cases/{c["slug"]}.html" data-stage="{c["stage"]}" data-search="{key}">'
         f'<span class="cz-tag">{html.escape(c["request"] or "Case")}</span>'
         f'<div class="cz-name">{html.escape(c["name"])}</div>'
+        f'{sumline}'
         f'<div class="cz-meta">{html.escape(" · ".join(bits)) if bits else html.escape(c["casenum"])}</div>'
         f'<span class="cz-status">{html.escape(c["status"])}</span>'
         '</a>'
@@ -350,6 +566,8 @@ def build_cases() -> Path | None:
     cases = fetch_cases()
     if not cases:
         return None
+
+    _apply_enrichment(cases)   # Tier 2: plain-language read of the staff reports
 
     # Per-case pages.
     cdir = PUBLIC / "cases"
