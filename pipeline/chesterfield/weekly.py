@@ -80,22 +80,17 @@ def _eyebrow(label: str) -> str:
 
 
 def _voice_section(issue_date: datetime) -> str:
+    """The Front Porch column. Human-written; omitted entirely until one exists
+    so a public issue never shows an empty slot."""
     meta, body = _read_voice(issue_date)
+    if not body:
+        return ""
     mode = _esc(meta.get("mode", "") or "From the Editor")
     byline = _esc(meta.get("byline", "") or "The Chesterfield Report")
-    if body:
-        paras = "".join(
-            f"<p>{render._inline(_esc(p.strip()))}</p>"
-            for p in body.split("\n\n") if p.strip() and not p.strip().startswith("#")
-        )
-    else:
-        paras = (
-            '<p class="nl-placeholder">Your column goes here. This is the one section a '
-            'person writes each week: a take on the biggest story, a thread connecting a '
-            'few of them, or just an observation about life in the county. Drop a file at '
-            '<code>content/newsletter/voice-' + issue_date.strftime('%Y-%m-%d') +
-            '.md</code> and it appears here.</p>'
-        )
+    paras = "".join(
+        f"<p>{render._inline(_esc(p.strip()))}</p>"
+        for p in body.split("\n\n") if p.strip() and not p.strip().startswith("#")
+    )
     return (
         '<section class="nl-voice">'
         + _eyebrow("The Front Porch &middot; " + mode)
