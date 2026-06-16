@@ -46,3 +46,4 @@ venv/
 # ---- OS ----
 .DS_Store
 cases_enrich_cache.json
+events_enrich_cache.json

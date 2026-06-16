@@ -391,6 +391,9 @@ def main() -> None:
     elif cmd == "cases-backfill":
         # One-time: enrich every development/zoning case (no per-build cap).
         print(cases_mod.backfill_cases())
+    elif cmd == "events-backfill":
+        # One-time: enrich every upcoming event (no per-build cap).
+        print(events_mod.backfill_events())
     elif cmd == "expire":
         # Deterministic: unpublish weather watches/warnings/advisories older than
         # EXPIRE_HOURS so passed alerts don't pile up on the homepage. Reversible.

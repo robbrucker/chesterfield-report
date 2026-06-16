@@ -17,8 +17,12 @@ from __future__ import annotations
 
 import datetime
 import html
+import json
 import re
+import shutil
 import ssl
+import subprocess
+import time
 import urllib.request
 from pathlib import Path
 
@@ -28,8 +32,13 @@ try:
 except Exception:                                # noqa: BLE001
     _ET = datetime.timezone(datetime.timedelta(hours=-4))
 
-from . import render
+from . import render, geo
 from .render import PUBLIC
+
+MODEL = "claude-haiku-4-5"
+CLI_TIMEOUT = 150
+ENRICH_CAP = 8   # max event enrichments per build (cached after; backfill does all)
+CACHE = Path(__file__).resolve().parents[1] / "events_enrich_cache.json"
 
 _FEED = ("https://www.chesterfield.gov/common/modules/iCalendar/"
          "iCalendar.aspx?catID={cat}&feed=calendar")
@@ -132,6 +141,150 @@ def fetch_events() -> list[dict]:
 
 
 # --------------------------------------------------------------------------- #
+# Enrichment: read the county event page for a description, registration, contact
+# --------------------------------------------------------------------------- #
+
+_ENRICH_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "description": {"type": "string"},
+        "registration_required": {"type": "boolean"},
+        "registration_note": {"type": "string"},
+        "cost": {"type": "string"},
+        "contact_phone": {"type": "string"},
+        "contact_name": {"type": "string"},
+        "audience": {"type": "string"},
+    },
+    "required": ["description"],
+}
+
+
+def _cli_available() -> bool:
+    return shutil.which("claude") is not None
+
+
+def _detail_text(link: str) -> str:
+    """Fetch a county event page and return the cleaned event-detail region."""
+    try:
+        raw = _get(link)
+    except Exception:                            # noqa: BLE001
+        return ""
+    i = raw.find("eventDetails")
+    seg = raw[i:i + 9000] if i != -1 else raw
+    seg = re.sub(r"<script.*?</script>", " ", seg, flags=re.DOTALL)
+    seg = re.sub(r"<[^>]+>", " ", seg)
+    seg = html.unescape(seg)
+    return re.sub(r"\s+", " ", seg).strip()[:6000]
+
+
+def _clean_field(s):
+    if not isinstance(s, str):
+        return s
+    for cut in ("</", "<parameter", "<function", "<antml", "```"):
+        j = s.find(cut)
+        if j != -1:
+            s = s[:j]
+    return s.strip()
+
+
+def enrich_event(ev: dict, detail: str) -> dict | None:
+    if not _cli_available() or not detail:
+        return None
+    prompt = (
+        "You are a local-news editor writing a short, useful listing for a Chesterfield "
+        "County, Virginia community event. Using ONLY the official event-page text below, "
+        "fill the schema.\n\n"
+        f"Event title: {ev['summary']}\n"
+        f"When: {ev['start'].strftime('%A, %B %-d, %Y %-I:%M %p')}\n"
+        f"Where: {ev['location']}\n\n"
+        f"OFFICIAL EVENT PAGE TEXT:\n\"\"\"\n{detail}\n\"\"\"\n\n"
+        "Rules: 'description' = 1 to 2 plain sentences on what the event is and who it is for. "
+        "'registration_required' = true ONLY if the text says you must register/sign up/RSVP "
+        "in advance; else false. 'registration_note' = how to register (and any link/phone) if "
+        "required, else empty. 'cost' = 'Free' if free, or a brief note if there are fees, else "
+        "empty. 'contact_phone' and 'contact_name' = from the page if present, else empty. "
+        "'audience' = e.g. 'All ages', 'Adults', 'Kids', if stated, else empty. Use ONLY the "
+        "text; never invent a phone number, link, or fee. "
+        "STYLE: no em dashes or en dashes; use commas, periods, or colons."
+    )
+    cmd = ["claude", "-p", prompt, "--output-format", "json",
+           "--json-schema", json.dumps(_ENRICH_SCHEMA), "--model", MODEL]
+    for attempt in range(2):
+        try:
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+            if proc.returncode != 0:
+                if attempt == 0:
+                    time.sleep(4)
+                    continue
+                return None
+            data = json.loads(proc.stdout).get("structured_output")
+            if not data or not data.get("description"):
+                return None
+            return {k: ([_clean_field(x) for x in v] if isinstance(v, list) else _clean_field(v))
+                    for k, v in data.items()}
+        except Exception:                        # noqa: BLE001
+            if attempt == 0:
+                time.sleep(4)
+                continue
+            return None
+    return None
+
+
+def _load_cache() -> dict:
+    try:
+        return json.loads(CACHE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def _save_cache(cache: dict) -> None:
+    try:
+        CACHE.write_text(json.dumps(cache, indent=0), encoding="utf-8")
+    except OSError:
+        pass
+
+
+def _geocode(ev: dict) -> None:
+    """Attach lat/lon from the event location (Nominatim, cached). Skips virtual."""
+    loc = ev.get("location", "")
+    if not loc or "virtual" in loc.lower():
+        return
+    r = geo.geocode(loc) or geo.geocode(loc + ", Chesterfield, VA")
+    if r:
+        ev["lat"], ev["lon"] = r["lat"], r["lon"]
+
+
+def _apply(events: list[dict], cap: int = ENRICH_CAP) -> None:
+    """Geocode every event; (re-)enrich up to `cap` un-cached events per run."""
+    cache = _load_cache()
+    n = 0
+    for ev in events:
+        _geocode(ev)
+        key = str(ev["uid"])
+        cached = cache.get(key)
+        if cached:
+            ev["ai"] = cached
+            continue
+        if n >= cap:
+            continue
+        data = enrich_event(ev, _detail_text(ev["link"]))
+        n += 1
+        if data:
+            cache[key] = data
+            ev["ai"] = data
+    _save_cache(cache)
+    if n:
+        print(f"  events: enriched {n} this run")
+
+
+def backfill_events() -> dict:
+    """One-time: enrich every upcoming event (no cap)."""
+    events = fetch_events()
+    _apply(events, cap=10_000)
+    return {"events": len(events)}
+
+
+# --------------------------------------------------------------------------- #
 # Rendering
 # --------------------------------------------------------------------------- #
 
@@ -158,7 +311,49 @@ _CSS = """<style>
   border-radius:var(--radius-xs);font:var(--fs-sm)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);}
 .ev-src a{color:var(--accent);font-weight:600;}
 .ev-empty{font:var(--fs-md) var(--font-sans);color:var(--text-secondary);margin:2rem 0;}
+#ev-map{height:340px;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--border);margin:0 0 1.2rem;}
+.ev-desc{font:var(--fs-sm)/1.5 var(--font-sans);color:var(--text-secondary);margin:.3rem 0 .2rem;}
+.ev-tags{display:flex;flex-wrap:wrap;gap:8px;margin:.3rem 0 .1rem;align-items:center;}
+.ev-reg{font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono);letter-spacing:var(--ls-wide);text-transform:uppercase;
+  color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:.22rem .5rem;}
+.ev-cost,.ev-contact,.ev-aud{font:var(--fs-2xs)/1.4 var(--font-sans);color:var(--text-tertiary);}
+.ev-contact a{color:var(--accent);}
+@media(max-width:560px){#ev-map{height:260px;}.ev-time{flex-basis:64px;}}
 </style>"""
+
+_MAP_JS = """
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+<div id="ev-map"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script>
+(function(){
+  if(!window.L) return;
+  var pts=__DATA__;
+  function tile(){var l=document.documentElement.getAttribute('data-theme')==='light';
+    return l?'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png':'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';}
+  var map=L.map('ev-map',{scrollWheelZoom:false}).setView([37.40,-77.58],11);
+  var layer=L.tileLayer(tile(),{attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:19}).addTo(map);
+  var cl=L.markerClusterGroup({maxClusterRadius:38,showCoverageOnHover:false});
+  pts.forEach(function(p){
+    var h='<strong>'+p[0]+'</strong><br>'+p[3]+(p[4]?'<br><a href="'+p[4]+'" target="_blank" rel="noopener">Details</a>':'');
+    L.circleMarker([p[1],p[2]],{radius:7,color:'#fff',weight:1.5,fillColor:'#9a3322',fillOpacity:.9}).bindPopup(h).addTo(cl);
+  });
+  map.addLayer(cl);
+  new MutationObserver(function(){layer.setUrl(tile());}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+})();
+</script>
+"""
+
+
+def _map(events: list[dict]) -> str:
+    pts = [[e["summary"], e["lat"], e["lon"], html.escape(e["cat"]), html.escape(e["link"])]
+           for e in events if e.get("lat") and e.get("lon")]
+    if not pts:
+        return ""
+    return _MAP_JS.replace("__DATA__", json.dumps(pts, separators=(",", ":")))
 
 _FILTER_JS = """
 <script>
@@ -191,6 +386,8 @@ def build_events() -> Path | None:
     if not events:
         return None
 
+    _apply(events)   # geocode + AI enrichment (description, registration, contact)
+
     cats_present = []
     seen_c = set()
     for e in events:
@@ -210,13 +407,30 @@ def build_events() -> Path | None:
             rows_html.append(f'<div class="ev-day">{d.strftime("%A, %B %-d")}</div>')
         cat_badge = f'<span class="ev-cat" style="background:{e["color"]}">{html.escape(e["cat"])}</span>'
         where = f'<div class="ev-where">{html.escape(e["location"])}</div>' if e["location"] else ""
+        ai = e.get("ai") or {}
+        extra = ""
+        if ai.get("description"):
+            extra += f'<div class="ev-desc">{html.escape(ai["description"])}</div>'
+        tags = []
+        if ai.get("registration_required"):
+            tags.append('<span class="ev-reg">Registration required</span>')
+        if (ai.get("cost") or "").strip():
+            tags.append(f'<span class="ev-cost">{html.escape(ai["cost"])}</span>')
+        if (ai.get("audience") or "").strip():
+            tags.append(f'<span class="ev-aud">{html.escape(ai["audience"])}</span>')
+        if tags:
+            extra += '<div class="ev-tags">' + "".join(tags) + '</div>'
+        cbits = [html.escape(ai[k]) for k in ("registration_note", "contact_phone", "contact_name")
+                 if (ai.get(k) or "").strip()]
+        if cbits:
+            extra += f'<div class="ev-contact">{" &middot; ".join(cbits)}</div>'
         rows_html.append(
             f'<div class="ev-row" data-cat="{html.escape(e["cat"])}">'
             f'<div class="ev-time">{html.escape(_time_label(e))}</div>'
             '<div class="ev-body">'
             f'<div class="ev-title"><a href="{html.escape(e["link"])}" target="_blank" rel="noopener">'
             f'{html.escape(e["summary"])}</a>{cat_badge}</div>'
-            f'{where}</div></div>'
+            f'{where}{extra}</div></div>'
         )
 
     body = (
@@ -226,6 +440,7 @@ def build_events() -> Path | None:
         + '<p class="ev-lead">Upcoming public events across Chesterfield County: festivals, '
           'parks programs, clinics, classes, and county happenings. Updated daily; past events '
           'drop off automatically.</p>'
+        + _map(events)
         + filters
         + f'<p class="ev-summary">{len(events)} upcoming events</p>'
         + "".join(rows_html)
