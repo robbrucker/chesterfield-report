@@ -1203,18 +1203,45 @@ def _regional_records() -> list:
 _VA_CSS = """<style>
 .va-wrap{max-width:820px;margin:0 auto;}
 .va-lead{font:var(--fs-lg)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);max-width:64ch;margin:.4rem 0 1.4rem;}
-.va-card{border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.1rem 1.2rem;background:var(--surface-card);margin:0 0 14px;}
-.va-meta{font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--text-tertiary);margin-bottom:.4rem;}
-.va-card h3{font:var(--fw-bold) var(--fs-lg)/1.2 var(--font-display);margin:0 0 .35rem;}
+.va-card{border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface-card);margin:0 0 18px;overflow:hidden;}
+.va-img{display:block;}
+.va-img img{display:block;width:100%;height:200px;object-fit:cover;}
+.va-body{padding:1.1rem 1.25rem 1.2rem;}
+.va-meta{font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--text-tertiary);margin-bottom:.45rem;}
+.va-card h3{font:var(--fw-bold) var(--fs-xl)/1.2 var(--font-display);margin:0 0 .4rem;}
 .va-card h3 a{color:var(--text-primary);}
 .va-card h3 a:hover{color:var(--accent);}
-.va-tldr{font:var(--fs-sm)/1.5 var(--font-sans);color:var(--text-secondary);margin:.3rem 0 .55rem;}
+.va-tldr{font:var(--fw-semibold) var(--fs-md)/1.45 var(--font-sans);color:var(--text-primary);margin:.3rem 0 .6rem;}
+.va-sum{font:var(--fs-sm)/1.6 var(--font-sans);color:var(--text-secondary);margin:.3rem 0 .7rem;}
+.va-why{border-left:3px solid var(--accent);background:var(--surface-sunken,rgba(154,50,34,.05));border-radius:0 var(--radius-xs) var(--radius-xs) 0;padding:.6rem .85rem;margin:.6rem 0 .8rem;}
+.va-why-l{display:block;font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--accent);margin-bottom:.3rem;}
+.va-why p{font:var(--fs-sm)/1.55 var(--font-sans);color:var(--text-secondary);margin:0;}
 .va-src{font:var(--fw-semibold) var(--fs-2xs) var(--font-sans);}
 .va-src a{color:var(--accent);}
 .va-note{margin-top:2rem;padding:1rem 1.1rem;border-left:3px solid var(--accent);background:var(--surface-card);
   border-radius:var(--radius-xs);font:var(--fs-sm)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);}
 .va-empty{font:var(--fs-md) var(--font-sans);color:var(--text-secondary);margin:2rem 0;}
 </style>"""
+
+
+def _summary_from_body(body: str) -> str:
+    """The story summary paragraph(s): everything between the TL;DR and the
+    'Why it matters' line / source link, with the headline and TL;DR removed."""
+    text = re.split(r"\*\*Why it matters:\*\*|\n\[Read the source", body)[0]
+    paras = []
+    for raw in text.split("\n\n"):
+        s = raw.strip()
+        if not s or s.startswith("#") or s.startswith("**TL;DR:") or s.startswith("["):
+            continue
+        paras.append(re.sub(r"\s+", " ", s))
+    return " ".join(paras).strip()
+
+
+def _why_from_body(body: str) -> str:
+    """The 'Why it matters' analysis (our Chesterfield angle), if present."""
+    m = re.search(r"\*\*Why it matters:\*\*\s*(.+?)(?:\n\[Read the source|\Z)",
+                  body, re.S)
+    return re.sub(r"\s+", " ", m.group(1)).strip() if m else ""
 
 
 def _regional_card(meta: dict, body: str) -> str:
@@ -1224,14 +1251,31 @@ def _regional_card(meta: dict, body: str) -> str:
     date = _pretty_date(meta.get("published", ""))
     _, flabel = _primary_focus(meta)
     tldr = _tldr_from_body(body)
-    tldr_html = f'<p class="va-tldr">{_inline(html.escape(tldr))}</p>' if tldr else ""
+    summary = _summary_from_body(body)
+    why = _why_from_body(body)
+    img = (meta.get("image") or "").strip()
     metabits = " &middot; ".join(b for b in (html.escape(flabel), date) if b)
+    img_html = (
+        f'<a class="va-img" href="{src_url}" target="_blank" rel="noopener">'
+        f'<img src="{html.escape(img)}" alt="" loading="lazy"></a>'
+    ) if img.startswith("http") else ""
+    tldr_html = f'<p class="va-tldr">{_inline(html.escape(tldr))}</p>' if tldr else ""
+    summary_html = f'<p class="va-sum">{_inline(html.escape(summary))}</p>' if summary else ""
+    why_html = (
+        '<div class="va-why"><span class="va-why-l">Why it matters to Chesterfield</span>'
+        f'<p>{_inline(html.escape(why))}</p></div>'
+    ) if why else ""
     return (
         '<article class="va-card">'
+        f'{img_html}'
+        '<div class="va-body">'
         f'<div class="va-meta">{metabits}</div>'
         f'<h3><a href="{src_url}" target="_blank" rel="noopener">{headline}</a></h3>'
         f'{tldr_html}'
-        f'<div class="va-src">Read it at <a href="{src_url}" target="_blank" rel="noopener">{src} &nearr;</a></div>'
+        f'{summary_html}'
+        f'{why_html}'
+        f'<div class="va-src">Read the full story at <a href="{src_url}" target="_blank" rel="noopener">{src} &nearr;</a></div>'
+        '</div>'
         '</article>'
     )
 
