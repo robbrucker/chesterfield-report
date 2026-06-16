@@ -435,20 +435,36 @@ def _is_multi_location(loc: str) -> bool:
     return sum(1 for p in parts if _VENUE_RE.search(p)) >= 2
 
 
+# Chesterfield County bounding box. Any pin outside it is a bad geocode (wrong
+# state, or Nominatim's "center of the USA" fallback) and is never mapped.
+_MAP_BBOX = (36.9, 37.8, -78.1, -77.2)  # lat_min, lat_max, lon_min, lon_max
+
+
+def _in_chesterfield(lat, lon) -> bool:
+    try:
+        lat, lon = float(lat), float(lon)
+    except (TypeError, ValueError):
+        return False
+    return _MAP_BBOX[0] <= lat <= _MAP_BBOX[1] and _MAP_BBOX[2] <= lon <= _MAP_BBOX[3]
+
+
 def _resolve_map(meta: dict) -> str:
     """Return map HTML for a post, geocoding the location if needed (cached).
-    Only renders for a single, specific location."""
-    label = meta.get("location", "").strip()
-    if not label or _is_multi_location(label):
+    Only renders for a single, specific location inside Chesterfield County."""
+    label = meta.get("location", "").strip().strip('"\\ ')
+    # Skip empty, multi-venue, or junk labels (no real letters, e.g. a stray quote).
+    if not label or _is_multi_location(label) or not re.search(r"[A-Za-z]", label):
         return ""
     lat, lon = meta.get("lat", "").strip(), meta.get("lon", "").strip()
-    if lat and lon:
+    if lat and lon and _in_chesterfield(lat, lon):
         try:
             return _map_embed(float(lat), float(lon), label)
         except ValueError:
             pass
+    # Stored coords missing or outside the county: (re)geocode (geo.geocode itself
+    # rejects out-of-bbox results, so a bad label simply yields no map).
     g = geo.geocode(label)
-    if g:
+    if g and _in_chesterfield(g["lat"], g["lon"]):
         return _map_embed(g["lat"], g["lon"], label)
     return ""
 
