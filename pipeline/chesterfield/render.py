@@ -2174,7 +2174,7 @@ _TEMPLATE = """<!doctype html>
     </div></div>
   </div>
   <nav class="topnav cr-header__nav">
-    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a><a href="/taxes.html">Taxes</a><a href="/meetings.html">Meetings</a><a href="/board.html">Board of Supervisors</a><a href="/shoosmith.html">Shoosmith investigation</a>
+    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a><a href="/taxes.html">Taxes</a><a href="/meetings.html">Meetings</a><a href="/board.html">Board of Supervisors</a><a href="/development.html">Development</a><a href="/shoosmith.html">Shoosmith</a>
   </nav>
   <div class="dateline">
     <span class="place">Chesterfield County &middot; Virginia</span>
