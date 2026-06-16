@@ -338,6 +338,83 @@ def _reject_file(path, meta: dict, kind: str, reason: str, sensitive: bool) -> N
         pass
 
 
+# --------------------------------------------------------------------------- #
+# Regional track: Virginia / area news that affects residents but isn't local.
+# These drafts (track=regional) get a separate judgment and, if they pass, move
+# to content/regional/ (rendered on /virginia.html, never the local feed).
+# --------------------------------------------------------------------------- #
+
+REGIONAL = render.PUBLISHED.parent / "regional"
+
+_REGIONAL_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "publish": {"type": "boolean"},
+        "affects_residents": {"type": "boolean"},
+        "reason": {"type": "string"},
+    },
+    "required": ["publish", "reason"],
+}
+
+
+def _regional_decide(meta: dict, body: str, model: str) -> dict:
+    headline = meta.get("headline", "")
+    summary = next((ln for ln in body.splitlines() if ln and not ln.startswith(("#", "*"))), "")
+    prompt = (
+        "You are the regional-news editor for a Chesterfield County, Virginia local "
+        "news site's 'Virginia & Region' section. This item is statewide or regional "
+        "news, NOT specifically about Chesterfield. Decide whether it belongs in a "
+        "section for news that MATERIALLY affects Chesterfield County residents: a new "
+        "or proposed state law, the state budget, taxes, a Dominion/utility rate change, "
+        "regional transportation (I-95, tolls, CVTA), a statewide election, a court "
+        "ruling, education funding, or a public-safety policy change.\n\n"
+        f"Headline: {headline}\nSource: {meta.get('source','')}\nSummary: {summary}\n\n"
+        "Set publish=true ONLY if it is newsworthy, real (not a press release, ad, "
+        "listicle, sports trivia, or fluff), and a typical Chesterfield resident would "
+        "care because it affects them. Set publish=false for: another locality's purely "
+        "local news, national politics not specific to Virginia, lifestyle/fluff, thin "
+        "items, or duplicates. Return publish, affects_residents, and a one-sentence "
+        "reason. Do not use em dashes."
+    )
+    cmd = ["claude", "-p", prompt, "--output-format", "json",
+           "--json-schema", json.dumps(_REGIONAL_SCHEMA), "--model", model]
+    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+    if proc.returncode != 0:
+        raise RuntimeError(proc.stderr.strip()[:200] or "regional CLI failed")
+    data = json.loads(proc.stdout).get("structured_output")
+    if not data:
+        raise RuntimeError("regional CLI returned no structured_output")
+    return data
+
+
+def _handle_regional(path, meta: dict, body: str, model: str) -> str:
+    """Judge a regional-track draft; publish to content/regional/ or reject
+    (reversible). Returns 'publish' or 'reject'. Never raises."""
+    try:
+        v = _regional_decide(meta, body, model)
+    except Exception as e:                       # noqa: BLE001
+        v = None
+        print(f"  ! regional triage failed for {path.name}: {e}")
+    if not v or not v.get("publish"):
+        reason = ((v or {}).get("reason") or "not regionally relevant").strip()
+        _reject_file(path, meta, "regional", reason, False)
+        print(f"{path.name} — regional reject — {reason[:80]}")
+        return "reject"
+    reason = (v.get("reason") or "").strip()
+    render.update_frontmatter(path, {
+        "ai_verdict": "approve",
+        "ai_verdict_reason": _yq(reason),
+        "ai_sensitive": "false",
+        "status": "published",
+    })
+    REGIONAL.mkdir(parents=True, exist_ok=True)
+    dest = REGIONAL / path.name
+    dest.write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+    path.unlink()
+    print(f"{path.name} — regional publish — {reason[:80]}")
+    return "publish"
+
+
 def triage(model: str = "claude-haiku-4-5", deepen: bool = True,
            max_deepen: int = MAX_DEEPEN, limit: int = 12) -> dict:
     """Triage un-triaged drafts: auto-approve clearly-safe items and route the
@@ -356,7 +433,7 @@ def triage(model: str = "claude-haiku-4-5", deepen: bool = True,
     Returns {"approved", "deepened", "review", "rejected", "processed"}.
     """
     drafts = sorted(render.DRAFTS.glob("*.md"))
-    approved = deepened = review = rejected = duplicate = 0
+    approved = deepened = review = rejected = duplicate = regional_pub = 0
 
     # Build the taste-tuned system prompt once, and load the published set for
     # the duplicate guard (we append to it as we auto-publish this run).
@@ -376,6 +453,15 @@ def triage(model: str = "claude-haiku-4-5", deepen: bool = True,
         meta, body = render._parse_frontmatter(text)
         if "ai_verdict" in meta:
             continue  # already triaged — idempotent skip
+
+        # Regional-track drafts get a separate judgment and go to content/regional/.
+        if meta.get("track") == "regional":
+            if _handle_regional(path, meta, body, model) == "publish":
+                regional_pub += 1
+            else:
+                rejected += 1
+            processed_files += 1
+            continue
 
         try:
             v = _triage_cli(meta, body, model, system=system)
@@ -517,5 +603,6 @@ def triage(model: str = "claude-haiku-4-5", deepen: bool = True,
         "rejected": rejected,
         "duplicate": duplicate,
         "quiet_fill": quiet_filled,
+        "regional": regional_pub,
         "processed": approved + review + rejected + duplicate,
     }

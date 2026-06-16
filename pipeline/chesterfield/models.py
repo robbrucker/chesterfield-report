@@ -25,6 +25,9 @@ class Item:
     # than the fixed focus areas. Used for cross-linking and discovery.
     tags: list[str] = field(default_factory=list)
     license: str = "press"  # "government" (free to use) | "press" (link-only)
+    # Editorial track: "" = local Chesterfield news; "regional" = Virginia /
+    # regional news that affects residents but isn't Chesterfield-specific.
+    track: str = ""
     # Geocodable place for this story ("" if not tied to a location) + coords.
     location: str = ""
     lat: str = ""

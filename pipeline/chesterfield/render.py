@@ -6,6 +6,7 @@ renderer turns the *published* files into a browsable index.html.
 """
 from __future__ import annotations
 
+import html
 import json
 import os
 import re
@@ -28,6 +29,7 @@ def _updated_stamp() -> str:
 ROOT = Path(__file__).resolve().parents[2]
 DRAFTS = ROOT / "content" / "drafts"
 PUBLISHED = ROOT / "content" / "published"
+REGIONAL = ROOT / "content" / "regional"   # Virginia/regional track (separate page)
 PUBLIC = ROOT / "public"
 
 
@@ -53,6 +55,7 @@ def write_draft(item: Item) -> Path:
         f"source: {_yaml_escape(item.source_name)}",
         f"source_url: {_yaml_escape(item.url)}",
         f"license: {item.license}",
+        f"track: {item.track}",
         f"published: {_yaml_escape(item.published)}",
         f"focus: [{', '.join(labels)}]",
         f"tags: [{', '.join(item.tags)}]",
@@ -904,6 +907,7 @@ def _render_index_pages(records: list, top_html: str = "") -> int:
             hero
             + _sechead("// The feed", "Across the county", filter_action)
             + '<div class="cr-home__grid feed" id="feed">' + grid + '</div>'
+            + (_regional_home_module() if page == 1 else "")
             + _pagination_nav(page, total_pages)
         )
         body_html = (jsonld
@@ -1185,6 +1189,118 @@ def build_articles() -> int:
         (sdir / f"{slug}.html").write_text(page, encoding="utf-8")
         n += 1
     return n
+
+
+# --- Virginia & Region (regional track) -----------------------------------
+
+def _regional_records() -> list:
+    """Published regional-track stories (content/regional/), newest first."""
+    if not REGIONAL.is_dir():
+        return []
+    return _collect(sorted(REGIONAL.glob("*.md"), reverse=True), include_drafts=False)
+
+
+_VA_CSS = """<style>
+.va-wrap{max-width:820px;margin:0 auto;}
+.va-lead{font:var(--fs-lg)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);max-width:64ch;margin:.4rem 0 1.4rem;}
+.va-card{border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.1rem 1.2rem;background:var(--surface-card);margin:0 0 14px;}
+.va-meta{font:var(--fw-bold) var(--fs-3xs)/1 var(--font-mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--text-tertiary);margin-bottom:.4rem;}
+.va-card h3{font:var(--fw-bold) var(--fs-lg)/1.2 var(--font-display);margin:0 0 .35rem;}
+.va-card h3 a{color:var(--text-primary);}
+.va-card h3 a:hover{color:var(--accent);}
+.va-tldr{font:var(--fs-sm)/1.5 var(--font-sans);color:var(--text-secondary);margin:.3rem 0 .55rem;}
+.va-src{font:var(--fw-semibold) var(--fs-2xs) var(--font-sans);}
+.va-src a{color:var(--accent);}
+.va-note{margin-top:2rem;padding:1rem 1.1rem;border-left:3px solid var(--accent);background:var(--surface-card);
+  border-radius:var(--radius-xs);font:var(--fs-sm)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);}
+.va-empty{font:var(--fs-md) var(--font-sans);color:var(--text-secondary);margin:2rem 0;}
+</style>"""
+
+
+def _regional_card(meta: dict, body: str) -> str:
+    headline = html.escape(meta.get("headline", "") or "")
+    src = html.escape(meta.get("source", "") or "the source")
+    src_url = html.escape(meta.get("source_url", "") or "#")
+    date = _pretty_date(meta.get("published", ""))
+    _, flabel = _primary_focus(meta)
+    tldr = _tldr_from_body(body)
+    tldr_html = f'<p class="va-tldr">{_inline(html.escape(tldr))}</p>' if tldr else ""
+    metabits = " &middot; ".join(b for b in (html.escape(flabel), date) if b)
+    return (
+        '<article class="va-card">'
+        f'<div class="va-meta">{metabits}</div>'
+        f'<h3><a href="{src_url}" target="_blank" rel="noopener">{headline}</a></h3>'
+        f'{tldr_html}'
+        f'<div class="va-src">Read it at <a href="{src_url}" target="_blank" rel="noopener">{src} &nearr;</a></div>'
+        '</article>'
+    )
+
+
+def build_virginia() -> Path:
+    """Render /virginia.html: the regional track (statewide/regional news that
+    affects Chesterfield residents), separate from the local feed."""
+    recs = _regional_records()
+    if recs:
+        cards = "".join(_regional_card(m, b) for m, b, _ in recs)
+    else:
+        cards = ('<p class="va-empty">No regional stories yet. As Virginia and '
+                 'Richmond-area news that affects Chesterfield residents comes in, it '
+                 'will appear here.</p>')
+    body = (
+        _VA_CSS
+        + '<div class="va-wrap">'
+        + '<h1 class="page-title">Virginia &amp; Region</h1>'
+        + '<p class="va-lead">State and regional news that affects Chesterfield County '
+          'residents but isn’t local Chesterfield news: state laws and the budget, '
+          'utility rates, regional transportation, courts, and elections. Each item links '
+          'to the original reporting.</p>'
+        + cards
+        + '<div class="va-note">This section covers Virginia and Richmond-area news with '
+          'a direct impact on Chesterfield residents. It is kept separate from our local '
+          'Chesterfield coverage, and every item is summarized with a link back to the '
+          'original source. Spotted something we should include? <a href="/tip.html">Let us know.</a></div>'
+        + '</div>'
+    )
+    page = _shell(body, len(recs))
+    page = _inject_og(page, "Virginia & Region — The Chesterfield Report",
+                      "State and regional news that affects Chesterfield County residents: "
+                      "laws, the budget, utility rates, transportation, courts, and elections.",
+                      "https://chesterfieldreport.com/virginia.html")
+    out = PUBLIC / "virginia.html"
+    out.write_text(page, encoding="utf-8")
+    return out
+
+
+def _regional_home_module() -> str:
+    """Compact 'Virginia & Region' block for the homepage (latest few items)."""
+    recs = _regional_records()[:4]
+    if not recs:
+        return ""
+    items = []
+    for meta, _body, _name in recs:
+        headline = html.escape(meta.get("headline", "") or "")
+        src_url = html.escape(meta.get("source_url", "") or "/virginia.html")
+        date = _pretty_date(meta.get("published", ""))
+        items.append(
+            f'<li><a href="{src_url}" target="_blank" rel="noopener">{headline}</a>'
+            f'<span class="vahome-d">{html.escape(date)}</span></li>')
+    more = '<a class="vahome-more" href="/virginia.html">All Virginia &amp; Region &rarr;</a>'
+    return (
+        '<style>.vahome{margin:1.6rem 0;border:1px solid var(--border);border-radius:var(--radius-sm);'
+        'background:var(--surface-card);padding:1rem 1.2rem;}'
+        '.vahome h2{font:var(--fw-bold) var(--fs-md)/1.1 var(--font-display);margin:0 0 .2rem;}'
+        '.vahome .vahome-sub{font:var(--fs-2xs)/1.3 var(--font-sans);color:var(--text-tertiary);margin:0 0 .7rem;}'
+        '.vahome ul{list-style:none;padding:0;margin:0;}'
+        '.vahome li{padding:.45rem 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:10px;'
+        'font:var(--fs-sm)/1.4 var(--font-sans);}'
+        '.vahome li a{color:var(--text-primary);}.vahome li a:hover{color:var(--accent);}'
+        '.vahome-d{font:var(--fs-3xs) var(--font-mono);color:var(--text-tertiary);white-space:nowrap;}'
+        '.vahome-more{display:inline-block;margin-top:.6rem;font:var(--fw-semibold) var(--fs-2xs) var(--font-sans);color:var(--accent);}'
+        '</style>'
+        '<section class="vahome"><h2>Virginia &amp; Region</h2>'
+        '<p class="vahome-sub">State and regional news that affects Chesterfield residents</p>'
+        f'<ul>{"".join(items)}</ul>{more}</section>'
+    )
 
 
 # --- Spanish edition (/es/) -----------------------------------------------
@@ -2191,14 +2307,14 @@ _TEMPLATE = """<!doctype html>
   </div>
   <nav class="topnav cr-header__nav nav-desktop" aria-label="Main navigation">
     <a class="nav-x" href="/">Home</a>
-    <div class="nav-g"><button class="nav-t" type="button">News <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a></div></div>
+    <div class="nav-g"><button class="nav-t" type="button">News <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia &amp; Region</a></div></div>
     <a class="nav-x" href="/events.html">Events</a>
     <div class="nav-g"><button class="nav-t" type="button">Community <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable Housing</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a></div></div>
     <div class="nav-g"><button class="nav-t" type="button">Government <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/board.html">Board of Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development &amp; Zoning</a></div></div>
     <div class="nav-g"><button class="nav-t" type="button">Investigations <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/shoosmith.html">Shoosmith landfill</a></div></div>
   </nav>
   <nav class="topnav cr-header__nav nav-mobile" aria-label="Sections">
-    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/events.html">Events</a><a href="/map.html">News map</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development</a><a href="/shoosmith.html">Shoosmith</a>
+    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/events.html">Events</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development</a><a href="/shoosmith.html">Shoosmith</a>
   </nav>
   <div class="dateline">
     <span class="place">Chesterfield County &middot; Virginia</span>
@@ -2226,16 +2342,41 @@ _TEMPLATE = """<!doctype html>
       </form>
     </div>
     <nav class="footer-nav" aria-label="All sections">
-      <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a>
-      <a href="/events.html">Events</a><a href="/map.html">News map</a><a href="/neighborhoods.html">Neighborhoods</a>
-      <a href="/dining.html">Dining</a><a href="/business.html">Business</a>
-      <a href="/meetings.html">Meetings</a><a href="/board.html">Board of Supervisors</a>
-      <a href="/schools.html">Schools</a><a href="/school-board.html">School Board</a><a href="/apartments.html">Apartments</a><a href="/affordable-housing.html">Affordable Housing</a><a href="/taxes.html">Taxes</a>
-      <a href="/development.html">Development & Zoning</a>
-      <a href="/shoosmith.html">Shoosmith investigation</a>
-      <a href="/subscribe.html">Subscribe</a>
-      <a href="/letters.html">Opinion</a><a href="/tip.html">Send a tip</a>
-      <a href="/about.html">About</a><a href="/feed.xml">RSS</a>
+      <div class="footer-col">
+        <h3>News</h3>
+        <a href="/">Home</a>
+        <a href="/topics/">Topics</a>
+        <a href="/digest.html">This Week</a>
+        <a href="/map.html">News map</a>
+        <a href="/virginia.html">Virginia &amp; Region</a>
+      </div>
+      <div class="footer-col">
+        <h3>Community</h3>
+        <a href="/events.html">Events</a>
+        <a href="/neighborhoods.html">Neighborhoods</a>
+        <a href="/schools.html">Schools</a>
+        <a href="/apartments.html">Apartments</a>
+        <a href="/affordable-housing.html">Affordable Housing</a>
+        <a href="/dining.html">Dining</a>
+        <a href="/business.html">Business</a>
+      </div>
+      <div class="footer-col">
+        <h3>Government</h3>
+        <a href="/board.html">Board of Supervisors</a>
+        <a href="/school-board.html">School Board</a>
+        <a href="/meetings.html">Meetings</a>
+        <a href="/taxes.html">Taxes</a>
+        <a href="/development.html">Development &amp; Zoning</a>
+      </div>
+      <div class="footer-col">
+        <h3>More</h3>
+        <a href="/shoosmith.html">Shoosmith investigation</a>
+        <a href="/letters.html">Opinion</a>
+        <a href="/tip.html">Send a tip</a>
+        <a href="/subscribe.html">Subscribe</a>
+        <a href="/about.html">About</a>
+        <a href="/feed.xml">RSS</a>
+      </div>
     </nav>
     <p>Stories are aggregated and summarized with links back to the original reporting.
        Please follow the <strong>[source]</strong> and &ldquo;Read the source&rdquo; links to support

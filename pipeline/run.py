@@ -160,6 +160,7 @@ def cmd_ingest(backend: str = "auto", model: str = "claude-haiku-4-5",
                 store.add(item, status="skipped")
                 continue
             item.focus = classify.tag_focus(item)
+            item.track = source.get("track", "")   # "" local | "regional"
             enrich_mod.enrich(item, backend=backend, model=model)
             path = render.write_draft(item)
             store.add(item, status="drafted")
@@ -187,6 +188,7 @@ def cmd_build() -> None:
     render.build_subscribe()
     render.build_about()
     render.build_shoosmith()
+    render.build_virginia()                        # regional track -> /virginia.html
     render.build_feed()
     map_out = maps_mod.build_map()
     board_out = board_mod.build_board()

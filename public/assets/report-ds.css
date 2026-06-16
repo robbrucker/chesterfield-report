@@ -941,9 +941,16 @@ footer { border-top: 1px solid var(--ink-400); margin-top: var(--space-9);
   font: var(--fs-2xs)/1.4 var(--font-mono); color: var(--text-faint);
   text-transform: uppercase; letter-spacing: var(--ls-wide); }
 .footer-domain { color: var(--neon-teal); font-weight: 700; }
-.footer-nav { display: flex; flex-wrap: wrap; gap: 9px 18px; margin: .2rem 0 1.1rem; }
-.footer-nav a { font: var(--fw-medium) var(--fs-sm)/1 var(--font-sans); color: var(--text-muted); text-decoration: none; }
+.footer-nav { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px 28px;
+  margin: 1.1rem 0 1.4rem; padding-top: var(--space-4); border-top: 1px solid var(--ink-600); }
+.footer-col { display: flex; flex-direction: column; gap: 9px; min-width: 0; }
+.footer-col h3 { margin: 0 0 4px; font: var(--fw-bold) var(--fs-2xs)/1 var(--font-mono);
+  text-transform: uppercase; letter-spacing: var(--ls-wide); color: var(--text-faint); }
+.footer-nav a { font: var(--fw-medium) var(--fs-sm)/1.2 var(--font-sans); color: var(--text-muted); text-decoration: none; }
 .footer-nav a:hover { color: var(--neon-teal); }
+@media (max-width: 640px) {
+  .footer-nav { grid-template-columns: repeat(2, 1fr); gap: 20px 22px; }
+}
 .footer-signup { margin: .3rem 0 1.2rem; }
 .footer-signup strong { display: block; font: var(--fw-bold) var(--fs-md)/1.3 var(--font-sans); color: var(--text-strong); margin-bottom: 9px; }
 .signup-form { display: flex; flex-wrap: wrap; gap: 8px; max-width: 440px; }

@@ -603,6 +603,44 @@ SOURCES = [
         # do. Leave disabled. (Google News still surfaces Observer stories.)
         "enabled": False,            # flip to True once the feed is reachable
     },
+
+    # --- REGIONAL TRACK: Virginia / Richmond-area news that affects Chesterfield
+    # residents but isn't Chesterfield-specific (state laws, the budget, Dominion
+    # rates, regional transportation, courts, elections). track="regional" routes
+    # these to a separate editorial pass and the /virginia.html page, NOT the local
+    # feed. geo_filter is OFF (these are statewide by definition). press license.
+    {
+        "id": "va-mercury", "name": "Virginia Mercury", "kind": "rss",
+        "url": "https://virginiamercury.com/feed/",
+        "geo_filter": False, "default_focus": ["government"], "license": "press",
+        "track": "regional",
+    },
+    {
+        "id": "va-cardinal", "name": "Cardinal News", "kind": "rss",
+        "url": "https://cardinalnews.org/feed/",
+        "geo_filter": False, "default_focus": ["government"], "license": "press",
+        "track": "regional",
+    },
+    {
+        "id": "va-rtd-state", "name": "Richmond Times-Dispatch (State)", "kind": "rss",
+        "url": "https://richmond.com/search/?f=rss&t=article&c=news/state-and-regional&l=30",
+        "geo_filter": False, "default_focus": ["government"], "license": "press",
+        "track": "regional",
+    },
+    {
+        "id": "gnews-va-assembly", "name": "Google News: Virginia Government", "kind": "rss",
+        "url": ("https://news.google.com/rss/search?q=%22Virginia+General+Assembly%22+OR+"
+                "%22Virginia+law%22+OR+%22Gov.+of+Virginia%22&hl=en-US&gl=US&ceid=US:en"),
+        "geo_filter": False, "default_focus": ["government"], "license": "press",
+        "track": "regional",
+    },
+    {
+        "id": "gnews-va-dominion", "name": "Google News: Dominion / VA Utilities", "kind": "rss",
+        "url": ("https://news.google.com/rss/search?q=%22Dominion+Energy%22+Virginia+"
+                "rate+OR+bill&hl=en-US&gl=US&ceid=US:en"),
+        "geo_filter": False, "default_focus": ["government"], "license": "press",
+        "track": "regional",
+    },
 ]
 
 
