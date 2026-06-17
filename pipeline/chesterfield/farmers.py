@@ -148,15 +148,16 @@ MARKETS = [
     {
         "name": "RVA Big Market",
         "chesterfield": False,
-        "address": "Joseph Bryan Park, Richmond, VA 23227",
+        "address": "4308 Hermitage Road (Joseph Bryan Park), Richmond, VA 23227",
         "schedule": "Saturdays",
-        "hours": "",
-        "season": "Seasonal (spring through fall)",
+        "hours": "8:00 AM – 12:00 PM (May–Oct) · 9:00 AM – 12:00 PM (Nov–Apr)",
+        "season": "Year-round",
         "offers": "Local produce, artisan makers, and food vendors; the sister market to South of the James",
-        "website": "https://www.growrva.com/", "facebook": "", "instagram": "",
+        "website": "https://www.growrva.com/rvabigmkt",
+        "facebook": "https://www.facebook.com/RVABIGMKT/", "instagram": "",
         "description": "GrowRVA's sister market to South of the James, held Saturdays at Joseph Bryan "
                        "Park with local farmers, makers, and food vendors.",
-        "verify": True,
+        "verify": False,
     },
     {
         "name": "Lakeside Farmers' Market",
