@@ -885,8 +885,8 @@ _PROMO_CSS = """<style>
 
 _PROMO = [
     ("/board.html", "box-supervisors.jpg", "Board of Supervisors", "Meet your district reps"),
-    ("/neighborhoods.html", "box-neighborhoods.jpg", "Neighborhoods", "Find your area on the map"),
-    ("/things-to-do.html", "box-thingstodo.jpg", "Things to Do", "Concerts, shows &amp; games"),
+    ("/development.html", "box-development.jpg", "Development & Zoning", "Track growth near you"),
+    ("/events.html", "box-events.jpg", "Events", "Festivals, concerts &amp; markets"),
     ("/schools.html", "box-schools.jpg", "Schools", "Grades, maps &amp; contacts"),
 ]
 
