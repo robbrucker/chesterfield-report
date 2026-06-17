@@ -871,6 +871,37 @@ def _render_page(records: list, out_path: Path, draft_mode: bool = False,
 PER_PAGE = 10
 
 
+_PROMO_CSS = """<style>
+.cr-promo{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:1.5rem 0 2rem;}
+.cr-promo a{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;background:var(--surface-card);text-decoration:none;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease;}
+.cr-promo a:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.10);border-color:var(--accent);}
+.cr-promo .cr-promo-img{display:block;width:100%;height:108px;object-fit:cover;background:var(--surface-sunken,#eee);}
+.cr-promo .cr-promo-b{padding:.6rem .8rem .85rem;}
+.cr-promo h3{font:var(--fw-bold) var(--fs-md)/1.15 var(--font-display);margin:0;color:var(--text-primary);}
+.cr-promo p{font:var(--fs-2xs)/1.35 var(--font-sans);color:var(--text-tertiary);margin:.2rem 0 0;}
+@media (max-width:760px){.cr-promo{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:430px){.cr-promo{grid-template-columns:1fr;}.cr-promo .cr-promo-img{height:140px;}}
+</style>"""
+
+_PROMO = [
+    ("/board.html", "box-supervisors.jpg", "Board of Supervisors", "Meet your district reps"),
+    ("/neighborhoods.html", "box-neighborhoods.jpg", "Neighborhoods", "Find your area on the map"),
+    ("/things-to-do.html", "box-thingstodo.jpg", "Things to Do", "Concerts, shows &amp; games"),
+    ("/schools.html", "box-schools.jpg", "Schools", "Grades, maps &amp; contacts"),
+]
+
+
+def _promo_boxes() -> str:
+    """A four-box 'Explore Chesterfield' strip for the homepage, below the lead."""
+    cards = "".join(
+        f'<a href="{href}"><img class="cr-promo-img" src="/assets/{img}" alt="" '
+        f'loading="lazy" width="500" height="200">'
+        f'<div class="cr-promo-b"><h3>{html.escape(title)}</h3><p>{sub}</p></div></a>'
+        for href, img, title, sub in _PROMO)
+    return (_PROMO_CSS
+            + '<nav class="cr-promo" aria-label="Explore Chesterfield">' + cards + '</nav>')
+
+
 def _render_index_pages(records: list, top_html: str = "") -> int:
     """Render the paginated PUBLISHED homepage from summary cards. Page 1 is
     public/index.html (with the This Week band on top); pages 2..N are
@@ -905,6 +936,7 @@ def _render_index_pages(records: list, top_html: str = "") -> int:
                 or '<p class="cr-topics__empty">No published stories yet. Approve some drafts to see them here.</p>')
         main = (
             hero
+            + (_promo_boxes() if page == 1 else "")
             + _sechead("// The feed", "Across the county", filter_action)
             + '<div class="cr-home__grid feed" id="feed">' + grid + '</div>'
             + (_regional_home_module() if page == 1 else "")
@@ -2353,7 +2385,7 @@ _TEMPLATE = """<!doctype html>
     <a class="nav-x" href="/">Home</a>
     <div class="nav-g"><button class="nav-t" type="button">News <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia &amp; Region</a></div></div>
     <a class="nav-x" href="/events.html">Events</a>
-    <div class="nav-g"><button class="nav-t" type="button">Community <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable Housing</a><a href="/dining.html">Dining</a><a href="/things-to-do.html">Things to Do</a><a href="/business.html">Business</a></div></div>
+    <div class="nav-g"><button class="nav-t" type="button">Community <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable Housing</a><a href="/dining.html">Dining</a><a href="/things-to-do.html">Things to Do</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/business.html">Business</a></div></div>
     <a class="nav-x" href="/schools.html">Schools</a>
     <a class="nav-x" href="/board.html">Supervisors</a>
     <a class="nav-x" href="/meetings.html">Meetings</a>
@@ -2361,7 +2393,7 @@ _TEMPLATE = """<!doctype html>
     <div class="nav-g"><button class="nav-t" type="button">Investigations <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/shoosmith.html">Shoosmith landfill</a></div></div>
   </nav>
   <nav class="topnav cr-header__nav nav-mobile" aria-label="Sections">
-    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/events.html">Events</a><a href="/things-to-do.html">Things to Do</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development</a><a href="/shoosmith.html">Shoosmith</a>
+    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/events.html">Events</a><a href="/things-to-do.html">Things to Do</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/dining.html">Dining</a><a href="/business.html">Business</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development</a><a href="/shoosmith.html">Shoosmith</a>
   </nav>
   <div class="dateline">
     <span class="place">Chesterfield County &middot; Virginia</span>
@@ -2401,6 +2433,7 @@ _TEMPLATE = """<!doctype html>
         <h3>Community</h3>
         <a href="/events.html">Events</a>
         <a href="/things-to-do.html">Things to Do</a>
+        <a href="/farmers-markets.html">Farmers Markets</a>
         <a href="/neighborhoods.html">Neighborhoods</a>
         <a href="/schools.html">Schools</a>
         <a href="/apartments.html">Apartments</a>
