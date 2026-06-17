@@ -388,6 +388,13 @@ def build_events() -> Path | None:
 
     _apply(events)   # geocode + AI enrichment (description, registration, contact)
 
+    # A bare title/time row with no description reads as broken. Drop anything we
+    # could not enrich with a real description; un-enriched events reappear on
+    # later builds as the enrichment backfill catches up.
+    events = [e for e in events if ((e.get("ai") or {}).get("description") or "").strip()]
+    if not events:
+        return None
+
     cats_present = []
     seen_c = set()
     for e in events:
