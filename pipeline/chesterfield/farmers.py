@@ -10,11 +10,20 @@ readers to confirm day/time before they go.
 from __future__ import annotations
 
 import html
+import json
+import shutil
+import subprocess
+import time
 from pathlib import Path
 
 from . import render
 
 PUBLIC = render.PUBLIC
+CACHE = render.ROOT / "pipeline" / "farmers_cache.json"   # gitignored AI summaries
+MODEL = "claude-haiku-4-5"
+CLI_TIMEOUT = 120
+_SUM_SCHEMA = {"type": "object", "properties": {"summary": {"type": "string"}},
+               "required": ["summary"]}
 
 # Curated market list. `verify` flags entries whose hours/season were not
 # confirmed from an official source (shown with a soft "confirm ahead" note).
@@ -184,6 +193,100 @@ def _esc(s) -> str:
     return html.escape(str(s or "").strip())
 
 
+# --- AI "what you'll find" summaries (goods, not named vendors) ------------
+
+def _cli_available() -> bool:
+    return shutil.which("claude") is not None
+
+
+def _load_cache() -> dict:
+    try:
+        return json.loads(CACHE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def _save_cache(cache: dict) -> None:
+    try:
+        CACHE.write_text(json.dumps(cache, indent=0), encoding="utf-8")
+    except OSError:
+        pass
+
+
+def _clean(s):
+    if not isinstance(s, str):
+        return s
+    for cut in ("</", "<parameter", "<function", "<antml", "```"):
+        j = s.find(cut)
+        if j != -1:
+            s = s[:j]
+    return s.strip()
+
+
+def _summarize(m: dict, model: str = MODEL) -> str:
+    """Generate a short, factual, human-sounding 'what you'll find' summary,
+    grounded strictly in the market's known offerings. No invented vendors."""
+    if not _cli_available():
+        return ""
+    prompt = (
+        "You are writing a short listing for a farmers market, for a Chesterfield County, "
+        "Virginia community news site. Write two sentences telling a reader what they will find "
+        "at this market.\n\n"
+        f"Market: {m.get('name','')}\n"
+        f"Location: {m.get('address','')}\n"
+        f"When: {m.get('schedule','')}, {m.get('hours','')}\n"
+        f"Known offerings: {m.get('offers','')}\n"
+        f"Context: {m.get('description','')}\n\n"
+        "RULES:\n"
+        "- Base it ONLY on the offerings and context above. Do NOT invent vendor names, farm "
+        "names, specific products, prices, or any detail not implied by the offerings.\n"
+        "- Describe the TYPES of goods and the character of the market, not named vendors.\n"
+        "- Sound warm and natural, the way a real local person would write it. Be specific to "
+        "this market, not generic.\n"
+        "- Exactly two sentences, roughly 30 to 45 words.\n"
+        "BANNED, because it reads as AI filler: NO em dashes or en dashes (use commas and "
+        "periods only). No exclamation points. No marketing hype. Do not use words and phrases "
+        "like nestled, vibrant, bustling, hidden gem, in the heart of, whether you are, look no "
+        "further, something for everyone, tapestry, feast for the senses, a wide array, "
+        "elevate, curated, or rain or shine. Plain, concrete, friendly English only.\n"
+        "Return just the summary."
+    )
+    cmd = ["claude", "-p", prompt, "--output-format", "json",
+           "--json-schema", json.dumps(_SUM_SCHEMA), "--model", model]
+    for attempt in range(2):
+        try:
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+            if proc.returncode != 0:
+                if attempt == 0:
+                    time.sleep(4)
+                    continue
+                return ""
+            data = json.loads(proc.stdout).get("structured_output") or {}
+            return _clean(data.get("summary", "")) or ""
+        except Exception:                            # noqa: BLE001
+            if attempt == 0:
+                time.sleep(4)
+                continue
+            return ""
+    return ""
+
+
+def _enrich(markets: list) -> None:
+    """Fill m['ai_summary'] from cache, generating any that are missing."""
+    cache = _load_cache()
+    changed = False
+    for m in markets:
+        key = m.get("name", "")
+        if key and not cache.get(key):
+            s = _summarize(m)
+            if s:
+                cache[key] = s
+                changed = True
+        m["ai_summary"] = cache.get(key, "")
+    if changed:
+        _save_cache(cache)
+
+
 def _maps_link(address: str) -> str:
     import urllib.parse
     q = urllib.parse.quote_plus(address)
@@ -222,7 +325,8 @@ def _card(m: dict) -> str:
     rows = [
         f'<div class="fm-when">{when}</div>' if when else "",
         season,
-        f'<p class="fm-desc">{render._inline(_esc(m["description"]))}</p>' if m.get("description") else "",
+        f'<p class="fm-desc">{render._inline(_esc(m.get("ai_summary") or m.get("description")))}</p>'
+        if (m.get("ai_summary") or m.get("description")) else "",
         f'<div class="fm-offers">{_esc(m["offers"])}</div>' if m.get("offers") else "",
         f'<div class="fm-addr">{_esc(m["address"])}</div>' if m.get("address") else "",
         _links(m),
@@ -269,6 +373,7 @@ _FM_CSS = """<style>
 
 def build_farmers() -> Path:
     """Render /farmers-markets.html."""
+    _enrich(MARKETS)   # fill m['ai_summary'] (cached; generates any missing)
     ches = [m for m in MARKETS if m.get("chesterfield")]
     # Featured first, then the rest in listed order.
     ches.sort(key=lambda m: (not m.get("featured"),))
