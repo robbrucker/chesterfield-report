@@ -119,19 +119,6 @@ MARKETS = [
         "verify": True,
     },
     {
-        "name": "The Market at Magnolia Green",
-        "chesterfield": True,
-        "address": "17320 Hull Street Road, Moseley, VA 23120",
-        "schedule": "Saturdays",
-        "hours": "8:00 AM – 12:00 PM",
-        "season": "Seasonal (warm months)",
-        "offers": "Local produce, artisan and craft vendors, food vendors",
-        "website": "https://magnoliagreen.com/the-market/", "facebook": "", "instagram": "",
-        "description": "A Saturday market in the Magnolia Green community of Moseley with local "
-                       "produce, crafts, and food vendors.",
-        "verify": True,
-    },
-    {
         "name": "Chesterfield Berry Farm & Market",
         "chesterfield": True,
         "address": "26002 Pear Orchard Road, Moseley, VA 23120",
@@ -156,6 +143,19 @@ MARKETS = [
         "instagram": "",
         "description": "One of Richmond's largest and most popular markets, in Forest Hill Park just "
                        "across the river from North Chesterfield.",
+        "verify": True,
+    },
+    {
+        "name": "RVA Big Market",
+        "chesterfield": False,
+        "address": "Joseph Bryan Park, Richmond, VA 23227",
+        "schedule": "Saturdays",
+        "hours": "",
+        "season": "Seasonal (spring through fall)",
+        "offers": "Local produce, artisan makers, and food vendors; the sister market to South of the James",
+        "website": "https://www.growrva.com/", "facebook": "", "instagram": "",
+        "description": "GrowRVA's sister market to South of the James, held Saturdays at Joseph Bryan "
+                       "Park with local farmers, makers, and food vendors.",
         "verify": True,
     },
     {
