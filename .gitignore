@@ -47,3 +47,4 @@ venv/
 .DS_Store
 cases_enrich_cache.json
 events_enrich_cache.json
+pipeline/things_cache.json
