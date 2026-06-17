@@ -879,7 +879,7 @@ _PROMO_CSS = """<style>
 .cr-promo .cr-promo-b{padding:.6rem .8rem .85rem;}
 .cr-promo h3{font:var(--fw-bold) var(--fs-md)/1.15 var(--font-display);margin:0;color:var(--text-primary);}
 .cr-promo p{font:var(--fs-2xs)/1.35 var(--font-sans);color:var(--text-tertiary);margin:.2rem 0 0;}
-@media (max-width:860px){.cr-promo{display:none;}}
+@media (max-width:860px){.cr-promo{grid-template-columns:repeat(2,1fr);gap:10px;margin:1.1rem 0 1.4rem;}.cr-promo .cr-promo-img{height:80px;}.cr-promo .cr-promo-b{padding:.45rem .6rem .55rem;}.cr-promo h3{font-size:var(--fs-sm);}.cr-promo p{display:none;}}
 </style>"""
 
 _PROMO = [
