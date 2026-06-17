@@ -33,6 +33,8 @@ except Exception:                                # noqa: BLE001
     _ET = datetime.timezone(datetime.timedelta(hours=-4))
 
 from . import render, geo
+from . import things as _things
+from . import farmers as _farmers
 from .render import PUBLIC
 
 MODEL = "claude-haiku-4-5"
@@ -381,6 +383,83 @@ def _time_label(e: dict) -> str:
     return t
 
 
+# Ticketmaster segment -> (events-page category label, color).
+_TM_CAT = {
+    "Music": ("Live Music", "#9a3322"),
+    "Sports": ("Sports", "#1f6f54"),
+    "Arts & Theatre": ("Arts & Theatre", "#5b4b8a"),
+    "Family": ("Family", "#b5731f"),
+}
+
+
+def _chesterfield_ticketed() -> list[dict]:
+    """Chesterfield-venue concerts/shows from Ticketmaster, shaped as events."""
+    try:
+        items = _things.fetch_things()
+    except Exception:                            # noqa: BLE001
+        return []
+    out = []
+    for e in items:
+        if not e.get("chesterfield"):
+            continue
+        try:
+            y, mo, d = (int(x) for x in e["date"].split("-"))
+            t = (e.get("time") or "").split(":")
+            hh, mm = (int(t[0]), int(t[1])) if len(t) >= 2 else (19, 0)
+            start = datetime.datetime(y, mo, d, hh, mm)
+        except Exception:                        # noqa: BLE001
+            continue
+        cat, color = _TM_CAT.get(e.get("segment", ""), ("Things to Do", "#33617a"))
+        venue = e.get("venue", "")
+        parts = [b for b in (e.get("genre"), venue) if b]
+        desc = " at ".join(parts) if len(parts) == 2 else (parts[0] if parts else "")
+        if desc and e.get("price"):
+            desc = f"{desc}. Tickets {e['price']}."
+        elif desc:
+            desc = f"{desc}."
+        out.append({
+            "summary": e.get("name", ""), "start": start, "all_day": False,
+            "location": ", ".join(b for b in (venue, e.get("city", "")) if b),
+            "uid": e.get("url") or e.get("name", ""), "link": e.get("url", ""),
+            "cat": cat, "color": color,
+            "lat": e.get("lat", ""), "lon": e.get("lon", ""),
+            "ai": {"description": desc} if desc else {},
+        })
+    return out
+
+
+_FM_CSS = """<style>
+.ev-fm{border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface-card);
+ padding:.9rem 1.1rem;margin:0 0 1.4rem;}
+.ev-fm-h{font:var(--fw-bold) var(--fs-2xs)/1 var(--font-mono);letter-spacing:var(--ls-wide);
+ text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;}
+.ev-fm ul{list-style:none;padding:0;margin:0;}
+.ev-fm li{font:var(--fs-sm)/1.5 var(--font-sans);color:var(--text-secondary);padding:.25rem 0;}
+.ev-fm li .ev-fm-when{display:inline-block;min-width:9.5rem;font-weight:600;color:var(--text-primary);}
+.ev-fm-more{display:inline-block;margin-top:.5rem;font:var(--fw-semibold) var(--fs-2xs) var(--font-sans);color:var(--accent);text-decoration:none;}
+</style>"""
+
+
+def _farmers_block() -> str:
+    """A compact recurring-markets block for the events page."""
+    ms = [m for m in _farmers.MARKETS if m.get("chesterfield")]
+    if not ms:
+        return ""
+    rows = "".join(
+        f'<li><span class="ev-fm-when">{html.escape(m.get("schedule",""))}</span>'
+        f'<strong>{html.escape(m.get("name",""))}</strong>'
+        + (f' &middot; {html.escape(m["hours"])}' if m.get("hours") else "")
+        + '</li>'
+        for m in ms)
+    return (
+        _FM_CSS
+        + '<div class="ev-fm"><div class="ev-fm-h">Farmers markets (recurring)</div>'
+        + f'<ul>{rows}</ul>'
+        + '<a class="ev-fm-more" href="/farmers-markets.html">All farmers markets &amp; details &rarr;</a>'
+        + '</div>'
+    )
+
+
 def build_events() -> Path | None:
     events = fetch_events()
     if not events:
@@ -392,6 +471,11 @@ def build_events() -> Path | None:
     # could not enrich with a real description; un-enriched events reappear on
     # later builds as the enrichment backfill catches up.
     events = [e for e in events if ((e.get("ai") or {}).get("description") or "").strip()]
+
+    # Fold in Chesterfield-venue concerts/shows from Ticketmaster so the events
+    # page is the single "everything happening in Chesterfield" hub.
+    events += _chesterfield_ticketed()
+    events.sort(key=lambda e: e["start"])
     if not events:
         return None
 
@@ -444,9 +528,10 @@ def build_events() -> Path | None:
         _CSS
         + '<div class="ev-wrap">'
         + '<h1 class="page-title">Events in Chesterfield</h1>'
-        + '<p class="ev-lead">Upcoming public events across Chesterfield County: festivals, '
-          'parks programs, clinics, classes, and county happenings. Updated daily; past events '
-          'drop off automatically.</p>'
+        + '<p class="ev-lead">Everything happening across Chesterfield County: festivals, parks '
+          'programs, classes, and county happenings, plus concerts and shows at Chesterfield venues '
+          'and the area farmers markets. Updated daily; past events drop off automatically.</p>'
+        + _farmers_block()
         + _map(events)
         + filters
         + f'<p class="ev-summary">{len(events)} upcoming events</p>'
