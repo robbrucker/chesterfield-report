@@ -29,6 +29,10 @@ MARKETS = [
         "season": "Grand opening Friday, July 31, 2026",
         "offers": "Fresh produce, artisan goods, flowers and plants, baked goods, live music; family-friendly",
         "website": "", "facebook": "", "instagram": "",
+        "qr": [
+            {"label": "Facebook", "img": "/assets/rountrey-facebook-qr.png"},
+            {"label": "Instagram", "img": "/assets/rountrey-instagram-qr.png"},
+        ],
         "description": "A new monthly evening market in the RounTrey community of Midlothian, "
                        "pairing local produce and artisan makers with live music. Its grand opening is "
                        "Friday, July 31, 2026.",
@@ -207,6 +211,14 @@ def _card(m: dict) -> str:
     season = f'<div class="fm-season">{_esc(m["season"])}</div>' if m.get("season") else ""
     confirm = ('<div class="fm-confirm">Days and hours can change with the season — confirm before you go.</div>'
                if m.get("verify") else "")
+    qr = ""
+    if m.get("qr"):
+        codes = "".join(
+            f'<figure class="fm-qr"><img src="{_esc(q["img"])}" alt="{_esc(q["label"])} QR code" '
+            f'width="92" height="92" loading="lazy"><figcaption>{_esc(q["label"])}</figcaption></figure>'
+            for q in m["qr"])
+        qr = ('<div class="fm-qrs"><span class="fm-qr-lbl">No website yet — scan to follow:</span>'
+              f'<div class="fm-qr-row">{codes}</div></div>')
     rows = [
         f'<div class="fm-when">{when}</div>' if when else "",
         season,
@@ -214,6 +226,7 @@ def _card(m: dict) -> str:
         f'<div class="fm-offers">{_esc(m["offers"])}</div>' if m.get("offers") else "",
         f'<div class="fm-addr">{_esc(m["address"])}</div>' if m.get("address") else "",
         _links(m),
+        qr,
         confirm,
     ]
     return (
@@ -244,6 +257,12 @@ _FM_CSS = """<style>
 .fm-links{font:var(--fw-semibold) var(--fs-2xs) var(--font-sans);margin-top:.2rem;}
 .fm-links a{color:var(--accent);}
 .fm-confirm{font:var(--fs-3xs)/1.4 var(--font-sans);color:var(--text-tertiary);font-style:italic;margin-top:.2rem;}
+.fm-qrs{margin-top:.5rem;}
+.fm-qr-lbl{display:block;font:var(--fw-semibold) var(--fs-3xs) var(--font-mono);text-transform:uppercase;letter-spacing:var(--ls-wide);color:var(--text-tertiary);margin-bottom:.4rem;}
+.fm-qr-row{display:flex;gap:1rem;}
+.fm-qr{margin:0;text-align:center;}
+.fm-qr img{display:block;border:1px solid var(--border);border-radius:4px;background:#fff;}
+.fm-qr figcaption{font:var(--fw-semibold) var(--fs-3xs) var(--font-sans);color:var(--text-secondary);margin-top:.2rem;}
 .fm-note{margin-top:2rem;padding:1rem 1.1rem;border-left:3px solid var(--accent);background:var(--surface-card);border-radius:var(--radius-xs);font:var(--fs-sm)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);}
 </style>"""
 
