@@ -32,33 +32,56 @@ Write these down. You will reuse them throughout.
 
 ## 1. Understand what transfers and what does not
 
-This is the most important section. Sort every feature into one of three buckets.
+This is the most important section. The site has grown well beyond the core news
+feed — there are many feature pages now, and they transfer very differently. Sort
+every feature into one of four buckets.
 
 **A. Universal (works anywhere, just needs the new name).**
 The core article pipeline (ingest -> triage -> QA -> enrich -> render -> deploy),
 Google News sources, the **dining guide + map** (OpenStreetMap Overpass works for
-any place name), RSS feed, SEO/sitemap/Open Graph, the tip and opinion forms,
-light/dark theme, and the whole design system.
+any place name), the **weekly newsletter** (`weekly.py` -> `/newsletter/`, plus the
+email-safe `newsletter.py`), the **Spanish edition** (`/es/`), RSS feed,
+SEO/sitemap/Open Graph, the tip and opinion forms, light/dark theme, and the whole
+design system.
 
-**B. Locality data (must be edited).**
+**B. Locality data (must be edited — config-level).**
 Brand/name, domain, geographic bounding box, map center, NWS weather zone, time
 zone, editorial focus areas, contact email, and the masthead region list.
 
-**C. County-tech-dependent (AUDIT, then adapt or DISABLE).**
-These rely on vendors that Chesterfield County happens to use. Other places may
-use a different vendor, or none. **If you cannot find a working equivalent for
-the new locality, disable the feature. A missing feature is fine; a broken one is
-not.** They are:
+**C. Hand-curated data pages (REBUILD the dataset or DROP the page).**
+These pages render from committed, human-researched data files, not a live feed.
+The code is reusable but the data is 100% Chesterfield-specific. For each one you
+keep, **research and rewrite the data for the new locality** (this is real work,
+often best done with a research subagent); for each you drop, remove it cleanly
+(see step 5). Do NOT ship these with Chesterfield data.
+
+| Page | Module + data | What to do |
+|---|---|---|
+| **Schools** (`/schools.html`) | `schools.py` + `pipeline/schools_data.json` | Rebuild with the new district's schools (names, grades, contacts, coords) or drop. |
+| **School Board** (`/school-board.html`) | `school_board.py` | Rebuild with local board members / campaign-finance data or drop. |
+| **Taxes / budget** (`/taxes.html`) | `taxes.py` + `pipeline/budget_data.json` | Rebuild with the locality's budget figures or drop. |
+| **Housing** (`/apartments.html`, `/affordable-housing.html`) | `housing.py` + `pipeline/apartments_data.json` + `pipeline/affordable_housing.json` | Rebuild the community directory + income-restricted list or drop. |
+| **Farmers Markets** (`/farmers-markets.html`) | `farmers.py` (`MARKETS` list inline) | Rewrite the market list for the new area or drop. |
+| **Board of Supervisors** (`/board.html`) | `board.py` (named supervisors, donor tables) | Rebuild for the local governing body or drop. |
+| **Shoosmith investigation** (`/shoosmith.html`) | `render.build_shoosmith()` | Chesterfield-only investigative page — **drop it** (and the nav "Investigations" item) unless you have your own investigation. |
+
+**D. Vendor-tech-dependent (AUDIT, then adapt or DISABLE).**
+These rely on live APIs/vendors that Chesterfield happens to use. Other places use
+a different vendor, or none. **If you cannot find a working equivalent, disable the
+feature. A missing feature is fine; a broken one is not.**
 
 | Feature | What it depends on | What to do |
 |---|---|---|
-| **Live dispatch ticker** (top marquee: active police/fire/traffic calls) | Chesterfield's CivicEngage "active calls" JSON API at `api.chesterfield.gov` | Check if the new locality publishes a live CAD/active-calls feed. Most do NOT. If not, **remove the ticker script** and keep the static region ticker. |
-| **County meetings** (`/meetings.html`) | CivicClerk OData API, tenant `chesterfieldcova` | Find the locality's agenda system (CivicClerk, Legistar, Granicus, PrimeGov, or none). Re-point or **disable** `meetings.py`. |
-| **Restaurant inspections** lookup (on `/dining.html`) | Virginia "My Health Department" portal | Update the link to the locality's health-inspection portal, or remove that callout. |
-| **Board of Supervisors** (`/board.html`) | Chesterfield's specific board structure + donor data | Rebuild for the local government structure, or remove the page + nav link. |
+| **Live dispatch ticker** (top marquee: active police/fire calls) | Chesterfield's CivicEngage "active calls" JSON at `api.chesterfield.gov` | Most localities have no live CAD feed. If not, **remove the ticker script**; the static region ticker remains. |
+| **County meetings** (`/meetings.html`) | `meetings.py` — CivicClerk OData API, tenant `chesterfieldcova` | Find the locality's agenda system (CivicClerk, Legistar, Granicus, PrimeGov, or none). Re-point or **disable**. |
+| **Events calendar** (`/events.html`) | `events.py` — the county CivicPlus iCal feed + AI enrichment | Re-point to the locality's public iCal/calendar feed, or disable. Events with no description are auto-dropped. |
+| **Development & Zoning cases** (`/development.html`) | `cases.py` + `laserfiche.py` — Chesterfield's ArcGIS + Laserfiche portals | Very Chesterfield-specific. Adapt to the locality's GIS/permit portal or **drop**. |
+| **Things to Do** (`/things-to-do.html`) | `things.py` — Ticketmaster Discovery API | Works for any US locality: set `TICKETMASTER_API_KEY` in `.deploy.env` and re-center `LATLONG`/`RADIUS_MI` in `things.py`. No key -> the page falls back to cache/empty; drop it if you do not want it. |
+| **Regional track** (`/virginia.html`) | regional sources in `sources.py` + the editor's regional judgment | Re-point to the new STATE's news (rename the page, swap the state feeds, update the "affects residents" prompt in `editor.py`). |
+| **Restaurant inspections** lookup (on `/dining.html`) | Virginia "My Health Department" portal | Update the link to the locality's health-inspection portal, or remove the callout. |
 
-Tell the human which Bucket C features you are keeping, adapting, or dropping,
-**before** you build.
+Tell the human which Bucket C and D features you are keeping, adapting, or
+dropping, **before** you build.
 
 ---
 
@@ -170,9 +193,14 @@ scripts/.deploy.env; set +a`).
 - Build with a Python that has a working `pyexpat` (XML). On the original Mac,
   system `/usr/bin/python3` works; a Homebrew 3.14 had broken pyexpat. Use
   whatever Python parses XML.
-- From `pipeline/`: `python3 run.py ingest` then `triage`, `qa`, then `build`.
-- Open `public/index.html` and click around. Fix anything locality-specific you
-  missed (stray "Chesterfield" text, dead links, empty feature pages).
+- From `pipeline/`: `python3 run.py ingest` then `triage`, `qa`, `expire`
+  (auto-unpublishes stale weather alerts), then `build`. The cron runs this whole
+  chain; `build` regenerates every feature page.
+- Open `public/index.html` and click around. **Click every nav item** (the nav has
+  dropdowns now: News, Community, Government, plus the Supervisors/Schools/Meetings
+  pillars) and confirm no page still shows Chesterfield data or 404s.
+- Fix anything locality-specific you missed (stray "Chesterfield" text, dead links,
+  empty feature pages, hand-curated pages still showing Chesterfield data).
 - Confirm the geo bbox is right (no out-of-area map pins) and sources produce
   real local stories.
 
@@ -222,12 +250,25 @@ the human finishes the Vercel step.
 - `pipeline/chesterfield/maps.py` — `_BBOX`, map center.
 - `pipeline/chesterfield/dining.py` — Overpass area, map center, inspections link.
 - `pipeline/chesterfield/meetings.py` — CivicClerk tenant + body names.
-- `pipeline/chesterfield/board.py` — local government structure (or remove).
+- `pipeline/chesterfield/events.py` — county iCal calendar URL, map center.
+- `pipeline/chesterfield/things.py` — `LATLONG`, `RADIUS_MI`, Chesterfield place list (Things to Do).
+- `pipeline/chesterfield/cases.py` + `laserfiche.py` — county GIS/permit portals (Development).
+- `pipeline/chesterfield/board.py` — local governing body (or remove).
+- `pipeline/chesterfield/school_board.py` — local school board (or remove).
+- `pipeline/chesterfield/farmers.py` — the `MARKETS` list (or remove).
+- Hand-curated datasets (rebuild for the locality or drop the page): `pipeline/schools_data.json`,
+  `pipeline/budget_data.json`, `pipeline/apartments_data.json`, `pipeline/affordable_housing.json`.
 - `pipeline/chesterfield/seo.py` — `SITE_URL`, static page list.
 - `pipeline/chesterfield/letters.py` + tip form — destination email.
+- `pipeline/run.py` — `cmd_build` calls every `build_*` (drop the call for any page you remove).
 - `public/assets/` — logo SVGs, favicon, `og-default.png`, `report-ds.css` (brand
   colors live in the `:root` tokens at the top).
-- `scripts/.deploy.env` — `VERCEL_TOKEN`, `VERCEL_SCOPE`, `WEB3FORMS_KEY` (secrets).
+- `scripts/.deploy.env` — `VERCEL_TOKEN`, `VERCEL_SCOPE`, `WEB3FORMS_KEY`, and
+  (optional) `TICKETMASTER_API_KEY` for Things to Do — all secrets, gitignored.
+
+When you ADD a feature page, wire it in all four places or it half-exists: the
+`build_*` call in `pipeline/run.py`, the nav link(s) in `render.py` `_TEMPLATE`
+(desktop dropdown + mobile + footer), and the page name in `seo.py`'s sitemap list.
 
 ## Definition of done
 
