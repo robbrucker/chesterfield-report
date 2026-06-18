@@ -2285,36 +2285,24 @@ def build_tip() -> Path:
 def build_subscribe() -> Path:
     """A dedicated newsletter signup page (email only). Submissions email the
     operator via Web3Forms, like the tip/letters forms."""
-    key = os.environ.get("WEB3FORMS_KEY", "").strip()
-    notice = "" if key else (
-        '<div class="form-notice">⚠️ Signup isn\'t active yet — add WEB3FORMS_KEY '
-        'in scripts/.deploy.env and rebuild.</div>')
-    form = (
-        '<form class="site-form" action="https://api.web3forms.com/submit" method="POST">'
-        f'<input type="hidden" name="access_key" value="{key or "MISSING_WEB3FORMS_KEY"}">'
-        '<input type="hidden" name="subject" value="Newsletter signup — The Chesterfield Report">'
-        '<input type="hidden" name="from_name" value="Chesterfield Report Newsletter">'
-        '<input type="hidden" name="redirect" value="https://chesterfieldreport.com/subscribe.html?ok=1">'
-        '<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">'
-        '<label>Email address</label>'
-        '<input type="email" name="email" required placeholder="you@email.com">'
-        '<button type="submit" class="cr-btn cr-btn--primary" style="margin-top:1.2rem">Subscribe</button>'
-        '</form>')
-    thanks_js = (
-        "<script>if(location.search.indexOf('ok=1')>-1){"
-        "var f=document.querySelector('.site-form');"
-        "if(f){f.outerHTML='<div class=\\\"thanks\\\"><h2>You\\u2019re on the list.</h2>'"
-        "+'<p>Thanks for subscribing to The Chesterfield Report. "
-        "<a href=\\\"/\\\">\\u2190 Back to the news</a></p></div>';}}</script>")
+    # The Weekly Report signups are managed and sent through beehiiv. The embed
+    # below renders beehiiv's hosted form (it handles confirmation + unsubscribe).
+    embed = (
+        '<div class="bh-embed">'
+        '<script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" '
+        'data-beehiiv-form="40c9394d-8ca1-4272-ae7f-4e2762729620"></script>'
+        '<noscript><a class="cr-btn cr-btn--primary" '
+        'href="https://subscribe-forms.beehiiv.com/40c9394d-8ca1-4272-ae7f-4e2762729620" '
+        'target="_blank" rel="noopener">Subscribe by email</a></noscript>'
+        '</div>')
     body = (
         _SITE_FORM_CSS
         + '<h1 class="page-title">Subscribe</h1>'
-        '<p class="lead">Get Chesterfield County news in your inbox. Free, no ads, '
-        'unsubscribe anytime.</p>'
-        '<div class="tipwrap">' + notice + form +
+        '<p class="lead">Get <strong>The Weekly Report</strong>, our free Chesterfield '
+        'County roundup, in your inbox. No ads, no paywall, unsubscribe anytime.</p>'
+        '<div class="tipwrap">' + embed +
         '<p class="tip-note" style="color:var(--text-faint);font-size:.85rem;margin-top:1rem">'
-        'We only email you Chesterfield news and never share your address.</p></div>'
-        + thanks_js)
+        'We only email you Chesterfield news and never share your address.</p></div>')
     out = PUBLIC / "subscribe.html"
     out.write_text(_shell(body), encoding="utf-8")
     return out
@@ -2408,16 +2396,9 @@ _TEMPLATE = """<!doctype html>
     <p>Independent, community-rooted coverage of Chesterfield County, Virginia &mdash;
        growth &amp; development, schools, public safety, government and community life.</p>
     <div class="footer-signup">
-      <strong>Get Chesterfield news in your inbox.</strong>
-      <form class="signup-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="__W3FKEY__">
-        <input type="hidden" name="subject" value="Newsletter signup — The Chesterfield Report">
-        <input type="hidden" name="from_name" value="Chesterfield Report Newsletter">
-        <input type="hidden" name="redirect" value="https://chesterfieldreport.com/subscribe.html?ok=1">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-        <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
-        <button type="submit">Subscribe</button>
-      </form>
+      <strong>Get The Weekly Report in your inbox.</strong>
+      <p class="footer-signup-sub">A free weekly Chesterfield County roundup. No ads, unsubscribe anytime.</p>
+      <a class="footer-cta" href="/subscribe.html">Subscribe &rarr;</a>
     </div>
     <nav class="footer-nav" aria-label="All sections">
       <div class="footer-col">
