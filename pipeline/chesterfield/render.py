@@ -521,8 +521,16 @@ def _eligible_tag_slugs() -> set:
     counts: Counter = Counter()
     focus: set = set()
     for meta, _body, _name in _published_records():
+        # Count DISTINCT stories per slug (dedup tags within a story), exactly
+        # like build_topics() dedups its recs by story name — otherwise a story
+        # that repeats a tag inflates the count and links to a page that was
+        # never built.
+        seen: set = set()
         for t in [x.strip() for x in meta.get("tags", "").strip("[]").split(",") if x.strip()]:
-            counts[slugify(t)] += 1
+            s = slugify(t)
+            if s not in seen:
+                seen.add(s)
+                counts[s] += 1
         for l in [x.strip() for x in meta.get("focus", "").strip("[]").split(",") if x.strip()]:
             focus.add(_focus_slug(l))
     return focus | {s for s, n in counts.items() if n >= 2}
@@ -1206,7 +1214,7 @@ def build_articles() -> int:
         # add hreflang alternates pointing at the EN <-> ES mirror.
         canonical = SITE_URL + rel_url
         es_rel = f"/es{rel_url}"
-        title_tag = (f"{headline} — The Chesterfield Report")
+        title_tag = (f"{headline} | The Chesterfield Report")
         page = page.replace(
             "<title>The Chesterfield Report: Hyperlocal News for Chesterfield County, Virginia</title>",
             f'<title>{title_tag}</title>'
