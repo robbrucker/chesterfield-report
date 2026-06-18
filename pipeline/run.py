@@ -57,6 +57,8 @@ from chesterfield import cases as cases_mod
 from chesterfield import school_board as school_board_mod
 from chesterfield import events as events_mod
 from chesterfield import things as things_mod
+from chesterfield import farmers as farmers_mod
+from chesterfield import changelog as changelog_mod
 from chesterfield import housing as housing_mod
 from chesterfield import letters as letters_mod
 from chesterfield.db import Store
@@ -203,6 +205,8 @@ def cmd_build() -> None:
     cases_mod.build_cases()                        # live development/zoning cases (graceful on fetch fail)
     events_mod.build_events()                      # county events calendar (graceful on fetch fail)
     things_mod.build_things()                      # Ticketmaster live events -> /things-to-do.html
+    farmers_mod.build_farmers()                    # farmers markets directory -> /farmers-markets.html
+    changelog_mod.build_changelog()                # "What's New" -> /changelog.html
     housing_mod.build_affordable()                 # affordable-housing finder from committed data
     housing_mod.build_directory()                  # market-rate apartment community directory
     from chesterfield import seo as seo_mod

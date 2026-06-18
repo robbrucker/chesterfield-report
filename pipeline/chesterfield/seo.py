@@ -114,10 +114,10 @@ def _sitemap_urls() -> list[tuple[str, str]]:
         add(f"/story/{slug}.html", story_dir / f"{slug}.html")
 
     # Standalone pages.
-    for name in ("digest.html", "events.html", "things-to-do.html", "map.html", "virginia.html", "board.html", "meetings.html", "dining.html",
+    for name in ("digest.html", "events.html", "things-to-do.html", "farmers-markets.html", "map.html", "virginia.html", "board.html", "meetings.html", "dining.html",
                  "neighborhoods.html", "business.html", "taxes.html", "schools.html",
                  "school-board.html", "apartments.html", "affordable-housing.html", "development.html", "shoosmith.html", "about.html",
-                 "letters.html", "tip.html", "subscribe.html"):
+                 "letters.html", "tip.html", "subscribe.html", "changelog.html"):
         add(f"/{name}", PUBLIC / name)
     # Per-neighborhood pages (big long-tail SEO surface).
     nb_dir = PUBLIC / "neighborhoods"
