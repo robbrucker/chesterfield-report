@@ -341,7 +341,7 @@ def build_things() -> Path:
     )
     page = render._shell(body, len(items))
     page = render._inject_og(
-        page, "Things to Do — The Chesterfield Report",
+        page, "Things to Do: The Chesterfield Report",
         "Concerts, sports, theatre, and family events across Chesterfield County "
         "and the Richmond region, with tickets and times.",
         f"{render.SITE_URL}/things-to-do.html", og_type="website")

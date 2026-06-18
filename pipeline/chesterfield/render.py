@@ -1076,14 +1076,14 @@ _TOPNAV_CLOSE = "</nav>\n  <div class=\"dateline\">"
 # These default strings must match _TEMPLATE exactly so we can swap them per page.
 _OG_DEF_TITLE = '<meta property="og:title" content="The Chesterfield Report">'
 _OG_DEF_DESC = ('<meta property="og:description" content="Hyperlocal news for Chesterfield County, '
-                'Virginia — growth, schools, public safety, government, and community. Free, no ads, '
+                'Virginia. Growth, schools, public safety, government, and community. Free, no ads, '
                 'with links back to the original sources.">')
 _OG_DEF_URL = '<meta property="og:url" content="https://chesterfieldreport.com/">'
 _OG_DEF_IMG = '<meta property="og:image" content="https://chesterfieldreport.com/assets/og-default.png">'
 _OG_DEF_TYPE = '<meta property="og:type" content="website">'
 _TW_DEF_TITLE = '<meta name="twitter:title" content="The Chesterfield Report">'
 _TW_DEF_DESC = ('<meta name="twitter:description" content="Hyperlocal news for Chesterfield County, '
-                'Virginia — free, no ads, links to the original sources.">')
+                'Virginia. Free, no ads, links to the original sources.">')
 _TW_DEF_IMG = '<meta name="twitter:image" content="https://chesterfieldreport.com/assets/og-default.png">'
 
 
@@ -1208,7 +1208,7 @@ def build_articles() -> int:
         es_rel = f"/es{rel_url}"
         title_tag = (f"{headline} — The Chesterfield Report")
         page = page.replace(
-            "<title>The Chesterfield Report — Hyperlocal News for Chesterfield County, Virginia</title>",
+            "<title>The Chesterfield Report: Hyperlocal News for Chesterfield County, Virginia</title>",
             f'<title>{title_tag}</title>'
             f'<link rel="canonical" href="{canonical}">'
             f'<link rel="alternate" hreflang="en" href="{canonical}">'
@@ -1402,11 +1402,11 @@ _ES_READ_ORIGINAL = "Lee el original en"
 _ES_BACK = "&larr; Volver a The Chesterfield Report"
 # Footer tagline / body, translated.
 _EN_FOOTER_P1 = (
-    "Independent, community-rooted coverage of Chesterfield County, Virginia &mdash;\n"
+    "Independent, community-rooted coverage of Chesterfield County, Virginia:\n"
     "       growth &amp; development, schools, public safety, government and community life.")
 _ES_FOOTER_P1 = (
     "Cobertura independiente y arraigada en la comunidad del condado de Chesterfield, "
-    "Virginia &mdash; crecimiento y desarrollo, escuelas, seguridad pública, gobierno y "
+    "Virginia: crecimiento y desarrollo, escuelas, seguridad pública, gobierno y "
     "vida comunitaria.")
 _EN_FOOTER_P2 = (
     "Stories are aggregated and summarized with links back to the original reporting.\n"
@@ -1601,7 +1601,7 @@ def build_spanish() -> int:
         canonical = f"{SITE_URL}{es_rel}"
         title_tag = f"{es_headline} — The Chesterfield Report"
         page = page.replace(
-            "<title>The Chesterfield Report — Hyperlocal News for Chesterfield County, Virginia</title>",
+            "<title>The Chesterfield Report: Hyperlocal News for Chesterfield County, Virginia</title>",
             f'<title>{title_tag}</title>'
             f'<link rel="canonical" href="{canonical}">'
             f'<link rel="alternate" hreflang="es" href="{canonical}">'
@@ -1633,8 +1633,8 @@ def build_spanish() -> int:
     page = _es_localize_shell(page)
     canonical = f"{SITE_URL}/es/"
     page = page.replace(
-        "<title>The Chesterfield Report — Hyperlocal News for Chesterfield County, Virginia</title>",
-        '<title>The Chesterfield Report — Noticias hiperlocales del condado de Chesterfield, Virginia</title>'
+        "<title>The Chesterfield Report: Hyperlocal News for Chesterfield County, Virginia</title>",
+        '<title>The Chesterfield Report: Noticias hiperlocales del condado de Chesterfield, Virginia</title>'
         f'<link rel="canonical" href="{canonical}">'
         f'<link rel="alternate" hreflang="es" href="{canonical}">'
         f'<link rel="alternate" hreflang="en" href="{SITE_URL}/">',
@@ -2253,7 +2253,7 @@ def build_tip() -> Path:
         '<form class="site-form" action="https://api.web3forms.com/submit" method="POST">'
         f'<input type="hidden" name="access_key" value="{key or "MISSING_WEB3FORMS_KEY"}">'
         '<input type="hidden" name="subject" value="New tip/correction — The Chesterfield Report">'
-        '<input type="hidden" name="from_name" value="Chesterfield Report — Tips">'
+        '<input type="hidden" name="from_name" value="Chesterfield Report Tips">'
         '<input type="hidden" name="redirect" value="https://chesterfieldreport.com/tip.html?ok=1">'
         '<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">'
         '<label>Your tip or correction</label>'
@@ -2268,7 +2268,7 @@ def build_tip() -> Path:
     thanks_js = (
         "<script>if(location.search.indexOf('ok=1')>-1){"
         "var f=document.querySelector('.site-form');"
-        "if(f){f.outerHTML='<div class=\\\"thanks\\\"><h2>Thank you — your tip is in.</h2>'"
+        "if(f){f.outerHTML='<div class=\\\"thanks\\\"><h2>Thank you. Your tip is in.</h2>'"
         "+'<p>We read every one. <a href=\\\"/\\\">← Back to The Chesterfield Report</a></p></div>';}}</script>")
     body = (
         _SITE_FORM_CSS
@@ -2325,20 +2325,20 @@ _TEMPLATE = """<!doctype html>
   }} catch (e) {{}}
 }})();
 </script>
-<title>The Chesterfield Report — Hyperlocal News for Chesterfield County, Virginia</title>
-<meta name="description" content="The Chesterfield Report delivers hyperlocal news for Chesterfield County, Virginia — AI-assembled from official county sources, local outlets, and public records, then human-reviewed, with links to the originals. Growth & development, schools, public safety, government, and community.">
+<title>The Chesterfield Report: Hyperlocal News for Chesterfield County, Virginia</title>
+<meta name="description" content="The Chesterfield Report delivers hyperlocal news for Chesterfield County, Virginia. AI-assembled from official county sources, local outlets, and public records, then human-reviewed, with links to the originals. Growth & development, schools, public safety, government, and community.">
 <meta name="theme-color" content="#06141a">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Chesterfield Report">
 <meta property="og:title" content="The Chesterfield Report">
-<meta property="og:description" content="Hyperlocal news for Chesterfield County, Virginia — growth, schools, public safety, government, and community. Free, no ads, with links back to the original sources.">
+<meta property="og:description" content="Hyperlocal news for Chesterfield County, Virginia. Growth, schools, public safety, government, and community. Free, no ads, with links back to the original sources.">
 <meta property="og:url" content="https://chesterfieldreport.com/">
 <meta property="og:image" content="https://chesterfieldreport.com/assets/og-default.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Chesterfield Report">
-<meta name="twitter:description" content="Hyperlocal news for Chesterfield County, Virginia — free, no ads, links to the original sources.">
+<meta name="twitter:description" content="Hyperlocal news for Chesterfield County, Virginia. Free, no ads, links to the original sources.">
 <meta name="twitter:image" content="https://chesterfieldreport.com/assets/og-default.png">
 <link rel="icon" href="/assets/favicon.svg">
 <link rel="alternate" type="application/rss+xml" title="The Chesterfield Report" href="/feed.xml">
@@ -2397,7 +2397,7 @@ _TEMPLATE = """<!doctype html>
 <footer>
   <div class="footer-inner">
     <div class="footer-brand"><img src="/assets/logo-mark.svg" alt="">The Chesterfield Report</div>
-    <p>Independent, community-rooted coverage of Chesterfield County, Virginia &mdash;
+    <p>Independent, community-rooted coverage of Chesterfield County, Virginia:
        growth &amp; development, schools, public safety, government and community life.</p>
     <div class="footer-signup">
       <strong>Get The Weekly Report in your inbox.</strong>

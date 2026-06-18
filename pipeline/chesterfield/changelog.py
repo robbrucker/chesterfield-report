@@ -106,7 +106,7 @@ def build_changelog() -> Path:
     )
     page = render._shell(body, len(items))
     page = render._inject_og(
-        page, "What's New — The Chesterfield Report",
+        page, "What's New: The Chesterfield Report",
         "A running list of new features and updates to The Chesterfield Report, "
         "the hyperlocal news site for Chesterfield County, Virginia.",
         f"{render.SITE_URL}/changelog.html", og_type="website")

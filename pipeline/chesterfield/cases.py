@@ -648,7 +648,7 @@ def build_cases() -> Path | None:
         + '<div class="cz-wrap">'
         + '<h1 class="page-title">Development & Zoning Cases</h1>'
         + f'<p class="cz-lead">Every active rezoning, conditional use, and development case in '
-          f'Chesterfield County right now — {len(active)} of them — with what is proposed, where, '
+          f'Chesterfield County right now, {len(active)} of them, with what is proposed, where, '
           'and where each stands in the approval process. Updated daily from county records.</p>'
         + _map(pts, "cz-map", False)
         + '<div class="cz-controls">'
