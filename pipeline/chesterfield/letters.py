@@ -43,7 +43,7 @@ def create_draft(subject: str, body: str, name: str = "",
         f"byline: {render._yaml_escape('By ' + byline)}",
         "ai_provider: letter", "---", "",
         f"# {subject}", "",
-        f"_Letter to the Editor — {byline}_", "",
+        f"_Letter to the Editor, {byline}_", "",
     ]
     for para in re.split(r"\n\s*\n", body.strip()):
         p = para.strip().replace("\n", " ")
@@ -71,8 +71,8 @@ with your name or anonymously, your call.</p>
 
 <form class="letter-form" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="{key}">
-  <input type="hidden" name="subject" value="New Letter to the Editor — The Chesterfield Report">
-  <input type="hidden" name="from_name" value="Chesterfield Report — Letters">
+  <input type="hidden" name="subject" value="New Letter to the Editor for The Chesterfield Report">
+  <input type="hidden" name="from_name" value="Chesterfield Report Letters">
   <input type="hidden" name="redirect" value="https://chesterfieldreport.com/letters.html?ok=1">
   <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
 
