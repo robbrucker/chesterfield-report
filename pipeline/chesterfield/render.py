@@ -1989,6 +1989,8 @@ def build_about() -> Path:
         '<a href="/tip.html">Send a tip or correction.</a></li>'
         '<li><strong>Got a take on a local issue?</strong> '
         '<a href="/letters.html">Submit an opinion piece</a> (with your name or anonymously).</li>'
+        '<li><strong>Just want to reach us?</strong> Email '
+        '<a href="mailto:info@chesterfieldreport.com">info@chesterfieldreport.com</a>.</li>'
         '</ul>'
         '</div>')
     out = PUBLIC / "about.html"
@@ -2272,10 +2274,12 @@ def build_tip() -> Path:
         _SITE_FORM_CSS
         + '<h1 class="page-title">Send a tip or correction</h1>'
         '<p class="lead">The Chesterfield Report is community-powered. See something we '
-        'should cover, or something we got wrong? Tell us — confidentially.</p>'
+        'should cover, or something we got wrong? Tell us, confidentially.</p>'
         '<div class="tipwrap">' + notice + form +
         '<p class="tip-note" style="color:var(--text-faint);font-size:.85rem;margin-top:1rem">'
-        'Tips are confidential. We never publish your name without permission.</p></div>'
+        'Tips are confidential. We never publish your name without permission. '
+        'Prefer email? Reach us at <a href="mailto:info@chesterfieldreport.com">'
+        'info@chesterfieldreport.com</a>.</p></div>'
         + thanks_js)
     out = PUBLIC / "tip.html"
     out.write_text(_shell(body), encoding="utf-8")
@@ -2436,6 +2440,7 @@ _TEMPLATE = """<!doctype html>
         <a href="/tip.html">Send a tip</a>
         <a href="/subscribe.html">Subscribe</a>
         <a href="/about.html">About</a>
+        <a href="mailto:info@chesterfieldreport.com">Contact</a>
         <a href="/feed.xml">RSS</a>
       </div>
     </nav>
