@@ -68,12 +68,12 @@ MARKETS = [
         "address": "13900 Hull Street Road, Chesterfield, VA 23832 (Chesterfield Technical Center)",
         "schedule": "Saturdays",
         "hours": "8:00 AM – 1:00 PM",
-        "season": "April – October",
+        "season": "April 4 – October 31, 2026",
         "offers": "Local food, unique vendor finds, culture and community",
         "website": "https://www.latinofarmersmarketva.com/", "facebook": "", "instagram": "",
-        "description": "A Saturday market on Hull Street celebrating Latino culture, flavor, and "
-                       "community alongside local food and vendor finds.",
-        "verify": True,
+        "description": "A Saturday market at the Chesterfield Technical Center on Hull Street, "
+                       "celebrating Latino culture, flavor, and community alongside local food and finds.",
+        "verify": False,
     },
     {
         "name": "Bon Air Farmers Market",
@@ -86,37 +86,37 @@ MARKETS = [
         "website": "", "facebook": "https://www.facebook.com/p/Bon-Air-Farmers-Market-100075685608361/",
         "instagram": "",
         "description": "A year-round community market in the churchyard at St. Michael's, with local "
-                       "produce, food trucks, and live music — Thursday evenings in summer, Saturday "
+                       "produce, food trucks, and live music. Thursday evenings in summer, Saturday "
                        "mornings in winter.",
-        "verify": True,
+        "verify": False,
     },
     {
         "name": "Brandermill Green Market",
         "chesterfield": True,
         "address": "4900 Market Square Lane, Midlothian, VA 23112",
         "schedule": "Saturdays",
-        "hours": "",
-        "season": "Approximately May – October",
+        "hours": "9:00 AM – 12:00 PM",
+        "season": "First Saturday in May through last Saturday in October",
         "offers": "Local produce and neighborhood vendors",
-        "website": "https://www.brandermill.com/", "facebook": "https://www.facebook.com/brandermillmarket/",
+        "website": "https://www.brandermill.com/", "facebook": "https://www.facebook.com/brandermillmarketsquare/",
         "instagram": "",
         "description": "A neighborhood Saturday market at Brandermill's Market Square offering local "
                        "produce and vendor goods through the warm-weather season.",
-        "verify": True,
+        "verify": False,
     },
     {
         "name": "Woodlake Maker's Market",
         "chesterfield": True,
         "address": "14710 Village Square Place, Midlothian, VA 23112",
         "schedule": "Tuesdays",
-        "hours": "10:00 AM – 5:00 PM",
-        "season": "Spring through summer",
+        "hours": "10:00 AM – 2:00 PM",
+        "season": "Tuesdays, April 7 – July 7, 2026 (no market May 26)",
         "offers": "Handmade art, jewelry and home goods, artisanal and baked foods, local coffee, "
                   "plus a fresh-produce vendor",
         "website": "https://woodlakeva.org/events/", "facebook": "", "instagram": "",
         "description": "A Tuesday makers' market in the Woodlake community blending handmade goods and "
                        "artisanal food with fresh produce from a local farmer.",
-        "verify": True,
+        "verify": False,
     },
     {
         "name": "Chesterfield Berry Farm & Market",
@@ -143,7 +143,7 @@ MARKETS = [
         "instagram": "",
         "description": "One of Richmond's largest and most popular markets, in Forest Hill Park just "
                        "across the river from North Chesterfield.",
-        "verify": True,
+        "verify": False,
     },
     {
         "name": "RVA Big Market",
@@ -184,8 +184,9 @@ MARKETS = [
         "website": "https://birdhousefarmersmarket.org/", "facebook": "https://www.facebook.com/birdhousemarket/",
         "instagram": "https://www.instagram.com/birdhousefarmersmarket/",
         "description": "A community-focused Tuesday market in Richmond's Randolph neighborhood, with a "
-                       "strong local-food-access mission.",
-        "verify": True,
+                       "strong local-food-access mission. Winter (December to April) is online-only with "
+                       "Tuesday curbside pickup.",
+        "verify": False,
     },
 ]
 
