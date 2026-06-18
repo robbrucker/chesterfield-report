@@ -1,4 +1,4 @@
-"""Farmers Markets — a 'support local' directory of farmers markets in and
+"""Farmers Markets: a 'support local' directory of farmers markets in and
 around Chesterfield County, on /farmers-markets.html.
 
 Data is hand-curated from researched, sourced entries (county pages, market
@@ -314,7 +314,7 @@ def _card(m: dict) -> str:
     when_bits = [b for b in (m.get("schedule"), m.get("hours")) if b]
     when = " &middot; ".join(_esc(b) for b in when_bits)
     season = f'<div class="fm-season">{_esc(m["season"])}</div>' if m.get("season") else ""
-    confirm = ('<div class="fm-confirm">Days and hours can change with the season — confirm before you go.</div>'
+    confirm = ('<div class="fm-confirm">Days and hours can change with the season, so confirm before you go.</div>'
                if m.get("verify") else "")
     qr = ""
     if m.get("qr"):
@@ -322,7 +322,7 @@ def _card(m: dict) -> str:
             f'<figure class="fm-qr"><img src="{_esc(q["img"])}" alt="{_esc(q["label"])} QR code" '
             f'width="92" height="92" loading="lazy"><figcaption>{_esc(q["label"])}</figcaption></figure>'
             for q in m["qr"])
-        qr = ('<div class="fm-qrs"><span class="fm-qr-lbl">No website yet — scan to follow:</span>'
+        qr = ('<div class="fm-qrs"><span class="fm-qr-lbl">No website yet. Scan to follow:</span>'
               f'<div class="fm-qr-row">{codes}</div></div>')
     rows = [
         f'<div class="fm-when">{when}</div>' if when else "",
