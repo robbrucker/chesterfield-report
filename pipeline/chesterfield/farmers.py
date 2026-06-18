@@ -45,7 +45,7 @@ MARKETS = [
         "description": "A new monthly evening market in the RounTrey community of Midlothian, "
                        "pairing local produce and artisan makers with live music. Its grand opening is "
                        "Friday, July 31, 2026.",
-        "verify": True,
+        "verify": False,
     },
     {
         "name": "Chesterfield County Farmers Market",
