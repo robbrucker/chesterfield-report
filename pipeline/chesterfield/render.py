@@ -2447,6 +2447,7 @@ _TEMPLATE = """<!doctype html>
         <a href="/letters.html">Opinion</a>
         <a href="/tip.html">Send a tip</a>
         <a href="/subscribe.html">Subscribe</a>
+        <a href="/newsletter/">Newsletter</a>
         <a href="/about.html">About</a>
         <a href="/changelog.html">What's New</a>
         <a href="mailto:info@chesterfieldreport.com">Contact</a>
