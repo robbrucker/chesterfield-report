@@ -63,7 +63,7 @@ ELECTIONS = [
                   "web": "https://www.davidwilliamsforva.com/", "vpap": "https://www.vpap.org/candidates/federal/"},
              ]},
             {"office": "U.S. House, 1st District: Democratic primary", "scope": "1st District voters only, Democratic ballot",
-             "note": "Seven Democrats are running to challenge Rep. Rob Wittman (R). The winner advances to November.",
+             "map": "va01", "note": "Seven Democrats are running to challenge Rep. Rob Wittman (R). The winner advances to November.",
              "candidates": [
                  {"n": "Salaam Bhatti", "party": "D", "bio": "An attorney and former public-benefits and anti-poverty lawyer.",
                   "web": "https://salaamforva.com/", "vpap": "https://www.vpap.org/candidates/549197-salaam-bhatti/"},
@@ -108,13 +108,13 @@ ELECTIONS = [
                   "web": "https://www.markwarner.com/", "vpap": "https://www.vpap.org/candidates/federal/5301-mark-warner/"},
                  {"n": "Republican nominee", "party": "R", "bio": "Decided in the August 4 Republican primary.", "web": "", "vpap": ""},
              ]},
-            {"office": "U.S. House, 1st District", "scope": "1st District voters", "note": "",
+            {"office": "U.S. House, 1st District", "scope": "1st District voters", "map": "va01", "note": "",
              "candidates": [
                  {"n": "Rob Wittman", "party": "R", "inc": True, "bio": "Has represented the 1st District since 2007.",
                   "web": "https://wittman.house.gov/", "vpap": "https://www.vpap.org/candidates/federal/"},
                  {"n": "Democratic nominee", "party": "D", "bio": "Decided in the August 4 Democratic primary (seven candidates).", "web": "", "vpap": ""},
              ]},
-            {"office": "U.S. House, 4th District", "scope": "4th District voters (most of Chesterfield)", "note": "",
+            {"office": "U.S. House, 4th District", "scope": "4th District voters (most of Chesterfield)", "map": "va04", "note": "",
              "candidates": [
                  {"n": "Jennifer McClellan", "party": "D", "inc": True, "bio": "Has represented the 4th District since 2023, after serving in the Virginia legislature.",
                   "web": "https://jennifermcclellan.com/", "vpap": "https://www.vpap.org/candidates/35804-jennifer-mcclellan/"},
@@ -217,6 +217,9 @@ def _status_banner() -> str:
 
 
 def _lookup_section() -> str:
+    # The U.S. Census geocoder does not send CORS headers, so a browser fetch()
+    # is blocked cross-origin. The endpoint does support JSONP (format=jsonp),
+    # so we load it via a <script> tag with a unique callback instead.
     js = (
         "<script>(function(){"
         "var PORTAL=" + repr(PORTAL) + ",POLL=" + repr(POLL_LOOKUP) + ";"
@@ -226,13 +229,11 @@ def _lookup_section() -> str:
         "'01':'U.S. House, 1st District: Rep. Rob Wittman (R) faces the Democrat chosen in the August 4 primary (seven Democrats are running).',"
         "'04':'U.S. House, 4th District: Rep. Jennifer McClellan (D), Jason Brown II (Independent), and Andre Kersey (Independent).'};"
         "function esc(s){return (s||'').replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}"
-        "f.addEventListener('submit',function(e){e.preventDefault();var a=i.value.trim();if(!a){return;}"
-        "o.innerHTML='<p class=\\\"el-loading\\\">Looking up your address...</p>';"
-        "var u='https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address='+encodeURIComponent(a)+'&benchmark=Public_AR_Current&vintage=Current_Current&layers=all&format=json';"
-        "fetch(u).then(function(r){return r.json();}).then(function(d){"
-        "var m=(d.result&&d.result.addressMatches)||[];"
+        "function fail(){o.innerHTML='<div class=\\\"el-res el-res-err\\\">Something went wrong. Look up your address at <a href=\\\"'+PORTAL+'\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">the official Virginia portal</a>.</div>';}"
+        "function done(d,a){"
+        "var m=(d&&d.result&&d.result.addressMatches)||[];"
         "if(!m.length){o.innerHTML='<div class=\\\"el-res el-res-err\\\">We could not find that address. Check the spelling, or use <a href=\\\"'+PORTAL+'\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">the official Virginia lookup</a>.</div>';return;}"
-        "var g=m[0].geographies,co=(g['Counties']||[])[0]||{};"
+        "var g=m[0].geographies||{},co=(g['Counties']||[])[0]||{};"
         "if(co.GEOID!=='51041'){o.innerHTML='<div class=\\\"el-res el-res-err\\\"><strong>That address is in '+esc(co.NAME||'another county')+', not Chesterfield County.</strong> Find your races and polling place at <a href=\\\"'+PORTAL+'\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">vote.elections.virginia.gov</a>.</div>';return;}"
         "var cd=((g['119th Congressional Districts']||[])[0]||{}).CD119||'';"
         "var items=['<li>'+R.senate+'</li>'];"
@@ -245,7 +246,17 @@ def _lookup_section() -> str:
         "+'<p class=\\\"el-res-l\\\">On your ballot:</p><ul class=\\\"el-res-list\\\">'+items.join('')+'</ul>'"
         "+'<a class=\\\"el-btn\\\" href=\\\"'+POLL+'\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Find your exact polling place and sample ballot &rarr;</a>'"
         "+'<p class=\\\"el-res-note\\\">Your district is computed from the U.S. Census Bureau. Always confirm your polling place and full ballot at the official lookup.</p></div>';"
-        "}).catch(function(){o.innerHTML='<div class=\\\"el-res el-res-err\\\">Something went wrong. Look up your address at <a href=\\\"'+PORTAL+'\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">the official Virginia portal</a>.</div>';});"
+        "}"
+        "var seq=0;"
+        "f.addEventListener('submit',function(e){e.preventDefault();var a=i.value.trim();if(!a){return;}"
+        "o.innerHTML='<p class=\\\"el-loading\\\">Looking up your address...</p>';"
+        "var cb='__elcb'+(++seq),s=document.createElement('script'),to;"
+        "function cleanup(){clearTimeout(to);try{delete window[cb];}catch(_){window[cb]=undefined;}if(s.parentNode){s.parentNode.removeChild(s);}}"
+        "window[cb]=function(d){cleanup();try{done(d,a);}catch(_){fail();}};"
+        "s.onerror=function(){cleanup();fail();};"
+        "to=setTimeout(function(){cleanup();fail();},15000);"
+        "s.src='https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address='+encodeURIComponent(a)+'&benchmark=Public_AR_Current&vintage=Current_Current&layers=all&format=jsonp&callback='+cb;"
+        "document.body.appendChild(s);"
         "});})();</script>"
     )
     return (
@@ -291,12 +302,61 @@ def _race_card(r: dict) -> str:
     else:
         body = "".join(_candidate(c) for c in r.get("candidates", []))
     note = f'<p class="el-race-note">{_esc(r["note"])}</p>' if r.get("note") else ""
+    mp = r.get("map")
+    mphtml = ""
+    if mp:
+        which = "1st (VA-01)" if mp == "va01" else "4th (VA-04)"
+        mphtml = (f'<img class="el-race-map" src="/assets/elections-{mp}.svg" loading="lazy" '
+                  f'alt="Map of Chesterfield County with the {which} congressional district shaded">')
     return (
         '<div class="el-race">'
         f'<div class="el-race-office">{_esc(r["office"])}</div>'
         f'<div class="el-race-scope">{_esc(r["scope"])}</div>'
-        f'{body}{note}'
+        f'{mphtml}{body}{note}'
         '</div>'
+    )
+
+
+def _districts_section() -> str:
+    return (
+        '<section class="el-dist">'
+        '<h2>Your districts, explained</h2>'
+        '<p class="el-dist-lead">Chesterfield does not vote as one block. The county is split between '
+        'two U.S. House districts and five local magisterial districts, so the ballot one neighbor sees '
+        'is not always the ballot the next street over sees. Here is how the lines fall.</p>'
+        '<figure class="el-dist-fig">'
+        '<img class="el-dist-map" src="/assets/elections-districts.svg" loading="lazy" '
+        'alt="Map of Chesterfield County divided between congressional districts VA-01 in the west and VA-04 in the east">'
+        '<figcaption class="el-dist-cap">'
+        '<span class="el-key"><span class="el-sw el-sw-01"></span>1st District (VA-01)</span>'
+        '<span class="el-key"><span class="el-sw el-sw-04"></span>4th District (VA-04)</span>'
+        '<span class="el-dist-src">County outline and district lines: U.S. Census Bureau (119th Congress).</span>'
+        '</figcaption>'
+        '</figure>'
+        '<div class="el-dist-grid">'
+        '<div class="el-dist-card">'
+        '<div class="el-dist-h"><span class="el-sw el-sw-01"></span>1st District (VA-01)</div>'
+        '<p>The <strong>western and southwestern</strong> county, including much of the Midlothian area and '
+        'the Route 360 / Hull Street corridor out toward Moseley. Represented by '
+        '<strong>Rep. Rob Wittman (R)</strong>, who has held the seat since 2007. In 2026 he faces the '
+        'Democrat chosen in the August 4 primary, where seven candidates are running.</p>'
+        '</div>'
+        '<div class="el-dist-card">'
+        '<div class="el-dist-h"><span class="el-sw el-sw-04"></span>4th District (VA-04)</div>'
+        '<p>The <strong>central and eastern</strong> county, including the courthouse area, Chester, '
+        'Bermuda Hundred, and the more densely populated communities toward Richmond and the rivers. This '
+        'is where most Chesterfield voters live. Represented by <strong>Rep. Jennifer McClellan (D)</strong>, '
+        'in office since 2023; in November she faces independents Jason Brown II and Andre Kersey.</p>'
+        '</div>'
+        '</div>'
+        '<p class="el-dist-note"><strong>Local magisterial districts.</strong> For county government, '
+        'Chesterfield is divided into five magisterial districts, Bermuda, Clover Hill, Dale, Matoaca, and '
+        'Midlothian, each electing one member of the '
+        '<a href="/board.html">Board of Supervisors</a> and one School Board member. In 2026 only the '
+        '<strong>Dale District</strong> has a county race on the ballot, a special election for the late '
+        'Jim Holland\'s seat. Not sure which district you are in? Use the address lookup above, or the '
+        f'county\'s <a href="{PRECINCT_MAPS}" target="_blank" rel="noopener">precinct maps</a>.</p>'
+        '</section>'
     )
 
 
@@ -381,6 +441,24 @@ _EL_CSS = """<style>
 .el-race{border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface-card);padding:.9rem 1.05rem;}
 .el-race-office{font:var(--fw-bold) var(--fs-md)/1.2 var(--font-display);color:var(--text-primary);}
 .el-race-scope{font:var(--fw-semibold) var(--fs-3xs) var(--font-mono);text-transform:uppercase;letter-spacing:var(--ls-wide);color:var(--text-tertiary);margin:.2rem 0 .6rem;}
+.el-race-map{display:block;width:100%;max-width:200px;height:auto;margin:.2rem 0 .7rem;border:1px solid var(--border);border-radius:var(--radius-xs);background:#fff;}
+.el-dist{border-top:1px solid var(--border);margin-top:2rem;padding-top:.4rem;}
+.el-dist h2{font:var(--fw-bold) var(--fs-2xl)/1.15 var(--font-display);color:var(--text-primary);margin:1rem 0 .3rem;}
+.el-dist-lead{font:var(--fs-md)/1.6 var(--font-sans);color:var(--text-secondary);max-width:64ch;margin:.2rem 0 1.1rem;}
+.el-dist-fig{margin:0 0 1.2rem;}
+.el-dist-map{display:block;width:100%;max-width:460px;height:auto;margin:0 auto;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff;padding:.4rem;}
+.el-dist-cap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem 1.1rem;margin-top:.7rem;font:var(--fs-2xs) var(--font-sans);color:var(--text-secondary);}
+.el-key{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;}
+.el-sw{display:inline-block;width:13px;height:13px;border-radius:3px;border:1px solid rgba(0,0,0,.2);flex:none;}
+.el-sw-01{background:#3f6f86;}
+.el-sw-04{background:#9a3322;}
+.el-dist-src{flex-basis:100%;text-align:center;font:var(--fs-3xs) var(--font-mono);color:var(--text-tertiary);}
+.el-dist-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:0 0 1.1rem;}
+.el-dist-card{border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface-card);padding:.9rem 1.05rem;}
+.el-dist-h{display:flex;align-items:center;gap:.5rem;font:var(--fw-bold) var(--fs-md) var(--font-display);color:var(--text-primary);margin-bottom:.4rem;}
+.el-dist-card p{font:var(--fs-2xs)/1.6 var(--font-sans);color:var(--text-secondary);margin:0;}
+.el-dist-note{font:var(--fs-sm)/1.6 var(--font-sans);color:var(--text-secondary);background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-xs);padding:.8rem 1rem;max-width:none;}
+.el-dist-note a,.el-dist-card a{color:var(--accent);}
 .el-c{border-top:1px solid var(--border);padding:.55rem 0;}
 .el-c:first-of-type{border-top:none;}
 .el-c-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem;}
@@ -459,6 +537,7 @@ def build_elections() -> Path:
         + f'<a class="el-btn" href="{PORTAL}" target="_blank" rel="noopener">Register or check your status</a>'
         + f'<a class="el-btn sec" href="{POLL_LOOKUP}" target="_blank" rel="noopener">Find your polling place</a>'
         + '</div>'
+        + _districts_section()
         + _election_block(ELECTIONS[0])
         + _election_block(ELECTIONS[1])
         + _civics_section()

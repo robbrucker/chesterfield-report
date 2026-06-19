@@ -23,6 +23,11 @@ CHANGELOG = [
      "(early voting for the August 4 primary is open now), what's on your ballot, and how to register "
      "and vote, with links to the official sources."),
 
+    ("June 19, 2026", "2026-06-19b", "District maps on the Voter Guide",
+     "The <a href=\"/elections.html\">Voter Guide</a> now shows how Chesterfield is split between the "
+     "1st and 4th congressional districts, with maps and a plain-language explainer, plus a fix so the "
+     "address lookup works in every browser."),
+
     ("June 18, 2026", "2026-06-18", "A real contact address",
      "You can now reach us directly at "
      "<a href=\"mailto:info@chesterfieldreport.com\">info@chesterfieldreport.com</a>, "
