@@ -361,10 +361,11 @@ _REGIONAL_SCHEMA = {
     "type": "object",
     "properties": {
         "publish": {"type": "boolean"},
+        "chesterfield_local": {"type": "boolean"},
         "affects_residents": {"type": "boolean"},
         "reason": {"type": "string"},
     },
-    "required": ["publish", "reason"],
+    "required": ["publish", "chesterfield_local", "reason"],
 }
 
 
@@ -373,19 +374,24 @@ def _regional_decide(meta: dict, body: str, model: str) -> dict:
     summary = next((ln for ln in body.splitlines() if ln and not ln.startswith(("#", "*"))), "")
     prompt = (
         "You are the regional-news editor for a Chesterfield County, Virginia local "
-        "news site's 'Virginia & Region' section. This item is statewide or regional "
-        "news, NOT specifically about Chesterfield. Decide whether it belongs in a "
-        "section for news that MATERIALLY affects Chesterfield County residents: a new "
-        "or proposed state law, the state budget, taxes, a Dominion/utility rate change, "
-        "regional transportation (I-95, tolls, CVTA), a statewide election, a court "
-        "ruling, education funding, or a public-safety policy change.\n\n"
+        "news site. This item arrived from a statewide/regional feed. Make TWO judgments.\n\n"
         f"Headline: {headline}\nSource: {meta.get('source','')}\nSummary: {summary}\n\n"
-        "Set publish=true ONLY if it is newsworthy, real (not a press release, ad, "
+        "1) publish: set true ONLY if it is newsworthy, real (not a press release, ad, "
         "listicle, sports trivia, or fluff), and a typical Chesterfield resident would "
-        "care because it affects them. Set publish=false for: another locality's purely "
+        "care because it MATERIALLY affects them: a new or proposed state law, the state "
+        "budget, taxes, a Dominion/utility rate change, regional transportation (I-95, "
+        "tolls, CVTA), a statewide election, a court ruling, education funding, or a "
+        "public-safety policy change. Set publish=false for another locality's purely "
         "local news, national politics not specific to Virginia, lifestyle/fluff, thin "
-        "items, or duplicates. Return publish, affects_residents, and a one-sentence "
-        "reason. Do not use em dashes."
+        "items, or duplicates.\n"
+        "2) chesterfield_local: set true if the story is SPECIFICALLY centered on "
+        "Chesterfield County itself, a project, development, business, decision, vote, "
+        "event, or incident located IN or directly about Chesterfield County (examples: "
+        "a data center being built in Chesterfield, a county Board vote, a local road "
+        "project, a Chesterfield company expanding). Those are FRONT-PAGE LOCAL news, not "
+        "a regional sidebar. Set chesterfield_local=false for genuinely statewide or "
+        "multi-locality news that merely affects Chesterfield among others.\n\n"
+        "Return publish, chesterfield_local, and a one-sentence reason. Do not use em dashes."
     )
     cmd = ["claude", "-p", prompt, "--output-format", "json",
            "--json-schema", json.dumps(_REGIONAL_SCHEMA), "--model", model]
@@ -412,6 +418,22 @@ def _handle_regional(path, meta: dict, body: str, model: str) -> str:
         print(f"{path.name} — regional reject — {reason[:80]}")
         return "reject"
     reason = (v.get("reason") or "").strip()
+    if v.get("chesterfield_local"):
+        # Came from a regional feed but is squarely a Chesterfield County story:
+        # route it to the LOCAL front page (track="") instead of /virginia.html.
+        render.update_frontmatter(path, {
+            "track": "",
+            "ai_verdict": "approve",
+            "ai_verdict_reason": _yq(reason),
+            "ai_sensitive": "false",
+            "status": "published",
+        })
+        render.PUBLISHED.mkdir(parents=True, exist_ok=True)
+        dest = render.PUBLISHED / path.name
+        dest.write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+        path.unlink()
+        print(f"{path.name} — local publish (Chesterfield-specific, from regional feed) — {reason[:60]}")
+        return "publish"
     render.update_frontmatter(path, {
         "ai_verdict": "approve",
         "ai_verdict_reason": _yq(reason),
