@@ -366,11 +366,11 @@ def _districts_section() -> str:
 
 def _election_block(e: dict) -> str:
     rows = "".join(
-        '<div class="el-date">'
-        f'<div class="el-date-top"><span class="el-date-lbl">{_esc(lbl)}</span>'
-        f'<span class="el-date-when">{_esc(w)}</span></div>'
-        + (f'<div class="el-date-det">{_esc(det)}</div>' if det else "")
-        + '</div>'
+        '<li class="el-tl-ev">'
+        f'<div class="el-tl-when">{_esc(w)}</div>'
+        f'<div class="el-tl-lbl">{_esc(lbl)}</div>'
+        + (f'<div class="el-tl-det">{_esc(det)}</div>' if det else "")
+        + '</li>'
         for lbl, w, det in e["timeline"])
     races = "".join(_race_card(r) for r in e["races"])
     return (
@@ -378,7 +378,7 @@ def _election_block(e: dict) -> str:
         f'<h2>{_esc(e["name"])}</h2>'
         f'<p class="el-intro">{_esc(e["intro"])}</p>'
         '<h3>Key dates</h3>'
-        f'<div class="el-dates">{rows}</div>'
+        f'<ol class="el-tl">{rows}</ol>'
         '<h3>What is on your ballot</h3>'
         f'<div class="el-races">{races}</div>'
         '</section>'
@@ -435,12 +435,14 @@ _EL_CSS = """<style>
 .el-block h2,.el-civics h2,.el-faqs h2{font:var(--fw-bold) var(--fs-2xl)/1.15 var(--font-display);color:var(--text-primary);margin:1rem 0 .3rem;}
 .el-block h3{font:var(--fw-bold) var(--fs-2xs)/1 var(--font-mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--accent);margin:1.6rem 0 .7rem;}
 .el-intro{font:var(--fs-md)/1.6 var(--font-sans);color:var(--text-secondary);}
-.el-dates{margin:.3rem 0 0;}
-.el-date{border-top:1px solid var(--border);padding:.7rem 0;}
-.el-date-top{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem 1.2rem;flex-wrap:wrap;}
-.el-date-lbl{font:var(--fw-bold) var(--fs-md)/1.25 var(--font-display);color:var(--text-primary);}
-.el-date-when{font:var(--fw-semibold) var(--fs-sm)/1.3 var(--font-sans);color:var(--accent);text-align:right;}
-.el-date-det{font:var(--fs-2xs)/1.5 var(--font-sans);color:var(--text-tertiary);margin-top:.25rem;max-width:64ch;}
+.el-tl{list-style:none;margin:.7rem 0 0;padding:0 0 0 1.3rem;border-left:2px solid var(--border);}
+.el-tl-ev{position:relative;padding:0 0 1.4rem;}
+.el-tl-ev:last-child{padding-bottom:.2rem;}
+.el-tl-ev::before{content:"";position:absolute;left:calc(-1.3rem - 7px);top:.15rem;width:12px;height:12px;border-radius:50%;background:var(--surface-card,#fff);border:2.5px solid var(--accent);}
+.el-tl-ev:last-child::before{background:var(--accent);box-shadow:0 0 0 4px rgba(154,50,34,.16);}
+.el-tl-when{font:var(--fw-bold) var(--fs-3xs)/1.1 var(--font-mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--accent);margin-bottom:.2rem;}
+.el-tl-lbl{font:var(--fw-bold) var(--fs-md)/1.25 var(--font-display);color:var(--text-primary);}
+.el-tl-det{font:var(--fs-2xs)/1.5 var(--font-sans);color:var(--text-tertiary);margin-top:.25rem;max-width:64ch;}
 .el-races{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;}
 .el-race{border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface-card);padding:.9rem 1.05rem;}
 .el-race-office{font:var(--fw-bold) var(--fs-md)/1.2 var(--font-display);color:var(--text-primary);}
