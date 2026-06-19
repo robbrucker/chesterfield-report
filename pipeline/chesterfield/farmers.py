@@ -171,7 +171,7 @@ MARKETS = [
         "instagram": "https://www.instagram.com/lakesidefarmersmarketrva/",
         "description": "A long-running year-round market in Henrico's Lakeside neighborhood, known for "
                        "fresh produce and bedding plants.",
-        "verify": True,
+        "verify": False,
     },
     {
         "name": "Birdhouse Farmers Market",
