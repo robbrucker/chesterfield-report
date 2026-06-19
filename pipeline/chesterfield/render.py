@@ -1176,6 +1176,40 @@ def build_site() -> Path:
     return PUBLIC / "index.html"
 
 
+def _live_story_slugs(recs: list) -> set:
+    """The slugs of every currently-published story, derived the SAME way the
+    story page filename is (slugify(headline)). This is the authoritative set of
+    pages that SHOULD exist under public/story (and public/es/story)."""
+    slugs = set()
+    for meta, _body, name in recs:
+        headline = meta.get("headline", "") or name
+        slugs.add(slugify(headline))
+    return slugs
+
+
+def _prune_orphan_story_pages(story_dir: Path, live_slugs: set) -> int:
+    """Delete <slug>.html files in story_dir whose slug is no longer published.
+
+    When a story is superseded/deduped its content/published/*.md is removed, but
+    the rendered public/story/<slug>.html (and its /es/ twin) used to LINGER. Those
+    orphan pages carried stale tag chips pointing at /topics/<slug>.html pages that
+    are no longer built (broken links), and dangled in the sitemap. They are NOT
+    linked from any live page (home feed, pagination, digest, board, and topic
+    cards all link by slugify(headline), which only yields live slugs), so removing
+    them is safe. Mirrors build_topics()'s existing "clear stale pages" step.
+
+    IMPORTANT: the slug is slugify(headline), NOT the md filename (which carries a
+    YYYY-MM-DD- date prefix) — matching on the filename would nuke real pages."""
+    if not story_dir.is_dir():
+        return 0
+    removed = 0
+    for old in story_dir.glob("*.html"):
+        if old.stem not in live_slugs:
+            old.unlink()
+            removed += 1
+    return removed
+
+
 def build_articles() -> int:
     """Write one full-article page per published story to public/story/<slug>.html.
     Returns the number of pages written."""
@@ -1183,6 +1217,9 @@ def build_articles() -> int:
     recs = _published_records()
     sdir = PUBLIC / "story"
     sdir.mkdir(parents=True, exist_ok=True)
+    # Remove orphan pages for stories that are no longer published before (re)writing
+    # the live ones, so superseded/deduped stories don't linger with broken /topics/ links.
+    _prune_orphan_story_pages(sdir, _live_story_slugs(recs))
     n = 0
     for meta, body, name in recs:
         link = True
@@ -1577,6 +1614,10 @@ def build_spanish() -> int:
     es_dir = PUBLIC / "es"
     es_story_dir = es_dir / "story"
     es_story_dir.mkdir(parents=True, exist_ok=True)
+    # Same orphan cleanup as the EN edition: drop /es/story pages for stories that
+    # are no longer published, otherwise an ES orphan links back to a now-deleted
+    # EN /story/<slug>.html and creates a broken link.
+    _prune_orphan_story_pages(es_story_dir, _live_story_slugs(recs))
 
     es_recs, n = [], 0
     for meta, body, name in recs:
