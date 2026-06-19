@@ -26,9 +26,13 @@ OUT = Path(__file__).resolve().parent.parent / "public" / "assets"
 # Chesterfield County = 51041.
 LEG = "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/0/query"
 CNTY = "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/1/query"
+# County subdivisions (layer 1) are Chesterfield's magisterial districts.
+# Dale magisterial district GEOID = 5104191088.
+MCD = "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/1/query"
 
 BRICK = "#9a3322"     # VA-04 fill (matches site accent)
 SLATE = "#3f6f86"     # VA-01 fill
+GREEN = "#46785f"     # Dale magisterial district fill (local, not congressional)
 OUTLINE = "#3a342c"   # county outline
 MUTED = "#d9d2c5"     # inactive district fill on single maps
 W = 520               # SVG width in px
@@ -79,6 +83,7 @@ print("Fetching boundaries from Census TIGERweb...")
 county = fetch(CNTY, "GEOID='51041'")
 cd01 = fetch(LEG, "GEOID='5101'")
 cd04 = fetch(LEG, "GEOID='5104'")
+dale = fetch(MCD, "GEOID='5104191088'")
 
 xs, ys = [], []
 for ring in rings(county):
@@ -103,7 +108,7 @@ def path_d(geom):
     return "".join(parts)
 
 
-d_county, d01, d04 = path_d(county), path_d(cd01), path_d(cd04)
+d_county, d01, d04, d_dale = path_d(county), path_d(cd01), path_d(cd04), path_d(dale)
 
 
 def svg(body, title):
@@ -128,6 +133,10 @@ maps = {
         svg(f'<g clip-path="url(#cf)"><rect x="0" y="0" width="{W}" height="{H}" fill="{MUTED}"/>'
             f'<path d="{d04}" fill="{BRICK}" fill-opacity="0.75"/></g>',
             "Map of Chesterfield County highlighting the area in congressional district VA-04")),
+    "elections-dale.svg": (
+        svg(f'<g clip-path="url(#cf)"><rect x="0" y="0" width="{W}" height="{H}" fill="{MUTED}"/>'
+            f'<path d="{d_dale}" fill="{GREEN}" fill-opacity="0.75"/></g>',
+            "Map of Chesterfield County highlighting the Dale magisterial district")),
 }
 for name, doc in maps.items():
     (OUT / name).write_text(doc, encoding="utf-8")

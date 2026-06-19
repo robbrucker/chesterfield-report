@@ -81,7 +81,7 @@ ELECTIONS = [
                   "web": "https://meltullforcongress.com/", "vpap": "https://www.vpap.org/candidates/343883-mel-tull/"},
              ]},
             {"office": "Dale District Supervisor: special Democratic primary", "scope": "Dale District voters only",
-             "note": "A special election for the seat of the late Jim Holland. The primary winner advances to November.",
+             "map": "dale", "note": "A special election for the seat of the late Jim Holland. The primary winner advances to November.",
              "candidates": [
                  {"n": "Kathryn Crosby", "party": "D", "bio": "A longtime Dale District resident running on community accountability.",
                   "web": "https://secure.actblue.com/donate/crosbyfordale", "vpap": "https://www.vpap.org/offices/chesterfield-county-supervisor-dale/elections/"},
@@ -123,7 +123,7 @@ ELECTIONS = [
                  {"n": "Andre Kersey", "party": "I", "bio": "A Richmond minister and teacher.",
                   "web": "https://kerseyforcongress.org/", "vpap": "https://www.vpap.org/offices/us-representative-4/elections/"},
              ]},
-            {"office": "Dale District Supervisor (special)", "scope": "Dale District voters", "note": "Confirm the final ballot with the registrar.",
+            {"office": "Dale District Supervisor (special)", "scope": "Dale District voters", "map": "dale", "note": "Confirm the final ballot with the registrar.",
              "candidates": [
                  {"n": "Winner of the August 4 Democratic primary", "party": "", "bio": "Kathryn Crosby or LeQuan Hylton.", "web": "", "vpap": ""},
              ]},
@@ -305,9 +305,13 @@ def _race_card(r: dict) -> str:
     mp = r.get("map")
     mphtml = ""
     if mp:
-        which = "1st (VA-01)" if mp == "va01" else "4th (VA-04)"
+        alt = {
+            "va01": "Map of Chesterfield County with the 1st (VA-01) congressional district shaded",
+            "va04": "Map of Chesterfield County with the 4th (VA-04) congressional district shaded",
+            "dale": "Map of Chesterfield County with the Dale magisterial district shaded",
+        }.get(mp, "Map of the district on this ballot")
         mphtml = (f'<img class="el-race-map" src="/assets/elections-{mp}.svg" loading="lazy" '
-                  f'alt="Map of Chesterfield County with the {which} congressional district shaded">')
+                  f'alt="{alt}">')
     return (
         '<div class="el-race">'
         f'<div class="el-race-office">{_esc(r["office"])}</div>'
