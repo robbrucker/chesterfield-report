@@ -49,3 +49,6 @@ cases_enrich_cache.json
 events_enrich_cache.json
 pipeline/things_cache.json
 pipeline/farmers_cache.json
+
+# Facebook daily-recap state (last posted day)
+scripts/.fb_posted

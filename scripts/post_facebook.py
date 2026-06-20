@@ -25,6 +25,7 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 # Import the site's render helpers (records, story URLs, dek extraction).
 ROOT = Path(__file__).resolve().parent.parent
@@ -125,18 +126,25 @@ def _ai_recap(headline: str, dek: str) -> str:
     return ""
 
 
-def _stories_for(date_str: str) -> list:
+STATE_FILE = ROOT / "scripts" / ".fb_posted"  # gitignored; last posted day
+
+
+def _stories_for(date_str: str, allow_fallback: bool = True) -> tuple:
     """(headline, url, recap) for stories published on date_str (YYYY-MM-DD).
-    Falls back to the most recent day that has stories if date_str has none."""
+    With allow_fallback, uses the most recent day that has stories when date_str
+    itself has none; otherwise returns an empty list for that day."""
     recs = render._published_records()
     by_day: dict[str, list] = {}
     for meta, body, name in recs:
         d = (meta.get("published") or "")[:10]
         if d:
             by_day.setdefault(d, []).append((meta, body, name))
-    if date_str not in by_day and by_day:
-        date_str = max(by_day)            # most recent day with stories
-        print(f"(no stories for the requested day; using {date_str})", file=sys.stderr)
+    if date_str not in by_day:
+        if allow_fallback and by_day:
+            date_str = max(by_day)        # most recent day with stories
+            print(f"(no stories for the requested day; using {date_str})", file=sys.stderr)
+        else:
+            return [], date_str
     out = []
     for meta, body, name in by_day.get(date_str, []):
         headline = (meta.get("headline") or name).strip()
@@ -182,16 +190,35 @@ def _post(message: str, page_token: str) -> dict:
 def main() -> None:
     import os
     ap = argparse.ArgumentParser()
-    ap.add_argument("--date", default=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-                    help="Day to recap (YYYY-MM-DD). Default: today (UTC).")
+    ap.add_argument("--tz", default="America/New_York", help="Timezone for 'today' and --at-hour.")
+    ap.add_argument("--date", default=None,
+                    help="Day to recap (YYYY-MM-DD). Default: today in --tz.")
     ap.add_argument("--post", action="store_true", help="Actually publish (otherwise dry run).")
     ap.add_argument("--max", type=int, default=12, help="Cap number of stories.")
+    ap.add_argument("--at-hour", type=int, default=None,
+                    help="Only proceed if the current hour in --tz equals this (for cron gating).")
+    ap.add_argument("--no-fallback", action="store_true",
+                    help="Only post the exact target day; skip (exit 0) if it has no stories.")
+    ap.add_argument("--skip-if-posted", action="store_true",
+                    help="Skip (exit 0) if a recap for the target day already went out.")
     args = ap.parse_args()
 
-    stories, used_date = _stories_for(args.date)
+    tz = ZoneInfo(args.tz)
+    now = datetime.now(tz)
+    # Cron gate: bail quietly unless it's the intended local hour.
+    if args.at_hour is not None and now.hour != args.at_hour:
+        return
+    target = args.date or now.strftime("%Y-%m-%d")
+
+    if args.skip_if_posted and args.post and STATE_FILE.exists():
+        if STATE_FILE.read_text(encoding="utf-8").strip() == target:
+            print(f"Already posted a recap for {target}; skipping.", file=sys.stderr)
+            return
+
+    stories, used_date = _stories_for(target, allow_fallback=not args.no_fallback)
     if not stories:
-        print("No stories to recap.", file=sys.stderr)
-        sys.exit(1)
+        print(f"No stories to recap for {target}; skipping.", file=sys.stderr)
+        return
     stories = stories[: args.max]
     message = _compose(stories, used_date)
 
@@ -209,6 +236,10 @@ def main() -> None:
         sys.exit("FB_ACCESS_TOKEN not set (source scripts/.deploy.env).")
     result = _post(message, _page_token(token))
     print("Published. Post id:", result.get("id"), file=sys.stderr)
+    try:
+        STATE_FILE.write_text(used_date, encoding="utf-8")
+    except OSError:
+        pass
 
 
 if __name__ == "__main__":
