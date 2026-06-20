@@ -170,14 +170,33 @@ def _compose(stories: list, date_str: str) -> str:
     return "\n".join(lines).strip()
 
 
-def _page_token(user_token: str) -> str:
-    url = f"{GRAPH}/me/accounts?fields=id,access_token&access_token={urllib.parse.quote(user_token)}"
-    with urllib.request.urlopen(url, timeout=30) as r:
-        data = json.load(r)
-    for p in data.get("data", []):
-        if str(p.get("id")) == PAGE_ID:
-            return p.get("access_token", "")
-    raise SystemExit("Could not find the Chesterfield Report page token for this user token.")
+def _token_ok(token: str) -> bool:
+    """Cheap validity check: a valid token (user OR page) answers /me; an expired
+    or missing one errors. Lets an expired token fail before the costly compose."""
+    if not token:
+        return False
+    try:
+        url = f"{GRAPH}/me?access_token={urllib.parse.quote(token)}"
+        with urllib.request.urlopen(url, timeout=20) as r:
+            json.load(r)
+        return True
+    except Exception:
+        return False
+
+
+def _resolve_page_token(token: str) -> str:
+    """Accept either a user token (exchange it for the Page token via /me/accounts)
+    or a Page token pasted directly (use it as-is). No app secret needed."""
+    try:
+        url = f"{GRAPH}/me/accounts?fields=id,access_token&access_token={urllib.parse.quote(token)}"
+        with urllib.request.urlopen(url, timeout=30) as r:
+            data = json.load(r)
+        for p in data.get("data", []):
+            if str(p.get("id")) == PAGE_ID and p.get("access_token"):
+                return p["access_token"]
+    except Exception:
+        pass
+    return token  # assume the token is already the Page token
 
 
 def _post(message: str, page_token: str) -> dict:
@@ -215,6 +234,19 @@ def main() -> None:
             print(f"Already posted a recap for {target}; skipping.", file=sys.stderr)
             return
 
+    # In --post mode, validate the token BEFORE the costly AI compose so an
+    # expired/missing token fails cheaply. The cron auto-resumes the moment a
+    # working token is dropped into scripts/.deploy.env -- no other setup.
+    token = ""
+    if args.post:
+        token = os.environ.get("FB_ACCESS_TOKEN", "").strip()
+        if not _token_ok(token):
+            print("Facebook token is missing or expired; skipping post. Refresh "
+                  "FB_ACCESS_TOKEN in scripts/.deploy.env (a fresh token is enough; "
+                  "no app secret needed). The daily post resumes automatically once "
+                  "a valid token is in place.", file=sys.stderr)
+            return
+
     stories, used_date = _stories_for(target, allow_fallback=not args.no_fallback)
     if not stories:
         print(f"No stories to recap for {target}; skipping.", file=sys.stderr)
@@ -231,11 +263,17 @@ def main() -> None:
         print("DRY RUN. Re-run with --post to publish to the Page.", file=sys.stderr)
         return
 
-    token = os.environ.get("FB_ACCESS_TOKEN", "").strip()
-    if not token:
-        sys.exit("FB_ACCESS_TOKEN not set (source scripts/.deploy.env).")
-    result = _post(message, _page_token(token))
-    print("Published. Post id:", result.get("id"), file=sys.stderr)
+    try:
+        result = _post(message, _resolve_page_token(token))
+    except Exception as e:
+        print(f"Facebook post failed ({e}); not marked as posted, will retry next run.",
+              file=sys.stderr)
+        return
+    pid = result.get("id") if isinstance(result, dict) else None
+    if not pid:
+        print(f"Facebook post returned no post id: {result}", file=sys.stderr)
+        return
+    print("Published. Post id:", pid, file=sys.stderr)
     try:
         STATE_FILE.write_text(used_date, encoding="utf-8")
     except OSError:
