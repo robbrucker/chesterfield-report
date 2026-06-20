@@ -417,7 +417,12 @@ SUPERVISORS = [
             "Cycle totals and donors below are from the committee's official "
             "Schedule A/H filings with the Virginia Department of Elections "
             "(committee: Friends of Mark Miller, CC-22-00547). Donors are the "
-            "largest itemized contributions across the 2023 reports."
+            "largest itemized contributions across the 2023 reports. Note: Miller "
+            "reported a $10,000 contribution from Michael Jones during the cycle and "
+            "later returned it, citing a potential conflict of interest tied to a "
+            "possible development project in the county. It is not included among the "
+            "donors above. State campaign-finance filings may still show the original "
+            "contribution."
         ),
         "donors": [
             ("Robert Jones", "$5,500"),
