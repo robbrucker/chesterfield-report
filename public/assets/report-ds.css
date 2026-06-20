@@ -885,6 +885,13 @@ body {
   height: 2px; background: var(--accent, var(--neon-teal)); transform: scaleX(0);
   transform-origin: left; transition: transform var(--dur-base) var(--ease-out); }
 .cr-header__nav.topnav .nav-x:hover::after { transform: scaleX(1); }
+/* Subscribe call-to-action, pushed to the right side of the toolbar. */
+.cr-header__nav.topnav .nav-cta { margin-left: auto; background: var(--accent); color: #fff;
+  border-radius: 4px; padding: 9px 18px; font-weight: var(--fw-bold); letter-spacing: var(--ls-wide); }
+.cr-header__nav.topnav .nav-cta:hover { color: #fff; background: var(--accent-pressed, #7c2818); }
+.cr-header__nav.topnav .nav-cta::after { display: none; }
+.nav-mobile .nav-cta-m { background: var(--accent); color: #fff; border-radius: 4px;
+  font-weight: var(--fw-bold); }
 .nav-c { font-size: .62em; opacity: .6; }
 /* Dropdown groups. */
 .nav-g { position: relative; }

@@ -2386,7 +2386,7 @@ def build_subscribe() -> Path:
         _SITE_FORM_CSS
         + '<h1 class="page-title">Subscribe</h1>'
         '<p class="lead">Get <strong>The Weekly Report</strong>, our free Chesterfield '
-        'County roundup, in your inbox. No ads, no paywall, unsubscribe anytime.</p>'
+        'County roundup, in your inbox. Free to read, unsubscribe anytime.</p>'
         '<div class="tipwrap">' + embed +
         '<p class="tip-note" style="color:var(--text-faint);font-size:.85rem;margin-top:1rem">'
         'We only email you Chesterfield news and never share your address.</p></div>')
@@ -2465,9 +2465,10 @@ _TEMPLATE = """<!doctype html>
     <a class="nav-x" href="/meetings.html">Meetings</a>
     <div class="nav-g"><button class="nav-t" type="button">Government <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/elections.html">Elections</a><a href="/board.html">Board of Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development &amp; Zoning</a></div></div>
     <div class="nav-g"><button class="nav-t" type="button">Investigations <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/shoosmith.html">Shoosmith landfill</a></div></div>
+    <a class="nav-x nav-cta" href="/subscribe.html">Subscribe</a>
   </nav>
   <nav class="topnav cr-header__nav nav-mobile" aria-label="Sections">
-    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/elections.html">Elections</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development</a><a href="/dining.html">Dining</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/events.html">Events</a><a href="/things-to-do.html">Things to Do</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/business.html">Business</a><a href="/shoosmith.html">Shoosmith</a>
+    <a class="nav-cta-m" href="/subscribe.html">Subscribe</a><a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/elections.html">Elections</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development</a><a href="/dining.html">Dining</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/events.html">Events</a><a href="/things-to-do.html">Things to Do</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/business.html">Business</a><a href="/shoosmith.html">Shoosmith</a>
   </nav>
   <div class="dateline">
     <span class="place">Chesterfield County &middot; Virginia</span>
@@ -2484,7 +2485,7 @@ _TEMPLATE = """<!doctype html>
        growth &amp; development, schools, public safety, government and community life.</p>
     <div class="footer-signup">
       <strong>Get The Weekly Report in your inbox.</strong>
-      <p class="footer-signup-sub">A free weekly Chesterfield County roundup. No ads, unsubscribe anytime.</p>
+      <p class="footer-signup-sub">A free weekly Chesterfield County roundup. Unsubscribe anytime.</p>
       <a class="footer-cta" href="/subscribe.html">Subscribe &rarr;</a>
     </div>
     <div class="footer-social">

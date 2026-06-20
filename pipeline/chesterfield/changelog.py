@@ -35,7 +35,7 @@ CHANGELOG = [
 
     ("June 18, 2026", "2026-06-18b", "The Weekly Report newsletter",
      "Sign up to get a free weekly roundup of the week's news and what's on the civic "
-     "calendar, delivered to your inbox. No ads, no paywall. "
+     "calendar, delivered to your inbox. Free to read. "
      "<a href=\"/subscribe.html\">Subscribe here.</a>"),
 
     ("June 17, 2026", "2026-06-17", "Farmers markets guide",
