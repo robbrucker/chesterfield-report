@@ -32,7 +32,7 @@
   ],
   "tax_rates": [
     {"name": "Real estate (real property)", "rate": "$0.89 per $100", "note": "Calendar year 2025. Fourth straight annual cut (was $0.90)."},
-    {"name": "Personal property (vehicles)", "rate": "$3.35 per $100", "note": "Down from $3.60. 2025 personal property tax relief: 40%."},
+    {"name": "Personal property (vehicles)", "rate": "$3.35 per $100", "note": "Down from $3.60. 2025 personal property tax relief: 44%."},
     {"name": "Sales & use tax", "rate": "6.0% total", "note": "4.3% state + 1.0% local + 0.7% regional (CVTA)."},
     {"name": "Machinery & tools", "rate": "$1.00 per $100", "note": "Tax year 2025."},
     {"name": "Data center computer equipment", "rate": "$0.24 per $100", "note": "Reduced rate for data center hardware."},

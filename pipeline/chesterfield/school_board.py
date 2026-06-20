@@ -256,10 +256,10 @@ def build_school_board() -> str:
         + f'<div class="sb-grid">{cards}</div>'
 
         + '<p class="sb-fin-flag">Campaign-finance figures above are from the <strong>2023 '
-          'election cycle</strong>, the last time these seats were on the ballot. The next '
-          'regular School Board election is <strong>November 2027</strong>; a special election '
-          'for the appointed Clover Hill seat is expected before then. Figures will be updated '
-          'when new filings are reported.</p>'
+          'election cycle</strong>, the last time these seats were on the ballot. A special '
+          'election for the appointed Clover Hill seat is expected in <strong>November 2026</strong>; '
+          'the next regular School Board election is <strong>November 2027</strong>. Figures will be '
+          'updated when new filings are reported.</p>'
 
         + '<div class="sb-sec"><h2>Meetings &amp; how to weigh in</h2>'
           '<p>The board meets roughly monthly at the Public Meeting Room, 10001 Iron Bridge Road: '

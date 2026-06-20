@@ -65,7 +65,7 @@ MARKETS = [
     {
         "name": "Latino Farmers Market",
         "chesterfield": True,
-        "address": "13900 Hull Street Road, Chesterfield, VA 23832 (Chesterfield Technical Center)",
+        "address": "13900 Hull Street Road, Midlothian, VA 23112 (Chesterfield Technical Center)",
         "schedule": "Saturdays",
         "hours": "8:00 AM – 1:00 PM",
         "season": "April 4 – October 31, 2026",
