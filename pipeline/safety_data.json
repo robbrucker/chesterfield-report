@@ -303,7 +303,9 @@
       {
         "n": "16",
         "name": "Swift Creek",
-        "address": "3030 Water Cove Road, Midlothian, VA 23112"
+        "address": "3030 Water Cove Road, Midlothian, VA 23112",
+        "lat": 37.450206,
+        "lon": -77.646316
       },
       {
         "n": "17",
