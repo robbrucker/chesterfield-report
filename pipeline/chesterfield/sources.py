@@ -216,7 +216,7 @@ SOURCES = [
         "name": "Google News: Chesterfield County",
         "kind": "rss",
         "url": ("https://news.google.com/rss/search?q=%22Chesterfield+County%22+"
-                "Virginia&hl=en-US&gl=US&ceid=US:en"),
+                "Virginia+-Derbyshire+-England&hl=en-US&gl=US&ceid=US:en"),
         "geo_filter": True,         # require a Chesterfield place name (drops other Chesterfields)
         "default_focus": [],
         "license": "press",
@@ -226,7 +226,7 @@ SOURCES = [
         "name": "Google News: Chesterfield Schools",
         "kind": "rss",
         "url": ("https://news.google.com/rss/search?q=%22Chesterfield+County+"
-                "Public+Schools%22&hl=en-US&gl=US&ceid=US:en"),
+                "Public+Schools%22+-Derbyshire+-England&hl=en-US&gl=US&ceid=US:en"),
         "geo_filter": True,
         "default_focus": ["schools"],
         "license": "press",
@@ -238,7 +238,7 @@ SOURCES = [
         "name": "Google News: Chesterfield Development",
         "kind": "rss",
         "url": ("https://news.google.com/rss/search?q=%22Chesterfield+County%22+"
-                "development+OR+rezoning&hl=en-US&gl=US&ceid=US:en"),
+                "Virginia+(development+OR+rezoning)+-Derbyshire+-England&hl=en-US&gl=US&ceid=US:en"),
         "geo_filter": True,
         "default_focus": ["growth"],
         "license": "press",
@@ -248,7 +248,7 @@ SOURCES = [
         "name": "Google News: Chesterfield Business",
         "kind": "rss",
         "url": ("https://news.google.com/rss/search?q=%22Chesterfield+County%22+"
-                "business+OR+restaurant+opening&hl=en-US&gl=US&ceid=US:en"),
+                "Virginia+(business+OR+restaurant+opening)+-Derbyshire+-England&hl=en-US&gl=US&ceid=US:en"),
         "geo_filter": True,
         "default_focus": ["business"],
         "license": "press",
@@ -258,7 +258,7 @@ SOURCES = [
         "name": "Google News: Chesterfield Board of Supervisors",
         "kind": "rss",
         "url": ("https://news.google.com/rss/search?q=%22Chesterfield+County+"
-                "Board+of+Supervisors%22&hl=en-US&gl=US&ceid=US:en"),
+                "Board+of+Supervisors%22+-Derbyshire+-England&hl=en-US&gl=US&ceid=US:en"),
         "geo_filter": True,
         "default_focus": ["government"],
         "license": "press",
@@ -268,7 +268,7 @@ SOURCES = [
         "name": "Google News: Chesterfield School Board",
         "kind": "rss",
         "url": ("https://news.google.com/rss/search?q=%22Chesterfield+County%22+"
-                "school+board&hl=en-US&gl=US&ceid=US:en"),
+                "school+board+-Derbyshire+-England&hl=en-US&gl=US&ceid=US:en"),
         "geo_filter": True,
         "default_focus": ["schools", "government"],
         "license": "press",
@@ -630,14 +630,14 @@ SOURCES = [
     {
         "id": "gnews-va-assembly", "name": "Google News: Virginia Government", "kind": "rss",
         "url": ("https://news.google.com/rss/search?q=%22Virginia+General+Assembly%22+OR+"
-                "%22Virginia+law%22+OR+%22Gov.+of+Virginia%22&hl=en-US&gl=US&ceid=US:en"),
+                "%22Virginia+law%22+OR+%22Gov.+of+Virginia%22+-Derbyshire+-England&hl=en-US&gl=US&ceid=US:en"),
         "geo_filter": False, "default_focus": ["government"], "license": "press",
         "track": "regional",
     },
     {
         "id": "gnews-va-dominion", "name": "Google News: Dominion / VA Utilities", "kind": "rss",
         "url": ("https://news.google.com/rss/search?q=%22Dominion+Energy%22+Virginia+"
-                "rate+OR+bill&hl=en-US&gl=US&ceid=US:en"),
+                "rate+OR+bill+-Derbyshire+-England&hl=en-US&gl=US&ceid=US:en"),
         "geo_filter": False, "default_focus": ["government"], "license": "press",
         "track": "regional",
     },

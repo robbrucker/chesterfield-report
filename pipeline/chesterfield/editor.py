@@ -23,8 +23,10 @@ from __future__ import annotations
 
 import datetime
 import json
+import re
 import shutil
 import subprocess
+import urllib.request
 from collections import defaultdict
 from pathlib import Path
 
@@ -127,6 +129,12 @@ _RUBRIC = (
     "or magistrates' court, amounts in pounds (£), Sheffield, the M1, or UK "
     "place/road names. When the location is ambiguous and there is no clear "
     "Virginia or US signal, lean toward chesterfield_specific=false.\n"
+    "ALSO reject (chesterfield_specific=false) when the underlying SOURCE is "
+    "really about somewhere else and Chesterfield was added without support, e.g. "
+    "a regional story about data centers, projects, or policy in OTHER Virginia "
+    "counties (Louisa, Spotsylvania, Stafford, Caroline, Henrico, etc.) that does "
+    "not itself concern Chesterfield County. If the local angle is not clearly in "
+    "the source, do not approve it as Chesterfield news.\n"
     "verdict: 'approve' = newsworthy and fit to publish as-is; 'review' = needs a "
     "human (low-value-but-real, or fraught in a way the editor below would hold "
     "back); 'reject' = spam/promo/recruitment/off-topic/trivial/duplicate. "
@@ -313,6 +321,42 @@ def _can_auto_approve(meta: dict, v: dict) -> bool:
     if AUTO_REQUIRE_GOVERNMENT_LICENSE and meta.get("license") != "government":
         return False
     return True
+
+
+# Chesterfield County, VA place names used to confirm a cited source actually
+# concerns our county (not a "Chesterfield" elsewhere, and not a story the model
+# pinned to Chesterfield without support, e.g. Amazon data centers in other VA
+# counties). "chester" intentionally last via word boundary in the regex.
+_CHES_PLACE_RE = re.compile(
+    r"\bchesterfield count|\b(midlothian|matoaca|moseley|ettrick|brandermill|"
+    r"woodlake|winterpock|bon air|robious|enon|dale district|clover hill|"
+    r"hull street|iron bridge|courthouse road|chester\b)", re.I)
+
+_UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+
+
+def _source_grounds_chesterfield(url: str):
+    """Best-effort grounding: fetch the cited source and check it mentions a
+    Chesterfield County, VA place. Returns True if it does, False if we fetched a
+    real article that does NOT, and None when we can't judge (no URL, a county
+    source we already trust, a block/paywall, or too little text). None and True
+    both allow publishing; only False routes to human review (fail-open)."""
+    url = (url or "").strip().strip('"')
+    if not url.startswith("http"):
+        return None
+    if "chesterfield.gov" in url:        # county sources are inherently local
+        return True
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": _UA})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            html = r.read(500_000).decode("utf-8", "ignore")
+    except Exception:
+        return None                      # blocked/timeout -> don't judge
+    text = re.sub(r"<[^>]+>", " ", html)
+    if len(text) < 800:                  # JS-only/paywall/redirect stub
+        return None
+    return bool(_CHES_PLACE_RE.search(text))
 
 
 def _deepen(path, meta: dict, body: str, model: str) -> None:
@@ -544,6 +588,24 @@ def triage(model: str = "claude-haiku-4-5", deepen: bool = True,
         )
         too_old = _too_old(meta, path)
         want_publish = (can_approve or autonomous_ok or quiet_ok) and not too_old
+
+        # Source-grounding gate: if the cited source is a real article that never
+        # mentions Chesterfield County, the local angle is unsupported (e.g. a
+        # Virginia Mercury story about data centers in OTHER counties). Route to
+        # human review rather than auto-publishing a misattributed story.
+        if want_publish and _source_grounds_chesterfield(meta.get("source_url", "")) is False:
+            reason = ("Cited source does not mention Chesterfield County; "
+                      "unsupported or misattributed local angle.")
+            render.update_frontmatter(path, {
+                "ai_verdict": "review",
+                "ai_verdict_reason": _yq(reason),
+                "ai_sensitive": "true" if sensitive else "false",
+            })
+            print(f"{path.name} — review — {reason}")
+            review += 1
+            processed_files += 1
+            continue
+
         via_quiet = bool(want_publish and quiet_ok and not (can_approve or autonomous_ok))
         is_dup = bool(want_publish and DUP_GUARD and _looks_duplicate(path, pub))
 

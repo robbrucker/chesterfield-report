@@ -22,7 +22,10 @@ def _strip_html(s: str) -> str:
 _UK_MARKERS = re.compile(
     r"\b(derbyshire|england|scotland|wales|united kingdom|"
     r"crown court|magistrates|sheffield|nottingham|"
-    r"chesterfield fc|spireites)\b")
+    r"chesterfield fc|spireites|"
+    r"borough council|parish council|county council|town hall|"
+    r"staveley|brimington|whittington|hasland|dronfield|bolsover|"
+    r"clay cross|holme hall|peak district|high peak)\b")
 
 
 def _looks_uk(hay: str) -> bool:
