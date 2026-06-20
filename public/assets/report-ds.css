@@ -411,9 +411,9 @@ a.cr-ticker__item:hover { color: var(--text-strong); text-decoration: none; }
 /* Real-photo heroes always use light text over a deepened scrim, regardless of
    the active theme. The editorial default theme would otherwise paint the
    headline dark (var(--text-strong)) and leave it unreadable over the image. */
-.cr-hero .cr-photo:not(.cr-photo--fallback) .cr-hero__overlay { background: linear-gradient(0deg, rgba(2,7,10,0.95) 0%, rgba(2,7,10,0.82) 28%, rgba(2,7,10,0.56) 52%, rgba(2,7,10,0.28) 75%, rgba(2,7,10,0) 100%); }
-.cr-hero .cr-photo:not(.cr-photo--fallback) .cr-hero__title { color: #f6fbf9; text-shadow: 0 2px 16px rgba(0,0,0,.85), 0 1px 4px rgba(0,0,0,.75); }
-.cr-hero .cr-photo:not(.cr-photo--fallback) .cr-hero__dek { color: #e9f1ee; text-shadow: 0 1px 10px rgba(0,0,0,.8); }
+.cr-hero .cr-photo:not(.cr-photo--fallback) .cr-hero__overlay { background: linear-gradient(0deg, rgba(2,7,10,0.82) 0%, rgba(2,7,10,0.5) 38%, rgba(2,7,10,0.2) 64%, rgba(2,7,10,0) 88%); }
+.cr-hero .cr-photo:not(.cr-photo--fallback) .cr-hero__title { color: #f6fbf9; text-shadow: 0 1px 3px rgba(0,0,0,.55); }
+.cr-hero .cr-photo:not(.cr-photo--fallback) .cr-hero__dek { color: #eef4f1; text-shadow: 0 1px 2px rgba(0,0,0,.5); }
 .cr-hero .cr-photo:not(.cr-photo--fallback) .cr-meta,
 .cr-hero .cr-photo:not(.cr-photo--fallback) .cr-meta__by { color: #d6e2dd; }
 
