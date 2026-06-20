@@ -199,7 +199,7 @@ SUPERVISORS = [
             "are the largest itemized contributions across the 2023 reports."
         ),
         "donors": [
-            ("Micheal Jones for Delegate (PAC)", "$1,000"),
+            ("Mike Jones for Delegate (PAC)", "$1,000"),
             ("Stuart Broth", "$700"),
             ("Everytown for Gun Safety Action Fund", "$500"),
             ("Elaine Fishman", "$250"),
