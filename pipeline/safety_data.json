@@ -28,8 +28,9 @@
       "hq": {"name": "Police Headquarters", "address": "10001 Iron Bridge Road, Chesterfield, VA 23832", "phone": "Non-emergency: 804-748-1251"},
       "note": "Chesterfield Police operate from a central headquarters at the County complex on Iron Bridge Road, supported by community-policing offices and patrol facilities around the county rather than numbered precincts."
     },
-    "work_title": "The work in 2024",
-    "work_dek": "From the department's 2024 annual report. The department does not publish a single annual total-arrests figure, so the enforcement numbers below are the ones it reports.",
+    "work_title": "The work (2024)",
+    "work_dek": "From the department's 2024 annual report, the most recent full year it has published; a police annual report comes out months after the year ends, so the 2025 edition is not out yet. The department does not publish a single annual total-arrests figure, so the enforcement numbers below are the ones it reports.",
+    "current_note": "More recent, partial 2025 data: through November 2025, overall reported crime was down to about 12,453 offenses from 14,113 in 2024, though domestic-violence, weapons, and drug-possession cases rose, per a county crime report. The full 2025 annual report, with updated arrest and traffic figures, will update this page when it is released.",
     "work_stats": [
       {"value": "205,286", "label": "Calls for service & assists"},
       {"value": "32,497", "label": "Traffic stops"},
@@ -43,7 +44,8 @@
     "sources": [
       {"label": "Chesterfield County Police Department", "url": "https://www.chesterfield.gov/941/Police"},
       {"label": "About CCPD (leadership & structure)", "url": "https://www.chesterfield.gov/2374/About-CCPD"},
-      {"label": "FY2026 county budget book", "url": "https://www.chesterfield.gov/DocumentCenter/View/42310/FY2026-Budget-and-FY2026-FY2030-Capital-Improvement-Program-PDF"}
+      {"label": "FY2026 county budget book", "url": "https://www.chesterfield.gov/DocumentCenter/View/42310/FY2026-Budget-and-FY2026-FY2030-Capital-Improvement-Program-PDF"},
+      {"label": "2024-to-2025 crime report (via WRIC)", "url": "https://www.wric.com/news/local-news/chesterfield-county/crime-report-2024-to-2025-report/"}
     ]
   },
   "fire": {

@@ -173,6 +173,7 @@ def _page(d: dict, title: str, xlinks: str) -> str:
         + '<div class="ps-sec"><h2>' + html.escape(d["work_title"]) + '</h2>'
         + f'<p class="ps-sec__dek">{html.escape(d["work_dek"])}</p>'
         + _work_grid(d["work_stats"])
+        + (f'<p class="ps-note">{html.escape(d["current_note"])}</p>' if d.get("current_note") else "")
         + '</div>'
         + xlinks
         + (f'<p class="ps-note">{html.escape(d["staffing_note"])}</p>' if d.get("staffing_note") else "")
