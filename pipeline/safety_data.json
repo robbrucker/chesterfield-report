@@ -1,7 +1,7 @@
 {
   "police": {
     "name": "Chesterfield County Police",
-    "meta": "Chesterfield County · figures from the FY2026 county budget and the department's 2024 annual report",
+    "meta": "Chesterfield County \u00b7 figures from the FY2026 county budget and the department's 2024 annual report",
     "lead": "Who runs the Chesterfield County Police Department, where it is, what it costs, how many officers it has, and what its officers did last year. Every figure links back to an official source so you can check it yourself.",
     "chief": {
       "title": "Chief of Police",
@@ -10,47 +10,117 @@
       "note": "Carpenter leads the department through the Office of the Chief and three branches: Operations, Administrative Services, and Professional Standards. The department serves about 387,700 residents across 437 square miles."
     },
     "headline_stats": [
-      {"value": "564", "label": "Sworn officers (authorized, 2024)"},
-      {"value": "$119.3M", "label": "Department budget, FY2026 (see note)"},
-      {"value": "205,286", "label": "Calls for service & assists (2024)"},
-      {"value": "387,703", "label": "Residents served"}
+      {
+        "value": "564",
+        "label": "Sworn officers (authorized, 2024)"
+      },
+      {
+        "value": "$119.3M",
+        "label": "Department budget, FY2026 (see note)"
+      },
+      {
+        "value": "205,286",
+        "label": "Calls for service & assists (2024)"
+      },
+      {
+        "value": "387,703",
+        "label": "Residents served"
+      }
     ],
     "budget_total_label": "$119.3 million (FY2026 General Fund)",
     "budget_note": "The county budgets the Police Department together with Animal Services, the 911 Emergency Communications Center, and the Magistrate's Office, so this $119.3M line is not police-only. The department reported its police operations at about $99.2 million in fiscal 2025.",
     "budget": [
-      {"name": "Personnel (salaries & benefits)", "dollars": 101867100, "percent": 85.4},
-      {"name": "Operating", "dollars": 14349700, "percent": 12.0},
-      {"name": "Capital outlay", "dollars": 3039000, "percent": 2.5},
-      {"name": "Transfers out", "dollars": 51800, "percent": 0.04}
+      {
+        "name": "Personnel (salaries & benefits)",
+        "dollars": 101867100,
+        "percent": 85.4
+      },
+      {
+        "name": "Operating",
+        "dollars": 14349700,
+        "percent": 12.0
+      },
+      {
+        "name": "Capital outlay",
+        "dollars": 3039000,
+        "percent": 2.5
+      },
+      {
+        "name": "Transfers out",
+        "dollars": 51800,
+        "percent": 0.04
+      }
     ],
     "staffing_note": "Authorized strength in 2024 was 564 sworn officers, plus 153 full-time and 68 part-time professional (civilian) staff. More than 200 volunteers contributed over 23,000 hours in 2024.",
     "stations": {
-      "hq": {"name": "Police Headquarters", "address": "10001 Iron Bridge Road, Chesterfield, VA 23832", "phone": "Non-emergency: 804-748-1251"},
+      "hq": {
+        "name": "Police Headquarters",
+        "address": "10001 Iron Bridge Road, Chesterfield, VA 23832",
+        "phone": "Non-emergency: 804-748-1251",
+        "lat": 37.376465,
+        "lon": -77.507924
+      },
       "note": "Chesterfield Police operate from a central headquarters at the County complex on Iron Bridge Road, supported by community-policing offices and patrol facilities around the county rather than numbered precincts."
     },
     "work_title": "The work (2024)",
     "work_dek": "From the department's 2024 annual report, the most recent full year it has published; a police annual report comes out months after the year ends, so the 2025 edition is not out yet. The department does not publish a single annual total-arrests figure, so the enforcement numbers below are the ones it reports.",
     "current_note": "More recent, partial 2025 data: through November 2025, overall reported crime was down to about 12,453 offenses from 14,113 in 2024, though domestic-violence, weapons, and drug-possession cases rose, per a county crime report. The full 2025 annual report, with updated arrest and traffic figures, will update this page when it is released.",
     "work_stats": [
-      {"value": "205,286", "label": "Calls for service & assists"},
-      {"value": "32,497", "label": "Traffic stops"},
-      {"value": "21,000+", "label": "Traffic summonses issued"},
-      {"value": "5,300", "label": "Written warnings"},
-      {"value": "847", "label": "DUI arrests"},
-      {"value": "5,088", "label": "Crashes investigated (976 with injuries)"},
-      {"value": "22", "label": "Traffic fatalities"},
-      {"value": "12", "label": "Homicides (all cleared by arrest)"}
+      {
+        "value": "205,286",
+        "label": "Calls for service & assists"
+      },
+      {
+        "value": "32,497",
+        "label": "Traffic stops"
+      },
+      {
+        "value": "21,000+",
+        "label": "Traffic summonses issued"
+      },
+      {
+        "value": "5,300",
+        "label": "Written warnings"
+      },
+      {
+        "value": "847",
+        "label": "DUI arrests"
+      },
+      {
+        "value": "5,088",
+        "label": "Crashes investigated (976 with injuries)"
+      },
+      {
+        "value": "22",
+        "label": "Traffic fatalities"
+      },
+      {
+        "value": "12",
+        "label": "Homicides (all cleared by arrest)"
+      }
     ],
     "sources": [
-      {"label": "Chesterfield County Police Department", "url": "https://www.chesterfield.gov/941/Police"},
-      {"label": "About CCPD (leadership & structure)", "url": "https://www.chesterfield.gov/2374/About-CCPD"},
-      {"label": "FY2026 county budget book", "url": "https://www.chesterfield.gov/DocumentCenter/View/42310/FY2026-Budget-and-FY2026-FY2030-Capital-Improvement-Program-PDF"},
-      {"label": "2024-to-2025 crime report (via WRIC)", "url": "https://www.wric.com/news/local-news/chesterfield-county/crime-report-2024-to-2025-report/"}
+      {
+        "label": "Chesterfield County Police Department",
+        "url": "https://www.chesterfield.gov/941/Police"
+      },
+      {
+        "label": "About CCPD (leadership & structure)",
+        "url": "https://www.chesterfield.gov/2374/About-CCPD"
+      },
+      {
+        "label": "FY2026 county budget book",
+        "url": "https://www.chesterfield.gov/DocumentCenter/View/42310/FY2026-Budget-and-FY2026-FY2030-Capital-Improvement-Program-PDF"
+      },
+      {
+        "label": "2024-to-2025 crime report (via WRIC)",
+        "url": "https://www.wric.com/news/local-news/chesterfield-county/crime-report-2024-to-2025-report/"
+      }
     ]
   },
   "fire": {
     "name": "Chesterfield Fire & EMS",
-    "meta": "Chesterfield County · figures from the FY2026 county budget and the 2026 Community Risk Assessment & Standards of Cover",
+    "meta": "Chesterfield County \u00b7 figures from the FY2026 county budget and the 2026 Community Risk Assessment & Standards of Cover",
     "lead": "Who runs Chesterfield Fire & EMS, where its stations are, what it costs, how many firefighters and medics it has, and how many emergencies it answers. Every figure links back to an official source.",
     "chief": {
       "title": "Fire Chief",
@@ -59,57 +129,232 @@
       "note": "Chesterfield Fire & EMS is a career department supplemented by volunteers, covering 437 square miles and about 387,700 residents. It grew out of the unification of community volunteer fire companies decades ago and holds an ISO Class 2 rating."
     },
     "headline_stats": [
-      {"value": "21", "label": "Career fire stations (+ volunteer stations)"},
-      {"value": "562", "label": "Career firefighters (605 total positions)"},
-      {"value": "$97.6M", "label": "Department budget, FY2026"},
-      {"value": "51,000+", "label": "Emergency incidents a year"}
+      {
+        "value": "21",
+        "label": "Career fire stations (+ volunteer stations)"
+      },
+      {
+        "value": "562",
+        "label": "Career firefighters (605 total positions)"
+      },
+      {
+        "value": "$97.6M",
+        "label": "Department budget, FY2026"
+      },
+      {
+        "value": "51,000+",
+        "label": "Emergency incidents a year"
+      }
     ],
     "budget_total_label": "$97.6 million (FY2026 General Fund)",
     "budget_note": "Beyond the General Fund total shown, a separate grants fund of about $9.7 million (mostly EMS billing / revenue recovery) also supports the department. General Fund spending grew 6.4% over FY2025.",
     "budget": [
-      {"name": "Personnel (salaries & benefits)", "dollars": 85374300, "percent": 87.5},
-      {"name": "Operating", "dollars": 9288500, "percent": 9.5},
-      {"name": "Capital outlay", "dollars": 2893900, "percent": 3.0}
+      {
+        "name": "Personnel (salaries & benefits)",
+        "dollars": 85374300,
+        "percent": 87.5
+      },
+      {
+        "name": "Operating",
+        "dollars": 9288500,
+        "percent": 9.5
+      },
+      {
+        "name": "Capital outlay",
+        "dollars": 2893900,
+        "percent": 3.0
+      }
     ],
     "staffing_note": "For fiscal 2026 the department has 605 authorized positions. Operationally that is about 562 career firefighters and 53 civilian professionals, backed by 56 volunteer firefighters and partnerships with volunteer rescue squads.",
     "work_title": "By the numbers",
     "work_dek": "From the 2026 Community Risk Assessment & Standards of Cover. About four of every five calls are medical (EMS), not fire.",
     "work_stats": [
-      {"value": "51,000+", "label": "Incidents a year (about 140 a day)"},
-      {"value": "~80%", "label": "Of calls are EMS / medical"},
-      {"value": "7 min", "label": "Target first-unit response (urban zone)"},
-      {"value": "Class 2", "label": "ISO public-protection rating"},
-      {"value": "22", "label": "Ambulances (17 staffed 24/7)"},
-      {"value": "96%", "label": "Surveyed residents highly satisfied"}
+      {
+        "value": "51,000+",
+        "label": "Incidents a year (about 140 a day)"
+      },
+      {
+        "value": "~80%",
+        "label": "Of calls are EMS / medical"
+      },
+      {
+        "value": "7 min",
+        "label": "Target first-unit response (urban zone)"
+      },
+      {
+        "value": "Class 2",
+        "label": "ISO public-protection rating"
+      },
+      {
+        "value": "22",
+        "label": "Ambulances (17 staffed 24/7)"
+      },
+      {
+        "value": "96%",
+        "label": "Surveyed residents highly satisfied"
+      }
     ],
     "stations": [
-      {"n": "1", "name": "Chester", "address": "4325 Old Hundred Road, Chester, VA 23831"},
-      {"n": "2", "name": "Manchester", "address": "7541 Hull Street Road, North Chesterfield, VA 23235"},
-      {"n": "3", "name": "Bensley", "address": "2836 Dundas Road, North Chesterfield, VA 23235"},
-      {"n": "4", "name": "Bon Air", "address": "2600 Polo Parkway, Midlothian, VA 23113"},
-      {"n": "5", "name": "Midlothian", "address": "13900 Midlothian Turnpike, Midlothian, VA 23113"},
-      {"n": "6", "name": "Enon", "address": "1920 E Hundred Road, Chester, VA 23836"},
-      {"n": "7", "name": "Clover Hill", "address": "13810 Hull Street Road, Midlothian, VA 23112"},
-      {"n": "8", "name": "Matoaca", "address": "6612 Hickory Road, South Chesterfield, VA 23803"},
-      {"n": "9", "name": "Buford", "address": "8001 Buford Court, North Chesterfield, VA 23235"},
-      {"n": "10", "name": "Wagstaff", "address": "2101 Adkins Road, North Chesterfield, VA 23235"},
-      {"n": "11", "name": "Dale", "address": "5811 Iron Bridge Road, North Chesterfield, VA 23234"},
-      {"n": "12", "name": "Ettrick", "address": "21200 Chesterfield Avenue, South Chesterfield, VA 23803"},
-      {"n": "13", "name": "Phillips", "address": "10630 River Road, Chesterfield, VA 23832"},
-      {"n": "14", "name": "Dutch Gap", "address": "2711 W Hundred Road, Chester, VA 23831"},
-      {"n": "15", "name": "Airport", "address": "7300 Airfield Drive, North Chesterfield, VA 23237"},
-      {"n": "16", "name": "Swift Creek", "address": "3030 Water Cove Road, Midlothian, VA 23112"},
-      {"n": "17", "name": "Centralia", "address": "9501 Chester Road, North Chesterfield, VA 23237"},
-      {"n": "18", "name": "Rivers Bend", "address": "901 Bermuda Hundred Road, Chester, VA 23831"},
-      {"n": "19", "name": "Winterpock", "address": "14010 Beach Road, Chesterfield, VA 23838"},
-      {"n": "20", "name": "Courthouse Road", "address": "201 Courthouse Road, North Chesterfield, VA 23236"},
-      {"n": "21", "name": "Harrowgate Road", "address": "16901 Harrowgate Road, South Chesterfield, VA 23834"}
+      {
+        "n": "1",
+        "name": "Chester",
+        "address": "4325 Old Hundred Road, Chester, VA 23831",
+        "lat": 37.354945,
+        "lon": -77.447371
+      },
+      {
+        "n": "2",
+        "name": "Manchester",
+        "address": "7541 Hull Street Road, North Chesterfield, VA 23235",
+        "lat": 37.468836,
+        "lon": -77.531515
+      },
+      {
+        "n": "3",
+        "name": "Bensley",
+        "address": "2836 Dundas Road, North Chesterfield, VA 23235",
+        "lat": 37.436516,
+        "lon": -77.444642
+      },
+      {
+        "n": "4",
+        "name": "Bon Air",
+        "address": "2600 Polo Parkway, Midlothian, VA 23113",
+        "lat": 37.526212,
+        "lon": -77.614965
+      },
+      {
+        "n": "5",
+        "name": "Midlothian",
+        "address": "13900 Midlothian Turnpike, Midlothian, VA 23113",
+        "lat": 37.504913,
+        "lon": -77.656774
+      },
+      {
+        "n": "6",
+        "name": "Enon",
+        "address": "1920 E Hundred Road, Chester, VA 23836",
+        "lat": 37.332167,
+        "lon": -77.324066
+      },
+      {
+        "n": "7",
+        "name": "Clover Hill",
+        "address": "13810 Hull Street Road, Midlothian, VA 23112",
+        "lat": 37.407091,
+        "lon": -77.658267
+      },
+      {
+        "n": "8",
+        "name": "Matoaca",
+        "address": "6612 Hickory Road, South Chesterfield, VA 23803",
+        "lat": 37.262058,
+        "lon": -77.48593
+      },
+      {
+        "n": "9",
+        "name": "Buford",
+        "address": "8001 Buford Court, North Chesterfield, VA 23235",
+        "lat": 37.501807,
+        "lon": -77.544567
+      },
+      {
+        "n": "10",
+        "name": "Wagstaff",
+        "address": "2101 Adkins Road, North Chesterfield, VA 23235",
+        "lat": 37.4653,
+        "lon": -77.575945
+      },
+      {
+        "n": "11",
+        "name": "Dale",
+        "address": "5811 Iron Bridge Road, North Chesterfield, VA 23234",
+        "lat": 37.437458,
+        "lon": -77.489543
+      },
+      {
+        "n": "12",
+        "name": "Ettrick",
+        "address": "21200 Chesterfield Avenue, South Chesterfield, VA 23803",
+        "lat": 37.235909,
+        "lon": -77.423879
+      },
+      {
+        "n": "13",
+        "name": "Phillips",
+        "address": "10630 River Road, Chesterfield, VA 23832",
+        "lat": 37.276536,
+        "lon": -77.566784
+      },
+      {
+        "n": "14",
+        "name": "Dutch Gap",
+        "address": "2711 W Hundred Road, Chester, VA 23831",
+        "lat": 37.355436,
+        "lon": -77.416316
+      },
+      {
+        "n": "15",
+        "name": "Airport",
+        "address": "7300 Airfield Drive, North Chesterfield, VA 23237",
+        "lat": 37.400194,
+        "lon": -77.513471
+      },
+      {
+        "n": "16",
+        "name": "Swift Creek",
+        "address": "3030 Water Cove Road, Midlothian, VA 23112"
+      },
+      {
+        "n": "17",
+        "name": "Centralia",
+        "address": "9501 Chester Road, North Chesterfield, VA 23237",
+        "lat": 37.39109,
+        "lon": -77.445511
+      },
+      {
+        "n": "18",
+        "name": "Rivers Bend",
+        "address": "901 Bermuda Hundred Road, Chester, VA 23831",
+        "lat": 37.347181,
+        "lon": -77.340117
+      },
+      {
+        "n": "19",
+        "name": "Winterpock",
+        "address": "14010 Beach Road, Chesterfield, VA 23838",
+        "lat": 37.358672,
+        "lon": -77.668202
+      },
+      {
+        "n": "20",
+        "name": "Courthouse Road",
+        "address": "201 Courthouse Road, North Chesterfield, VA 23236",
+        "lat": 37.487131,
+        "lon": -77.596897
+      },
+      {
+        "n": "21",
+        "name": "Harrowgate Road",
+        "address": "16901 Harrowgate Road, South Chesterfield, VA 23834",
+        "lat": 37.289546,
+        "lon": -77.415382
+      }
     ],
     "stations_note": "21 career fire stations, plus 2 volunteer fire stations and 7 volunteer EMS rescue-squad stations across the county.",
     "sources": [
-      {"label": "Chesterfield Fire & EMS", "url": "https://www.chesterfield.gov/489/Fire-and-EMS"},
-      {"label": "2026 Community Risk Assessment & Standards of Cover", "url": "https://www.chesterfield.gov/DocumentCenter/View/46569"},
-      {"label": "FY2026 county budget book", "url": "https://www.chesterfield.gov/DocumentCenter/View/42310/FY2026-Budget-and-FY2026-FY2030-Capital-Improvement-Program-PDF"}
+      {
+        "label": "Chesterfield Fire & EMS",
+        "url": "https://www.chesterfield.gov/489/Fire-and-EMS"
+      },
+      {
+        "label": "2026 Community Risk Assessment & Standards of Cover",
+        "url": "https://www.chesterfield.gov/DocumentCenter/View/46569"
+      },
+      {
+        "label": "FY2026 county budget book",
+        "url": "https://www.chesterfield.gov/DocumentCenter/View/42310/FY2026-Budget-and-FY2026-FY2030-Capital-Improvement-Program-PDF"
+      }
     ]
   }
 }

@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import html
 import json
+import json as _json
 from pathlib import Path
 
 from . import render
@@ -93,6 +94,42 @@ def _work_grid(stats: list) -> str:
     return f'<div class="ps-work-grid">{cells}</div>'
 
 
+# Leaflet + markercluster + CARTO (theme-aware), same stack as the schools map.
+_MAP_HEAD = (
+    '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">'
+    '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>'
+)
+
+
+def _map_section(points: list, color: str) -> str:
+    """A Leaflet map of station points. points = [[name, lat, lon, address], ...].
+    Tiles follow the site theme (light by default, dark when data-theme=dark)."""
+    if not points:
+        return ""
+    data = _json.dumps(points)
+    return (
+        _MAP_HEAD
+        + '<div id="ps-map" class="ps-map"></div>'
+        '<script>(function(){if(!window.L)return;var pts=' + data + ';'
+        'function tileUrl(){var dark=document.documentElement.getAttribute("data-theme")==="dark";'
+        'return dark?"https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"'
+        ':"https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";}'
+        'var map=L.map("ps-map",{scrollWheelZoom:false}).setView([37.40,-77.55],10);'
+        'var layer=L.tileLayer(tileUrl(),{attribution:"\\u00a9 OpenStreetMap \\u00a9 CARTO",'
+        'subdomains:"abcd",maxZoom:19}).addTo(map);'
+        'var grp=L.featureGroup();'
+        'pts.forEach(function(p){var h="<strong>"+p[0]+"</strong><br>"+p[3];'
+        'L.circleMarker([p[1],p[2]],{radius:7,color:"#fff",weight:1.5,'
+        'fillColor:"' + color + '",fillOpacity:0.95}).bindPopup(h).addTo(grp);});'
+        'grp.addTo(map);'
+        'try{if(pts.length>1){map.fitBounds(grp.getBounds().pad(0.12));}'
+        'else{map.setView([pts[0][1],pts[0][2]],13);}}catch(e){}'
+        'new MutationObserver(function(){layer.setUrl(tileUrl());})'
+        '.observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});'
+        '})();</script>'
+    )
+
+
 def _sources(srcs: list) -> str:
     links = " &middot; ".join(
         f'<a href="{html.escape(s["url"])}" target="_blank" rel="noopener">{html.escape(s["label"])}</a>'
@@ -141,6 +178,8 @@ _CSS = """<style>
 .ps-stations td{padding:.55rem .6rem;border-bottom:1px solid var(--border);font:var(--fs-sm)/1.4 var(--font-sans);color:var(--text-secondary);vertical-align:top;}
 .ps-stations .ps-st-n{font:var(--fw-bold) var(--fs-sm) var(--font-mono);color:var(--accent);width:2.5rem;}
 .ps-stations .ps-st-name{font-weight:var(--fw-semibold);color:var(--text-primary);white-space:nowrap;}
+.ps-map{height:380px;border:1px solid var(--border);border-radius:var(--radius-sm);margin:0 0 1rem;background:var(--surface-sunken,#eee);z-index:0;}
+.ps-map .leaflet-popup-content{font:var(--fs-2xs)/1.4 var(--font-sans);}
 .ps-source{margin:2.4rem 0 0;padding:1rem 1.1rem;border-left:3px solid var(--accent);background:var(--surface-card);border-radius:var(--radius-xs);font:var(--fs-sm)/var(--lh-relaxed) var(--font-sans);color:var(--text-secondary);}
 .ps-source a{color:var(--accent);font-weight:600;}
 .ps-xlinks{margin:1.6rem 0 0;font:var(--fs-sm)/1.6 var(--font-sans);color:var(--text-secondary);}
@@ -188,14 +227,18 @@ def _page(d: dict, title: str, xlinks: str) -> str:
 def build_police() -> Path:
     d = _load()["police"]
     s = d["stations"]
+    hq = s["hq"]
+    pts = ([[hq["name"], hq["lat"], hq["lon"], html.escape(hq["address"])]]
+           if hq.get("lat") and hq.get("lon") else [])
     stations_html = (
         '<div class="ps-sec"><h2>Where it is</h2>'
         '<div class="ps-hq">'
-        f'<div class="ps-hq__name">{html.escape(s["hq"]["name"])}</div>'
-        f'<div class="ps-hq__addr">{html.escape(s["hq"]["address"])}</div>'
-        f'<div class="ps-hq__phone">{html.escape(s["hq"]["phone"])}</div>'
+        f'<div class="ps-hq__name">{html.escape(hq["name"])}</div>'
+        f'<div class="ps-hq__addr">{html.escape(hq["address"])}</div>'
+        f'<div class="ps-hq__phone">{html.escape(hq["phone"])}</div>'
         '</div>'
-        f'<p class="ps-note">{html.escape(s["note"])}</p>'
+        + _map_section(pts, "#1c3a5e")
+        + f'<p class="ps-note">{html.escape(s["note"])}</p>'
         '</div>'
     )
     body = _page(d, "Chesterfield County Police", stations_html)
@@ -220,10 +263,13 @@ def build_fire() -> Path:
         '</tr>'
         for st in d["stations"]
     )
+    pts = [[f'Station {st["n"]}: {st["name"]}', st["lat"], st["lon"], html.escape(st["address"])]
+           for st in d["stations"] if st.get("lat") and st.get("lon")]
     stations_html = (
         '<div class="ps-sec"><h2>Where the stations are</h2>'
         f'<p class="ps-sec__dek">{html.escape(d["stations_note"])}</p>'
-        '<table class="ps-stations"><thead><tr>'
+        + _map_section(pts, "#c0392b")
+        + '<table class="ps-stations"><thead><tr>'
         '<th>#</th><th>Station</th><th>Address</th>'
         '</tr></thead><tbody>'
         + rows
