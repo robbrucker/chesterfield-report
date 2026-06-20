@@ -706,9 +706,11 @@ def _hero_score(meta: dict, rank: int) -> float:
     """Impact score for the homepage lead (higher wins). Favors civic and
     public-safety beats, breaking tone, and stories with a real photo (the
     hero is a large image card), with a gentle recency penalty so the lead
-    stays current."""
-    slug, _ = _primary_focus(meta)
-    score = float(_HERO_WEIGHT.get(slug, 2))
+    stays current. Uses the BEST beat among the story's focus tags, not just the
+    first one the model listed, so a major story tagged e.g. [Local Business,
+    Government] is scored as the government story it actually is."""
+    _labels, slugs = _focus_of(meta)
+    score = float(max((_HERO_WEIGHT.get(s, 2) for s in slugs), default=2))
     if _tone_of(meta) == "breaking":
         score += 2
     if _story_image(meta):

@@ -330,18 +330,34 @@ def _can_auto_approve(meta: dict, v: dict) -> bool:
 _CHES_PLACE_RE = re.compile(
     r"\bchesterfield\b|\b(midlothian|matoaca|moseley|ettrick|brandermill|"
     r"woodlake|winterpock|bon air|robious|enon|dale district|clover hill|"
-    r"hull street|iron bridge|courthouse road|chester\b)", re.I)
+    r"hull street|iron bridge|courthouse road|swift creek|magnolia green|"
+    r"rountrey|pocahontas state park|virginia state university|\bvsu\b|"
+    r"manchester high|cosby high|monacan high|thomas dale|l\.?c\.? bird|"
+    r"meadowbrook high|james river high|clover hill high|matoaca high|"
+    r"midlothian high|chester\b)", re.I)
+
+# Other Virginia localities that signal a story is really about somewhere else.
+# We only treat "no Chesterfield mention" as a problem when the source clearly
+# concerns one of these instead (the Amazon-data-centers-in-other-counties case).
+# Richmond/metro neighbors are deliberately excluded to avoid false holds.
+_OTHER_LOCALITY_RE = re.compile(
+    r"\b(louisa|spotsylvania|powhatan|goochland|dinwiddie|nottoway|fluvanna|"
+    r"loudoun|prince william|prince george county|new kent|stafford county|"
+    r"caroline county|amelia county|cumberland county)\b", re.I)
 
 _UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
        "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
 
 def _source_grounds_chesterfield(url: str):
-    """Best-effort grounding: fetch the cited source and check it mentions a
-    Chesterfield County, VA place. Returns True if it does, False if we fetched a
-    real article that does NOT, and None when we can't judge (no URL, a county
-    source we already trust, a block/paywall, or too little text). None and True
-    both allow publishing; only False routes to human review (fail-open)."""
+    """Best-effort grounding: fetch the cited source. Returns True if it mentions
+    a Chesterfield County, VA place; False ONLY if it never mentions Chesterfield
+    AND clearly concerns another locality (the misattribution signature); and None
+    when we can't judge (no URL, a trusted county source, a block/paywall, too
+    little text, or simply no competing-locality signal). None and True both allow
+    publishing; only False routes to human review. This stays deliberately
+    conservative so legitimate local stories are not held just because the source
+    omits the word 'Chesterfield'."""
     url = (url or "").strip().strip('"')
     if not url.startswith("http"):
         return None
@@ -356,7 +372,11 @@ def _source_grounds_chesterfield(url: str):
     text = re.sub(r"<[^>]+>", " ", html)
     if len(text) < 800:                  # JS-only/paywall/redirect stub
         return None
-    return bool(_CHES_PLACE_RE.search(text))
+    if _CHES_PLACE_RE.search(text):
+        return True                      # grounded in Chesterfield
+    if _OTHER_LOCALITY_RE.search(text):
+        return False                     # about another county, not Chesterfield
+    return None                          # can't tell -> publish (fail open)
 
 
 def _deepen(path, meta: dict, body: str, model: str) -> None:
