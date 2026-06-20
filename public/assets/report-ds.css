@@ -890,8 +890,16 @@ body {
   border-radius: 4px; padding: 9px 18px; font-weight: var(--fw-bold); letter-spacing: var(--ls-wide); }
 .cr-header__nav.topnav .nav-cta:hover { color: #fff; background: var(--accent-pressed, #7c2818); }
 .cr-header__nav.topnav .nav-cta::after { display: none; }
-.nav-mobile .nav-cta-m { background: var(--accent); color: #fff; border-radius: 4px;
-  font-weight: var(--fw-bold); }
+/* Mobile-only full-width Subscribe strip (desktop uses the toolbar CTA). */
+.cr-subscribe-strip { display: none; }
+@media (max-width: 860px) {
+  .cr-subscribe-strip { display: block; text-align: center; padding: 13px 16px;
+    background: var(--accent); color: #fff !important; text-decoration: none;
+    white-space: normal; font: var(--fw-bold) var(--fs-sm)/1.3 var(--font-sans); letter-spacing: .01em; }
+}
+@media (max-width: 400px) {
+  .cr-subscribe-strip { font-size: 13px; padding: 12px 12px; white-space: normal !important; }
+}
 .nav-c { font-size: .62em; opacity: .6; }
 /* Dropdown groups. */
 .nav-g { position: relative; }

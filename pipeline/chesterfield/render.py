@@ -2468,12 +2468,13 @@ _TEMPLATE = """<!doctype html>
     <a class="nav-x nav-cta" href="/subscribe.html">Subscribe</a>
   </nav>
   <nav class="topnav cr-header__nav nav-mobile" aria-label="Sections">
-    <a class="nav-cta-m" href="/subscribe.html">Subscribe</a><a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/elections.html">Elections</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development</a><a href="/dining.html">Dining</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/events.html">Events</a><a href="/things-to-do.html">Things to Do</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/business.html">Business</a><a href="/shoosmith.html">Shoosmith</a>
+    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/elections.html">Elections</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development</a><a href="/dining.html">Dining</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/events.html">Events</a><a href="/things-to-do.html">Things to Do</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/business.html">Business</a><a href="/shoosmith.html">Shoosmith</a>
   </nav>
   <div class="dateline">
     <span class="place">Chesterfield County &middot; Virginia</span>
     <span>Updated {generated}</span>
   </div>
+  <a class="cr-subscribe-strip" href="/subscribe.html">Subscribe to free Chesterfield news &rarr;</a>
 </header>
 <main class="cr-main"><div class="cr-main__inner">
 {body}
