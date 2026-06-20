@@ -328,7 +328,7 @@ def _can_auto_approve(meta: dict, v: dict) -> bool:
 # pinned to Chesterfield without support, e.g. Amazon data centers in other VA
 # counties). "chester" intentionally last via word boundary in the regex.
 _CHES_PLACE_RE = re.compile(
-    r"\bchesterfield count|\b(midlothian|matoaca|moseley|ettrick|brandermill|"
+    r"\bchesterfield\b|\b(midlothian|matoaca|moseley|ettrick|brandermill|"
     r"woodlake|winterpock|bon air|robious|enon|dale district|clover hill|"
     r"hull street|iron bridge|courthouse road|chester\b)", re.I)
 
