@@ -964,6 +964,10 @@ footer { border-top: 1px solid var(--ink-400); margin-top: var(--space-9);
 .footer-signup-sub { font: var(--fw-regular) var(--fs-sm)/1.5 var(--font-sans); color: var(--text-muted); margin: 0 0 12px; max-width: 44ch; }
 .footer-cta { display: inline-block; background: var(--neon-teal); color: var(--text-on-neon); border-radius: var(--radius-xs); padding: 11px 22px; font: var(--fw-bold) var(--fs-sm)/1 var(--font-sans); text-decoration: none; }
 .footer-cta:hover { background: var(--neon-teal-dim); }
+.footer-social { margin: 0 0 1.4rem; }
+.footer-social a { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font: var(--fw-semibold) var(--fs-sm)/1 var(--font-sans); text-decoration: none; }
+.footer-social a:hover { text-decoration: underline; }
+.footer-social svg { flex: none; }
 .bh-embed { max-width: 480px; margin: 1rem 0 .5rem; }
 .signup-form { display: flex; flex-wrap: wrap; gap: 8px; max-width: 440px; }
 .signup-form input[type=email] { flex: 1 1 210px; background: var(--surface-raised); border: 1px solid var(--border-hair); border-radius: var(--radius-xs); padding: 11px 13px; color: var(--text-default); font: var(--text-body-r); }
