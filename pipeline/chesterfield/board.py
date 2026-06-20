@@ -378,7 +378,7 @@ SUPERVISORS = [
             "years. He spent 13 years with Chesterfield Mental Health, rising from "
             "senior clinician to services supervisor, and has worked the past nine "
             "years as a professional counselor at Brightpoint Community College "
-            "(formerly J. Sargeant Reynolds/JTCC). He holds a B.A. in secondary "
+            "(formerly John Tyler Community College). He holds a B.A. in secondary "
             "English education from the University of Pittsburgh, an M.S. in "
             "psychology from Shippensburg University and a Ph.D. in clinical "
             "psychology from the California Institute of Integral Studies."
@@ -420,7 +420,6 @@ SUPERVISORS = [
             "largest itemized contributions across the 2023 reports."
         ),
         "donors": [
-            ("Mike Jones", "$10,000"),
             ("Robert Jones", "$5,500"),
             ("Chesterfield Professional Firefighters", "$2,500"),
             ("Jenefer Hughes", "$2,020"),
@@ -432,9 +431,9 @@ SUPERVISORS = [
             ("Robert Miller", "$700"),
         ],
         "donor_sectors": (
-            "Miller's largest 2023 donors are led by individual contributors "
-            "Mike Jones ($10,000) and Robert Jones, with the local firefighters' "
-            "association and a small-business PAC also among the top givers."
+            "Miller's largest 2023 donors are led by individual contributor "
+            "Robert Jones ($5,500), with the local firefighters' association and a "
+            "small-business PAC also among the top givers."
         ),
         "sources": [
             ("Chesterfield County — Midlothian District (Miller)", CHESTERFIELD + "/1240/Midlothian-District---Miller"),
