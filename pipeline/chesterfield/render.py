@@ -694,6 +694,39 @@ def _summary_card(meta: dict, body: str, name: str) -> str:
     )
 
 
+# Impact weights for choosing the homepage lead, keyed by primary focus slug.
+# Civic and public-safety news leads over softer community items.
+_HERO_WEIGHT = {
+    "government": 5, "police": 4, "fire": 4, "growth": 4,
+    "schools": 4, "weather": 3, "business": 2, "community": 1,
+}
+
+
+def _hero_score(meta: dict, rank: int) -> float:
+    """Impact score for the homepage lead (higher wins). Favors civic and
+    public-safety beats, breaking tone, and stories with a real photo (the
+    hero is a large image card), with a gentle recency penalty so the lead
+    stays current."""
+    slug, _ = _primary_focus(meta)
+    score = float(_HERO_WEIGHT.get(slug, 2))
+    if _tone_of(meta) == "breaking":
+        score += 2
+    if _story_image(meta):
+        score += 3
+    return score - rank * 0.6
+
+
+def _pick_hero_index(records: list, window: int = 8) -> int:
+    """Index of the highest-impact recent story to feature as the lead, chosen
+    from the most recent `window` records (they arrive newest-first)."""
+    best, best_score = 0, None
+    for i in range(min(window, len(records))):
+        sc = _hero_score(records[i][0], i)
+        if best_score is None or sc > best_score:
+            best, best_score = i, sc
+    return best
+
+
 def _hero_card(meta: dict, body: str, name: str) -> str:
     """The lead story: a 21:9 photo-frame with an overlaid headline + dek."""
     headline = meta.get("headline", "") or name
@@ -933,8 +966,9 @@ def _render_index_pages(records: list, top_html: str = "") -> int:
             seo.jsonld_newsarticle(m, b) for m, b, n in chunk)
         # Page 1 leads with a hero; the rest fill the two-column card grid.
         if page == 1 and chunk:
-            hero = _hero_card(*chunk[0])
-            grid_recs = chunk[1:]
+            hi = _pick_hero_index(chunk)
+            hero = _hero_card(*chunk[hi])
+            grid_recs = chunk[:hi] + chunk[hi + 1:]
         else:
             hero = ""
             grid_recs = chunk
