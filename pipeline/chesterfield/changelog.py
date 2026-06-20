@@ -23,6 +23,12 @@ CHANGELOG = [
      "(early voting for the August 4 primary is open now), what's on your ballot, and how to register "
      "and vote, with links to the official sources."),
 
+    ("June 20, 2026", "2026-06-20", "Police and Fire pages",
+     "New pages for <a href=\"/police.html\">Chesterfield County Police</a> and "
+     "<a href=\"/fire.html\">Chesterfield Fire &amp; EMS</a>: who runs each, where the "
+     "stations are, what they cost and on what, how many officers and firefighters there "
+     "are, and what the work looks like, all from official county figures."),
+
     ("June 19, 2026", "2026-06-19b", "District maps on the Voter Guide",
      "The <a href=\"/elections.html\">Voter Guide</a> now shows how Chesterfield is split between the "
      "1st and 4th congressional districts, with maps and a plain-language explainer, plus a fix so the "

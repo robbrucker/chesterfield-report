@@ -60,6 +60,7 @@ from chesterfield import things as things_mod
 from chesterfield import farmers as farmers_mod
 from chesterfield import changelog as changelog_mod
 from chesterfield import elections as elections_mod
+from chesterfield import safety as safety_mod
 from chesterfield import housing as housing_mod
 from chesterfield import letters as letters_mod
 from chesterfield.db import Store
@@ -209,6 +210,8 @@ def cmd_build() -> None:
     farmers_mod.build_farmers()                    # farmers markets directory -> /farmers-markets.html
     changelog_mod.build_changelog()                # "What's New" -> /changelog.html
     elections_mod.build_elections()                # 2026 voter guide -> /elections.html
+    safety_mod.build_police()                      # police dept page -> /police.html
+    safety_mod.build_fire()                        # fire & EMS page -> /fire.html
     housing_mod.build_affordable()                 # affordable-housing finder from committed data
     housing_mod.build_directory()                  # market-rate apartment community directory
     from chesterfield import seo as seo_mod
