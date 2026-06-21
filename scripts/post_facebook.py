@@ -38,6 +38,37 @@ SITE = render.SITE_URL.rstrip("/")
 MODEL = "claude-haiku-4-5"
 CLI_TIMEOUT = 90
 
+# Evergreen "house" posts for quiet days (no new stories). Rotated by date so the
+# feed stays active and varied: the newsletter and the most useful pages.
+_EVERGREEN = [
+    ("Get Chesterfield news in your inbox. The Weekly Report is a free roundup of the "
+     "week's county news and what's on the civic calendar. Sign up here:", "/subscribe.html"),
+    ("Know exactly what's on your 2026 ballot. Our nonpartisan Voter Guide lets you enter "
+     "your address and see your races, plus how and where to vote:", "/elections.html"),
+    ("Who runs the Chesterfield County Police, where it is, what it costs, and the numbers "
+     "behind it: officers, arrests, and traffic enforcement.", "/police.html"),
+    ("Chesterfield Fire & EMS by the numbers: all 21 stations on a map, the budget, "
+     "staffing, and how many emergencies they answer a year.", "/fire.html"),
+    ("Shopping local? Here is every farmers market in Chesterfield County and the Richmond "
+     "area, with days, hours, and what each one sells.", "/farmers-markets.html"),
+    ("Meet your Board of Supervisors: what each one does for your district, and who funds "
+     "their campaigns.", "/board.html"),
+    ("Looking for something to do? Concerts, shows, family events, and games around "
+     "Chesterfield and the Richmond region:", "/things-to-do.html"),
+    ("Where do your county tax dollars actually go? A plain-language look at the "
+     "Chesterfield County budget:", "/taxes.html"),
+]
+
+
+def _quiet_post(date_str: str) -> str:
+    """A rotating evergreen post for days with no new stories."""
+    try:
+        idx = datetime.strptime(date_str, "%Y-%m-%d").toordinal() % len(_EVERGREEN)
+    except ValueError:
+        idx = 0
+    text, link = _EVERGREEN[idx]
+    return f"{text}\n\n{SITE}{link}"
+
 _RECAP_SCHEMA = {
     "type": "object",
     "properties": {"recap": {"type": "string"}},
@@ -243,6 +274,9 @@ def main() -> None:
                     help="Only post the exact target day; skip (exit 0) if it has no stories.")
     ap.add_argument("--skip-if-posted", action="store_true",
                     help="Skip (exit 0) if a recap for the target day already went out.")
+    ap.add_argument("--quiet-fallback", action="store_true",
+                    help="On a day with no new stories, post a rotating evergreen house "
+                         "post (newsletter / a key page) instead of skipping.")
     args = ap.parse_args()
 
     tz = ZoneInfo(args.tz)
@@ -270,12 +304,21 @@ def main() -> None:
                   "a valid token is in place.", file=sys.stderr)
             return
 
-    stories, used_date = _stories_for(target, allow_fallback=not args.no_fallback)
-    if not stories:
+    # Today's stories only when quiet-fallback is on (we post evergreen instead of
+    # recapping old days). Otherwise honor --no-fallback as before.
+    allow_fb = (not args.no_fallback) and (not args.quiet_fallback)
+    stories, used_date = _stories_for(target, allow_fallback=allow_fb)
+    if stories:
+        stories = stories[: args.max]
+        message = _compose(stories, used_date)
+    elif args.quiet_fallback:
+        stories = []                       # signals: evergreen post, no video
+        used_date = target
+        message = _quiet_post(target)
+        print(f"No new stories for {target}; posting evergreen house content.", file=sys.stderr)
+    else:
         print(f"No stories to recap for {target}; skipping.", file=sys.stderr)
         return
-    stories = stories[: args.max]
-    message = _compose(stories, used_date)
 
     print("=" * 60)
     print(message)
