@@ -206,6 +206,29 @@ def _post(message: str, page_token: str) -> dict:
         return json.load(r)
 
 
+def _post_video(path: str, message: str, page_token: str) -> dict:
+    """Upload the recap video to the Page with the recap text as its description.
+    Uses curl for the multipart upload (simple + reliable for a small MP4)."""
+    out = subprocess.check_output([
+        "curl", "-s", "-X", "POST", f"{GRAPH}/{PAGE_ID}/videos",
+        "-F", f"access_token={page_token}",
+        "-F", f"description={message}",
+        "-F", f"source=@{path}",
+    ], timeout=300)
+    return json.loads(out.decode("utf-8") or "{}")
+
+
+def _make_video(stories, used_date):
+    """Best-effort: render the daily recap video. Returns a path or None.
+    Requires ffmpeg/ImageMagick/rsvg + ELEVENLABS_* env (present on the VPS)."""
+    try:
+        import make_recap_video as mrv
+        return mrv.build_recap_video(stories, used_date, "/tmp/cr_recap.mp4")
+    except Exception as e:  # noqa: BLE001
+        print(f"Recap video not generated ({e}); will post text only.", file=sys.stderr)
+        return None
+
+
 def main() -> None:
     import os
     ap = argparse.ArgumentParser()
@@ -263,17 +286,33 @@ def main() -> None:
         print("DRY RUN. Re-run with --post to publish to the Page.", file=sys.stderr)
         return
 
+    page_token = _resolve_page_token(token)
+    # Render the recap video and post it WITH the recap text as the description.
+    # Fall back to a text-only post if the video can't be made or uploaded.
+    video = _make_video(stories, used_date)
     try:
-        result = _post(message, _resolve_page_token(token))
+        if video and os.path.exists(video):
+            result = _post_video(video, message, page_token)
+            kind = "video"
+        else:
+            result = _post(message, page_token)
+            kind = "text"
     except Exception as e:
-        print(f"Facebook post failed ({e}); not marked as posted, will retry next run.",
+        # If a video upload failed, try once more as a text post so the day isn't missed.
+        print(f"Facebook {('video' if video else 'text')} post failed ({e}); trying text.",
               file=sys.stderr)
-        return
-    pid = result.get("id") if isinstance(result, dict) else None
+        try:
+            result = _post(message, page_token)
+            kind = "text (fallback)"
+        except Exception as e2:
+            print(f"Facebook post failed ({e2}); not marked as posted, will retry next run.",
+                  file=sys.stderr)
+            return
+    pid = (result.get("id") or result.get("post_id")) if isinstance(result, dict) else None
     if not pid:
-        print(f"Facebook post returned no post id: {result}", file=sys.stderr)
+        print(f"Facebook post returned no id: {result}", file=sys.stderr)
         return
-    print("Published. Post id:", pid, file=sys.stderr)
+    print(f"Published ({kind}). Id:", pid, file=sys.stderr)
     try:
         STATE_FILE.write_text(used_date, encoding="utf-8")
     except OSError:
