@@ -18,6 +18,53 @@ PUBLIC = render.PUBLIC
 # Newest first. Each entry: (date_display, sort_key, title, body_html).
 # sort_key is YYYY-MM-DD for ordering; date_display is what readers see.
 CHANGELOG = [
+    ("June 25, 2026", "2026-06-25", "Yard Sales",
+     "A new <a href=\"/yard-sales.html\">Yard Sales</a> map where you can post your own garage, "
+     "yard, estate, or moving sale for free, and filter what's coming up by today, tomorrow, this "
+     "week, or this month. It also lists the big annual neighborhood community sales. Sales drop "
+     "off the map on their own once they are over."),
+
+    ("June 25, 2026", "2026-06-25b", "Local Nonprofits directory",
+     "A new <a href=\"/nonprofits.html\">Local Nonprofits</a> directory and map of the charities "
+     "and groups that serve Chesterfield, from food pantries and free clinics to senior, youth, "
+     "veteran, and crisis help. Filter by category, and any organization can ask to be added or "
+     "corrected."),
+
+    ("June 24, 2026", "2026-06-24", "Community Resources hub",
+     "A new <a href=\"/community-resources.html\">Community Resources</a> page gathering help that "
+     "is often hard to find in one place: schools and ESL, legal and immigration aid, health and "
+     "food, voting, consulates, and the county's Office of Multicultural Engagement."),
+
+    ("June 24, 2026", "2026-06-24b", "Corrections, in the open",
+     "We added a clear <a href=\"/about.html#corrections\">corrections policy</a> and a "
+     "Corrections link in the footer of every page. If we get something wrong, tell us and we "
+     "will fix it and say so."),
+
+    ("June 24, 2026", "2026-06-24c", "Support the Report",
+     "If you value free local news for Chesterfield, there is now a Support button in the footer. "
+     "Reader support helps keep the site going and free to read."),
+
+    ("June 23, 2026", "2026-06-23", "Elected Offices",
+     "New <a href=\"/elected-offices.html\">Elected Offices</a> pages for the county's "
+     "constitutional officers, the Clerk of the Circuit Court, Commissioner of the Revenue, "
+     "Commonwealth's Attorney, Sheriff, and Treasurer, with what each office does and how to "
+     "reach it."),
+
+    ("June 23, 2026", "2026-06-23b", "Parks &amp; Recreation",
+     "A new <a href=\"/parks.html\">Parks</a> page with a map of parks across Chesterfield "
+     "County, color coded by type, so you can find the green space, trail, or playground nearest "
+     "you."),
+
+    ("June 23, 2026", "2026-06-23c", "Places of Worship",
+     "A new <a href=\"/places-of-worship.html\">Places of Worship</a> map of congregations across "
+     "every faith in and around the county, with a filter by tradition. Any congregation can ask "
+     "to be added or corrected."),
+
+    ("June 22, 2026", "2026-06-22", "The Chesterfield Report, en espa&ntilde;ol",
+     "The whole site is now available in Spanish. Use the EN / ES toggle in the header to switch, "
+     "and we remember your choice. Every section, including the news, is translated. "
+     "<a href=\"/es/\">Lee en espa&ntilde;ol.</a>"),
+
     ("June 19, 2026", "2026-06-19", "2026 Voter Guide",
      "A nonpartisan <a href=\"/elections.html\">Voter Guide</a> for the 2026 elections: the calendar "
      "(early voting for the August 4 primary is open now), what's on your ballot, and how to register "

@@ -938,14 +938,26 @@ body {
   text-transform: uppercase; letter-spacing: var(--ls-wide); }
 .dateline .place { color: var(--neon-teal); }
 
-/* Language toggle inside the nav row */
-.lang-toggle { display: inline-flex; align-items: center; gap: 6px;
-  margin-left: auto; font: var(--fw-bold) var(--fs-2xs)/1 var(--font-mono);
-  letter-spacing: var(--ls-wide); padding-left: var(--space-4); }
+/* Language toggle: a small always-visible pill anchored to the right of the
+   dateline row (renders on every page + screen width). order:9 keeps it last. */
+.lang-toggle { order: 9; margin-left: auto; display: inline-flex; align-items: center;
+  gap: 6px; font: var(--fw-bold) var(--fs-2xs)/1 var(--font-mono);
+  letter-spacing: var(--ls-wide); border: 1px solid var(--neon-teal);
+  border-radius: 999px; padding: 4px 11px; }
 .lang-toggle .lang-link { color: var(--text-muted); text-transform: uppercase; }
 .lang-toggle .lang-link:hover { color: var(--neon-teal); text-decoration: none; }
 .lang-toggle .lang-link.is-current { color: var(--neon-teal); }
 .lang-toggle .lang-sep { color: var(--ink-400); }
+
+/* Footer "Support" pill (links to the Stripe payment page). Reader support, not a paywall.
+   width:max-content + align-self keep it from stretching across the flex footer. */
+.footer-support { display: inline-flex; width: max-content; max-width: max-content;
+  align-self: flex-start; align-items: center; gap: 6px; margin: 1.3rem 0 0;
+  padding: 5px 13px; background: transparent; border: 1px solid var(--accent);
+  border-radius: 999px; color: var(--accent); text-decoration: none;
+  font: var(--fw-bold) var(--fs-3xs)/1 var(--font-mono); letter-spacing: var(--ls-wide);
+  text-transform: uppercase; transition: background .15s, color .15s; }
+.footer-support:hover { background: var(--accent); color: #fff; }
 
 /* Footer (legacy <footer> markup re-skinned) */
 footer { border-top: 1px solid var(--ink-400); margin-top: var(--space-9);

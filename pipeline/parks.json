@@ -1,0 +1,586 @@
+[
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.528853,
+    "lon": -77.599212,
+    "address": "11119 Live Oak Circle 23113",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.547113,
+    "lon": -77.625304,
+    "address": "3536 Salles Ridge Court 23113",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.414115,
+    "lon": -77.459581,
+    "address": "7800 Chasing Lane 23237",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.423405,
+    "lon": -77.620471,
+    "address": "12400 Wescott Drive, Chesterfield County 23112",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.451909,
+    "lon": -77.687335,
+    "address": "3648 Evershot Drive 23112",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.456063,
+    "lon": -77.688176,
+    "address": "3401 Barkham Drive 23112",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.510975,
+    "lon": -77.663799,
+    "address": "1324 Winterfield Road 23113",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.433551,
+    "lon": -77.724127,
+    "address": "16818 Westerleigh Parkway 23120",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.37636,
+    "lon": -77.664139,
+    "address": "14631 Lavenham Lane 23112",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.378041,
+    "lon": -77.655511,
+    "address": "9406 Brading Lane 23112",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.37754,
+    "lon": -77.656804,
+    "address": "14300 Forest Row Trail 23112",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.364962,
+    "lon": -77.668148,
+    "address": "15018 Wooferton Drive 23112",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.368129,
+    "lon": -77.662268,
+    "address": "9619 Blossom Loop 23112",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.54006,
+    "lon": -77.683512,
+    "address": "2812 Founders Bridge Road 23113",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.379123,
+    "lon": -77.700928,
+    "address": "15701 Fishers Green Drive, Chesterfield County 23832",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "(unnamed neighborhood park)",
+    "lat": 37.37837,
+    "lon": -77.70538,
+    "address": "15900 Blooming Road, Chesterfield County 23832",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Appomatox Park",
+    "lat": 37.308626,
+    "lon": -77.341476,
+    "address": "",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Appomattox River Canoe Launch",
+    "lat": 37.220043,
+    "lon": -77.523387,
+    "address": "21501 Chesdin Road, South Chesterfield 23803",
+    "type": "county_park",
+    "amenities": "water access"
+  },
+  {
+    "name": "Ashbrook Totlot",
+    "lat": 37.394629,
+    "lon": -77.684093,
+    "address": "7731 Offshore Drive 23832",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Battery Dantzler Park",
+    "lat": 37.358919,
+    "lon": -77.391773,
+    "address": "",
+    "type": "conservation",
+    "amenities": ""
+  },
+  {
+    "name": "Bensley Park",
+    "lat": 37.428515,
+    "lon": -77.445511,
+    "address": "2808 Drewrys Bluff Road 23237",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Brown-Williamson Chesterfield Park",
+    "lat": 37.351898,
+    "lon": -77.301843,
+    "address": "",
+    "type": "conservation",
+    "amenities": ""
+  },
+  {
+    "name": "Chester Linear Park",
+    "lat": 37.35863,
+    "lon": -77.452753,
+    "address": "11801 Womack Road 23831",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Chester Park",
+    "lat": 37.35772,
+    "lon": -77.441864,
+    "address": "",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Clarendon Park",
+    "lat": 37.456826,
+    "lon": -77.614307,
+    "address": "2428 Brookforest Road 23112",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Colony Park",
+    "lat": 37.493946,
+    "lon": -77.67089,
+    "address": "",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Dutch Gap Historical Park",
+    "lat": 37.370781,
+    "lon": -77.375375,
+    "address": "",
+    "type": "conservation",
+    "amenities": ""
+  },
+  {
+    "name": "Eppington Park",
+    "lat": 37.297923,
+    "lon": -77.727247,
+    "address": "",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Ettrick Park",
+    "lat": 37.244487,
+    "lon": -77.430044,
+    "address": "",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Falling Creek Ironworks",
+    "lat": 37.439177,
+    "lon": -77.434607,
+    "address": "2046 Marina Drive, North Chesterfield 23234",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Falling Creek Linear Park",
+    "lat": 37.443128,
+    "lon": -77.444045,
+    "address": "",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Falling Creek Park",
+    "lat": 37.446155,
+    "lon": -77.449292,
+    "address": "",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Falling Creek Wayside Park",
+    "lat": 37.439033,
+    "lon": -77.438993,
+    "address": "",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Fernbrook Park",
+    "lat": 37.441499,
+    "lon": -77.56466,
+    "address": "",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Fort Stevens Park",
+    "lat": 37.403317,
+    "lon": -77.429245,
+    "address": "",
+    "type": "conservation",
+    "amenities": ""
+  },
+  {
+    "name": "Fort Wead Park",
+    "lat": 37.334938,
+    "lon": -77.360056,
+    "address": "1107 Greyledge Boulevard 23836",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Gates Mill Park",
+    "lat": 37.45078,
+    "lon": -77.452585,
+    "address": "3000 Cogbill Road, North Chesterfield 23234",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Greenfield Athletic Complex",
+    "lat": 37.516561,
+    "lon": -77.592884,
+    "address": "",
+    "type": "athletic",
+    "amenities": ""
+  },
+  {
+    "name": "Harry G. Daniel Park at Iron Bridge",
+    "lat": 37.398563,
+    "lon": -77.500583,
+    "address": "6600 Whitepine Road, North Chesterfield 23237",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Highland's Park",
+    "lat": 37.348573,
+    "lon": -77.531719,
+    "address": "",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Howlett Line Park",
+    "lat": 37.331875,
+    "lon": -77.3832,
+    "address": "14100 Howlett Line Drive, South Chesterfield 23834",
+    "type": "conservation",
+    "amenities": ""
+  },
+  {
+    "name": "Huguenot Park",
+    "lat": 37.514688,
+    "lon": -77.598588,
+    "address": "",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Irvin G. Horner Park",
+    "lat": 37.447018,
+    "lon": -77.748708,
+    "address": "17701 Genito Road, Moseley 23120",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "John J Radcliffe Appomattox River Conservation Area",
+    "lat": 37.222651,
+    "lon": -77.513525,
+    "address": "",
+    "type": "conservation",
+    "amenities": ""
+  },
+  {
+    "name": "Jubilee Park",
+    "lat": 37.390042,
+    "lon": -77.706382,
+    "address": "",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Kiwanis Park",
+    "lat": 37.352949,
+    "lon": -77.439764,
+    "address": "",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Lake Chesdin Boat Landing",
+    "lat": 37.27563,
+    "lon": -77.65106,
+    "address": "",
+    "type": "county_park",
+    "amenities": "water access"
+  },
+  {
+    "name": "Lake Chesdin Park",
+    "lat": 37.290858,
+    "lon": -77.636001,
+    "address": "14700 North Ivey Mill Road, Chesterfield 23838",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Lowe's Athletic Complex",
+    "lat": 37.346361,
+    "lon": -77.416832,
+    "address": "2651 Weir Place 23831",
+    "type": "athletic",
+    "amenities": ""
+  },
+  {
+    "name": "Manchester High Atletic Complex",
+    "lat": 37.406461,
+    "lon": -77.620483,
+    "address": "",
+    "type": "athletic",
+    "amenities": ""
+  },
+  {
+    "name": "Matoaca Park",
+    "lat": 37.253176,
+    "lon": -77.478121,
+    "address": "",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Mid-lothian Mines Park",
+    "lat": 37.493132,
+    "lon": -77.642878,
+    "address": "13301 North Woolridge Road, Midlothian 23114",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Midlothian Village Park",
+    "lat": 37.506724,
+    "lon": -77.654379,
+    "address": "13801 Westfield Road, Midlothian 23113",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Moody Conservation Area",
+    "lat": 37.498502,
+    "lon": -77.610866,
+    "address": "600 North Courthouse Road, North Chesterfield 23236",
+    "type": "conservation",
+    "amenities": ""
+  },
+  {
+    "name": "Nuttree Park",
+    "lat": 37.444583,
+    "lon": -77.653443,
+    "address": "",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Pocahontas State Park",
+    "lat": 37.364424,
+    "lon": -77.566788,
+    "address": "10301 State Park Road, Chesterfield 23832",
+    "type": "state",
+    "amenities": ""
+  },
+  {
+    "name": "Presquile National Wildlife Refuge",
+    "lat": 37.363069,
+    "lon": -77.259567,
+    "address": "",
+    "type": "state",
+    "amenities": ""
+  },
+  {
+    "name": "R. Garland Dodd Park at Point of Rocks",
+    "lat": 37.319725,
+    "lon": -77.358516,
+    "address": "201 Enon Church Road, Chester 23836",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Richmond National Battlefield Park",
+    "lat": 37.50474,
+    "lon": -77.339743,
+    "address": "470 Tredegar Street, Richmond 23219",
+    "type": "state",
+    "amenities": ""
+  },
+  {
+    "name": "River City Sportsplex",
+    "lat": 37.455954,
+    "lon": -77.633645,
+    "address": "13030 Genito Road, Midlothian 23112",
+    "type": "athletic",
+    "amenities": ""
+  },
+  {
+    "name": "Robious Athletic Complex",
+    "lat": 37.530479,
+    "lon": -77.611959,
+    "address": "",
+    "type": "athletic",
+    "amenities": ""
+  },
+  {
+    "name": "Robious Landing Park",
+    "lat": 37.557568,
+    "lon": -77.650889,
+    "address": "3800 James River Road, Midlothian 23113",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Rockwood Park",
+    "lat": 37.450321,
+    "lon": -77.58105,
+    "address": "",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Salem Church Mini Park",
+    "lat": 37.391549,
+    "lon": -77.482732,
+    "address": "5200 Lockberry Ridge Drive, North Chesterfield 23237",
+    "type": "county_park",
+    "amenities": ""
+  },
+  {
+    "name": "Sgt James Engle Park",
+    "lat": 37.334561,
+    "lon": -77.363927,
+    "address": "13924 Tobacco Bay Place 23836",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Summer Lake Neighborhood Park",
+    "lat": 37.442532,
+    "lon": -77.72349,
+    "address": "17001 Lake Summer Drive 23120",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Sunday Park",
+    "lat": 37.421234,
+    "lon": -77.649645,
+    "address": "",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Swift Creek Conservation Area",
+    "lat": 37.292796,
+    "lon": -77.381369,
+    "address": "",
+    "type": "conservation",
+    "amenities": ""
+  },
+  {
+    "name": "Village Green",
+    "lat": 37.358651,
+    "lon": -77.446981,
+    "address": "",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Warbro Road Athletic Complex",
+    "lat": 37.444412,
+    "lon": -77.629727,
+    "address": "",
+    "type": "athletic",
+    "amenities": ""
+  },
+  {
+    "name": "Ware Bottom Church Battlefield Park",
+    "lat": 37.343962,
+    "lon": -77.390652,
+    "address": "1600 Old Bermuda Hundred Road, Chester 23836",
+    "type": "conservation",
+    "amenities": ""
+  },
+  {
+    "name": "Wishing Well Park",
+    "lat": 37.52422,
+    "lon": -77.663266,
+    "address": "",
+    "type": "unknown",
+    "amenities": ""
+  },
+  {
+    "name": "Woodlake Athletic Complex",
+    "lat": 37.423286,
+    "lon": -77.673736,
+    "address": "5660 Woodlake Village Parkway 23112",
+    "type": "athletic",
+    "amenities": ""
+  }
+]

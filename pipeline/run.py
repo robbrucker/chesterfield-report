@@ -214,10 +214,21 @@ def cmd_build() -> None:
     safety_mod.build_fire()                        # fire & EMS page -> /fire.html
     housing_mod.build_affordable()                 # affordable-housing finder from committed data
     housing_mod.build_directory()                  # market-rate apartment community directory
+    from chesterfield import elected as elected_mod, parks as parks_mod, worship as worship_mod
+    elected_mod.build_elected()                    # elected-offices hub + per-office pages
+    parks_mod.build_parks()                        # parks & rec page + map -> /parks.html
+    worship_mod.build_worship()                    # places of worship map + filter -> /places-of-worship.html
+    from chesterfield import recursos as recursos_mod
+    recursos_mod.build_recursos()                  # community resources hub -> /community-resources.html
+    from chesterfield import yard_sales as yard_sales_mod
+    yard_sales_mod.build_yard_sales()              # submit-your-own yard sale map -> /yard-sales.html
+    from chesterfield import nonprofits as nonprofits_mod
+    nonprofits_mod.build_nonprofits()              # local nonprofits directory + map -> /nonprofits.html
     from chesterfield import seo as seo_mod
     seo_mod.build_seo()
     letters_mod.build_form()
     # employees_mod.build()  # salary lookup shelved (county data is FOIA-only)
+    render.build_es_sections()  # Spanish /es/ versions of EVERY page (incl. the new ones)
     print(f"Built {out}")
     print(f"Built {n} topic pages, digest.html (+ digest.md), tip.html")
     print(f"Built {map_out.name}, {board_out.name}, {meetings_out.name}, "

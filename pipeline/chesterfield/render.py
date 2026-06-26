@@ -1192,11 +1192,13 @@ def _share_row(url: str, title: str, lang: str = "en") -> str:
 
 
 def _inject_toggle(page: str, en_path: str, es_path: str, current: str) -> str:
-    """Insert the EN/ES toggle at the end of the .topnav in a rendered page."""
-    toggle = _lang_toggle(en_path, es_path, current)
-    return page.replace(
-        _TOPNAV_CLOSE,
-        toggle + _TOPNAV_CLOSE, 1)
+    """No-op: the EN/ES toggle now lives statically in the dateline of every page
+    (see _TEMPLATE) and is wired up client-side by /assets/lang-toggle.js, which
+    sets the correct EN/ES counterpart links, marks the active language, stores the
+    reader's language preference, and (on an English page) sends a Spanish-preferring
+    reader to the Spanish version when one exists. Kept as a no-op so existing call
+    sites stay valid."""
+    return page
 
 
 def build_site() -> Path:
@@ -1467,17 +1469,119 @@ def _regional_home_module() -> str:
 # localized by post-processing the rendered EN template, and the home/brand links
 # are repointed at /es/ so a Spanish reader stays in the Spanish edition.
 
-# Localized standing UI strings emitted by the ES shell.
+# Localized standing UI strings emitted by the ES shell. Replaced globally (every
+# occurrence) so the same label in the desktop and mobile navs stays consistent.
+# Order matters where one key is a prefix of another (longer first).
 _ES_NAV = {
     ">Home<": ">Inicio<",
+    ">News map<": ">Mapa de noticias<",
+    ">News<": ">Noticias<",
     ">Topics<": ">Temas<",
     ">This Week<": ">Esta Semana<",
     ">Map<": ">Mapa<",
-    ">Board<": ">Pizarra<",
+    ">Virginia &amp; Region<": ">Virginia y la regi&oacute;n<",
+    ">Events<": ">Eventos<",
+    ">Community<": ">Comunidad<",
+    ">Neighborhoods<": ">Vecindarios<",
+    ">Schools<": ">Escuelas<",
+    ">Affordable Housing<": ">Vivienda asequible<",
+    ">Affordable<": ">Asequible<",
+    ">Housing<": ">Vivienda<",
+    ">Dining<": ">Restaurantes<",
+    ">Things to Do<": ">Qu&eacute; hacer<",
+    ">Farmers Markets<": ">Mercados<",
+    ">Business<": ">Negocios<",
+    ">Supervisors<": ">Supervisores<",
     ">Meetings<": ">Reuniones<",
-    ">Opinion<": ">Opinión<",
+    ">Government<": ">Gobierno<",
+    ">Elections<": ">Elecciones<",
+    ">Elected Offices<": ">Cargos Electos<",
+    ">Parks<": ">Parques<",
+    ">Places of Worship<": ">Lugares de Culto<",
+    ">Community Resources<": ">Recursos<",
+    ">Yard Sales<": ">Ventas de Garaje<",
+    ">Nonprofits<": ">Sin Fines de Lucro<",
+    ">Board of Supervisors<": ">Junta de Supervisores<",
+    ">School Board<": ">Junta Escolar<",
+    ">Taxes<": ">Impuestos<",
+    ">Development &amp; Zoning<": ">Desarrollo y zonificaci&oacute;n<",
+    ">Development<": ">Desarrollo<",
+    ">Police<": ">Polic&iacute;a<",
+    ">Fire &amp; EMS<": ">Bomberos y EMS<",
+    ">Investigations<": ">Investigaciones<",
+    ">Shoosmith landfill<": ">Vertedero Shoosmith<",
+    ">Board<": ">Junta<",
+    ">Opinion<": ">Opini&oacute;n<",
     ">Send a tip<": ">Enviar un aviso<",
+    ">Subscribe<": ">Suscr&iacute;bete<",
 }
+
+# Section pages that get a Spanish version at /es/<slug>.html (Core set). Used both
+# to build them and to know which internal links are safe to repoint at /es/.
+_ES_SECTION_SLUGS = ["police", "fire", "elections", "things-to-do", "board",
+                     "taxes", "schools", "neighborhoods"]
+
+# Curated Spanish for shared-chrome strings (ticker, dateline, footer, nav dropdown
+# buttons, category chips, map link) that live in the EN template and are otherwise
+# left English on /es/ pages. Applied globally by _es_localize_shell to every /es/
+# page so the header/footer read Spanish site-wide. Order: longer keys before any
+# that are substrings of them.
+_ES_CHROME = [
+    # nav dropdown buttons (have a trailing space + chevron span, so not caught by _ES_NAV)
+    ('"button">News <span', '"button">Noticias <span'),
+    ('"button">Community <span', '"button">Comunidad <span'),
+    ('"button">Government <span', '"button">Gobierno <span'),
+    ('"button">Investigations <span', '"button">Investigaciones <span'),
+    # masthead ticker + dateline + subscribe strip
+    ('>LIVE<', '>EN VIVO<'),
+    ('Growth &middot; Schools &middot; Public safety &middot; Government &middot; Community',
+     'Crecimiento &middot; Escuelas &middot; Seguridad p&uacute;blica &middot; Gobierno &middot; Comunidad'),
+    ('<span>Updated ', '<span>Actualizado '),
+    ('Subscribe to free Chesterfield news &rarr;',
+     'Suscr&iacute;bete a noticias gratis de Chesterfield &rarr;'),
+    # footer
+    ('Get The Weekly Report in your inbox.', 'Recibe The Weekly Report en tu correo.'),
+    ('A free weekly Chesterfield County roundup.',
+     'Un resumen semanal gratuito del condado de Chesterfield.'),
+    ('Unsubscribe anytime.', 'Cancela cuando quieras.'),
+    ('Subscribe &rarr;', 'Suscr&iacute;bete &rarr;'),
+    ('Follow us on Facebook', 'S&iacute;guenos en Facebook'),
+    # footer-nav + category chips not in _ES_NAV
+    ('>Apartments<', '>Apartamentos<'),
+    ('>Affordable<', '>Asequible<'),
+    ('>About<', '>Acerca de<'),
+    ('>Corrections<', '>Correcciones<'),
+    ('>Support<', '>Ap&oacute;yanos<'),
+    ('>Contact<', '>Contacto<'),
+    ('>More<', '>M&aacute;s<'),
+    (">What's New<", '>Novedades<'),
+    ('>Shoosmith investigation<', '>Investigaci&oacute;n Shoosmith<'),
+    ('>Local Business<', '>Negocios locales<'),
+    ('>Weather &amp; Safety<', '>Clima y seguridad<'),
+    ('>Growth &amp; Development<', '>Crecimiento y desarrollo<'),
+    # in-content
+    ('View larger map', 'Ver mapa m&aacute;s grande'),
+]
+
+
+def _es_rewrite_links(page: str) -> str:
+    """Keep readers inside /es/: repoint internal page links (home, .html pages,
+    stories, topics) at their Spanish equivalents. Every reader-facing page now has
+    a Spanish version, so this rewrites all of them. Leaves assets, feeds (.xml/.txt),
+    external links, and already-/es/ links alone."""
+    def repl(m):
+        href = m.group(1)
+        if href.startswith(("/es/", "/assets/")):
+            return m.group(0)
+        base = href.split("#", 1)[0].split("?", 1)[0]
+        if base == "/":
+            return 'href="/es/"'
+        if (base.endswith(".html") or base.endswith("/")
+                or base.startswith(("/story/", "/topics/"))):
+            return 'href="/es' + href + '"'
+        return m.group(0)
+
+    return re.sub(r'href="(/[^"]*)"', repl, page)
 _ES_TAGLINE = "Noticias hiperlocales para el condado de Chesterfield, Virginia."
 _ES_READ_ORIGINAL = "Lee el original en"
 _ES_BACK = "&larr; Volver a The Chesterfield Report"
@@ -1504,16 +1608,157 @@ def _es_localize_shell(page: str) -> str:
     tagline, footer, and repoint the home/brand links at /es/."""
     page = page.replace('<html lang="en">', '<html lang="es">', 1)
     for en, es in _ES_NAV.items():
-        page = page.replace(en, es, 1)
+        page = page.replace(en, es)          # global: keep desktop + mobile nav consistent
+    for en, es in _ES_CHROME:                # ticker, dateline, footer, nav buttons, chips
+        page = page.replace(en, es)
     page = page.replace(
         '<p class="tagline cr-header__tagline">Hyperlocal news for Chesterfield County, Virginia.</p>',
         f'<p class="tagline cr-header__tagline">{_ES_TAGLINE}</p>', 1)
-    # Brand + Home links -> /es/ (keep other nav pointing at canonical EN pages).
-    page = page.replace('<a class="brand" href="/"', '<a class="brand" href="/es/"', 1)
-    page = page.replace('<a href="/">Inicio</a>', '<a href="/es/">Inicio</a>', 1)
     page = page.replace(_EN_FOOTER_P1, _ES_FOOTER_P1, 1)
     page = page.replace(_EN_FOOTER_P2, _ES_FOOTER_P2, 1)
+    # Repoint internal links at their /es/ equivalents (home, stories, Core sections).
+    page = _es_rewrite_links(page)
     return page
+
+
+_ES_ATTRS = ("alt", "title", "aria-label", "placeholder")
+
+
+def _es_translatable(s: str) -> bool:
+    s = s.strip()
+    if len(s) < 2 or not re.search(r"[A-Za-z]", s):
+        return False
+    # Skip pure entities / numbers / punctuation / separators.
+    if re.fullmatch(r"(?:&[a-zA-Z]+;|&#\d+;|[\W\d_])+", s):
+        return False
+    return True
+
+
+def _es_localize_page(en_html: str, en_path: str, es_path: str) -> str:
+    """Localize a fully-rendered EN section page into Spanish: translate the body
+    text (the chrome/nav/footer are protected and handled by the curated shell),
+    repoint links at /es/, and add the language toggle. Degrades to EN text on any
+    translation failure so the build never breaks."""
+    from . import translate
+
+    # Protect script/style/nav/footer from generic translation (nav + footer are
+    # localized by the curated shell so labels stay consistent site-wide).
+    blocks: list = []
+
+    def _stash(m):
+        blocks.append(m.group(0))
+        return f"\x00{len(blocks) - 1}\x00"
+
+    work = re.sub(r"<(script|style|nav|footer)\b[^>]*>.*?</\1>", _stash, en_html,
+                  flags=re.S | re.I)
+
+    # Collect unique translatable strings (unescaped to clean unicode).
+    texts = set()
+    for m in re.finditer(r">([^<>]+)<", work):
+        core = html.unescape(m.group(1)).strip()
+        if _es_translatable(core):
+            texts.add(core)
+    for a in _ES_ATTRS:
+        for m in re.finditer(a + r'="([^"]*)"', work):
+            core = html.unescape(m.group(1)).strip()
+            if _es_translatable(core):
+                texts.add(core)
+    _meta_desc = (r'<meta (?:name|property)="(?:og:description|twitter:description'
+                  r'|description)" content="([^"]*)"')
+    for m in re.finditer(_meta_desc, work):
+        core = html.unescape(m.group(1)).strip()
+        if _es_translatable(core):
+            texts.add(core)
+
+    try:
+        tmap = translate.translate_strings(sorted(texts))
+    except Exception as e:  # noqa: BLE001
+        print(f"  ! ES section translation failed for {en_path}: {e}")
+        tmap = {}
+
+    def _sub_text(m):
+        raw = m.group(1)
+        core = html.unescape(raw).strip()
+        dst = tmap.get(core)
+        if dst and dst != core:
+            lead = raw[:len(raw) - len(raw.lstrip())]
+            trail = raw[len(raw.rstrip()):]
+            return ">" + lead + html.escape(dst, quote=False) + trail + "<"
+        return m.group(0)
+
+    work = re.sub(r">([^<>]+)<", _sub_text, work)
+
+    for a in _ES_ATTRS:
+        def _sub_attr(m, a=a):
+            core = html.unescape(m.group(1)).strip()
+            dst = tmap.get(core)
+            if dst and dst != core:
+                return a + '="' + html.escape(dst, quote=True) + '"'
+            return m.group(0)
+        work = re.sub(a + r'="([^"]*)"', _sub_attr, work)
+
+    def _sub_meta(m):
+        core = html.unescape(m.group(2)).strip()
+        dst = tmap.get(core)
+        if dst and dst != core:
+            return m.group(1) + '"' + html.escape(dst, quote=True) + '"'
+        return m.group(0)
+    work = re.sub(
+        r'(<meta (?:name|property)="(?:og:description|twitter:description|description)"'
+        r' content=)"([^"]*)"', _sub_meta, work)
+
+    # Restore protected blocks, then apply curated chrome + links + toggle.
+    work = re.sub(r"\x00(\d+)\x00", lambda m: blocks[int(m.group(1))], work)
+    work = _es_localize_shell(work)
+    work = _inject_toggle(work, en_path=en_path, es_path=es_path, current="es")
+    return work
+
+
+# RULE: every reader-facing page gets a Spanish version. We translate every
+# top-level public/*.html and every public/topics/*.html. The only exclusions are
+# the ES homepage (built properly by build_spanish with translated cards), error/
+# internal pages, and the paginated EN homepage (the ES home is single-page).
+_ES_DENY = {"index.html", "404.html", "offline.html", "drafts.html", "preview.html"}
+
+
+def es_targets() -> list:
+    """All (src_path, en_path, es_path) that should have a Spanish version.
+    Stories + the ES homepage are handled separately by build_spanish()."""
+    out = []
+    for src in sorted(PUBLIC.glob("*.html")):
+        if src.name in _ES_DENY:
+            continue
+        out.append((src, f"/{src.name}", f"/es/{src.name}"))
+    topics = PUBLIC / "topics"
+    if topics.is_dir():
+        for src in sorted(topics.glob("*.html")):
+            out.append((src, f"/topics/{src.name}", f"/es/topics/{src.name}"))
+    return out
+
+
+def build_es_sections(only=None) -> int:
+    """Build Spanish versions of every eligible page (top-level + topics) by
+    localizing the already-rendered EN pages. `only` (a set/list of en_paths)
+    restricts the run to a shard, so several processes can build in parallel.
+    Must run after the EN pages are built (end of `run.py build`)."""
+    es_dir = PUBLIC / "es"
+    es_dir.mkdir(parents=True, exist_ok=True)
+    targets = es_targets()
+    if only is not None:
+        want = set(only)
+        targets = [t for t in targets if t[1] in want]
+    n = 0
+    for src, en_path, es_path in targets:
+        if not src.exists():
+            continue
+        page = _es_localize_page(src.read_text(encoding="utf-8"),
+                                 en_path=en_path, es_path=es_path)
+        dst = es_dir / en_path.lstrip("/")
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        dst.write_text(page, encoding="utf-8")
+        n += 1
+    print(f"Built {n} Spanish pages (/es/)")
+    return n
 
 
 def _es_translated_body(headline: str, body: str) -> tuple[str, str]:
@@ -1951,12 +2196,18 @@ def build_digest() -> Path:
 
 
 def _tldr_from_body(body: str) -> str:
-    m = re.search(r"\*\*TL;DR:\*\*\s*(.+)", body)
+    # Match the EN marker and its Spanish translations ("En resumen", "Resumen"),
+    # since the translator localizes "TL;DR". Without this the ES hero/cards fall
+    # through to the first full paragraph -- a wall of text in the hero overlay.
+    m = re.search(r"\*\*(?:TL;DR|En\s+resumen|Resumen):\*\*\s*(.+)", body, re.I)
     if m:
         return m.group(1).strip()
     for ln in body.splitlines():
         s = ln.strip()
         if s and not s.startswith(("#", "*", "[", "-")):
+            # Safety net: never return a wall of text as a dek.
+            if len(s) > 240:
+                s = s[:240].rsplit(" ", 1)[0] + "…"
             return s
     return ""
 
@@ -2047,6 +2298,22 @@ def build_about() -> Path:
         'the full thing at the source.</p>'
         '<p>The goal is simple: one place to see what actually happened in '
         'Chesterfield this week, with the receipts.</p>'
+
+        '<h2 id="corrections">Corrections &amp; accuracy</h2>'
+        '<p>We work hard to get it right, and we move fast to fix it when we do not. '
+        'Because our summaries are AI-drafted and human-reviewed, mistakes can slip '
+        'through, and we would much rather hear about one than leave it up. When we '
+        'correct something significant, we fix it openly instead of quietly editing it '
+        'away.</p>'
+        '<p>Spot an error, an out-of-date fact, a broken link, or an awkward Spanish '
+        'translation? Tell us and we will fix it, usually the same day:</p>'
+        '<ul>'
+        '<li><a href="/tip.html">Report an error or correction</a></li>'
+        '<li>Or email <a href="mailto:info@chesterfieldreport.com">'
+        'info@chesterfieldreport.com</a>.</li>'
+        '</ul>'
+        '<p>Every story also links back to its original source, so you can always check '
+        'our work against the outlet or agency that reported it first.</p>'
 
         '<h2>What it is not</h2>'
         '<ul>'
@@ -2431,6 +2698,7 @@ _TEMPLATE = """<!doctype html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Chakra+Petch:wght@400;500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/report-ds.css">
+<script src="/assets/lang-toggle.js" defer></script>
 </head>
 <body>
 <div class="cr-app">
@@ -2461,20 +2729,21 @@ _TEMPLATE = """<!doctype html>
     <a class="nav-x" href="/">Home</a>
     <div class="nav-g"><button class="nav-t" type="button">News <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia &amp; Region</a></div></div>
     <a class="nav-x" href="/events.html">Events</a>
-    <div class="nav-g"><button class="nav-t" type="button">Community <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable Housing</a><a href="/dining.html">Dining</a><a href="/things-to-do.html">Things to Do</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/business.html">Business</a></div></div>
+    <div class="nav-g"><button class="nav-t" type="button">Community <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/community-resources.html">Community Resources</a><a href="/nonprofits.html">Nonprofits</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable Housing</a><a href="/dining.html">Dining</a><a href="/things-to-do.html">Things to Do</a><a href="/parks.html">Parks</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/places-of-worship.html">Places of Worship</a><a href="/yard-sales.html">Yard Sales</a><a href="/business.html">Business</a></div></div>
     <a class="nav-x" href="/schools.html">Schools</a>
     <a class="nav-x" href="/board.html">Supervisors</a>
     <a class="nav-x" href="/meetings.html">Meetings</a>
-    <div class="nav-g"><button class="nav-t" type="button">Government <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/elections.html">Elections</a><a href="/board.html">Board of Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development &amp; Zoning</a><a href="/police.html">Police</a><a href="/fire.html">Fire &amp; EMS</a></div></div>
+    <div class="nav-g"><button class="nav-t" type="button">Government <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/elections.html">Elections</a><a href="/elected-offices.html">Elected Offices</a><a href="/board.html">Board of Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development &amp; Zoning</a><a href="/police.html">Police</a><a href="/fire.html">Fire &amp; EMS</a></div></div>
     <div class="nav-g"><button class="nav-t" type="button">Investigations <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/shoosmith.html">Shoosmith landfill</a></div></div>
     <a class="nav-x nav-cta" href="/subscribe.html">Subscribe</a>
   </nav>
   <nav class="topnav cr-header__nav nav-mobile" aria-label="Sections">
-    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/elections.html">Elections</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/police.html">Police</a><a href="/fire.html">Fire &amp; EMS</a><a href="/development.html">Development</a><a href="/dining.html">Dining</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/events.html">Events</a><a href="/things-to-do.html">Things to Do</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/business.html">Business</a><a href="/shoosmith.html">Shoosmith</a>
+    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/elections.html">Elections</a><a href="/elected-offices.html">Elected Offices</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/police.html">Police</a><a href="/fire.html">Fire &amp; EMS</a><a href="/development.html">Development</a><a href="/dining.html">Dining</a><a href="/parks.html">Parks</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/places-of-worship.html">Places of Worship</a><a href="/yard-sales.html">Yard Sales</a><a href="/events.html">Events</a><a href="/things-to-do.html">Things to Do</a><a href="/community-resources.html">Community Resources</a><a href="/nonprofits.html">Nonprofits</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/business.html">Business</a><a href="/shoosmith.html">Shoosmith</a>
   </nav>
   <div class="dateline">
     <span class="place">Chesterfield County &middot; Virginia</span>
     <span>Updated {generated}</span>
+    <span class="lang-toggle" aria-label="Language"><a class="lang-link" hreflang="en" href="/">EN</a><span class="lang-sep" aria-hidden="true">/</span><a class="lang-link" hreflang="es" href="/es/">ES</a></span>
   </div>
   <a class="cr-subscribe-strip" href="/subscribe.html">Subscribe to free Chesterfield news &rarr;</a>
 </header>
@@ -2537,11 +2806,13 @@ _TEMPLATE = """<!doctype html>
         <a href="/subscribe.html">Subscribe</a>
         <a href="/newsletter/">Newsletter</a>
         <a href="/about.html">About</a>
+        <a href="/about.html#corrections">Corrections</a>
         <a href="/changelog.html">What's New</a>
         <a href="mailto:info@chesterfieldreport.com">Contact</a>
         <a href="/feed.xml">RSS</a>
       </div>
     </nav>
+    <a class="footer-support" href="https://buy.stripe.com/dRm4gz3jp4Qp5vC9q3bsc00" target="_blank" rel="noopener"><span aria-hidden="true">&#9829;</span> <span class="fs-label">Support</span></a>
     <p>Stories are aggregated and summarized with links back to the original reporting.
        Please follow the <strong>[source]</strong> and &ldquo;Read the source&rdquo; links to support
        the outlets and agencies that do the original work.</p>
@@ -2656,6 +2927,7 @@ _TEMPLATE = """<!doctype html>
 </script>
 <script>window.va=window.va||function(){{(window.vaq=window.vaq||[]).push(arguments);}};</script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script defer src="https://analytics.chesterfieldreport.com/script.js" data-website-id="2f78330e-c5ee-46b6-8937-fc8ec50cccf6"></script>
 </body></html>
 """
 

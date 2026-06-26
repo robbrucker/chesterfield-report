@@ -379,6 +379,24 @@ def _source_grounds_chesterfield(url: str):
     return None                          # can't tell -> publish (fail open)
 
 
+def _body_locates_other_county(body: str) -> bool:
+    """True if the article's OWN stated location names a non-Chesterfield county.
+
+    Catches AI mis-tags where the headline/links say Chesterfield but the facts
+    place the subject elsewhere (the Eli Lilly / Goochland County case: a YouTube
+    source the grounding gate could not read, but a body whose 'Where:' quick-fact
+    is plainly Goochland). We check the structured 'Where:' line first (highest
+    precision), then a couple of explicit 'in/at <County> County' location claims.
+    Only fires when another county is named AND no Chesterfield place sits in the
+    same location phrase, so genuinely cross-county Chesterfield stories pass."""
+    if not body:
+        return False
+    m = re.search(r"(?im)^\s*[*_> \t]*where\s*[:\-]?\s*[*_]*\s*(.+)$", body)
+    if m and _OTHER_LOCALITY_RE.search(m.group(1)) and not _CHES_PLACE_RE.search(m.group(1)):
+        return True
+    return False
+
+
 def _deepen(path, meta: dict, body: str, model: str) -> None:
     """Web-research the draft into a full long-form article in place.
     Mirrors run.cmd_article's topic construction."""
@@ -612,9 +630,12 @@ def triage(model: str = "claude-haiku-4-5", deepen: bool = True,
         # Source-grounding gate: if the cited source is a real article that never
         # mentions Chesterfield County, the local angle is unsupported (e.g. a
         # Virginia Mercury story about data centers in OTHER counties). Route to
-        # human review rather than auto-publishing a misattributed story.
-        if want_publish and _source_grounds_chesterfield(meta.get("source_url", "")) is False:
-            reason = ("Cited source does not mention Chesterfield County; "
+        # human review rather than auto-publishing a misattributed story. Also
+        # catch the inverse: the source can't be read but the article's OWN stated
+        # location is another county (Eli Lilly / Goochland).
+        if want_publish and (_source_grounds_chesterfield(meta.get("source_url", "")) is False
+                             or _body_locates_other_county(body)):
+            reason = ("Story's location appears to be another county, not Chesterfield; "
                       "unsupported or misattributed local angle.")
             render.update_frontmatter(path, {
                 "ai_verdict": "review",
