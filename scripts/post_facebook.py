@@ -18,6 +18,8 @@ the Page access token at runtime. Stdlib + the `claude` CLI only.
 """
 import argparse
 import json
+import os
+import re
 import subprocess
 import sys
 import time
@@ -31,12 +33,25 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 from chesterfield import render  # noqa: E402
+from chesterfield import translate  # noqa: E402
 
 GRAPH = "https://graph.facebook.com/v21.0"
 PAGE_ID = "1153985821132272"          # The Chesterfield Report
 SITE = render.SITE_URL.rstrip("/")
 MODEL = "claude-haiku-4-5"
 CLI_TIMEOUT = 90
+
+# UTM tags so the daily Facebook recap's clicks show up in analytics as an exact,
+# named source (utm_source=fb_page) instead of a vague "facebook" lump or "direct"
+# (the FB app often strips the referrer). Works for EN and ES story links alike.
+_UTM = "utm_source=fb_page&utm_medium=social&utm_campaign=daily_recap"
+
+
+def _utm(url: str) -> str:
+    """Append the daily-recap UTM tags to a site URL."""
+    if not url or "utm_source=" in url:
+        return url
+    return url + ("&" if "?" in url else "?") + _UTM
 
 # Evergreen "house" posts for quiet days (no new stories). Rotated by date so the
 # feed stays active and varied: the newsletter and the most useful pages.
@@ -179,26 +194,98 @@ def _stories_for(date_str: str, allow_fallback: bool = True) -> tuple:
     out = []
     for meta, body, name in by_day.get(date_str, []):
         headline = (meta.get("headline") or name).strip()
-        url = SITE + render.story_url(headline)
+        url = _utm(SITE + render.story_url(headline))
         dek = render._tldr_from_body(body) or ""
         recap = _ai_recap(headline, dek) or _first_sentence(dek) or headline
         out.append((headline, url, recap))
     return out, date_str
 
 
-def _compose(stories: list, date_str: str) -> str:
+_DEDUPE_STOP = set(
+    "the a an and or of for to in on at by with from as is are was were be been this that it its "
+    "has have had will would can could not new chesterfield county report virginia local news your "
+    "you who what when where after over into about more most than then they their them his her".split())
+
+
+def _dedupe_sig(text: str) -> set:
+    return {w for w in re.findall(r"[a-z][a-z'\-]{2,}", (text or "").lower())
+            if w not in _DEDUPE_STOP and len(w) >= 4}
+
+
+def _dedupe_stories(stories: list, thresh: float = 0.5) -> list:
+    """Drop near-duplicate stories (e.g. three separate write-ups of the same
+    appointment) so the recap doesn't say the same thing five times. Keeps the
+    first (highest-ranked) of each cluster, comparing significant-word overlap of
+    headline + recap."""
+    kept, sets = [], []
+    for h, u, r in stories:
+        sig = _dedupe_sig(f"{h} {r or ''}")
+        is_dup = any(
+            sig and ks and len(sig & ks) >= 2
+            and len(sig & ks) / min(len(sig), len(ks)) >= thresh
+            for ks in sets)
+        if not is_dup:
+            kept.append((h, u, r))
+            sets.append(sig)
+    return kept
+
+
+def _nice_date(date_str: str) -> str:
     try:
-        dt = datetime.strptime(date_str, "%Y-%m-%d")
-        nice = dt.strftime("%A, %B %-d, %Y")
+        return datetime.strptime(date_str, "%Y-%m-%d").strftime("%A, %B %-d, %Y")
     except ValueError:
-        nice = date_str
-    lines = [f"Today in Chesterfield, {nice}", ""]
-    for headline, url, recap in stories:
+        return date_str
+
+
+def _compose_block(stories: list, header: str, footer: str) -> str:
+    """Build one language block from (recap, url) pairs plus a header/footer.
+    Shared by the English and Spanish composers so both stay in lockstep."""
+    lines = [header, ""]
+    for recap, url in stories:
         lines.append(f"• {recap}")
         lines.append(url)
         lines.append("")
-    lines.append(f"More local news, every day, at {SITE.replace('https://', '')}")
+    lines.append(footer)
     return "\n".join(lines).strip()
+
+
+def _compose(stories: list, date_str: str) -> str:
+    nice = _nice_date(date_str)
+    pairs = [(recap, url) for headline, url, recap in stories]
+    return _compose_block(
+        pairs,
+        f"Today in Chesterfield, {nice}",
+        f"More local news, every day, at {SITE.replace('https://', '')}",
+    )
+
+
+# Separator placed between the English and Spanish blocks in a bilingual post.
+_BILINGUAL_SEP = "\n\n· · ·\n\nEn espanol\n\n"
+
+
+def _es_url(url: str) -> str:
+    """Point a story URL at its Spanish (/es/) version; leave non-story URLs as-is."""
+    return url.replace(
+        "chesterfieldreport.com/story/", "chesterfieldreport.com/es/story/")
+
+
+def _compose_bilingual(stories: list, date_str: str) -> str:
+    """English block, separator, then a Spanish block. Recap sentences are
+    translated via the project translator; story URLs swap to their /es/ pages."""
+    english = _compose(stories, date_str)
+
+    recaps = [recap for headline, url, recap in stories]
+    es_map = translate.translate_strings(recaps) if recaps else {}
+    es_pairs = [(es_map.get(recap, recap), _es_url(url))
+                for headline, url, recap in stories]
+
+    nice = _nice_date(date_str)
+    spanish = _compose_block(
+        es_pairs,
+        f"Hoy en Chesterfield, {nice}",
+        f"Mas noticias locales, todos los dias, en {SITE.replace('https://', '')}",
+    )
+    return english + _BILINGUAL_SEP + spanish
 
 
 def _token_ok(token: str) -> bool:
@@ -249,15 +336,44 @@ def _post_video(path: str, message: str, page_token: str) -> dict:
     return json.loads(out.decode("utf-8") or "{}")
 
 
+def _post_video_story(path: str, page_token: str) -> dict:
+    """Publish a vertical video as a Facebook Page Story (3-phase upload).
+    start -> binary upload to the returned rupload URL (curl) -> finish."""
+    start = subprocess.check_output([
+        "curl", "-s", "-X", "POST", f"{GRAPH}/{PAGE_ID}/video_stories",
+        "-F", "upload_phase=start", "-F", f"access_token={page_token}",
+    ], timeout=60)
+    s = json.loads(start.decode("utf-8") or "{}")
+    video_id, upload_url = s.get("video_id"), s.get("upload_url")
+    if not video_id or not upload_url:
+        raise RuntimeError(f"story start failed: {s}")
+    size = os.path.getsize(path)
+    up = subprocess.check_output([
+        "curl", "-s", "-X", "POST", upload_url,
+        "-H", f"Authorization: OAuth {page_token}",
+        "-H", "offset: 0", "-H", f"file_size: {size}",
+        "--data-binary", f"@{path}",
+    ], timeout=300)
+    u = json.loads(up.decode("utf-8") or "{}")
+    if not u.get("success", True) and "error" in u:
+        raise RuntimeError(f"story upload failed: {u}")
+    fin = subprocess.check_output([
+        "curl", "-s", "-X", "POST", f"{GRAPH}/{PAGE_ID}/video_stories",
+        "-F", "upload_phase=finish", "-F", f"video_id={video_id}",
+        "-F", f"access_token={page_token}",
+    ], timeout=120)
+    return json.loads(fin.decode("utf-8") or "{}")
+
+
 def _make_video(stories, used_date):
-    """Best-effort: render the daily recap video. Returns a path or None.
-    Requires ffmpeg/ImageMagick/rsvg + ELEVENLABS_* env (present on the VPS)."""
-    try:
-        import make_recap_video as mrv
-        return mrv.build_recap_video(stories, used_date, "/tmp/cr_recap.mp4")
-    except Exception as e:  # noqa: BLE001
-        print(f"Recap video not generated ({e}); will post text only.", file=sys.stderr)
-        return None
+    """Daily video is intentionally OFF.
+
+    We moved to an "explainer-first" video strategy (real map/satellite + data
+    supers + vd2 voiceover) for the meaty, place/data-driven stories, produced a
+    few times a week via scripts/make_explainer.py -- not a rote daily anchor read.
+    The daily Facebook post stays text-only here; explainers are posted on their own.
+    The AI anchor pipeline (make_anchor_recap.py) is kept but no longer auto-runs."""
+    return None
 
 
 def main() -> None:
@@ -277,6 +393,9 @@ def main() -> None:
     ap.add_argument("--quiet-fallback", action="store_true",
                     help="On a day with no new stories, post a rotating evergreen house "
                          "post (newsletter / a key page) instead of skipping.")
+    ap.add_argument("--bilingual", action="store_true",
+                    help="Append a full Spanish translation (with /es/ story links) below "
+                         "the English recap, for copy-pasting to a Spanish Facebook page.")
     args = ap.parse_args()
 
     tz = ZoneInfo(args.tz)
@@ -309,8 +428,9 @@ def main() -> None:
     allow_fb = (not args.no_fallback) and (not args.quiet_fallback)
     stories, used_date = _stories_for(target, allow_fallback=allow_fb)
     if stories:
-        stories = stories[: args.max]
-        message = _compose(stories, used_date)
+        stories = _dedupe_stories(stories)[: args.max]
+        message = (_compose_bilingual(stories, used_date) if args.bilingual
+                   else _compose(stories, used_date))
     elif args.quiet_fallback:
         stories = []                       # signals: evergreen post, no video
         used_date = target
@@ -356,6 +476,17 @@ def main() -> None:
         print(f"Facebook post returned no id: {result}", file=sys.stderr)
         return
     print(f"Published ({kind}). Id:", pid, file=sys.stderr)
+
+    # Also publish the vertical anchor video as a Page Story (best-effort; a
+    # story failure never undoes the feed post or blocks marking the day done).
+    if video and os.path.exists(video) and kind.startswith("video"):
+        try:
+            sres = _post_video_story(video, page_token)
+            spid = sres.get("post_id") or sres.get("id") or sres.get("success")
+            print("Story published:", spid, file=sys.stderr)
+        except Exception as e:  # noqa: BLE001
+            print(f"Story post failed ({e}); feed post still stands.", file=sys.stderr)
+
     try:
         STATE_FILE.write_text(used_date, encoding="utf-8")
     except OSError:

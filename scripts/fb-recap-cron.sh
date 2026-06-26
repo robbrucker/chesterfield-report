@@ -14,5 +14,5 @@ mkdir -p "$ROOT/logs"
 cd "$ROOT" || exit 1
 if [ -f "$ROOT/scripts/.deploy.env" ]; then set -a; source "$ROOT/scripts/.deploy.env"; set +a; fi
 echo "$(date '+%Y-%m-%d %H:%M:%S %Z') fb-recap run" >> "$LOG"
-"$PY" scripts/post_facebook.py --post --quiet-fallback --skip-if-posted \
+"$PY" scripts/post_facebook.py --post --bilingual --quiet-fallback --skip-if-posted \
   --at-hour 18 --tz America/New_York >> "$LOG" 2>&1
