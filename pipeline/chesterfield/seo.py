@@ -18,7 +18,7 @@ from __future__ import annotations
 
 import html
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from .render import PUBLIC, _published_records  # read-only use
@@ -27,6 +27,12 @@ SITE_NAME = "The Chesterfield Report"
 SITE_URL = "https://chesterfieldreport.com"
 SITE_DESC = "Hyperlocal news for Chesterfield County, Virginia"
 AREA_SERVED = "Chesterfield County, Virginia"
+# Publisher logo for NewsArticle schema (raster .png/.jpeg are currently empty
+# placeholders, so use the valid SVG). DEFAULT_IMAGE is the 1200x630 social card
+# used as a per-article image fallback so every NewsArticle is schema-valid and
+# Discover-eligible.
+SITE_LOGO = f"{SITE_URL}/assets/logo-mark.svg"
+DEFAULT_IMAGE = f"{SITE_URL}/assets/og-default.png"
 
 # AI / LLM crawlers we explicitly welcome (one Allow: / block each).
 AI_CRAWLERS = [
@@ -66,6 +72,7 @@ def build_robots() -> Path:
         lines.append("Allow: /")
         lines.append("")
     lines.append(f"Sitemap: {SITE_URL}/sitemap.xml")
+    lines.append(f"Sitemap: {SITE_URL}/news-sitemap.xml")
     text = "\n".join(lines) + "\n"
     PUBLIC.mkdir(parents=True, exist_ok=True)
     out = PUBLIC / "robots.txt"
@@ -156,6 +163,74 @@ def build_sitemap() -> Path:
     return out
 
 
+# --- Google News sitemap --------------------------------------------------
+
+NEWS_WINDOW_HOURS = 48  # Google News sitemap: only articles from the last ~2 days.
+
+
+def _parse_published(value: str) -> datetime | None:
+    """Parse a frontmatter 'published' value into a tz-aware UTC datetime."""
+    value = (value or "").strip()
+    if not value:
+        return None
+    try:
+        dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        try:
+            dt = datetime.strptime(value[:10], "%Y-%m-%d")
+        except ValueError:
+            return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
+def build_news_sitemap() -> Path:
+    """Write public/news-sitemap.xml — a Google News sitemap listing every story
+    published within the last NEWS_WINDOW_HOURS. Returns the written path.
+
+    Google News requires the news sitemap to contain only recent articles (last
+    ~2 days); older stories stay in the regular sitemap.xml.
+    """
+    from .render import story_url  # read-only use
+
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=NEWS_WINDOW_HOURS)
+    rows = []
+    for meta, body, name in _published_records():
+        headline = (meta.get("headline") or "").strip()
+        if not headline:
+            continue
+        pub = _parse_published(meta.get("published", ""))
+        if pub is None or pub < cutoff:
+            continue
+        loc = f"{SITE_URL}{story_url(headline)}"
+        rows.append(
+            "  <url>\n"
+            f"    <loc>{html.escape(loc)}</loc>\n"
+            "    <news:news>\n"
+            "      <news:publication>\n"
+            f"        <news:name>{html.escape(SITE_NAME)}</news:name>\n"
+            "        <news:language>en</news:language>\n"
+            "      </news:publication>\n"
+            f"      <news:publication_date>{html.escape(pub.isoformat())}</news:publication_date>\n"
+            f"      <news:title>{html.escape(headline)}</news:title>\n"
+            "    </news:news>\n"
+            "  </url>"
+        )
+    doc = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+        '        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n'
+        + "\n".join(rows)
+        + ("\n" if rows else "")
+        + "</urlset>\n"
+    )
+    PUBLIC.mkdir(parents=True, exist_ok=True)
+    out = PUBLIC / "news-sitemap.xml"
+    out.write_text(doc, encoding="utf-8")
+    return out
+
+
 # --- JSON-LD helpers (injected into <head>/cards by another engineer) ------
 
 def _script(obj: dict | list) -> str:
@@ -233,10 +308,19 @@ def jsonld_newsarticle(meta: dict, body: str, story_rel_url: str | None = None) 
         "headline": headline,
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
         "url": url,
+        "author": {
+            "@type": "Organization",
+            "name": SITE_NAME,
+            "url": SITE_URL,
+        },
         "publisher": {
             "@type": "Organization",
             "name": SITE_NAME,
             "url": SITE_URL,
+            "logo": {
+                "@type": "ImageObject",
+                "url": SITE_LOGO,
+            },
         },
         "isAccessibleForFree": True,
     }
@@ -246,9 +330,10 @@ def jsonld_newsarticle(meta: dict, body: str, story_rel_url: str | None = None) 
         article["datePublished"] = published
         article["dateModified"] = published
 
+    # Discover/News strongly favor articles with a large image; fall back to the
+    # 1200x630 social card so every NewsArticle carries a valid image.
     image = (meta.get("image") or "").strip()
-    if image:
-        article["image"] = image
+    article["image"] = image or DEFAULT_IMAGE
 
     focus = _split_list(meta.get("focus", ""))
     if focus:
@@ -280,6 +365,7 @@ def jsonld_newsarticle(meta: dict, body: str, story_rel_url: str | None = None) 
 # --- entry point ----------------------------------------------------------
 
 def build_seo() -> None:
-    """Build all static SEO artifacts (robots.txt + sitemap.xml)."""
+    """Build all static SEO artifacts (robots.txt + sitemap.xml + news-sitemap.xml)."""
     build_robots()
     build_sitemap()
+    build_news_sitemap()

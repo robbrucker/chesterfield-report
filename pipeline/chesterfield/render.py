@@ -2679,6 +2679,7 @@ _TEMPLATE = """<!doctype html>
 </script>
 <title>The Chesterfield Report: Hyperlocal News for Chesterfield County, Virginia</title>
 <meta name="description" content="The Chesterfield Report delivers hyperlocal news for Chesterfield County, Virginia. AI-assembled from official county sources, local outlets, and public records, then human-reviewed, with links to the originals. Growth & development, schools, public safety, government, and community.">
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#06141a">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Chesterfield Report">

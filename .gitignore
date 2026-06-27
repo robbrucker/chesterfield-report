@@ -23,6 +23,7 @@ public/page/
 public/neighborhoods/
 public/feed.xml
 public/sitemap.xml
+public/news-sitemap.xml
 public/robots.txt
 
 # ---- Workflow churn (review queue / reversible bins) ----
