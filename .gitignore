@@ -25,6 +25,7 @@ public/feed.xml
 public/sitemap.xml
 public/news-sitemap.xml
 public/robots.txt
+public/vercel.json
 
 # ---- Workflow churn (review queue / reversible bins) ----
 content/drafts/

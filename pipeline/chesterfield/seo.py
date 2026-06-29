@@ -362,10 +362,44 @@ def jsonld_newsarticle(meta: dict, body: str, story_rel_url: str | None = None) 
     return _script(article)
 
 
+# --- redirects (vercel.json) ----------------------------------------------
+
+REDIRECTS_SRC = Path(__file__).resolve().parent / "redirects.json"
+
+
+def build_redirects() -> Path:
+    """Write public/vercel.json from the version-controlled redirects.json so a
+    URL change keeps 301-redirecting from the old path. Stories are slugged from
+    their headline (render._story_url), so correcting a headline moves the URL;
+    adding the old->new pair here preserves shared/indexed links. Emitting it on
+    every build means a clean rebuild (rm -rf public/) can't drop the redirects,
+    unlike a hand-edited public/vercel.json. Returns the written path."""
+    rules = []
+    if REDIRECTS_SRC.exists():
+        try:
+            rules = json.loads(REDIRECTS_SRC.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            rules = []
+    redirects = [
+        {
+            "source": r["source"],
+            "destination": r["destination"],
+            "permanent": bool(r.get("permanent", True)),
+        }
+        for r in rules
+        if isinstance(r, dict) and r.get("source") and r.get("destination")
+    ]
+    out = PUBLIC / "vercel.json"
+    out.write_text(json.dumps({"redirects": redirects}, indent=2) + "\n", encoding="utf-8")
+    return out
+
+
 # --- entry point ----------------------------------------------------------
 
 def build_seo() -> None:
-    """Build all static SEO artifacts (robots.txt + sitemap.xml + news-sitemap.xml)."""
+    """Build all static SEO artifacts: robots.txt, sitemap.xml, news-sitemap.xml,
+    and vercel.json (URL redirects)."""
     build_robots()
     build_sitemap()
     build_news_sitemap()
+    build_redirects()
