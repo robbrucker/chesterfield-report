@@ -61,6 +61,23 @@ _STRIP = _STOPWORDS | _GENERIC
 _WORD_RE = re.compile(r"[a-z0-9][a-z0-9\-]*")
 
 
+def _summary_text(body: str) -> str:
+    """The gist of a story — its TL;DR sentence plus the lead of the body. Used
+    for content-level similarity when two write-ups of the same event are
+    headlined and tagged differently across sources (e.g. three versions of the
+    same toddler-prosthetic story), which headline-token / named-tag overlap
+    alone misses."""
+    body = body or ""
+    parts = []
+    m = re.search(r"\*\*TL;DR:\*\*\s*(.+)", body)
+    if m:
+        parts.append(m.group(1))
+    m = re.search(r"^##\s+The story\b(.*?)(?=^##\s)", body, re.MULTILINE | re.DOTALL)
+    if m:
+        parts.append(m.group(1)[:700])
+    return " ".join(parts)
+
+
 def _sig_tokens(text: str) -> set[str]:
     """Significant lowercase word tokens (stopwords + generic words removed)."""
     out = set()
@@ -112,7 +129,8 @@ def _distinctive_tags(tags: list[str]) -> set[str]:
 class _Story:
     __slots__ = (
         "path", "meta", "body", "headline", "focus", "tags",
-        "dist_tags", "head_tokens", "date", "n_sources", "has_story", "body_len",
+        "dist_tags", "head_tokens", "summary_tokens", "date", "n_sources",
+        "has_story", "body_len",
     )
 
     def __init__(self, path: Path):
@@ -124,6 +142,7 @@ class _Story:
         self.tags = _parse_tags(self.meta.get("tags", ""))
         self.dist_tags = _distinctive_tags(self.tags)
         self.head_tokens = _sig_tokens(self.headline)
+        self.summary_tokens = _sig_tokens(_summary_text(self.body))
         self.date = _parse_date(self.meta.get("published", "")) or _date_from_name(path)
         self.n_sources = self._count_sources()
         self.has_story = bool(re.search(r"^##\s+The story\b", self.body, re.MULTILINE))
@@ -220,6 +239,18 @@ def _same_event(a: _Story, b: _Story, threshold: float) -> bool:
     )
     if head_j >= max(threshold, 0.5) and tag_j >= 0.30:
         return True
+
+    # Signal 4: no shared named entity and headlines/tags barely overlap, but
+    # the stories describe the same thing — their TL;DR + lead content overlaps.
+    # Catches the same event re-headlined across sources (e.g. three write-ups
+    # of one toddler-prosthetic story, tagged only with generic descriptors).
+    # Restricted to stories published the SAME DAY: same-event re-tellings land
+    # together in time, whereas a multi-week saga (officer shooting, data center)
+    # shares vocabulary across many days and would over-chain via union-find if
+    # we used the wider window. The QA editor still adjudicates every cluster.
+    if a.date and b.date and a.date == b.date:
+        if _jaccard(a.summary_tokens, b.summary_tokens) >= 0.22:
+            return True
 
     return False
 

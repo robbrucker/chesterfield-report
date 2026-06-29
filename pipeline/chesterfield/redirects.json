@@ -3,5 +3,20 @@
     "source": "/story/chesterfield-approves-marlbank-farms-neighborhood-development.html",
     "destination": "/story/chesterfield-reviews-marlbank-farms-neighborhood-development.html",
     "permanent": true
+  },
+  {
+    "source": "/story/chesterfield-toddler-running-weeks-after-receiving-prosthetic.html",
+    "destination": "/story/two-year-old-cohen-overcomes-lawn-mower-accident-with-prosthetic.html",
+    "permanent": true
+  },
+  {
+    "source": "/story/2-year-old-chesterfield-amputee-running-weeks-after-prosthetic.html",
+    "destination": "/story/two-year-old-cohen-overcomes-lawn-mower-accident-with-prosthetic.html",
+    "permanent": true
+  },
+  {
+    "source": "/story/supreme-court-returns-geofence-case-to-lower-court.html",
+    "destination": "/story/chesterfield-robbery-case-leads-supreme-court-to-restrict-geofence-warrants.html",
+    "permanent": true
   }
 ]
