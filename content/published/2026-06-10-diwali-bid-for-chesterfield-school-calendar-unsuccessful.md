@@ -87,3 +87,5 @@ Adding religious holidays to a public school calendar involves balancing competi
 - [Chesterfield parent launches push to make Diwali a CCPS holiday](https://www.vpm.org/news/2025-11-13/diwali-chesterfield-public-schools-culture-holiday-gandhi)
 - [Henrico will recognize 3 new religious holidays beginning next school year](https://www.wric.com/news/local-news/henrico-county/henrico-will-recognize-3-new-religious-holidays-beginning-next-school-year/)
 - [Diwali - Wikipedia](https://en.wikipedia.org/wiki/Diwali)
+- [Chesterfield Schools Cancel Diwali Observance](https://www.vpm.org/news/2026-06-13/vpm-news-top-stories-june-13-2026)
+

@@ -69,4 +69,6 @@ Gary G. Shaw faces two counts of attempted aggravated murder of a police officer
 - [Chesterfield Police K-9 Knight Dies in Line of Duty](https://news.google.com/rss/articles/CBMi2AFBVV95cUxOcGdKaDRJWWJOUGNTNHU2ekM3UVY5V085UzYtVEJmSnlrcDhmT2hGbWlFN0xrQTl3S2NTODlkNlJlbGlWbmp1Z2FFRUdtby1zWWR2V0VFWFBkTlpsbEFIUXJjYUdQYlNVc2JybWFlUVIzaVdUYWdobWRoVHBPMVpTMTBHU3pwOGVBeVRZX2llbjVEcmttd0Z5V01tT3FMMzNKTUNxVURRS3Rxc2dMemRWUVJQSmxDdk82ZFRDZmlXXzVkZmkwcEZEcmRRUWtjLWFUdkRLQ0QtYUI?oc=5)
 - [Chesterfield Police Officers Shot; Suspect Arrested](https://news.google.com/rss/articles/CBMinwFBVV95cUxQblZyeEkybW5lenNRekx0WFNpakJ4OXRYNFBJX1NOLUx5eTBJNjg1YlJ5ZnBPbk84NXFSZG0yNkgtellSWXpUVG02X3FBYldMU1hjVUQ2NnY4R2xsWW5HdGNzMVo1bFhINHVkdk5VNHdjTFpmQk5qQTZXU1dVc1YyZWNFc2ttdGVSblRId1hhTS16NHFRNmRZTVI4b0txVkE?oc=5)
 - [Suspect in Officer Shooting Faces 17 Felony Charges](https://www.youtube.com/watch?v=YEHkkkESiKU)
+- [Chesterfield police identify officers shot, arrest suspect](https://www.12onyourside.com/2026/06/02/chesterfield-police-identify-officers-shot-arrest-suspect/)
+- [Search Warrant Reveals Details in Officer-Injuring Case](https://www.12onyourside.com/2026/06/11/im-not-letting-you-down-these-steps-search-warrant-sheds-light-suspect-accused-injuring-chesterfield-officers-killing-k-9/)
 

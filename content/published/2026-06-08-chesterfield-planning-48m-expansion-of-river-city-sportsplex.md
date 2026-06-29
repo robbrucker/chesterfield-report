@@ -96,4 +96,5 @@ The $48 million investment in a single recreational facility concentrates county
 - [Busy Week Ahead With Family Events and Community Celebrations](https://www.youtube.com/shorts/DIQTuSDxoxc)
 - [River City Sportsplex](https://www.chesterfield.gov/m/newsflash/home/detail/5524)
 - [River City Sportsplex Park Opens with New Recreation Amenities](https://www.youtube.com/watch?v=SUbws1amR9c)
+- [Chesterfield Celebrates Summer Growth with Park Opening and School Progress](https://www.youtube.com/shorts/VoAanESapsA)
 

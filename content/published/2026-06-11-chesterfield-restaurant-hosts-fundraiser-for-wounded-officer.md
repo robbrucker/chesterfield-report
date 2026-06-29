@@ -96,3 +96,5 @@ While community support is valuable, some argue that responsibility for comprehe
 - [Community rallies to support Chesterfield officers after shooting](https://www.wtvr.com/news/local-news/chesterfield-county/how-community-is-supporting-wounded-chesterfield-officers-june-7-2026)
 - [Knight, Chesterfield County Police Department, Virginia](https://www.odmp.org/k9/1968-k9-knight)
 - [Chesterfield memorial grows for police K9 Knight](https://www.wtvr.com/news/local-news/chesterfield-county/knight-memorial-grows-june-2-2026)
+- [Chesterfield restaurant honors wounded officers, dedicates K-9 patio](https://news.google.com/rss/articles/CBMingFBVV95cUxQTlUtd2tlUFZaSjlyN0lTc2NUaWE1U19VSmNCZW05NnZVOEZDa3ktWTdyWFhJMFR6RjRQWGNIbksyYllYbFUxbExEb2hiS1dUUHlzWmw3dFJiRXpVR282dlhQM1pXaXlyRFp5ZW1VTVBCVERJTllfUkJIUGhwa3V4d2JMdWl1N3FZRGRPcXFmQmNCeF9YMzBjdkdfdEpSdw?oc=5)
+
