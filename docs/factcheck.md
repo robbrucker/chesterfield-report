@@ -64,22 +64,28 @@ colliding with the story pipeline.
   attribution, and nuanced claims for human review. Apply fixes in a batch and
   **deploy once, under the `flock` lock**.
 - **Scope:** rolling **48-hour** window of published stories per run.
-- **Alerts:** email **HIGH/MED** findings to brucker.rob@gmail.com (LOW → journal only).
-- **Schedule:** twice daily at ~05:30 and ~17:30 (mid-gap between the every-2h
+- **Alerts:** HIGH/MED findings are written to `research/wiki/QA-ALERTS.md`, which
+  the runner pushes into the openclaw mirror — **ask lazer to read
+  `research/wiki/QA-ALERTS.md`** to hear what needs review. (LOW → journal only.)
+- **Schedule:** twice daily at 05:30 and 17:30 (mid-gap between the every-2h
   ingest cron), sharing the build lock so it defers if a pipeline run is active.
 
-**Components (to build):**
-- `pipeline/chesterfield/factcheck.py` — selects recent stories, runs mechanical
-  checks (auto-fix) + an LLM claim check (flag), reuses qa.py's `_cli` Claude call.
-- `run.py factcheck` — CLI entry.
-- `scripts/factcheck-cron.sh` — locked; runs factcheck → if any auto-fix applied,
-  build + deploy → email HIGH/MED via `alerts.py` → append to the journal.
-- `research/wiki/factcheck-journal.md` — dated findings log (private).
+**Components (built 2026-06-30):**
+- `pipeline/chesterfield/factcheck.py` — selects last-48h stories; SAFE auto-fix
+  (formatting artifacts + out-of-county geocodes) + flag-only checks (date/weekday,
+  internal contradictions, asserted outcomes, geography, attribution via a Claude
+  CLI call).
+- `run.py factcheck [--window N] [--apply]` — CLI entry (`--apply` enables safe fixes).
+- `scripts/factcheck-cron.sh` — `flock`-locked; runs factcheck → rebuilds+deploys
+  ONCE only if a safe fix changed content → refreshes the openclaw mirror so lazer
+  sees fresh alerts.
+- `research/wiki/factcheck-journal.md` (append-only record) + `QA-ALERTS.md`
+  (current HIGH/MED) — both private (research/ is gitignored) but mirrored to lazer.
 - crontab: `30 5,17 * * *`.
 
-**Blocker:** email requires Brevo SMTP creds in `scripts/.deploy.env`
-(`SMTP_HOST=smtp-relay.brevo.com`, `SMTP_USER`, `SMTP_PASS`) or `RESEND_API_KEY` —
-none are currently set, so alerts can't send until those are added.
+**Alert delivery:** push email was abandoned — Brevo's SMTP key isn't on the box,
+Web3Forms blocks server-side sends, openclaw WhatsApp is inbound-only, and the
+Twilio account has no number. The pull-via-lazer file is the channel instead.
 
 **Lesson baked in:** bulk content edits trigger a per-story Spanish re-translation
 storm; a 47-story batch ran >1h and collided with the ingest cron. So the runner

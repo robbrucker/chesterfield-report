@@ -50,6 +50,7 @@ from chesterfield import serve as serve_mod
 from chesterfield import newsletter as newsletter_mod, linkqueue as linkqueue_mod
 from chesterfield import editor as editor_mod, alerts as alerts_mod, qa as qa_mod
 from chesterfield import employees as employees_mod, dedup as dedup_mod
+from chesterfield import factcheck as factcheck_mod
 from chesterfield import expire as expire_mod
 from chesterfield import taxes as taxes_mod
 from chesterfield import schools as schools_mod
@@ -436,6 +437,16 @@ def main() -> None:
             deepen="--no-deepen" not in args,
         )
         print(f"Triage: {result}")
+    elif cmd == "factcheck":
+        # Twice-daily QA: SAFE auto-fix formatting/geocode, FLAG the rest to
+        # research/wiki/ (journal + QA-ALERTS). --apply enables the safe fixes;
+        # without it, flag-only (dry run). --window N sets the hours window.
+        win = _opt(args, "--window", "48")
+        res = factcheck_mod.run(
+            window_hours=int(win) if win.isdigit() else 48,
+            apply_safe="--apply" in args,
+        )
+        print(f"Factcheck: {res}")
     elif cmd == "status":
         cmd_status()
     else:
