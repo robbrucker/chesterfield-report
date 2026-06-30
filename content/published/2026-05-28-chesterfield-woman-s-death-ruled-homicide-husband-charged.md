@@ -34,7 +34,7 @@ Ashlee Butler, 36, was found unresponsive at a home on Alberta Road on December 
 
 After re-examining the evidence, Chesterfield County detectives determined that Ashlee Butler had been strangled to death and that the death scene had been deliberately staged to appear as a suicide. Investigators allege that on the day she died, Ashlee had returned home to pack her belongings—indicating she was preparing to leave her husband. It was during this time that police believe Ross Butler strangled her. Detectives noted a documented history of domestic violence in the household.
 
-In May 2026, after five years of investigation, detectives located Ross Butler in Flagler Beach, Florida, where he had fled. With assistance from the Flagler Beach Sheriff's Office, he was arrested and placed in Flagler County Jail pending extradition to Virginia. He faces four charges: first-degree murder, first-degree murder with strangulation, first-degree murder with abduction and strangulation. The case highlights both the difficulty of distinguishing staged deaths from actual suicides and the importance of persistent investigation in seeking justice years after a crime.
+In May 2026, after five years of investigation, detectives located Ross Butler in Flagler Beach, Florida, where he had fled. With assistance from the Flagler Beach Sheriff's Office, he was arrested and placed in Flagler County Jail pending extradition to Virginia. He faces three charges: first-degree murder, first-degree murder with strangulation, first-degree murder with abduction and strangulation. The case highlights both the difficulty of distinguishing staged deaths from actual suicides and the importance of persistent investigation in seeking justice years after a crime.
 
 ## Key players
 

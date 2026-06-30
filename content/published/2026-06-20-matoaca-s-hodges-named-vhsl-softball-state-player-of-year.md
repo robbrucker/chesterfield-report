@@ -24,21 +24,21 @@ ai_sensitive: false
 
 ## Quick facts
 
-- **Who:** Kaylee Hodges, senior pitcher at Matoaca High School
+- **Who:** Kaylee Hodges, junior pitcher at Matoaca High School
 - **What:** Named VHSL Class 5 softball state player of the year
 - **Where:** Matoaca High School, Chesterfield County
 
 ## The story
 
-Kaylee Hodges, a senior pitcher at Matoaca High School in Chesterfield County, has been named the VHSL Class 5 softball state player of the year following an exceptional season. According to the recognition, Hodges compiled an impressive pitching record and led her team through postseason play.
+Kaylee Hodges, a junior pitcher at Matoaca High School in Chesterfield County, has been named the VHSL Class 5 softball state player of the year following an exceptional season. According to the recognition, Hodges compiled an impressive pitching record and led her team through postseason play.
 
-The award caps a standout year for one of the county's top student athletes. As a senior, Hodges helped her team compete at the state level in Virginia's largest high school classification.
+The award caps a standout year for one of the county's top student athletes. As a junior, Hodges helped her team compete at the state level in Virginia's largest high school classification.
 
 This recognition reflects both Hodges' individual performance and her contributions to her team's success during the season. The honor places her among the elite players across Virginia's Class 5 high schools.
 
 ## Key players
 
-- **Kaylee Hodges:** Senior pitcher, Matoaca High School
+- **Kaylee Hodges:** Junior pitcher, Matoaca High School
 - **Matoaca High School:** Athletics program
 
 **Why it matters:** Hodges' award recognizes exceptional athletic achievement from a Chesterfield County student, highlighting the quality of sports programs in the county's schools.

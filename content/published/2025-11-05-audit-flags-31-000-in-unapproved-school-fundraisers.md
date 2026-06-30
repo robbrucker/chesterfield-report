@@ -24,7 +24,7 @@ ai_sensitive: false
 ## Quick facts
 
 - **Who:** Chesterfield County Public Schools staff; County Office of Internal Audit
-- **What:** Audit found $31,000 in unapproved school fundraisers, mostly through prohibited GoFundMe platform; unclear if funds were returned or kept
+- **What:** Audit found $31,000 in unapproved school fundraisers, including the prohibited GoFundMe platform; unclear if funds were returned or kept
 - **When:** October 17, 2025 (audit release date); fiscal year 2025 timeframe reviewed
 - **Where:** Chesterfield County Public Schools
 

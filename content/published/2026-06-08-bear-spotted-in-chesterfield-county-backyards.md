@@ -31,9 +31,9 @@ lon: -77.3225883
 
 Black bears have been spotted wandering through residential neighborhoods in Chesterfield County, with documented sightings near the Enon area where the animals damaged backyards, bird feeders, and gardens. Residents Jodie and Eric Schorr captured video of a bear moving through their yard and climbing over a fence to neighboring properties, where Melissa Dunn and George Henderson found evidence of destruction including damaged bird feeders and destroyed plants.
 
-The Virginia Department of Wildlife Resources identifies parts of Chesterfield County, along with North Dinwiddie and Hanover County, as areas where bear sightings are most common in Central Virginia. Virginia is home to 7,000 to 9,000 black bears, and the animals increasingly frequent residential areas as they forage for food. Spring and early summer—between mid-May and mid-July—is peak season for bear activity, when female bears naturally disperse their cubs to establish new territories. This behavioral pattern drives the seasonal increase in residential encounters.
+The Virginia Department of Wildlife Resources identifies parts of Chesterfield County, along with North Dinwiddie and Hanover County, as areas where bear sightings are most common in Central Virginia. Virginia is home to 18,000 to 20,000 black bears, and the animals increasingly frequent residential areas as they forage for food. Spring and early summer—between mid-May and mid-July—is peak season for bear activity, when female bears naturally disperse their cubs to establish new territories. This behavioral pattern drives the seasonal increase in residential encounters.
 
-According to wildlife officials, most bear conflicts can be resolved through removing attractants rather than direct intervention. Residents should secure trash at all times, remove bird feeders, clear fallen fruit from yards, and store or thoroughly clean grills to eliminate food odors. If a bear cannot be stored, turning it on and letting it burn until there is no smell of food can help deter visits.
+According to wildlife officials, most bear conflicts can be resolved through removing attractants rather than direct intervention. Residents should secure trash at all times, remove bird feeders, clear fallen fruit from yards, and store or thoroughly clean grills to eliminate food odors. If a grill cannot be stored, turning it on and letting it burn until there is no smell of food can help deter visits.
 
 Residents who encounter bears or suspect recent activity should report sightings to the Virginia Wildlife Conflict Helpline at 855-571-9003 (TTY 711), available Monday through Friday, 8 a.m. to 4:30 p.m., or email vawildlifeconflict@usda.gov. For local coordination, Chesterfield County Animal Services can be reached at 804-748-1683 or the non-emergency police line at 804-748-1251.
 
@@ -68,7 +68,6 @@ Repeated bear encounters create legitimate safety concerns and property damage, 
 
 - **2026-03-27** — Virginia DWR Spring Bear Awareness Campaign: State wildlife agency issues seasonal warnings as bears emerge from winter dens and begin foraging [[source]](https://www.wdbj7.com/2026/03/27/va-department-wildlife-resources-warns-be-aware-black-bears-during-spring/)
 - **2026-04-10** — Wildlife Center Releases Rehabilitated Bear Cubs: Cubs cared for after separation from mothers are returned to the wild following rehabilitation [[source]](https://www.wdbj7.com/2026/04/10/cubs-return-wild-after-care-wildlife-center-virginia/)
-- **2026-06-13** — Recent Bear Sightings in Enon Area: Black bear spotted in residential neighborhoods near Enon, damaging backyards and destroying bird feeders [[source]](https://www.wric.com/video/black-bear-spotted-in-enon-area/6712985/)
 
 ## Related links
 

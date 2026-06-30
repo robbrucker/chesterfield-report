@@ -2,7 +2,7 @@
 status: published
 headline: "Former NFL Linebacker Hosts I Am Power Football Camp"
 source: "WTVR CBS 6 Local"
-source_url: "https://www.wtvr.com/sports/former-nfl-linebacker-wali-rainer-i-am-power-pal-football-camp -june-27-2026"
+source_url: "https://www.wtvr.com/sports/former-nfl-linebacker-wali-rainer-i-am-power-pal-football-camp-june-27-2026"
 license: press
 track: 
 published: "2026-06-27T23:35:51+00:00"
@@ -20,7 +20,7 @@ ai_sensitive: false
 
 # Former NFL Linebacker Hosts I Am Power Football Camp
 
-**TL;DR:** Former NFL linebacker Wali Rainer is hosting the I Am Power PAL football camp at River City Sportsplex on June 24, 2026, bringing professional coaching and mentorship to Chesterfield County youth.
+**TL;DR:** Former NFL linebacker Wali Rainer hosted the I Am Power PAL football camp at River City Sportsplex on June 24, 2026, bringing professional coaching and mentorship to Chesterfield County youth.
 
 ## Quick facts
 
@@ -31,11 +31,11 @@ ai_sensitive: false
 
 ## The story
 
-Wali Rainer, a former NFL linebacker who played eight seasons in the National Football League for the Cleveland Browns, Jacksonville Jaguars, Detroit Lions, and Houston Texans, is bringing his professional expertise to Chesterfield County youth through the I Am Power PAL football camp. The camp, running for its third consecutive year, is scheduled for June 24, 2026, from 8:00 AM to 12:00 PM at River City Sportsplex in Midlothian.
+Wali Rainer, a former NFL linebacker who played seven seasons in the National Football League for the Cleveland Browns, Jacksonville Jaguars, Detroit Lions, and Houston Texans, brought his professional expertise to Chesterfield County youth through the I Am Power PAL football camp. The camp, running for its third consecutive year, was held June 24, 2026, from 8:00 AM to 12:00 PM at River City Sportsplex in Midlothian.
 
 Rainer, who played college football at the University of Virginia before being drafted by the Cleveland Browns in the fourth round of the 1999 NFL Draft, is dedicated to youth development and mentorship. His professional career included leading the Browns in tackles during his rookie season with 136 total tackles, establishing him as a perennial starter and team leader. The I Am Power program extends his commitment to helping young athletes, providing instruction and guidance beyond standard football coaching.
 
-The camp welcomes youth ages 11 to 17 and is organized in partnership with the Chesterfield Police Athletic League and Uptown Alley. Participants pay $25, which includes lunch and a camp shirt. The program features instruction from Rainer alongside former NFL players who assist with skill drills and development. With a capacity of 100 participants, the camp is designed to improve fundamental football skills while building character and resilience through youth mentorship.
+The camp welcomed youth ages 11 to 17 and was organized in partnership with the Chesterfield Police Athletic League and Uptown Alley. Participants paid $25, which included lunch and a camp shirt. The program featured instruction from Rainer alongside former NFL players who assisted with skill drills and development. With a capacity of 100 participants, the camp was designed to improve fundamental football skills while building character and resilience through youth mentorship.
 
 River City Sportsplex, a 115-acre facility in Chesterfield County with 16 synthetic turf fields, serves as the venue for the camp. The facility regularly hosts youth sports tournaments and programming that draw participants from throughout the region. The I Am Power camp represents another community-focused youth development initiative at the sportsplex, which has undergone recent enhancements to expand its role beyond traditional athletic competition.
 
@@ -77,7 +77,7 @@ Single-day camps offer limited continuity for skill development, and one four-ho
 - [River City Sportsplex](https://www.chesterfield.gov/facilities/facility/details/River-City-Sportsplex-65)
 - [Chesterfield Police Athletic League](https://www.chesterfield.gov/821/Recreational-Sports)
 
-[Read the original at WTVR CBS 6 Local →](https://www.wtvr.com/sports/former-nfl-linebacker-wali-rainer-i-am-power-pal-football-camp -june-27-2026)
+[Read the original at WTVR CBS 6 Local →](https://www.wtvr.com/sports/former-nfl-linebacker-wali-rainer-i-am-power-pal-football-camp-june-27-2026)
 
 ## Sources
 

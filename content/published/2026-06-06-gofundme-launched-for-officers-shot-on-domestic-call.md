@@ -17,7 +17,7 @@ tags: [Chesterfield County Police, domestic violence, officer shooting, Jacob Cl
 
 ## The story
 
-On May 31, 2026, Officers Jacob Clark (25, shot seven times) and Jacob Wells (40, shot twice) were wounded when they responded to a domestic disturbance at 12900 Gumfork Place. The suspect's mother had called 911 reporting her son, 65-year-old Gary G. Shaw, had fired shots during a domestic dispute while she barricaded herself upstairs. When officers arrived, Shaw opened fire with both a pistol and long gun; officers returned fire, and all three remained hospitalized. Police K-9 Knight, a four-year-old dog, was killed in the exchange.
+On May 31, 2026, Officers Jacob Clark (25, shot seven times) and Jacob Wells (40, shot twice) were wounded when they responded to a domestic disturbance at 12900 Gumfork Place. The suspect's mother had called 911 reporting her son, 65-year-old Gary G. Shaw, had fired shots during a domestic dispute while she barricaded herself upstairs. When officers arrived, Shaw opened fire with both a pistol and long gun; officers returned fire, and all three remained hospitalized. Police K-9 Knight, a five-year-old dog, was killed in the exchange.
 
 Both officers remain in critical but stable condition. Officer Clark received 71 units of blood during treatment and underwent multiple surgeries, while Officer Wells sustained a severe bicep wound and wrist graze. Police Chief Col. Frank Carpenter Jr. noted doctors initially questioned whether they would survive, but both are steadily recovering. A suspicious item—possibly a grenade or cannonball—found at the residence required explosives experts to clear the scene.
 

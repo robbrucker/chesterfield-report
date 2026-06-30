@@ -19,24 +19,24 @@ ai_sensitive: false
 
 # Chesterfield County Eyes Budget, New Administrator
 
-**TL;DR:** Chesterfield County is finalizing its $1.04 billion general fund budget while recruiting a new county administrator to replace Dr. Joseph P. Casey, who retires July 1 after a decade leading the 10,000-person government.
+**TL;DR:** Chesterfield County is finalizing its $1.1 billion general fund budget while recruiting a new county administrator to replace Dr. Joseph P. Casey, who retires July 1 after a decade leading the 10,000-person government.
 
 ## Quick facts
 
 - **Who:** Chesterfield County Board of Supervisors; interim County Attorney Karen Mullins; retiring Administrator Dr. Joseph P. Casey
-- **What:** FY2026 budget work sessions and county administrator search (executive recruitment via Raftelis firm)
+- **What:** FY2027 budget work sessions and county administrator search (executive recruitment via Raftelis firm)
 - **When:** Budget meetings March 2026; administrator interviews March 30–May 1, 2026; new hire expected by July 1, 2026
 - **Where:** Chesterfield County, Virginia
 
 ## The story
 
-Chesterfield County leadership is completing work on a $1.04 billion general fund budget for fiscal year 2026, marking the fourth consecutive year of tax relief. The proposed budget includes a $44.6 million increase over FY2025 (a 4.5% rise) and maintains the county's real estate tax rate at 89 cents per $100 of assessed value. Budget work sessions occurred in March, with public hearings held March 25 and final adoption on April 8.
+Chesterfield County leadership is completing work on a $1.1 billion general fund budget for fiscal year 2027, marking the fourth consecutive year of tax relief. The proposed budget includes a ~$49 million increase over FY2027 (a 4.7% rise) and maintains the county's real estate tax rate at 89 cents per $100 of assessed value. Budget work sessions occurred in March, with public hearings held March 25 and final adoption on April 8.
 
 The budget decisions come as the county simultaneously manages a high-profile leadership transition. County Administrator Dr. Joseph P. Casey is retiring July 1, 2026, completing exactly 10 years in the role he assumed on July 1, 2016. Under his tenure, Chesterfield County—one of Virginia's largest jurisdictions with approximately 10,000 county employees and 350,000 residents—has navigated major service delivery and infrastructure challenges. Karen Mullins, the county attorney, is serving as interim administrator during the search.
 
 To fill the vacancy, the Board of Supervisors contracted with Raftelis, the same executive search firm that recruited Casey a decade ago and has assisted with other high-level county searches. The job was posted January 23, 2026, with applications due February 20. A five-member Board of Supervisors panel—chaired by Mark S. Miller and including Vice Chair Kevin Carroll—conducted interviews between March 30 and May 1, 2026. The county solicited community, business, and employee input on desired qualifications for the new administrator.
 
-As of early June 2026, the Board has not publicly announced finalist selections or named a successor, though the search process has concluded. The new administrator will assume office July 1, taking the helm at a critical juncture as the county implements its FY2026 budget and manages ongoing growth in an increasingly diverse region.
+As of early June 2026, the Board has not publicly announced finalist selections or named a successor, though the search process has concluded. The new administrator will assume office July 1, taking the helm at a critical juncture as the county implements its FY2027 budget and manages ongoing growth in an increasingly diverse region.
 
 ## Key players
 
@@ -49,7 +49,7 @@ As of early June 2026, the Board has not publicly announced finalist selections 
 ## Key dates
 
 - **2026-07-01** — New county administrator takes office; Dr. Joseph P. Casey retirement effective
-- **2026-04-08** — FY2026 budget adoption (occurred)
+- **2026-04-08** — FY2027 budget adoption (occurred)
 
 ## The case for
 
@@ -71,10 +71,10 @@ A lengthy recruitment process during an interim leadership period can slow decis
 - **2025-12-11** — Casey announces retirement: County Administrator announces plans to retire July 1, 2026 [[source]](https://www.vpm.org/news/2025-12-11/joe-casey-chesterfield-county-administrator-retirement-carroll-lego-powhite)
 - **2026-01-23** — Administrator position posted: Job posting opens for County Administrator search [[source]](https://www.chesterfield.gov/m/newsflash/Home/Detail/6973)
 - **2026-02-20** — Application deadline: Administrator applications due at 5 p.m. [[source]](https://www.chesterfield.gov/m/newsflash/Home/Detail/6973)
-- **2026-03-11** — Budget work session: Board of Supervisors conducts FY2026 budget work session at 2 p.m. [[source]](https://www.chesterfield.gov/4089/2026-Meeting-Schedule)
-- **2026-03-25** — Budget public hearings: Public hearing on proposed FY2026 budget at 6 p.m. [[source]](https://www.chesterfield.gov/4089/2026-Meeting-Schedule)
+- **2026-03-11** — Budget work session: Board of Supervisors conducts FY2027 budget work session at 2 p.m. [[source]](https://www.chesterfield.gov/4089/2026-Meeting-Schedule)
+- **2026-03-25** — Budget public hearings: Public hearing on proposed FY2027 budget at 6 p.m. [[source]](https://www.chesterfield.gov/4089/2026-Meeting-Schedule)
 - **2026-03-30** — Administrator search interviews begin: Board of Supervisors interview panel begins candidate interviews [[source]](https://www.chesterfield.gov/m/newsflash/Home/Detail/6973)
-- **2026-04-08** — FY2026 budget adopted: Board approves $1.04 billion general fund budget with 4.5% increase; real estate tax rate held at 89 cents per $100 of assessed value [[source]](https://www.chesterfield.gov/251/Budget-Development-and-Documents)
+- **2026-04-08** — FY2027 budget adopted: Board approves $1.1 billion general fund budget with 4.7% increase; real estate tax rate held at 89 cents per $100 of assessed value [[source]](https://www.chesterfield.gov/251/Budget-Development-and-Documents)
 - **2026-05-01** — Administrator interviews conclude: Final interviews completed; Board of Supervisors has narrowed to finalists (not publicly announced as of June 2026) [[source]](https://www.chesterfield.gov/m/newsflash/Home/Detail/6973)
 - **2026-07-01** — New administrator takes office: Dr. Joseph P. Casey retires after 10 years; new administrator assumes role [[source]](https://www.chesterfield.gov/)
 

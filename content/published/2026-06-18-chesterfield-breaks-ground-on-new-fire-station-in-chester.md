@@ -26,7 +26,7 @@ ai_sensitive: false
 
 - **Who:** Chesterfield County Fire and EMS
 - **What:** Groundbreaking for new Fire Station 1 replacement facility
-- **When:** June 18, 2026
+- **When:** Wednesday, June 17, 2026
 - **Where:** Chester, Virginia, off Route 1 and Old Hundred Road (half mile west of current station)
 
 ## The story
@@ -47,7 +47,7 @@ The replacement station represents a significant county investment in emergency 
 ## Key dates
 
 - **2022:** County purchased land for new Fire Station 1
-- **June 18, 2026:** Official groundbreaking for new Fire Station 1 construction
+- **June 17, 2026:** Official groundbreaking for new Fire Station 1 construction
 
 ## The case for
 
@@ -70,7 +70,7 @@ The project carries a $12.3 million price tag during a period when county budget
 - **1962** — Fire Station 1 Chester constructed: Original facility built as volunteer-staffed firehouse on Old Hundred Road [[source]](https://www.wtvr.com/news/local-news/new-fire-station-1-chesterfield-virginia-feb-16-2026)
 - **2022** — County purchased replacement station site: Property acquired off Route 1, half mile west of current station; buildings used for training [[source]](https://www.wtvr.com/news/local-news/new-fire-station-1-chesterfield-virginia-feb-16-2026)
 - **February 2026** — Construction timeline announced: County officials announced construction would begin within weeks to address 4,000+ annual emergency calls [[source]](https://www.12onyourside.com/2026/02/20/work-starting-soon-new-chester-fire-station/)
-- **June 18, 2026** — Groundbreaking ceremony: Official groundbreaking marks beginning of construction on $12.3 million replacement Fire Station 1 [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/new-fire-station-1-june-17-2026)
+- **June 17, 2026** — Groundbreaking ceremony: Official groundbreaking marks beginning of construction on $12.3 million replacement Fire Station 1 [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/new-fire-station-1-june-17-2026)
 
 ## Related links
 

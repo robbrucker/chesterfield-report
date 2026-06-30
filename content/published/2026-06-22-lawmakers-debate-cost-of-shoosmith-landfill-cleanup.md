@@ -26,12 +26,12 @@ ai_sensitive: false
 
 - **Who:** Virginia lawmakers, Shoosmith landfill operators (VWS Holdco, Shoosmith Bros Inc), bankruptcy trustee Lynn Tavenner, State Sen. Glen Sturtevant
 - **What:** Debate over funding for cleanup of bankrupt Shoosmith Landfill with 65,000 gallons daily leachate generation
-- **When:** 2026 (bankruptcy filed July 2025, budget allocation June 2026)
+- **When:** 2026 (Chapter 11 bankruptcy filed June 2025, later converted to Chapter 7; budget allocation June 2026)
 - **Where:** Ironbridge Road, Chesterfield County, Virginia
 
 ## The story
 
-The Shoosmith Landfill, located off Ironbridge Road in Chesterfield County, has become the center of a major funding dispute following the July 2025 bankruptcy filing by its operators, VWS Holdco and Shoosmith Bros Inc. The facility generates approximately 65,000 gallons of toxic leachate daily that must be constantly collected and hauled to treatment facilities to prevent contamination of nearby creeks, including Swift Creek and Piney Branch, which feed into the James River and ultimately the Chesapeake Bay. A February 2026 Notice of Violation from the Virginia Department of Environmental Quality documented dark liquid entering waterways with elevated levels of suspended solids, ammonia, and zinc.
+The Shoosmith Landfill, located off Ironbridge Road in Chesterfield County, has become the center of a major funding dispute following the June 2025 Chapter 11 bankruptcy filing by its operators, VWS Holdco and Shoosmith Bros Inc. (a case later converted to Chapter 7). The facility generates approximately 65,000 gallons of toxic leachate daily that must be constantly collected and hauled to treatment facilities to prevent contamination of nearby creeks, including Swift Creek and Piney Branch, which feed into the James River and ultimately the Chesapeake Bay. A February 2026 Notice of Violation from the Virginia Department of Environmental Quality documented dark liquid entering waterways with elevated levels of suspended solids, ammonia, and zinc.
 
 The core of the funding debate centers on the massive cost disparity. An engineering study commissioned during the bankruptcy proceedings estimates that closure, corrective actions, and 30 years of post-closure care will cost more than $172 million. However, the landfill's financial assurance bonds total only $19 million, leaving a funding gap exceeding $150 million. State Sen. Glen Sturtevant (R-Chesterfield) publicly called the situation a "preventable disaster" and sent a formal letter on May 26, 2026, to state and federal leaders, setting a June 2 deadline for responses about federal coordination, liability recovery, and taxpayer protection.
 
@@ -52,7 +52,7 @@ Lawmakers remain divided on whether the $10.6 million appropriation and potentia
 
 ## Key dates
 
-- **2025-07-01:** VWS Holdco and Shoosmith Bros Inc file for Chapter 7 bankruptcy
+- **2025-06-01:** VWS Holdco and Shoosmith Bros Inc file for Chapter 11 bankruptcy (later converted to Chapter 7)
 - **2026-02-01:** Virginia DEQ issues Notice of Violation documenting leachate entering waterways
 - **2026-05-26:** State Sen. Glen Sturtevant sends formal letter to state and federal leaders regarding cleanup funding
 - **2026-06-02:** Deadline set by Sturtevant for responses from state and federal officials
@@ -80,7 +80,7 @@ The $10.6 million state allocation represents a significant taxpayer commitment 
 
 ## Development timeline
 
-- **2025-07-01** — Landfill operators file for bankruptcy: VWS Holdco and Shoosmith Bros Inc file for Chapter 7 bankruptcy, leaving 65,000 gallons of daily toxic leachate without dedicated funding for management [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/shoosmith-landfill-update-june-4-2026)
+- **2025-06-01** — Landfill operators file for bankruptcy: VWS Holdco and Shoosmith Bros Inc file for Chapter 11 bankruptcy (later converted to Chapter 7), leaving 65,000 gallons of daily toxic leachate without dedicated funding for management [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/shoosmith-landfill-update-june-4-2026)
 - **2026-02-01** — Virginia DEQ issues violation notice: Inspectors document dark liquid with elevated ammonia, suspended solids, and zinc entering Swift Creek and Piney Branch from the landfill site [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/shoosmith-landfill-update-june-4-2026)
 - **2026-05-26** — Senator Sturtevant issues formal letter: State Sen. Glen Sturtevant sends letter to state, county, and federal leaders highlighting the funding gap and requesting answers on accountability, liability recovery, and federal coordination with a June 2 deadline [[source]](https://www.wric.com/news/taking-action/shoosmith-landfill-bankruptcy-senator-letter/)
 - **2026-06-19** — State budget allocates $10.6 million: Virginia lawmakers reach budget compromise including $10.6 million in General Fund appropriation for Shoosmith Landfill response and remediation activities [[source]](https://www.wtvr.com/news/virginia-politics/budget-deal-june-19-2026)

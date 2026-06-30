@@ -31,7 +31,7 @@ ai_sensitive: false
 
 ## The story
 
-Severe thunderstorms moved through Chesterfield County on the evening of Sunday, June 28, dumping heavy rainfall that triggered flash flood warnings across multiple neighborhoods. The National Weather Service Wakefield office reported between 1 and 2.5 inches of rain fell in the affected areas, with an expected rainfall rate of up to 2 inches per hour. The flash flood warning remained in effect until 9:15 PM EDT, affecting numerous locations including Chester, Bellwood, Bensley, Chesterfield Court House, Centralia, Drewrys Bluff, Pocahontas State Park, Varina, Meadowville, Winterpock, and Elko.
+Severe thunderstorms moved through Chesterfield County on the evening of Sunday, June 28, dumping heavy rainfall that triggered flash flood warnings across multiple neighborhoods. The National Weather Service Wakefield office reported between 1 and 2.5 inches of rain fell in the affected areas, with an expected rainfall rate of up to 2 inches per hour. The flash flood warning remained in effect until 9:15 PM EDT, affecting numerous locations including Chester, Bellwood, Bensley, Chesterfield Court House, Centralia, Drewrys Bluff, Pocahontas State Park, Meadowville, and Winterpock.
 
 Flash flooding impacted small creeks and streams, urban corridors, highways, streets and underpasses, and other poorly drained and low-lying areas throughout the county. Residents were advised to avoid driving through flooded areas and to move to higher ground immediately, as just 6 inches of fast-moving water can knock over an adult, and 12 inches of rushing water can sweep away most vehicles.
 
@@ -63,10 +63,8 @@ Repeated flash flood events raise questions about whether drainage infrastructur
 - [Centralia](https://www.openstreetmap.org/search?query=Centralia+Chesterfield+VA)
 - [Drewrys Bluff](https://www.openstreetmap.org/search?query=Drewrys+Bluff+Chesterfield+VA)
 - [Pocahontas State Park](https://www.openstreetmap.org/search?query=Pocahontas+State+Park+Chesterfield+VA)
-- [Varina](https://www.openstreetmap.org/search?query=Varina+Chesterfield+VA)
 - [Meadowville](https://www.openstreetmap.org/search?query=Meadowville+Chesterfield+VA)
 - [Winterpock](https://www.openstreetmap.org/search?query=Winterpock+Chesterfield+VA)
-- [Elko](https://www.openstreetmap.org/search?query=Elko+Chesterfield+VA)
 
 ## Development timeline
 

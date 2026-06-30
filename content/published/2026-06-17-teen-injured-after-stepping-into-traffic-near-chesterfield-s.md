@@ -91,4 +91,5 @@ While safety measures are important, over-reliance on enforcement and cameras ma
 - [Teenager struck by truck in Chesterfield](https://www.wtvr.com/news/local-news/chesterfield-county/11900-bailey-bridge-road-crash-june-16-2026)
 - [Teen injured after struck by truck in Chesterfield](https://www.wtvr.com/news/local-news/chesterfield-county/14-year-old-hit-june-17-2026)
 - [Teenager struck by truck in Chesterfield](https://www.youtube.com/watch?v=1OPj8pLgu0s)
+- [Teen girl struck by vehicle near Chesterfield elementary school](https://news.google.com/rss/articles/CBMingFBVV95cUxOWjNjNWhMdHk1YzZocXVoOVpueDZYRFNkd3hxZmJUY3d1dlZKS3NzRFcwdVJ3VDlKOE1yUVNVbDBFNDNod05OWERPd3lVRUJ2dTY0UVQ5b3lleEdGSkdWOTZoemRKeXN2WVhuN2U5dGhtelZCeHY4NDBjVldSOUdiM3BTb2FLMHB1MmZ3VFNoZVJZY1BtQjZwVnV4M0xUQdIBsgFBVV95cUxOeF84NDNISUsxUWFoUU1hUHdvblVOeUowYzlaM091Xy1aZ0RleXBDMHY0V3g4aExaLUpUU2tKd0V4VG1YaE1mWG5YM0x5RFN4MGRWb0RCS3VFTF94Y2RULU9fNWxaeUNzc0w3REU4a1FNMHBNXzdWOTVtSTJfYTFLaEthUXdtdEpBS1FYc1VvTzB0SFgzNzQ1aEZ2VXRzdzB1bC1HVWswZTczMTJrNkxlaE93?oc=5)
 

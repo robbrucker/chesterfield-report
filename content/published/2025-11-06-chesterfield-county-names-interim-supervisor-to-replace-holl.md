@@ -25,18 +25,18 @@ ai_sensitive: false
 
 - **Who:** Dr. LeQuan M. Hylton appointed interim supervisor; Jim Holland (deceased); Chesterfield County Board of Supervisors
 - **What:** Dale District supervisor appointment to fill vacancy created by Holland's death
-- **When:** Interim appointment November 12, 2025; Holland died October 8, 2025; special election November 2026
+- **When:** Interim appointment November 12, 2025; Holland died October 14, 2025; special election November 2026
 - **Where:** Dale District, Chesterfield County, Virginia
 
 ## The story
 
-Chesterfield County appointed Dr. LeQuan M. Hylton as interim Dale District supervisor on November 12, 2025, filling a vacancy created by the death of longtime Supervisor Jim Holland. Holland, 73, passed away on October 8, 2025, following a battle with cancer. Hylton's appointment honored one of Holland's final wishes and ensures continuity of county leadership during the transition period.
+Chesterfield County appointed Dr. LeQuan M. Hylton as interim Dale District supervisor on November 12, 2025, filling a vacancy created by the death of longtime Supervisor Jim Holland. Holland, 73, passed away on October 14, 2025, following a battle with cancer. Hylton's appointment honored one of Holland's final wishes and ensures continuity of county leadership during the transition period.
 
 Dr. Hylton brings substantial public service experience to the role. A Ph.D. holder and U.S. Army combat veteran, he holds the rank of lieutenant colonel in the Army Reserve. Since 2019, he had served on the Chesterfield County Planning Commission, representing the Dale District, providing familiarity with county operations and district needs.
 
 Jim Holland was a transformative figure in Chesterfield County government. Elected in 2008, he served five consecutive terms and was the longest-tenured Board member at the time of his death. Holland made history in 2014 when he became the first African American chair of the Board of Supervisors—a position he held again in 2021 and 2024. Beyond his supervisory role, Holland was a U.S. Army veteran and certified public accountant (CPA) who taught accounting at Virginia Commonwealth University, bringing both military service and academic expertise to his public leadership.
 
-A special election is scheduled for November 2026 to determine Holland's permanent successor for the remainder of his four-year term, which ends December 21, 2027. Until then, Dr. Hylton will serve as interim supervisor, maintaining representation for the Dale District on the Board.
+A special election is scheduled for November 2026 to determine Holland's permanent successor for the remainder of his four-year term, which ends December 31, 2027. Until then, Dr. Hylton will serve as interim supervisor, maintaining representation for the Dale District on the Board.
 
 ## Key players
 
@@ -47,7 +47,7 @@ A special election is scheduled for November 2026 to determine Holland's permane
 ## Key dates
 
 - **2026-11** — Special election to elect permanent Dale District supervisor
-- **2027-12-21** — End of Jim Holland's four-year term (term limit for permanent successor)
+- **2027-12-31** — End of Jim Holland's four-year term (term limit for permanent successor)
 
 ## The case for
 
@@ -66,7 +66,7 @@ An interim appointment, while expedient, lacks direct democratic legitimacy; som
 
 ## Development timeline
 
-- **2025-10-08** — Jim Holland passes away: Longtime Dale District Supervisor dies at age 73 following cancer battle [[source]](https://www.chesterfield.gov/m/newsflash/Home/Detail/6699)
+- **2025-10-14** — Jim Holland passes away: Longtime Dale District Supervisor dies at age 73 following cancer battle [[source]](https://www.chesterfield.gov/m/newsflash/Home/Detail/6699)
 - **2025-10-14** — County announces Holland's death: Official announcement of Jim Holland's passing released by Chesterfield County [[source]](https://www.chesterfield.gov/m/newsflash/Home/Detail/6699)
 - **2025-11-12** — Dr. Hylton appointed interim supervisor: Board of Supervisors appoints Dr. LeQuan M. Hylton as interim Dale District Supervisor [[source]](https://www.chesterfield.gov/m/newsflash/Home/Detail/6759)
 - **2026-11** — Special election for permanent supervisor: Voters will elect Jim Holland's permanent successor for the Dale District

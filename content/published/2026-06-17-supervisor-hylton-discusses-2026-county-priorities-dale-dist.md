@@ -57,7 +57,7 @@ County leadership demonstrates fiscal responsibility by balancing significant in
 
 ## The case against
 
-Competing demands on county resources mean budget priorities cannot address all community needs simultaneously. Residents may question whether 83 cents per 100 dollars of assessed property value generates sufficient revenue for emerging priorities, and some infrastructure projects like Duval Road improvements and the Appomattox water facility extend over multiple years, meaning current-year budgeting reflects only partial commitments to long-term initiatives.
+Competing demands on county resources mean budget priorities cannot address all community needs simultaneously. Residents may question whether 89 cents per 100 dollars of assessed property value generates sufficient revenue for emerging priorities, and some infrastructure projects like Duval Road improvements and the Appomattox water facility extend over multiple years, meaning current-year budgeting reflects only partial commitments to long-term initiatives.
 
 **Why it matters:** Hylton's discussion of 2026 priorities shapes expectations for county services and infrastructure that directly affect daily life for Dale District residents, from school capacity and classroom conditions to road safety and water reliability. As interim supervisor leading up to the November 2026 special election, his public statements about county direction help residents understand how tax dollars are allocated and what improvements are in progress.
 

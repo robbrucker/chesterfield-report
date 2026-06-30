@@ -27,7 +27,7 @@ ai_sensitive: false
 - **Who:** Chesterfield County Police Department, Chester Food Pantry
 - **What:** Christmas in July toy drive collecting new, unwrapped toys for children ages 0-12
 - **When:** July 1-31, 2026; distribution in December
-- **Where:** Five Chesterfield County Police stations (Headquarters, Appomattox, Falling Creek, Swift Creek stations)
+- **Where:** Five Chesterfield County Police stations (Headquarters, Appomattox, Falling Creek, Falling Creek Substation, Swift Creek stations)
 
 ## The story
 

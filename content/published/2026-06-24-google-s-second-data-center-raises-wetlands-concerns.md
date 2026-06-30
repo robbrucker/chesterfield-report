@@ -31,7 +31,7 @@ ai_sensitive: false
 
 ## The story
 
-Google is advancing its second major data center campus in Chesterfield County, called Project Skye, as part of a $9 billion investment in Virginia cloud and AI infrastructure through 2026. The roughly 350-acre project, located on Watkins Center Parkway near Route 288 in Midlothian, is intended to support growing demand for artificial intelligence and large-scale data processing, with a planned online date of 2028 and expansion to continue over the following six years.
+Google is advancing its second major data center campus in Chesterfield County, called Project Skye, as part of a $9 billion investment in Virginia cloud and AI infrastructure through 2026. The roughly 880-acre project, located on Watkins Center Parkway near Route 288 in Midlothian, is intended to support growing demand for artificial intelligence and large-scale data processing, with a planned online date of 2028 and expansion to continue over the following six years.
 
 Federal permit filings reveal that Project Skye will impact significant wetland and stream resources. According to Army Corps of Engineers documents, the development is expected to permanently impact over 20 acres of wetlands and roughly 8,000 feet of stream channels, along with smaller disturbances to intermittent streams. To offset these impacts, Google has proposed constructing roughly 11 acres of new wetlands and preserving 34.2 acres of existing wetlands at different sites within the South Anna River watershed, using mitigation credits to fund the work.
 

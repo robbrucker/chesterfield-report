@@ -1,6 +1,6 @@
 ---
 status: published
-headline: "Matoaca Softball Advances to State Championship"
+headline: "Matoaca Softball Wins First State Championship"
 source: "Google News: Matoaca"
 source_url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcVlPSjJld1VRVDdvaXhDQlJ6UWR3VUtGWVRsRk1fem1YallUa2U1Wk41am13N1Z1REtTUHYzcmpYbkQzaDJaXzU1Und5ZTJYaGZzR2VlSzZCeWlzRjFHSlVlNUJ3ZEVhbU9iaUZtQmFSc3RnXzhvRGhpTnd4Y0g0LQ?oc=5"
 license: press
@@ -17,14 +17,14 @@ ai_verdict_reason: "Local high school's state championship advancement is signif
 ai_sensitive: false
 ---
 
-# Matoaca Softball Advances to State Championship
+# Matoaca Softball Wins First State Championship
 
-**TL;DR:** Matoaca High School's softball team defeated Kellam 7-3 in a regional semifinal and advanced to the Class 5 state championship game against Lightridge on June 13.
+**TL;DR:** Matoaca High School's softball team defeated Kellam 7-3 in a regional semifinal, then won the program’s first Class 5 state championship with a 2-1 walk-off victory over Lightridge on June 13.
 
 ## Quick facts
 
 - **Who:** Matoaca High School Warriors softball team, led by pitcher Kaylee Hodges
-- **What:** Regional semifinal victory over Kellam Knights, advancing to Class 5 state championship
+- **What:** Regional semifinal win over Kellam, then a 2-1 walk-off victory over Lightridge for the program’s first Class 5 state title
 - **When:** June 12, 2026 (regional semifinal); June 13, 2026 (state championship)
 - **Where:** Chesterfield County, Virginia
 
@@ -32,7 +32,7 @@ ai_sensitive: false
 
 Matoaca High School's softball team secured a berth in the Class 5 state championship by defeating Kellam 7-3 in a regional semifinal on June 12, 2026. The Warriors, boasting a 24-1 record heading into the matchup, extended their 20-game winning streak with the victory. Kellam came into the game on a seven-game winning streak with a 22-3 record.
 
-The state championship game is scheduled for June 13, 2026, against Lightridge High School. Lightridge advanced to the final by defeating Hickory 5-4 in their semifinal matchup. The Warriors reached the championship after also defeating Riverbend 4-3 in the quarterfinals.
+In the state championship game on June 13, 2026, the Warriors defeated Lightridge High School 2-1 on a walk-off single by Raven Crabtree, securing the program’s first state title. Lightridge had advanced to the final by defeating Hickory 5-4 in their semifinal matchup. The Warriors reached the championship after also defeating Riverbend 4-3 in the quarterfinals.
 
 The Warriors' season has been powered by the dominant pitching of Kaylee Hodges, a University of Tennessee commit who was named Gatorade Virginia Softball Player of the Year for the second consecutive year in June 2026. Hodges owns a 15-1 record with a remarkable 0.00 ERA and 246 strikeouts in 100 innings pitched. She has also been effective at the plate, hitting .563 with 8 home runs and 25 RBIs. Earlier in the season, Hodges led Matoaca to the Region 5C Championship with a 1-0 victory over Midlothian.
 

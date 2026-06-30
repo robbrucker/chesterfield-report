@@ -19,13 +19,13 @@ ai_sensitive: true
 
 # 6-Year-Old Chesterfield Girl Found Safe After CODI Alert
 
-**TL;DR:** A 6-year-old Chesterfield girl reported missing on June 10 was found safe on June 12 after a CODI Alert was issued, though police continue searching for a 37-year-old woman connected to the disappearance.
+**TL;DR:** A 6-year-old Chesterfield girl reported missing on June 10 was found safe on June 12 after a CODI Alert was issued, while a 37-year-old woman connected to the disappearance was located safe the following day.
 
 ## Quick facts
 
-- **Who:** Thelma Cockrell, age 6; Jasmine Courtney Cockrell, age 37
-- **What:** Child reported missing and located safe within 24 hours of CODI Alert; woman still missing
-- **When:** Missing June 10, 1 a.m.; alert issued June 11; child found June 12
+- **Who:** Thelma Jessie Cockrell, age 6; Jasmine Courtney Cockrell, age 37
+- **What:** Child reported missing and located safe within 24 hours of CODI Alert; woman located safe June 13
+- **When:** Missing June 10, 1 a.m.; alert issued June 11; child found June 12; woman found June 13
 - **Where:** 14000 block of Cherry Street, Chesterfield County
 
 ## The story
@@ -34,7 +34,7 @@ A 6-year-old Chesterfield girl was reported missing on the morning of June 10 af
 
 The alert was issued due to what police described as "existing health and welfare concerns" involving the 37-year-old woman, prompting authorities to express concern for both her safety and the child's. Police reported the most recent sighting of both individuals at approximately 8 a.m. on June 11 along Wolfe Street in Alexandria. The quick distribution of the alert through the CODI system appears to have been effective: by the morning of June 12, authorities announced that the 6-year-old had been found safe.
 
-However, the resolution was only partial. While the child's safe recovery was welcome news, Jasmine Cockrell remained missing as of the last report. Police continue their investigation and search efforts for the adult. The recovery of the child demonstrated the effectiveness of the CODI Alert system, which launched in Virginia in late 2024 following the high-profile disappearance of 4-year-old Codi Bigsby. The system has shown strong results: as of 2025, Virginia State Police had issued 40 CODI alerts with a 100% recovery rate for the missing children involved.
+While the child's safe recovery came first, the search for Jasmine Cockrell continued into the next day. On Saturday, June 13, 2026, Chesterfield Police announced that the 37-year-old woman had also been located and was safe, fully resolving the case. The recovery of the child demonstrated the effectiveness of the CODI Alert system, which launched in Virginia in late 2024 following the high-profile disappearance of 4-year-old Codi Bigsby. The system has shown strong results: as of 2025, Virginia State Police had issued 40 CODI alerts with a 100% recovery rate for the missing children involved.
 
 The CODI Alert operates as a more responsive tool than the federal AMBER Alert system. While AMBER Alerts require evidence of confirmed abduction, CODI Alerts can be issued when a child is missing under suspicious circumstances or poses a credible threat to their safety, allowing state law enforcement to mobilize resources more rapidly without meeting the higher threshold required for federal alerts.
 
@@ -49,6 +49,7 @@ The CODI Alert operates as a more responsive tool than the federal AMBER Alert s
 - **2026-06-10** — 6-year-old reported missing from Cherry Street
 - **2026-06-11** — CODI Alert issued for missing child
 - **2026-06-12** — Child found safe; alert canceled
+- **2026-06-13** — 37-year-old woman located safe
 
 **Why it matters:** The safe recovery of the child underscores both the vulnerability of young children and the importance of rapid alert systems in locating endangered minors. The case also highlights the CODI Alert system's emerging track record as an effective tool for Virginia law enforcement.
 
@@ -61,10 +62,11 @@ The CODI Alert operates as a more responsive tool than the federal AMBER Alert s
 
 ## Development timeline
 
-- **2026-06-10** — Child reported missing: 6-year-old Thelma Cockrell reported missing around 1 a.m. from 14000 block of Cherry Street, Chesterfield County [[source]](https://www.wtvr.com/news/local-news/codi-alert-thelma-cockrell-june-11-2026)
+- **2026-06-10** — Child reported missing: 6-year-old Thelma Jessie Cockrell reported missing around 1 a.m. from 14000 block of Cherry Street, Chesterfield County [[source]](https://www.wtvr.com/news/local-news/codi-alert-thelma-cockrell-june-11-2026)
 - **2026-06-11** — CODI Alert issued: Virginia State Police issues CODI Alert for missing child, indicating she may be with 37-year-old Jasmine Courtney Cockrell [[source]](https://www.wtvr.com/news/local-news/codi-alert-thelma-cockrell-june-11-2026)
 - **2026-06-11** — Last confirmed sighting: Most recent sighting of child and woman reported at approximately 8 a.m. along Wolfe Street in Alexandria, Virginia [[source]](https://www.12onyourside.com/2026/06/11/codi-alert-issued-chesterfield-6-year-old-possibly-alexandria/)
 - **2026-06-12** — Child found safe: 6-year-old located safely; CODI Alert canceled. Search for 37-year-old woman continues [[source]](https://www.wtvr.com/news/local-news/codi-alert-thelma-cockrell-june-11-2026)
+- **2026-06-13** — Woman located safe: 37-year-old Jasmine Cockrell located and confirmed safe, resolving the case [[source]](https://www.wtvr.com/news/local-news/codi-alert-thelma-cockrell-june-11-2026)
 
 ## Related links
 

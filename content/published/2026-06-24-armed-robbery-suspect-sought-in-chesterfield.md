@@ -20,18 +20,18 @@ ai_sensitive: true
 
 # Armed Robbery Suspect Sought in Chesterfield
 
-**TL;DR:** Chesterfield County police are searching for a Black male suspect who robbed a business at gunpoint on Buford Court on the evening of June 24, 2026.
+**TL;DR:** Chesterfield County police are searching for a Black male suspect who robbed a business at gunpoint on Buford Court on the evening of June 23, 2026.
 
 ## Quick facts
 
 - **Who:** Unknown Black male suspect; Chesterfield County Police Department investigating
 - **What:** Armed robbery; suspect displayed handgun and stole cash and merchandise
-- **When:** Tuesday, June 24, 2026, just after 10:30 p.m.
+- **When:** Tuesday, June 23, 2026, just after 10:30 p.m.
 - **Where:** 8000 block of Buford Court, Chesterfield, Virginia
 
 ## The story
 
-Chesterfield County police are seeking a suspect following an armed robbery at a business on the 8000 block of Buford Court on Tuesday, June 24, just after 10:30 p.m. According to authorities, the suspect displayed a handgun, stole cash and merchandise, and fled the scene on foot. No injuries were reported in connection with the incident.
+Chesterfield County police are seeking a suspect following an armed robbery at a business on the 8000 block of Buford Court on Tuesday, June 23, just after 10:30 p.m. According to authorities, the suspect displayed a handgun, stole cash and merchandise, and fled the scene on foot. No injuries were reported in connection with the incident.
 
 Police describe the suspect as a Black male with a slim build who was last seen wearing all black clothing. Authorities are urging anyone with information about the robbery to come forward.
 
@@ -51,7 +51,7 @@ The investigation is ongoing. The Chesterfield County Police Department encourag
 
 ## Development timeline
 
-- **2026-06-24** — Armed robbery at Buford Court business: Suspect displayed handgun, stole cash and merchandise, fled on foot just after 10:30 p.m. [[source]](https://www.12onyourside.com/2026/06/24/armed-robbery-suspect-sought-chesterfield/)
+- **2026-06-23** — Armed robbery at Buford Court business: Suspect displayed handgun, stole cash and merchandise, fled on foot just after 10:30 p.m. [[source]](https://www.12onyourside.com/2026/06/24/armed-robbery-suspect-sought-chesterfield/)
 
 ## Related links
 

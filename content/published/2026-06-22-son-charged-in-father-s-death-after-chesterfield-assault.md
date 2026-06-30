@@ -26,12 +26,12 @@ ai_sensitive: true
 
 - **Who:** Kasey Connelly, 33; victim Kelly Connelly, 65 (father)
 - **What:** Son charged with second-degree murder after father's death following alleged assault
-- **When:** Assault occurred Saturday, June 21 around 8 p.m.; victim died Sunday, June 22
+- **When:** Assault occurred Saturday, June 20 around 8 p.m.; victim died Sunday, June 21
 - **Where:** 14600 block of Cornwall Lane, Enon area, Chesterfield County
 
 ## The story
 
-Kasey Connelly, 33, has been charged with second-degree murder in connection with the death of his father, Kelly Connelly, 65. Officers responded to a residence on the 14600 block of Cornwall Lane in the Enon area of Chesterfield County around 8 p.m. on Saturday, June 21, after receiving a report that Kelly Connelly had been assaulted. He was transported to a hospital for treatment of injuries consistent with an assault.
+Kasey Connelly, 33, has been charged with second-degree murder in connection with the death of his father, Kelly Connelly, 65. Officers responded to a residence on the 14600 block of Cornwall Lane in the Enon area of Chesterfield County around 8 p.m. on Saturday, June 20, after receiving a report that Kelly Connelly had been assaulted. He was transported to a hospital for treatment of injuries consistent with an assault.
 
 Kelly Connelly died from his injuries the following day. Police initially obtained a warrant for domestic assault, but after the victim's death, charges against Kasey Connelly were elevated to second-degree murder. Witnesses at the scene identified Kasey Connelly as the suspect involved in the assault.
 
@@ -53,10 +53,10 @@ Kasey Connelly was located at the 6200 block of Arbor Park Drive and arrested. H
 
 ## Development timeline
 
-- **2026-06-21** — Assault reported: Officers respond to 14600 block of Cornwall Lane around 8 p.m. after report that Kelly Connelly, 65, has been assaulted; victim transported to hospital [[source]](https://www.12onyourside.com/2026/06/22/son-charged-after-father-dies-following-chesterfield-assault/)
-- **2026-06-21** — Warrant issued: Police obtain warrant for domestic assault; witnesses identify Kasey Connelly, 33, as suspect [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/kasey-connelly-murder-charge-june-22-2026)
-- **2026-06-22** — Victim dies from injuries: Kelly Connelly dies in hospital from injuries sustained in the assault [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/kasey-connelly-murder-charge-june-22-2026)
-- **2026-06-22** — Charges elevated to murder: Kasey Connelly arrested and charged with second-degree murder; held in Chesterfield County Jail without bond [[source]](https://www.12onyourside.com/2026/06/22/son-charged-after-father-dies-following-chesterfield-assault/)
+- **2026-06-20** — Assault reported: Officers respond to 14600 block of Cornwall Lane around 8 p.m. after report that Kelly Connelly, 65, has been assaulted; victim transported to hospital [[source]](https://www.12onyourside.com/2026/06/22/son-charged-after-father-dies-following-chesterfield-assault/)
+- **2026-06-20** — Warrant issued: Police obtain warrant for domestic assault; witnesses identify Kasey Connelly, 33, as suspect [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/kasey-connelly-murder-charge-june-22-2026)
+- **2026-06-21** — Victim dies from injuries: Kelly Connelly dies in hospital from injuries sustained in the assault [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/kasey-connelly-murder-charge-june-22-2026)
+- **2026-06-21** — Charges elevated to murder: Kasey Connelly arrested and charged with second-degree murder; held in Chesterfield County Jail without bond [[source]](https://www.12onyourside.com/2026/06/22/son-charged-after-father-dies-following-chesterfield-assault/)
 
 ## Related links
 

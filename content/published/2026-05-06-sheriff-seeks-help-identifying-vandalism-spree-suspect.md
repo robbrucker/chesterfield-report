@@ -1,6 +1,6 @@
 ---
 status: published
-headline: "Sheriff seeks help identifying vandalism spree suspect"
+headline: "Midlothian man arrested in Chesterfield vandalism spree"
 source: "Google News: Chesterfield County"
 source_url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPRHdUX196Tldvazk5bnZJQ1pBVWdtNFoxb1J2cXRyNmVmZ3RicXUyZDEzSUZkTlNlZkt4N3MwZGoxNm5sRnJjWDZxa3d1d01EU0dZd194aEFPUlFWdHlONy1Ecjk5NTNINDhscEMyUWo2Z3NzSzZMUk1EbjFpUFJBbXBWOXZNMzdTSnJsNFdaV1ZiQnpJbFUwOTR2TnljWmVfWnpkUg?oc=5"
 license: press
@@ -17,7 +17,7 @@ ai_verdict_reason: "Newsworthy public-safety crime story with clear public assis
 ai_sensitive: true
 ---
 
-# Sheriff seeks help identifying vandalism spree suspect
+# Midlothian man arrested in Chesterfield vandalism spree
 
 **TL;DR:** Chesterfield County Sheriff's Office arrested a Midlothian man for vandalizing four public and commercial buildings in a single night, including the county courthouse and central library.
 

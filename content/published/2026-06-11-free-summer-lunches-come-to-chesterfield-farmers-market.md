@@ -43,7 +43,7 @@ The Chesterfield program is part of a broader state response to summer food inse
 
 ## Key dates
 
-- **2026-06-04** — Program begins (first Wednesday in June)
+- **2026-06-03** — Program begins (first Wednesday in June)
 - **2026-08-06** — Program ends (final Wednesday through August 6)
 - **2026-06-23** — CCPS broader summer meal program begins at 20 sites county-wide
 
@@ -64,7 +64,7 @@ The program is limited to a single Wednesday location and time slot, which may n
 
 ## Development timeline
 
-- **2026-06-04** — Free summer lunch program launches at Chesterfield Farmers Market: CCPS Nutrition Services begins offering free lunches with local sourcing and educational activities [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/farmers-market-free-lunches-june-11-2026)
+- **2026-06-03** — Free summer lunch program launches at Chesterfield Farmers Market: CCPS Nutrition Services begins offering free lunches with local sourcing and educational activities [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/farmers-market-free-lunches-june-11-2026)
 - **2026-06-23** — Expanded summer meal sites open across Chesterfield County: CCPS adds 20 locations offering free breakfasts and lunches, running Monday–Thursday through July 17 [[source]](https://www.oneccps.org/o/ccps/article/2252775)
 - **2026-08-06** — Farmers market lunch program concludes: Final Wednesday of free lunch service at the Chesterfield County Farmers Market [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/farmers-market-free-lunches-june-11-2026)
 

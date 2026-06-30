@@ -35,7 +35,7 @@ Chesterfield County is offering residents a full schedule of summer activities t
 
 The Chesterfield Public Library is hosting a World Cup watch party at its Meadowdale Library location (4301 Meadowdale Boulevard, North Chesterfield), giving soccer fans a chance to gather and enjoy the tournament. The library continues its tradition of hosting community events alongside its regular programming.
 
-For history enthusiasts, the Chesterfield County Parks and Recreation department offers guided tours of the Historic Courthouse Green, an outdoor walking tour that explores the historic buildings, monuments, and the 210-year-old Nunnally Oak Tree (planted in 1814 by Lawson Nunnally, assistant deputy clerk of the county's court). Tours focus on discovering the area's fight for religious liberties and its significance to Chesterfield's history.
+For history enthusiasts, the Chesterfield County Parks and Recreation department offers guided tours of the Historic Courthouse Green, an outdoor walking tour that explores the historic buildings, monuments, and the 212-year-old Nunnally Oak Tree (planted in 1814 by Lawson Nunnally, assistant deputy clerk of the county's court). Tours focus on discovering the area's fight for religious liberties and its significance to Chesterfield's history.
 
 The county's Waste and Resource Recovery Division is combining three disposal services at Thomas Dale High School (3636 W. Hundred Road, Chester), offering residents a convenient one-stop location to shred personal documents (up to two small boxes or three grocery bags per person, at no fee), recycle electronics, and dispose of household hazardous waste. These combined events reduce the number of trips residents must make to manage different types of waste responsibly.
 
@@ -75,7 +75,7 @@ Coordinating multiple events requires significant staff and volunteer resources 
 - **2026-06-21** — Summer Nights at the Perk Music Series Begins: Free outdoor concert series featuring live music, food, beverages, and art activities on the Panchita Cline Patio [[source]](https://www.chesterfield.gov/Calendar.aspx?EID=4682)
 - **2026-06-22** — World Cup Watch Party at Meadowdale Library: Community gathering to watch World Cup soccer matches at Meadowdale Library, 4301 Meadowdale Boulevard [[source]](https://library.chesterfield.gov/158/Meadowdale-Library)
 - **2026-06-22** — Summer Fun in the Sun Camp Begins: Parks and Recreation summer camp opens for children ages 5-12 and teens 13-16, running through July 30 [[source]](https://www.chesterfield.gov/m/newsflash/home/detail/7003)
-- **2026-06-22** — Historic Courthouse Green Guided Tour: Outdoor walking tour exploring historic buildings, monuments, and the 210-year-old Nunnally Oak Tree; focuses on religious liberty history [[source]](https://www.active.com/chesterfield-va/classes/historic-courthouse-green-tour-2026)
+- **2026-06-22** — Historic Courthouse Green Guided Tour: Outdoor walking tour exploring historic buildings, monuments, and the 212-year-old Nunnally Oak Tree; focuses on religious liberty history [[source]](https://www.active.com/chesterfield-va/classes/historic-courthouse-green-tour-2026)
 - **2026-06-22** — Combined Waste Disposal Event at Thomas Dale High School: One-stop event for document shredding, electronics recycling, and household hazardous waste disposal at 3636 W. Hundred Road, Chester [[source]](https://www.chesterfield.gov/Calendar.aspx?EID=5585)
 
 ## Related links

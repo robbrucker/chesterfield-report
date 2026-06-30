@@ -30,7 +30,7 @@ ai_sensitive: true
 
 ## The story
 
-James M. "Jim" Holland, a certified public accountant, Army veteran, and educator whose four-decade career bridged academia and public service, died Oct. 14, 2025 at age 73, following a protracted battle with cancer. Holland represented the Dale District on the Chesterfield County Board of Supervisors for 17 years beginning in 2008, becoming the longest-serving supervisor in the county at the time of his death and the first African American board member and later chair in 2014.
+James M. "Jim" Holland, a certified public accountant, Army veteran, and educator whose four-decade career bridged academia and public service, died Oct. 14, 2025 at age 73, following a protracted battle with cancer. Holland represented the Dale District on the Chesterfield County Board of Supervisors for 17 years beginning in 2008, becoming the longest-serving supervisor in the county at the time of his death and the first African American chair in 2014.
 
 At Virginia Commonwealth University's School of Business, Holland spent 24 years teaching accounting and advising aspiring CPAs, instructing more than 200 classes to thousands of students. VCU colleagues noted his ability to connect "generations of students to both the rigor and the humanity of the profession," while former students credited him with making complex subjects engaging and building their professional confidence. Holland ran his own firm, Holland & Co. CPA, while balancing his teaching duties.
 
@@ -48,7 +48,7 @@ Born in Gates, North Carolina, Holland earned his bachelor's degree in accountin
 ## Key dates
 
 - **2008-01-01** — Holland took office as Dale District supervisor
-- **2014** — Holland became chair of Chesterfield Board of Supervisors; first African American board member and chair
+- **2014** — Holland became chair of Chesterfield Board of Supervisors; first African American chair
 - **2025-05** — Beulah Recreation Center renamed James M. Holland Recreation Complex
 - **2025-10-14** — Holland died at age 73
 - **2026-11** — Special election scheduled to fill remainder of Holland's four-year term

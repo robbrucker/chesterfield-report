@@ -46,7 +46,6 @@ The School Board is currently led by Chair Lisa Hudgins and Vice Chair Steven Pa
 ## Key dates
 
 - **2026-06-02** — School Board business meeting (materials and indexed video now available)
-- **2026-06-17** — Next scheduled School Board meeting at 7:00 p.m.
 - **2026-09-08** — Fall work session scheduled at 4:00 p.m.
 
 ## The case for
@@ -68,7 +67,6 @@ Digital access, while valuable, may deepen an existing engagement gap: residents
 - **2026-01-22** — Budget work session scheduled: First of four January-February budget work sessions at 4:00 p.m. [[source]](https://www.oneccps.org/page/school-board)
 - **2026-02-10** — School Board work session and business meeting: Work session at 4:00 p.m.; business meeting at 6:30 p.m.; indexed video now available [[source]](https://www.youtube.com/watch?v=0AR_KBN6Zdo)
 - **2026-06-02** — June School Board business meeting: Full meeting materials, presentations, and indexed video published at bit.ly/CCSchoolBoard [[source]](https://www.youtube.com/watch?v=nc1BA22FpT4)
-- **2026-06-10** — Announcement of online meeting access: School Board transparency initiative confirmed with meeting materials portal now live [[source]](https://www.oneccps.org/o/ccps/article/2961517)
 
 ## Related links
 

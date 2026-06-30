@@ -1,6 +1,6 @@
 ---
 status: published
-headline: "Teen hurt in Chester shooting incident"
+headline: "Teen hurt in March Chester shooting incident"
 source: "Google News: Chesterfield County"
 source_url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxQNTlxLTN0Y1Iza0pMSUxPaG56dWp2dHFNSlJoVkZQSDFtUGFLNnUwYnl1LWRJdURIUV9KU2hWektPUzZsMlN5b3Z3YWcxd0xHMHM2anAwOHp2MERhSVc1MEZNWnN2WlR3dUpQTDBJemR3eHNfSGhxTFRfRHhHTTVycWxZZ3BJVWRzQzNpMGhZN2t1U2xjSzNiOVZGUQ?oc=5"
 license: press
@@ -18,7 +18,7 @@ ai_verdict_reason: "Public-safety shooting incident with teen injury in Chester 
 ai_sensitive: true
 ---
 
-# Teen hurt in Chester shooting incident
+# Teen hurt in March Chester shooting incident
 
 **TL;DR:** A teenager was injured by gunfire on Cosmic Road in Chester on March 15, 2026, and police are investigating the incident.
 

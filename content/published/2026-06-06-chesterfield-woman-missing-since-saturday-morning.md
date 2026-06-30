@@ -19,7 +19,7 @@ tags: [missing person, Julie Ann Branan, Chesterfield County, cognitive impairme
 
 - **Who:** Julie Ann Branan, 42
 - **What:** Missing from residence in Chesterfield County; located safe
-- **When:** Missing June 6–8, 2026; found early June 8
+- **When:** Missing June 6–7, 2026; found early June 7
 - **Where:** 11200 block of Kalliope Drive, Chesterfield County, Virginia
 
 ## The story
@@ -28,7 +28,7 @@ Julie Ann Branan, 42, of Chesterfield County was reported missing early Saturday
 
 The Chesterfield County Police Department initiated an active search, and the Virginia State Police issued a Critically Missing Adult Alert on Saturday afternoon. The alert provided details to assist the public in locating Branan: a white female, 5 feet 1 inch tall, approximately 200 pounds, with brown hair and eyes, who wears glasses. Authorities noted that Branan has a cognitive impairment and requires medication, factors that informed the assessment of danger and the urgency of the alert.
 
-The search effort engaged multiple agencies and extended into Sunday. The public alert was circulated through law enforcement networks and missing-persons organizations including the AWARE Foundation. Police located Branan and confirmed her safety around midnight on Sunday, June 8, 2026, approximately 18 hours after her disappearance was reported. No details were publicly released about the circumstances of how she came to be missing or where she was found.
+The search effort engaged multiple agencies and extended into Sunday. The public alert was circulated through law enforcement networks and missing-persons organizations including the AWARE Foundation. Police located Branan and confirmed her safety around midnight on Sunday, June 7, 2026, approximately 18 hours after her disappearance was reported. No details were publicly released about the circumstances of how she came to be missing or where she was found.
 
 With Branan's safe recovery, the Critically Missing Adult Alert was rescinded and the active search concluded. The case underscores both the vulnerability of individuals with cognitive impairments and the effectiveness of rapid coordination between local police, state law enforcement, and the public through alert systems when missing-persons cases meet the threshold for emergency intervention.
 
@@ -48,7 +48,7 @@ With Branan's safe recovery, the Critically Missing Adult Alert was rescinded an
 
 - **2026-06-06** — Julie Ann Branan reported missing: Branan left her residence at 11200 block of Kalliope Drive at approximately 6:30 a.m.; family reported her missing shortly after. [[source]](https://www.chesterfield.gov/police)
 - **2026-06-06** — Critically Missing Adult Alert issued: Virginia State Police issued alert for Chesterfield County indicating credible threat to Branan's health and safety due to cognitive impairment and medication dependence. [[source]](https://www.vsp.virginia.gov/public-safety-alerts/)
-- **2026-06-08** — Julie Ann Branan located safely: Police confirmed Branan was safe around midnight on Sunday, approximately 18 hours after initial report. Alert rescinded and search concluded. [[source]](https://www.chesterfield.gov/police)
+- **2026-06-07** — Julie Ann Branan located safely: Police confirmed Branan was safe around midnight on Sunday, approximately 18 hours after initial report. Alert rescinded and search concluded. [[source]](https://www.chesterfield.gov/police)
 
 ## Related links
 

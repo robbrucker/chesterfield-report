@@ -12,8 +12,8 @@ image: ""
 video_url: ""
 media_kind: ""
 ai_provider: linkqueue
-lat: 41.6249737
-lon: -87.731956
+lat: 37.5066
+lon: -77.6469
 ---
 
 # Hidden Harm: The Teen Experience of Opioid Addiction - Chesterfield Public Library

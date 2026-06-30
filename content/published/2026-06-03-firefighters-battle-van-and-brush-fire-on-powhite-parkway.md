@@ -29,7 +29,7 @@ ai_provider: claude-cli
 
 Chesterfield County firefighters battled a dual emergency on Powhite Parkway on Tuesday when a van fire ignited vegetation along the heavily traveled corridor. Crews from Engine 220 and Engine 209 responded to the blaze near the Courthouse Road exit and worked to suppress both the vehicle fire and the brush fire it sparked. The driver, unharmed in the incident, was able to evacuate oxygen and acetylene tanks from the van's cargo before firefighters arrived on scene.
 
-The incident highlighted the complexity of vehicle fires on Virginia's major expressways. The Powhite Parkway—a 3.4-mile toll corridor connecting Chippenham Parkway to Cary Street and spanning the James River via the Powhite Bridge—carries nearly 90,000 vehicles daily, rising above 100,000 on peak travel days. Fires on such high-traffic corridors require rapid response to prevent both fire spread and traffic disruption across the Richmond metropolitan area.
+The incident highlighted the complexity of vehicle fires on Virginia's major expressways. The Powhite Parkway Extension—the Route 76 toll corridor running south through Chesterfield County—carries heavy daily traffic that rises on peak travel days. Fires on such high-traffic corridors require rapid response to prevent both fire spread and traffic disruption across the Richmond metropolitan area.
 
 Chesterfield Fire & EMS documented the suppression effort through helmet camera video, which was shared on the department's Facebook page. The footage provided a firsthand view of firefighters' coordinated attack on the flames. The safe evacuation of hazardous materials before crews arrived eliminated a potential complication, as pressurized gas cylinders can pose significant risks during vehicle fires.
 

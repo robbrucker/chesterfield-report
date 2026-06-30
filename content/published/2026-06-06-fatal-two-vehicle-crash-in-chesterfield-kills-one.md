@@ -19,7 +19,7 @@ tags: [fatal crash, Hopkins Road, Chesterfield County, Watchrun Drive, traffic f
 
 - **Who:** Female passenger in Honda sedan; drivers and passengers of both vehicles
 - **What:** Two-vehicle collision between southbound Honda sedan and Dodge Ram making left turn
-- **When:** Friday, June 6, 2026, around 9:20 p.m.
+- **When:** Friday, June 5, 2026, around 9:20 p.m.
 - **Where:** 6400 block of Hopkins Road at Watchrun Drive, Chesterfield County, Virginia
 
 ## The story
@@ -44,7 +44,7 @@ Hopkins Road, a major thoroughfare in the county, has been the subject of prior 
 
 - **2026-02-14** — First pedestrian fatality of 2026: Shawn Humphrey, 24, killed after being struck by an SUV on Woods Edge Road [[source]](https://www.wtvr.com/news/local-news/shawn-humphrey-obit-chesterfield-feb-14-2026)
 - **2026-04-02** — Chesterfield County traffic enforcement blitz: Police conducted speed enforcement operations in Enon, stopping 116 vehicles and issuing 158 summonses in 10 hours [[source]](https://www.12onyourside.com/2026/04/02/just-do-speed-limit-chesterfield-police-discuss-latest-traffic-blitz-results/)
-- **2026-06-06** — Fatal collision on Hopkins Road: Honda sedan traveling south collides with Dodge Ram turning onto Watchrun Drive; one female passenger killed, three others injured [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/hopkins-road-fatal-crash-june-6-2026)
+- **2026-06-05** — Fatal collision on Hopkins Road: Honda sedan traveling south collides with Dodge Ram turning onto Watchrun Drive; one female passenger killed, three others injured [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/hopkins-road-fatal-crash-june-6-2026)
 
 ## Related links
 

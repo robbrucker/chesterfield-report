@@ -26,7 +26,7 @@ ai_sensitive: true
 
 - **Who:** 14-year-old resident of a home in Chesterfield County
 - **What:** Random gunfire struck a residential home, sending a bullet through the front and into the teen's bedroom
-- **When:** Thursday evening around 8:30 p.m. (June 19, 2026)
+- **When:** Thursday evening around 8:30 p.m. (June 18, 2026)
 - **Where:** 3900 block of Curtis Street, Chesterfield County, Virginia
 
 ## The story
@@ -48,7 +48,7 @@ Anyone with information about this incident is asked to contact the Chesterfield
 
 ## Development timeline
 
-- **2026-06-19** — Random gunfire strikes Chesterfield home, injures teenager: Bullet pierced through front of home on Curtis Street, struck 14-year-old in bedroom around 8:30 p.m., causing laceration to face; police investigating as random gunfire incident with no suspect identified [[source]](https://www.12onyourside.com/2026/06/19/police-random-gunfire-hits-chesterfield-home-injures-14-year-old/)
+- **2026-06-18** — Random gunfire strikes Chesterfield home, injures teenager: Bullet pierced through front of home on Curtis Street, struck 14-year-old in bedroom around 8:30 p.m., causing laceration to face; police investigating as random gunfire incident with no suspect identified [[source]](https://www.12onyourside.com/2026/06/19/police-random-gunfire-hits-chesterfield-home-injures-14-year-old/)
 
 ## Related links
 

@@ -1,6 +1,6 @@
 ---
 status: published
-headline: "Chesterfield planning $48M expansion of River City Sportsplex"
+headline: "Chesterfield completes $48M expansion of River City Sportsplex"
 source: "richmondbizsense.com"
 source_url: "https://richmondbizsense.com/2021/10/25/chesterfield-planning-48m-expansion-of-river-city-sportsplex/"
 license: press
@@ -14,7 +14,7 @@ media_kind: ""
 ai_provider: linkqueue
 ---
 
-# Chesterfield planning $48M expansion of River City Sportsplex
+# Chesterfield completes $48M expansion of River City Sportsplex
 
 **TL;DR:** Chesterfield County completed a $48 million expansion of River City Sportsplex that added four turf fields, a destination playground with splash pad, and a nature-themed park opening to the public on June 11, 2026.
 

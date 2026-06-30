@@ -7,13 +7,13 @@ license: government
 published: "2026-06-05T20:05:46+00:00"
 focus: [Schools, Government, Community, Weather & Safety]
 tags: [Chesterfield County Public Schools, transportation, bus drivers, employee recognition, student safety, workforce]
-location: "\"\""
+location: "10001 Iron Bridge Road, Chesterfield, VA"
 image: "https://i1.ytimg.com/vi/DCINtOuunvE/hqdefault.jpg"
 video_url: "https://www.youtube.com/watch?v=DCINtOuunvE"
 media_kind: video
 ai_provider: claude-cli
-lat: 39.7837304
-lon: -100.445882
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # School Board Honors Outstanding Bus Drivers

@@ -1,6 +1,6 @@
 ---
 status: published
-headline: "Radiation-exposed patient temporarily closes Chesterfield ER"
+headline: "Suspected radiation exposure temporarily closes Chesterfield ER"
 source: "WRIC 8News Local"
 source_url: "https://www.wric.com/news/local-news/chesterfield-county/radiation-shuts-down-swift-creek-er/"
 license: press
@@ -18,14 +18,14 @@ ai_verdict_reason: "Real emergency incident with local public-health impact, fit
 ai_sensitive: true
 ---
 
-# Radiation-exposed patient temporarily closes Chesterfield ER
+# Suspected radiation exposure temporarily closes Chesterfield ER
 
-**TL;DR:** A Chesterfield County emergency room was temporarily closed Wednesday night when a radiation-exposed patient arrived, prompting emergency responders to activate containment protocols and evacuate the facility.
+**TL;DR:** A Chesterfield County emergency room was briefly closed Wednesday night after a patient arrived saying they may have been exposed to a radiological agent, prompting a HAZMAT response. Testing found no radiation and no threat to the public, and the ER resumed normal operations.
 
 ## Quick facts
 
 - **Who:** Unidentified patient; Chesterfield County Fire and EMS; Swift Creek ER staff
-- **What:** Emergency room temporary closure due to radiation exposure incident
+- **What:** Emergency room temporary closure after suspected radiation exposure; HAZMAT testing found no radiation and no public hazard
 - **When:** Wednesday, June 17, 2026, 8:22 p.m. to approximately 9:40 p.m.
 - **Where:** Swift Creek ER, 14720 Hancock Village St., Chesterfield
 
@@ -35,7 +35,7 @@ On Wednesday evening, June 17, Chesterfield County Fire and EMS responded to Swi
 
 In response to the incident, emergency personnel implemented containment protocols established for radiation emergencies. Crews evacuated the emergency room facility and secured the surrounding parking area to prevent potential spread of contamination. Staff members were directed to shelter in place as first responders assessed the situation and took appropriate safety measures.
 
-Standard hospital radiation incident procedures typically involve isolating affected areas, establishing decontamination zones, and protecting both patients and staff through PPE and monitoring equipment. The incident was contained and the scene cleared by approximately 9:40 p.m., according to fire officials, though specific details about decontamination procedures or the patient's condition were not disclosed.
+Standard hospital radiation incident procedures typically involve isolating affected areas, establishing decontamination zones, and protecting both patients and staff through PPE and monitoring equipment. After monitoring both the emergency room and the patient's vehicle, fire officials determined there were no hazards and no threat to the public, and no signs of radiation were found. The incident was contained and the scene cleared by approximately 9:40 p.m. The patient continued to receive care at the facility.
 
 Swift Creek ER is a 24-hour freestanding emergency facility operated by HCA Virginia, located in the Hancock Village Shopping Center in Chesterfield. The facility serves the area with comprehensive emergency services, imaging capabilities, and board-certified emergency physicians and nursing staff. After the scene was cleared, the emergency room resumed normal operations.
 
@@ -65,7 +65,7 @@ Temporary ER closure disrupts emergency care for other patients and can strain r
 
 - **2026-06-17** — Fire and EMS called to Swift Creek ER: Chesterfield County emergency responders received call at 8:22 p.m. regarding possible radiation exposure patient [[source]](https://www.wric.com/news/local-news/chesterfield-county/radiation-shuts-down-swift-creek-er/)
 - **2026-06-17** — Emergency room and parking area secured: Facility evacuated and containment protocols implemented; staff directed to shelter in place [[source]](https://www.wric.com/news/local-news/chesterfield-county/radiation-shuts-down-swift-creek-er/)
-- **2026-06-17** — Scene cleared and normal operations resumed: Incident contained approximately 9:40 p.m.; emergency room returned to full operations [[source]](https://www.wric.com/news/local-news/chesterfield-county/radiation-shuts-down-swift-creek-er/)
+- **2026-06-17** — Scene cleared and all-clear given: HAZMAT testing found no radiation and no threat to the public; incident contained approximately 9:40 p.m.; emergency room returned to full operations and the patient continued receiving care [[source]](https://www.wric.com/news/local-news/chesterfield-county/radiation-shuts-down-swift-creek-er/)
 
 ## Related links
 

@@ -1,6 +1,6 @@
 ---
 status: published
-headline: "Teacher charged with assaulting Chesterfield County student"
+headline: "Chesterfield teacher found not guilty of assaulting student"
 source: "Google News: Chesterfield Schools"
 source_url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVE03dUd3WF9pM3ZvcUo0TkFReE0wVmxOU3RYWk5KTHlGQmNlR25OdE5mZWhnUlc3a3k1a04tLU9VU1dRR2JwRGJNMC1hMEVaOUJlNEdnaVZkd1hEOVJTalhZQzFXck5MUmNrVnpqM0JQTVJXVVVudHo3ZHRHeVRneERUOFV3dWRlUTdhUkZMY3BrQnB4VWQwMNIBrAFBVV95cUxNeTZwa3ZvR3NKazA0NkR2ZW13QmVobl9fSFB0MzZEc0ZfYi1FMnpQSmNyWFdZUnhoc2t5ZlU1VjgtY0VYRHMyUHJwb0VmMVZER3hZZ1dXd3JyMHBGZ19xSk1jTEktTEk0R0FQY1VBV1pGUXNpamlRM2NCbUxfcG5iU1pTbThZWFcwZW0ycGhlWUZRS0NFM0prWVZtT2hYbUlYZTR3M3hzS0RXR0Fk?oc=5"
 license: press
@@ -17,30 +17,30 @@ ai_verdict_reason: "Real news with genuine public safety significance, but crimi
 ai_sensitive: true
 ---
 
-# Teacher charged with assaulting Chesterfield County student
+# Chesterfield teacher found not guilty of assaulting student
 
-**TL;DR:** A 50-year-old special education teacher at Chester Early Childhood Learning Academy in Chesterfield County has been charged with assault of a male student following an April 6, 2026 incident.
+**TL;DR:** A Chesterfield judge found special education teacher Jennifer Repole, 50, not guilty of assaulting a student on June 16, 2026, after surveillance video showed the boy bit her first; the judge called her conduct a discipline issue for the school rather than a crime.
 
 ## Quick facts
 
 - **Who:** Jennifer Repole, 50, special education teacher at Chester Early Childhood Learning Academy
-- **What:** Charged with assaulting a male student
-- **When:** Incident April 6, 2026; warrant served April 10, 2026; court date scheduled June 16, 2026
+- **What:** Charged with assaulting a male student; found NOT GUILTY at trial on June 16, 2026
+- **When:** Incident April 6, 2026; warrant served April 10, 2026; found not guilty June 16, 2026
 - **Where:** Chester Early Childhood Learning Academy, 15501 Harrowgate Road, Chester, VA
 
 ## The story
 
-Jennifer Repole, a 50-year-old special education teacher at Chester Early Childhood Learning Academy in Chester, has been charged with assaulting a male student following an incident on April 6, 2026. Chesterfield Police received a report of the assault and, after investigation, obtained a warrant for Repole on April 10, 2026. She was served with a releasable warrant and is scheduled to appear in court on June 16, 2026.
+Jennifer Repole, a 50-year-old special education teacher at Chester Early Childhood Learning Academy in Chester, has been charged with assaulting a male student following an incident on April 6, 2026. Chesterfield Police received a report of the assault and, after investigation, obtained a warrant for Repole on April 10, 2026. She was served with a releasable warrant and appeared for trial on June 16, 2026.
 
 Chester Early Childhood Learning Academy, located at 15501 Harrowgate Road, is a public preschool established in 2021 that serves 4-year-old children in Chesterfield County, particularly those identified as having economic needs or environmental risk factors affecting kindergarten readiness. The school serves approximately 378 students with a student-teacher ratio of 11:1, lower than Virginia's state requirement of 14:1.
 
 The Chesterfield County Public Schools division stated that "the employee will not return to the school division pending adjudication of the charges," effectively suspending Repole from her position. The specific circumstances and details of the alleged assault remain limited, with neither police nor the school division providing detailed accounts of what allegedly occurred.
 
-The case is now proceeding through the criminal justice system, with the June court date marking the next official step in the matter. Chesterfield Police have not released additional information about the investigation, and the school division has offered no further comment beyond the suspension notice.
+At trial on June 16, 2026, Chesterfield General District Court Judge J. David Rigler found Repole not guilty. Two surveillance videos shown in court depicted Repole walking a group of students to a bus when one boy bit her; she reacted by kicking the boy and grabbing his jaw. Judge Rigler called her remark to the child ("You bite me again, see what happens. I'll bite you back next time") "absolutely inappropriate" but said he had a hard time seeing unreasonable force, calling the matter "a discipline issue for the school." Repole remained on administrative leave following the verdict, with her return to the school division unclear.
 
 ## Key players
 
-- **Jennifer Repole** — Special education teacher at Chester Early Childhood Learning Academy; charged with assault
+- **Jennifer Repole** — Special education teacher at Chester Early Childhood Learning Academy; charged with assault, found not guilty June 16, 2026
 - **Chesterfield County Public Schools** — Employer; has suspended employee pending adjudication
 - **Chesterfield Police Department** — Investigated incident and obtained warrant
 
@@ -48,7 +48,7 @@ The case is now proceeding through the criminal justice system, with the June co
 
 - **2026-04-06** — Alleged assault incident at Chester Early Childhood Learning Academy
 - **2026-04-10** — Warrant issued for Jennifer Repole; served releasable warrant
-- **2026-06-16** — Scheduled court appearance for Jennifer Repole
+- **2026-06-16** — Jennifer Repole found NOT GUILTY at trial; judge ruled the evidence did not show unreasonable force
 
 **Why it matters:** The incident raises concerns about student safety in Chesterfield County schools and the protection of young children in early childhood education settings. Parents and community members typically focus on teacher accountability, background checks, and district oversight mechanisms following allegations of physical assault on students.
 
@@ -62,6 +62,7 @@ The case is now proceeding through the criminal justice system, with the June co
 - **2026-04-06** — Alleged assault at Chester Early Childhood Learning Academy: Police received report of assault of a male student by teacher Jennifer Repole [[source]](https://www.12onyourside.com/2026/04/28/teacher-charged-with-assaulting-student-chesterfield/)
 - **2026-04-10** — Warrant issued and served: Chesterfield Police obtained assault warrant for Jennifer Repole; warrant served on April 10, 2026 [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/chesterfield-teacher-assault-april-28-2026)
 - **2026-04-28** — Incident made public: News reports confirm teacher Jennifer Repole charged with assault; school division announces suspension pending adjudication [[source]](https://www.12onyourside.com/2026/04/28/teacher-charged-with-assaulting-student-chesterfield/)
+- **2026-06-16** — Found not guilty: Judge J. David Rigler acquits Repole after surveillance video shows the student bit her first; judge calls it a school discipline issue, not a crime [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/jennifer-repole-chesterfield-teacher-june-16-2026)
 
 ## Related links
 

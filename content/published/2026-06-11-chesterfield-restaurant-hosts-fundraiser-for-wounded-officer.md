@@ -97,4 +97,5 @@ While community support is valuable, some argue that responsibility for comprehe
 - [Knight, Chesterfield County Police Department, Virginia](https://www.odmp.org/k9/1968-k9-knight)
 - [Chesterfield memorial grows for police K9 Knight](https://www.wtvr.com/news/local-news/chesterfield-county/knight-memorial-grows-june-2-2026)
 - [Chesterfield restaurant honors wounded officers, dedicates K-9 patio](https://news.google.com/rss/articles/CBMingFBVV95cUxQTlUtd2tlUFZaSjlyN0lTc2NUaWE1U19VSmNCZW05NnZVOEZDa3ktWTdyWFhJMFR6RjRQWGNIbksyYllYbFUxbExEb2hiS1dUUHlzWmw3dFJiRXpVR282dlhQM1pXaXlyRFp5ZW1VTVBCVERJTllfUkJIUGhwa3V4d2JMdWl1N3FZRGRPcXFmQmNCeF9YMzBjdkdfdEpSdw?oc=5)
+- [Restaurant fundraiser honors wounded officers, dedicates patio to K-9](https://news.google.com/rss/articles/CBMi6wFBVV95cUxPeGYtSFNQaUhLb0xsVDlDN1NWUVU1X184UVRKTTdyNVNvdXVqUzBYM2UtcE52cjBUdUFSYTdTRWltUFlYTmNNYzJUZ2xadG5EdFJ5U3hIYzB0T3RLeEF2dmFzZDc5eXh3OThPU1QyamQ5bG5EcW1RNV9pNmJjNEdmWklla0FCQnBrR0F1WEI4NGZOTEQ1N2xiZDZSdy1Vb2tZSU5VQlIxRXQtaVhRWXBpakZ4c3V0WmxfcVA1TVBob0lCNnhyMFlKbjdlN0dlTkZNeFl6YmdKMmdKaVVPQW9DaUh4cGN0Ty1OZ3RN?oc=5)
 

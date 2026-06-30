@@ -50,7 +50,7 @@ Sen. Sturtevant described the $10.6 million as a critical first step, stating th
 ## Key dates
 
 - **2022-12-30:** Shoosmith Landfill ceased accepting new trash
-- **2024-02-01:** Virginia DEQ issued Notice of Violation documenting leachate discharge and water quality violations
+- **2026-02-09:** Virginia DEQ issued Notice of Violation documenting leachate discharge and water quality violations
 - **2025-06-01:** VWS Holdco, Inc. and Shoosmith Bros., Inc. filed for Chapter 11 bankruptcy
 - **2026-06-25:** Virginia General Assembly approved $10.6 million in emergency funding in two-year state budget
 - **2026-08-01:** Projected date when available funds would be exhausted without emergency appropriation (per Sen. Sturtevant)
@@ -78,7 +78,7 @@ The $10.6 million allocation commits state resources to what was a private busin
 ## Development timeline
 
 - **2022-12-30** — Shoosmith Landfill closes to new waste: Landfill ceased accepting solid waste after nearly 50 years of operation [[source]](https://virginiamercury.com/2026/06/25/va-legislature-grants-emergency-funds-to-help-close-leaking-bankrupt-landfill-in-chesterfield/)
-- **2024-02-01** — Virginia DEQ issues Notice of Violation: Environmental violations documented including leachate discharge and exceedances of ammonia, zinc, and suspended solids in local waterways [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/shoosmith-landfill-update-june-4-2026)
+- **2026-02-09** — Virginia DEQ issues Notice of Violation: Environmental violations documented including leachate discharge and exceedances of ammonia, zinc, and suspended solids in local waterways [[source]](https://www.wtvr.com/news/local-news/chesterfield-county/shoosmith-landfill-update-june-4-2026)
 - **2025-06-01** — Landfill operator files for bankruptcy: VWS Holdco, Inc. and Shoosmith Bros., Inc. filed Chapter 11 bankruptcy with $183 million in debt; landfill ceased most waste acceptance in 2022 [[source]](https://elevenflo.com/blog/vws-holdco)
 - **2026-02-01** — Bankruptcy trustee raises alarm over leachate crisis: Trustee discovers operators knowingly failed to address elevated temperature conditions and stripped company resources while leachate problem worsened [[source]](https://www.wric.com/news/taking-action/shoosmith-landfill-bankruptcy-senator-letter/)
 - **2026-06-25** — Virginia General Assembly approves emergency funding: State budget includes $10.6 million for Virginia DEQ to contain toxic leachate, addressing immediate crisis at bankrupt landfill [[source]](https://virginiamercury.com/2026/06/25/va-legislature-grants-emergency-funds-to-help-close-leaking-bankrupt-landfill-in-chesterfield/)

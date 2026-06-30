@@ -36,7 +36,7 @@ Clark, a 2019 high school graduate who earned a sixth-round draft selection (180
 
 The instruction was led by Clark alongside former teammates and coaches from Manchester High, ensuring participants received guidance not only on football fundamentals but also on the psychological aspects often overlooked in youth sports. This approach reflects Clark's own transfer experience in college, where he left Liberty University for the University of Louisville in pursuit of a better environment, a move that shaped his philosophy on athletic development.
 
-The camp represents a significant return to roots for Clark, who has worked his way through competitive football at every level. Now an NFL professional in his second season with the Cardinals after appearing in 29 games with 54 tackles and five passes defensed, Clark is investing directly in the next generation of Chesterfield County youth athletes.
+The camp represents a significant return to roots for Clark, who has worked his way through competitive football at every level. Now an NFL professional entering his fourth season with the Cardinals after appearing in 29 games with 54 tackles and five passes defensed, Clark is investing directly in the next generation of Chesterfield County youth athletes.
 
 ## Key players
 

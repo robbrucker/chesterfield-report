@@ -25,7 +25,7 @@ ai_sensitive: false
 
 - **Who:** Suchit Gandhi, Chesterfield parent; 430+ petition signers; Hindu families and students
 - **What:** Campaign to add Diwali (Hindu festival of lights) as official CCPS school holiday
-- **When:** Started November 2025; proposed 2026-27 calendar rejected in May 2026; Diwali falls November 8, 2026
+- **When:** Started November 2025; Diwali excluded from the approved 2026-27 calendar in May 2026; Diwali falls November 8, 2026
 - **Where:** Chesterfield County Public Schools; Chesterfield County, Virginia
 
 ## The story
