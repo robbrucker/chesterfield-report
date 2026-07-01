@@ -1248,6 +1248,29 @@ def _prune_orphan_story_pages(story_dir: Path, live_slugs: set) -> int:
     return removed
 
 
+def _article_cta(lang: str = "en") -> str:
+    """Inline end-of-article newsletter CTA — the highest-converting signup
+    placement (right where a reader finishes the story). Links to the
+    beehiiv-backed subscribe page. EN + ES."""
+    if lang == "es":
+        return (
+            '<aside class="cr-card cr-card--grad cr-card--pad" '
+            'style="margin:2rem 0;text-align:center">'
+            '<strong>Recibe las noticias de Chesterfield en tu correo.</strong>'
+            '<p style="margin:.5rem 0 1rem">The Weekly Report: un resumen semanal '
+            'gratuito del condado de Chesterfield. Cancela cuando quieras.</p>'
+            '<a class="cr-btn cr-btn--primary" href="/subscribe.html">'
+            'Suscr&iacute;bete &rarr;</a></aside>')
+    return (
+        '<aside class="cr-card cr-card--grad cr-card--pad" '
+        'style="margin:2rem 0;text-align:center">'
+        '<strong>Get Chesterfield news in your inbox.</strong>'
+        '<p style="margin:.5rem 0 1rem">The Weekly Report: a free weekly roundup of '
+        'Chesterfield County. Unsubscribe anytime.</p>'
+        '<a class="cr-btn cr-btn--primary" href="/subscribe.html">Subscribe &rarr;</a>'
+        '</aside>')
+
+
 def build_articles() -> int:
     """Write one full-article page per published story to public/story/<slug>.html.
     Returns the number of pages written."""
@@ -1280,6 +1303,7 @@ def build_articles() -> int:
             f"{story_html}{_tagrow_html(meta, link)}"
             f"{_share_row(SITE_URL + story_url(headline), headline, 'en')}"
             f"{_reactions_html(slug, 'en')}</article>"
+            f"{_article_cta('en')}"
             f'<div class="story-foot">{back}</div>'
         )
         jsonld = seo.jsonld_newsarticle(meta, body, rel_url)
@@ -1924,6 +1948,7 @@ def build_spanish() -> int:
             f"{story_html}"
             f"{_share_row(SITE_URL + f'/es/story/{slug}.html', es_headline, 'es')}"
             f"{_reactions_html(slug, 'es')}</article>"
+            f"{_article_cta('es')}"
             f'<div class="story-foot">{back}</div>'
         )
         page = _shell(article_html, len(recs))
