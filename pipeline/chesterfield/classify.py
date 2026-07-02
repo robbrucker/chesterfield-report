@@ -32,12 +32,28 @@ def _looks_uk(hay: str) -> bool:
     return "£" in hay or _UK_MARKERS.search(hay) is not None
 
 
+# There is ALSO a Chesterfield County in SOUTH CAROLINA (county seat Chesterfield,
+# towns Pageland/Cheraw/McBee). Broad "Chesterfield County" news feeds repeatedly
+# pull SC crime stories that read as local because they literally say "Chesterfield
+# County." Reject anything with clear South Carolina markers. (Deliberately avoids
+# ambiguous tokens like "Jefferson" — Jefferson Davis Hwy is in Chesterfield, VA.)
+_SC_MARKERS = re.compile(
+    r"(south carolina|\bpageland\b|\bcheraw\b|\bmcbee\b|\bmount croghan\b|"
+    r"cambo streater|south carolina law enforcement|"
+    r"\bwbtv\b|\bwcnc\b|\bwsoc\b|\bwltx\b)")
+
+
+def _looks_sc(hay: str) -> bool:
+    return _SC_MARKERS.search(hay) is not None
+
+
 def is_relevant(item: Item, source: dict) -> bool:
     """County-government & weather sources are relevant by definition.
     Broad sources must mention a Chesterfield place name. Anything with clear
-    UK markers (the Chesterfield in Derbyshire, England) is rejected outright."""
+    UK markers (the Chesterfield in Derbyshire, England) or South Carolina markers
+    (Chesterfield County, SC) is rejected outright."""
     hay = f"{item.title} {_strip_html(item.raw_summary)}".lower()
-    if _looks_uk(hay):
+    if _looks_uk(hay) or _looks_sc(hay):
         return False
     if not source.get("geo_filter", True):
         return True
