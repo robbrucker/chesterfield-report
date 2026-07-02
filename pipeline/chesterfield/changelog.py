@@ -18,6 +18,12 @@ PUBLIC = render.PUBLIC
 # Newest first. Each entry: (date_display, sort_key, title, body_html).
 # sort_key is YYYY-MM-DD for ordering; date_display is what readers see.
 CHANGELOG = [
+    ("July 2, 2026", "2026-07-02", "Data Center Tracker",
+     "A new standing <a href=\"/data-centers.html\">Data Center Tracker</a>: every data-center "
+     "project in Chesterfield in one place, including Google's $9 billion three-campus buildout, "
+     "with a map of the sites, each project's status and key dates, and all of our coverage. It "
+     "updates automatically as we publish new stories."),
+
     ("June 25, 2026", "2026-06-25", "Yard Sales",
      "A new <a href=\"/yard-sales.html\">Yard Sales</a> map where you can post your own garage, "
      "yard, estate, or moving sale for free, and filter what's coming up by today, tomorrow, this "

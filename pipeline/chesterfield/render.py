@@ -2759,12 +2759,12 @@ _TEMPLATE = """<!doctype html>
     <a class="nav-x" href="/schools.html">Schools</a>
     <a class="nav-x" href="/board.html">Supervisors</a>
     <a class="nav-x" href="/meetings.html">Meetings</a>
-    <div class="nav-g"><button class="nav-t" type="button">Government <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/elections.html">Elections</a><a href="/elected-offices.html">Elected Offices</a><a href="/board.html">Board of Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development &amp; Zoning</a><a href="/police.html">Police</a><a href="/fire.html">Fire &amp; EMS</a></div></div>
+    <div class="nav-g"><button class="nav-t" type="button">Government <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/elections.html">Elections</a><a href="/elected-offices.html">Elected Offices</a><a href="/board.html">Board of Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/development.html">Development &amp; Zoning</a><a href="/data-centers.html">Data Center Tracker</a><a href="/police.html">Police</a><a href="/fire.html">Fire &amp; EMS</a></div></div>
     <div class="nav-g"><button class="nav-t" type="button">Investigations <span class="nav-c">&#9662;</span></button><div class="nav-d"><a href="/shoosmith.html">Shoosmith landfill</a></div></div>
     <a class="nav-x nav-cta" href="/subscribe.html">Subscribe</a>
   </nav>
   <nav class="topnav cr-header__nav nav-mobile" aria-label="Sections">
-    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/elections.html">Elections</a><a href="/elected-offices.html">Elected Offices</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/police.html">Police</a><a href="/fire.html">Fire &amp; EMS</a><a href="/development.html">Development</a><a href="/dining.html">Dining</a><a href="/parks.html">Parks</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/places-of-worship.html">Places of Worship</a><a href="/yard-sales.html">Yard Sales</a><a href="/events.html">Events</a><a href="/things-to-do.html">Things to Do</a><a href="/community-resources.html">Community Resources</a><a href="/nonprofits.html">Nonprofits</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/business.html">Business</a><a href="/shoosmith.html">Shoosmith</a>
+    <a href="/">Home</a><a href="/topics/">Topics</a><a href="/digest.html">This Week</a><a href="/map.html">News map</a><a href="/virginia.html">Virginia</a><a href="/elections.html">Elections</a><a href="/elected-offices.html">Elected Offices</a><a href="/board.html">Supervisors</a><a href="/school-board.html">School Board</a><a href="/meetings.html">Meetings</a><a href="/taxes.html">Taxes</a><a href="/police.html">Police</a><a href="/fire.html">Fire &amp; EMS</a><a href="/development.html">Development</a><a href="/data-centers.html">Data Centers</a><a href="/dining.html">Dining</a><a href="/parks.html">Parks</a><a href="/farmers-markets.html">Farmers Markets</a><a href="/places-of-worship.html">Places of Worship</a><a href="/yard-sales.html">Yard Sales</a><a href="/events.html">Events</a><a href="/things-to-do.html">Things to Do</a><a href="/community-resources.html">Community Resources</a><a href="/nonprofits.html">Nonprofits</a><a href="/neighborhoods.html">Neighborhoods</a><a href="/schools.html">Schools</a><a href="/apartments.html">Housing</a><a href="/affordable-housing.html">Affordable</a><a href="/business.html">Business</a><a href="/shoosmith.html">Shoosmith</a>
   </nav>
   <div class="dateline">
     <span class="place">Chesterfield County &middot; Virginia</span>
@@ -2799,6 +2799,7 @@ _TEMPLATE = """<!doctype html>
         <a href="/topics/">Topics</a>
         <a href="/digest.html">This Week</a>
         <a href="/map.html">News map</a>
+        <a href="/data-centers.html">Data Centers</a>
         <a href="/virginia.html">Virginia &amp; Region</a>
       </div>
       <div class="footer-col">
@@ -2823,6 +2824,7 @@ _TEMPLATE = """<!doctype html>
         <a href="/police.html">Police</a>
         <a href="/fire.html">Fire &amp; EMS</a>
         <a href="/development.html">Development &amp; Zoning</a>
+        <a href="/data-centers.html">Data Center Tracker</a>
       </div>
       <div class="footer-col">
         <h3>More</h3>

@@ -1,0 +1,150 @@
+{
+  "_comment": "Data Center Tracker source data. Every fact traces to the site's own published stories (content/published/, slugs in each entry's 'stories' list) or research/data-centers.md / research/data-centers-filings.md. Statuses reflect the most recent documented action; where a project's standing is unclear it stays 'under review'. Code-name caution: some LLC/permit records associate the Skye and Loch code names with the opposite western sites; this file follows the site's published reporting (2026-06-24 and 2026-06-30 stories: Skye = Genito/Moseley site). Map coordinates are approximate site-area markers, not exact parcel centers.",
+  "summary": {
+    "updated": "July 2, 2026",
+    "headline_investment": "$9B+",
+    "lead": "Data centers are the biggest growth story in Chesterfield County. Google is behind a $9 billion, three-campus buildout approved by the Board of Supervisors, a second hyperscale campus is rising in Meadowville Technology Park, and since January 1, 2026 every new data center needs a conditional use permit. This page tracks every project we know of: where each one stands, what is on the record, and all of our coverage in one place."
+  },
+  "projects": [
+    {
+      "id": "google-peanut",
+      "name": "Google Project Peanut (Bermuda Hundred Road)",
+      "operator": "Google",
+      "status": "under construction",
+      "acreage": 307,
+      "location": "2700 Bermuda Hundred Road, Chester, adjacent to Meadowville Technology Park (Bermuda District)",
+      "lat": 37.3444,
+      "lon": -77.304,
+      "key_dates": [
+        {"date": "2025-08-27", "event": "Google announces a $9 billion Virginia investment and confirms it is behind three Chesterfield campuses"},
+        {"date": "2025-11", "event": "Site plan filed: three buildings totaling about 856,000 square feet"},
+        {"date": "2025-11-07", "event": "State air-permit application received by DEQ", "source": "https://permits.virginia.gov/Permit/Details/107605"},
+        {"date": "2026-08", "event": "DEQ air-permit decision expected, which would make generator counts public"}
+      ],
+      "stories": [
+        "2025-12-23-google-advances-chesterfield-data-center-despite-resident-co",
+        "2026-06-23-google-to-invest-9b-in-three-chesterfield-data-center-campus",
+        "2026-06-25-chesterfield-residents-seek-clarity-on-data-center-expansion"
+      ],
+      "case_ids": [],
+      "notes": "The first of Google's three Chesterfield campuses to break ground. Google has not disclosed megawatt capacity, water use, cooling method, or permanent job counts for its Chesterfield sites. The county granted a 30-year data-center equipment tax rate of $0.24 per $100 for the Google sites."
+    },
+    {
+      "id": "google-skye",
+      "name": "Google Project Skye (Genito / Moseley Road site)",
+      "operator": "Google",
+      "status": "approved",
+      "acreage": 880,
+      "location": "About 880 acres south of Genito Road, east of Moseley Road and north of Duval Road, in far western Chesterfield",
+      "lat": 37.432,
+      "lon": -77.745,
+      "key_dates": [
+        {"date": "2025-06", "event": "Board of Supervisors approves rezoning for Google's western campuses"},
+        {"date": "2026-05-19", "event": "Federal permit filings reveal impacts to more than 20 acres of wetlands and roughly 8,000 feet of streams"},
+        {"date": "2026-06-11", "event": "U.S. Army Corps of Engineers public comment period closes"},
+        {"date": "2026-06-30", "event": "Army Corps confirms the wetlands permit (NAO-2026-00282) is still under review"}
+      ],
+      "stories": [
+        "2026-06-24-google-s-second-data-center-raises-wetlands-concerns",
+        "2026-06-30-usace-provides-update-on-google-s-9b-data-center-project",
+        "2026-06-23-google-to-invest-9b-in-three-chesterfield-data-center-campus"
+      ],
+      "case_ids": ["NAO-2026-00282"],
+      "notes": "County rezoning is approved, but the federal Clean Water Act permit for wetlands impacts is still under Army Corps review. Plans call for five data-center buildings and three substations, with a target of coming online by 2028. A Dominion filing with the State Corporation Commission, approved in February 2026, confirms about 900 megawatts of planned data-center load in this area in three 300 MW phases through 2032. Some permit and LLC records associate the Skye and Loch code names with the opposite sites; we follow our published reporting here."
+    },
+    {
+      "id": "google-loch",
+      "name": "Google Project Loch (Watkins Centre site)",
+      "operator": "Google",
+      "status": "approved",
+      "acreage": 350,
+      "location": "Watkins Centre Parkway near Route 288 and Westchester Commons, Midlothian; about 350 acres of data-center use within a larger assemblage",
+      "lat": 37.5046,
+      "lon": -77.6952,
+      "key_dates": [
+        {"date": "2025-02", "event": "County Economic Development Authority files the rezoning request"},
+        {"date": "2025-06", "event": "Board of Supervisors approves rezoning, with a 150-foot building height limit"}
+      ],
+      "stories": [
+        "2026-06-23-google-to-invest-9b-in-three-chesterfield-data-center-campus",
+        "2026-06-25-chesterfield-residents-seek-clarity-on-data-center-expansion"
+      ],
+      "case_ids": [],
+      "notes": "The least publicly detailed of the three Google campuses. State and federal water-permit applications for the western campuses were still pending as of June 2026, per permit filings compiled in our research. Google has not disclosed megawatts, water use, or job counts. Code-name caution: see Project Skye."
+    },
+    {
+      "id": "digital-drive",
+      "name": "Digital Drive (Chirisa / PowerHouse)",
+      "operator": "Chirisa Technology Parks and PowerHouse Data Centers joint venture",
+      "status": "under construction",
+      "acreage": 104,
+      "location": "Meadowville Technology Park, Digital Drive, Chester (former Cartograf site)",
+      "lat": 37.3556,
+      "lon": -77.332,
+      "key_dates": [
+        {"date": "2024-09-26", "event": "Joint venture announces a hyperscale campus: five AI-ready facilities, 600,000-plus square feet, more than $2 billion"},
+        {"date": "2026", "event": "First facility targeted to open, with the full campus planned by 2028"}
+      ],
+      "stories": [
+        "2026-06-01-chesterfield-county-unemployment-rate-current-numbers"
+      ],
+      "case_ids": [],
+      "notes": "300 megawatts secured from the Meadowville substation, which Dominion is building out. Plans include direct-to-chip liquid cooling and a reclaimed-water partnership with the county."
+    },
+    {
+      "id": "tract-branders-bridge",
+      "name": "Tract campus (Branders Bridge Road)",
+      "operator": "Tract (Denver-based developer)",
+      "status": "withdrawn",
+      "acreage": 744,
+      "location": "16100 Branders Bridge Road, southern Chesterfield, with homes about 500 feet away",
+      "lat": 37.2605,
+      "lon": -77.4155,
+      "key_dates": [
+        {"date": "2025-06-17", "event": "Planning Commission unanimously recommends denial after about five hours of mostly opposed public comment"},
+        {"date": "2025-07-02", "event": "Tract withdraws the application and signals it intends to refile"}
+      ],
+      "stories": [
+        "2026-06-17-state-senator-lucas-pushes-data-center-regulations-in-cheste"
+      ],
+      "case_ids": [],
+      "notes": "The plan called for up to 11 data centers on roughly 740 acres. Any refiling now falls under the county's conditional-use-permit requirement that took effect January 1, 2026."
+    },
+    {
+      "id": "old-bermuda-hundred",
+      "name": "Old Bermuda Hundred Road campus (near I-95)",
+      "operator": "Washington Single Family Fund",
+      "status": "paused",
+      "acreage": 90,
+      "location": "Old Bermuda Hundred Road near I-95, Bermuda District",
+      "lat": 37.3427,
+      "lon": -77.4032,
+      "key_dates": [
+        {"date": "2026-01-01", "event": "Countywide zoning change takes effect: new data centers require a conditional use permit, with no grace period"},
+        {"date": "2026-06-03", "event": "Board of Zoning Appeals unanimously upholds the ruling that the project needs a conditional use permit; about a dozen residents spoke against it"}
+      ],
+      "stories": [
+        "2026-06-03-zoning-board-denies-data-center-campus-appeal-near-i-95",
+        "2026-06-17-data-center-project-paused-amid-county-lawsuits"
+      ],
+      "case_ids": [],
+      "notes": "The owner argued the roughly 90-acre project had vested rights under the old by-right industrial zoning and, after the appeal was denied, was weighing a circuit court challenge."
+    },
+    {
+      "id": "westdulles-james-river",
+      "name": "WestDulles Properties site (James River Industrial Center)",
+      "operator": "WestDulles Properties (Reston-based)",
+      "status": "under review",
+      "acreage": null,
+      "location": "James River Industrial Center, a heavy-industrial site in eastern Chesterfield",
+      "lat": null,
+      "lon": null,
+      "key_dates": [
+        {"date": "2026-03", "event": "Appeal filed against the county's ruling that the project needs a conditional use permit; a Board of Zoning Appeals hearing was scheduled for May 2026"}
+      ],
+      "stories": [],
+      "case_ids": [],
+      "notes": "Sourcing on this one is thin: the appeal and hearing date come from regional business-press reporting compiled in our research, and the outcome of the May 2026 hearing is not yet documented. We will update this entry as the record firms up."
+    }
+  ]
+}

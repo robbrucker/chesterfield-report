@@ -226,6 +226,8 @@ def cmd_build() -> None:
     yard_sales_mod.build_yard_sales()              # submit-your-own yard sale map -> /yard-sales.html
     from chesterfield import nonprofits as nonprofits_mod
     nonprofits_mod.build_nonprofits()              # local nonprofits directory + map -> /nonprofits.html
+    from chesterfield import datacenters as datacenters_mod
+    datacenters_mod.build_datacenters()            # data center tracker + map -> /data-centers.html
     from chesterfield import seo as seo_mod
     seo_mod.build_seo()
     letters_mod.build_form()
