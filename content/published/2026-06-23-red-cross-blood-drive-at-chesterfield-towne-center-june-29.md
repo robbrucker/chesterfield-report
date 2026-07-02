@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Named community event with specific date/location/details at Chesterfield Towne Center; falls under local fundraisers/drives that residents want to know about."
 ai_sensitive: false
+lat: 37.5089153
+lon: -77.6086605
 ---
 
 # Red Cross Blood Drive at Chesterfield Towne Center June 29

@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Essential civic information: residents need to know when early voting begins, including extended weekend hours for the August primary."
 ai_sensitive: false
+lat: 37.3834804
+lon: -77.5116775
 ---
 
 # Early Voting Starts June 18 for August Primary Elections

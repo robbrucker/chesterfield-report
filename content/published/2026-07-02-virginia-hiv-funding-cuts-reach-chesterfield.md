@@ -16,6 +16,8 @@ ai_provider:
 ai_verdict: approve
 ai_verdict_reason: "Statewide HIV funding cut, localized with verified Chesterfield data (943 residents living with HIV, VDH 2023), real local care providers, and a where-to-get-help service box. Fact-checked against a context file; two errors (500% FPL eligibility, Gilead rebate figure) corrected pre-publish. Service journalism for a vulnerable local population."
 ai_sensitive: true
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Virginia's HIV funding cuts reach Chesterfield — and where residents can still get help

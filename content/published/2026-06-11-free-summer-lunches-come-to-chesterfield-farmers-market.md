@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Free summer lunch program addresses youth food insecurity and integrates education with community services—substantive local development readers would find useful."
 ai_sensitive: false
+lat: 37.3768978
+lon: -77.504329
 ---
 
 # Free Summer Lunches Come to Chesterfield Farmers Market

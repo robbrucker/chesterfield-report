@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Genuine community charitable drive with actionable participation value, but reads as police department promotional content; human editor should confirm it fits publication's editorial voice."
 ai_sensitive: false
+lat: 37.3764651
+lon: -77.5079238
 ---
 
 # Christmas in July Toy Drive returns with police support

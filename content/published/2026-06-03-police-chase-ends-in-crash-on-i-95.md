@@ -12,6 +12,8 @@ image: ""
 video_url: ""
 media_kind: 
 ai_provider: claude-cli
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Police chase ends in crash on I-95

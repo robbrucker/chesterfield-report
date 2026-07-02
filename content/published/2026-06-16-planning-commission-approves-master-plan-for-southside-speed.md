@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Planning Commission approval of a local business revival is newsworthy government action with real economic development impact for Chesterfield residents."
 ai_sensitive: false
+lat: 37.4508463
+lon: -77.6291799
 ---
 
 # Planning Commission approves master plan for Southside Speedway revival

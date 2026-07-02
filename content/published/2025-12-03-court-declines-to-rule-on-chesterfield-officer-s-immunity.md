@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Court decision on police immunity is real news, but the stub lacks details needed to publish—editor should verify fuller coverage is available."
 ai_sensitive: true
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Court declines to rule on Chesterfield officer's immunity

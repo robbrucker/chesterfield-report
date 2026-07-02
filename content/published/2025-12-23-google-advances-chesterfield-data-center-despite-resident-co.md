@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Major infrastructure development with substantive community impact and documented resident concerns — fits the editor's pattern of publishing local growth/development stories."
 ai_sensitive: false
+lat: 37.3444044
+lon: -77.3039917
 ---
 
 # Google Advances Chesterfield Data Center Despite Resident Concerns

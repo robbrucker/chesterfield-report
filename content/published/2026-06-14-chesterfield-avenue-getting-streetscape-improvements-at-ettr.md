@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Substantive local development story with specific details and timeline that informs residents about a public-space improvement project affecting their community."
 ai_sensitive: false
+lat: 37.2355037
+lon: -77.4233119
 ---
 
 # Chesterfield Avenue Getting Streetscape Improvements at Ettrick Village Park

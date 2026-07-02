@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Legitimate public safety crime story, but lacks specifics (business name, suspect description) that warrant human editor follow-up for additional details."
 ai_sensitive: true
+lat: 37.5007641
+lon: -77.545148
 ---
 
 # Armed Robbery Suspect Sought in Chesterfield

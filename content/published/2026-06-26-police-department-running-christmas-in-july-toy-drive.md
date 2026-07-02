@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Named local police community initiative (toy drive by Chesterfield County Police Department) is a legitimate fundraiser that provides useful information for resident participation."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Police Department Running 'Christmas in July' Toy Drive

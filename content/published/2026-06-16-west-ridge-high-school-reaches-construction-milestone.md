@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "School construction milestone is significant local development news with community participation, matching the editor's pattern of publishing named school and infrastructure stories."
 ai_sensitive: false
+lat: 37.4171396
+lon: -77.762909
 ---
 
 # West Ridge High School reaches construction milestone

@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Public health infrastructure news with concrete results (lead-free confirmation) directly affecting all county residents; factual government source with no duplicates in your archive."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield Water System Declared Lead-Free

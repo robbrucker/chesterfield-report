@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "A Planning Commission resignation creates a board vacancy with implications for county land-use decisions, clearly qualifying as local government news of interest to residents."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield Planning Commission member steps down to return to school

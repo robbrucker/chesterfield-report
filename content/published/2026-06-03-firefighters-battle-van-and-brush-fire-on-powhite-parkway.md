@@ -12,6 +12,8 @@ image: ""
 video_url: ""
 media_kind: 
 ai_provider: claude-cli
+lat: 37.4643985
+lon: -77.6045022
 ---
 
 # Firefighters Battle Van and Brush Fire on Powhite Parkway

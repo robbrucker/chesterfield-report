@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Timely Chesterfield County government service event with practical value for residents."
 ai_sensitive: false
+lat: 37.3627185
+lon: -77.4364189
 ---
 
 # Free Shredding and E-Cycling Drop-Off at Thomas Dale

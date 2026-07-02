@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Significant leadership transition in county government with direct impact on local governance and succession planning."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Longtime Administrator Joe Casey Announces Retirement

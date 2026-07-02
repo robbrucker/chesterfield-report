@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Real emergency incident with local public-health impact, fits established pattern of approved safety/responder stories, and is timely and newsworthy."
 ai_sensitive: true
+lat: 37.4024332
+lon: -77.6786206
 ---
 
 # Suspected radiation exposure temporarily closes Chesterfield ER

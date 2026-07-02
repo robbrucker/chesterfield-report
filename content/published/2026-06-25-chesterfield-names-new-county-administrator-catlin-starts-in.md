@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "County administrator succession is significant government news with named individuals, a specific start date, and clear Chesterfield County impact; matches the site's published government coverage."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield Names New County Administrator, Catlin Starts in August
@@ -87,4 +89,5 @@ Leadership transition always carries transition risk: institutional knowledge de
 - [Chesterfield Appoints Dr. Kevin Catlin as New County Administrator](https://www.wric.com/news/local-news/chesterfield-county/chesterfield-appoints-administrator/)
 - [Chesterfield hires Michigan county executive as new administrator](https://news.google.com/rss/articles/CBMi5gFBVV95cUxQX1hOZnEtMVBfMFdJb3hZVWlfTHplcVBDZHVqZ2lxV28tYXNPRnVwbjZ4bGNvWnFHTGpGMUhBOGhNbmZJZ3dHdHQ4UC14Sm5kajNhWjJWVHZuUGRZVjVURDNkMzV0TVJtOGNvNC1YZ2VQOWZoMXFDM2Y1Z1hsTDNoM1N4ck5hb0t0dFpZN1Q0R3JmZXlkRTZJLV9IU0QySmNkN0wtSXM3LVNiamxYSzNLNVVweU9IRTJkbzJ3SmZIbERrckxCWVc4blRiVlF1b2NZZHpJbVptY3FBaTNuTGxoQnFadmZnQQ?oc=5)
 - [County Administrator Casey Reflects on 10-Year Tenure Before July Retirement](https://www.youtube.com/watch?v=FtAo0871K3c)
+- [County Launches Search for New Administrator](https://www.chesterfield.gov/CivicAlerts.aspx?aid=6973)
 

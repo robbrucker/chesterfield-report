@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Local youth camp with NFL coaching at named school; substantive turnout and genuine community interest for residents."
 ai_sensitive: false
+lat: 37.4068577
+lon: -77.6226638
 ---
 
 # NFL Star Kei'trel Clark Brings Youth Football Camp to Manchester High

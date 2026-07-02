@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Substantive government leadership announcement — County Administrator transition is consequential for residents and aligns with approved government-news items like board meeting announcements."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield Introduces Incoming County Administrator Dr. Kevin A. Catlin

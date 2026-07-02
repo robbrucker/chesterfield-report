@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Substantive local development story: named developer, specific project details (50 lots, 300+ acres, infrastructure timeline), and genuine impact on county growth."
 ai_sensitive: false
+lat: 37.2325405
+lon: -77.4986685
 ---
 
 # Developer to Begin Phillips Landing Subdivision Work

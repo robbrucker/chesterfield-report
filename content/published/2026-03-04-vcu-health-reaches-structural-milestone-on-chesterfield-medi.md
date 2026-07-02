@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Healthcare facility construction milestone is a legitimate development story with real impact on county residents' medical access."
 ai_sensitive: false
+lat: 37.3746426
+lon: -77.5101439
 ---
 
 # VCU Health Reaches Structural Milestone on Chesterfield Medical Complex

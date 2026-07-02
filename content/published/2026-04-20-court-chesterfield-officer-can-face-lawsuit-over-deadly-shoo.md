@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Court ruling on police accountability in a fatal shooting; newsworthy legal development with significant impact on residents, consistent with editor's pattern of publishing serious police/court matters."
 ai_sensitive: true
+lat: 37.474259
+lon: -77.5801128
 ---
 
 # Court: Chesterfield officer can face lawsuit over deadly shooting

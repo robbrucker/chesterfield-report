@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Legitimate criminal justice development but editor has shown selective coverage of this incident; needs human judgment on whether this follow-up merits publication."
 ai_sensitive: true
+lat: 37.391001
+lon: -77.6334956
 ---
 
 # Suspect in Officer-Involved Shooting Transferred to Jail

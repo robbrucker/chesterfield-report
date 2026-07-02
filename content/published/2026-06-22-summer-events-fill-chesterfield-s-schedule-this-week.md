@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Local community event roundup with practical services (e-cycling, hazardous waste disposal) from official government source; timely and useful to residents."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Summer Events Fill Chesterfield's Schedule This Week

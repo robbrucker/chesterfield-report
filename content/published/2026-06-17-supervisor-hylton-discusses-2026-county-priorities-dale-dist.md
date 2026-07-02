@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Substantive local government coverage of 2026 county priorities and Dale District projects from a named supervisor; aligns with approved government-accountability reporting."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Supervisor Hylton Discusses 2026 County Priorities, Dale District Projects

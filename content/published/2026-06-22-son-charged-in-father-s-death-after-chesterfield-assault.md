@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Genuine crime/death development warranting publication, but summary is notably thin (specific charges and assault circumstances not disclosed); editor should decide whether preliminary report is ready or warrants holding for additional detail."
 ai_sensitive: true
+lat: 37.3257628
+lon: -77.3265375
 ---
 
 # Son charged in father's death after Chesterfield assault

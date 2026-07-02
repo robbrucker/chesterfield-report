@@ -15,6 +15,8 @@ ai_provider:
 ai_verdict: approve
 ai_verdict_reason: "Local resident federally charged in an alleged $49.6M Medicaid fraud scheme — verified against two independent outlets (DOJ EDVA + Daily Voice), current, clearly local accountability news. Charge (not conviction) framing enforced; presumption of innocence."
 ai_sensitive: true
+lat: 37.5056125
+lon: -77.6087021
 ---
 
 # North Chesterfield executive charged in alleged $49.6M Medicaid fraud scheme

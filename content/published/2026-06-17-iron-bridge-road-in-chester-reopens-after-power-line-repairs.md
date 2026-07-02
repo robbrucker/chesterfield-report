@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Local infrastructure incident affecting traffic—Iron Bridge Road closure and reopening is timely public safety news with clear Chesterfield location and VDOT action, matching the editor's pattern of publishing similar road/infrastructure stories."
 ai_sensitive: false
+lat: 37.3543339
+lon: -77.494736
 ---
 
 # Iron Bridge Road in Chester reopens after power line repairs

@@ -9,6 +9,8 @@ focus: [Police, Community]
 location: "12900 block of Gumfork Place"
 ai_provider: claude-cli
 tags: [Chesterfield County Police, domestic violence, officer shooting, Jacob Clark, Jacob Wells, Gary Shaw, K-9 Knight, community fundraising]
+lat: 37.391001
+lon: -77.6334956
 ---
 
 # Two Chesterfield officers shot; suspect charged, K-9 Knight killed

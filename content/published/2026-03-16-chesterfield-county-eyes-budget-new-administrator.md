@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Budget and county administrator hiring are substantive governance items residents care about; mirrors your school-board-agenda approval pattern."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield County Eyes Budget, New Administrator

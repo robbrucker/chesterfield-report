@@ -12,6 +12,8 @@ image: ""
 video_url: ""
 media_kind: 
 ai_provider: claude-cli
+lat: 37.4988569
+lon: -77.5696146
 ---
 
 # 3 hospitalized in Chesterfield shopping center crash

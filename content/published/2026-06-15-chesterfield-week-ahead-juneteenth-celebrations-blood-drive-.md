@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Substantive civic week-ahead with official closures, blood drive logistics, and Juneteenth events—similar to previously approved county announcements."
 ai_sensitive: false
+lat: 37.3833594
+lon: -77.5116884
 ---
 
 # Chesterfield Week Ahead: Juneteenth Celebrations, Blood Drive, Father's Day

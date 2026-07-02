@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Serious local crime story with real public significance; death and felony charges; licensed news source with legally appropriate language; consistent with editor's approved crime and safety coverage."
 ai_sensitive: true
+lat: 37.4191689
+lon: -77.6760205
 ---
 
 # Chesterfield Mother Charged in Son's Death From Severe Neglect

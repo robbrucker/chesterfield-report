@@ -9,6 +9,8 @@ focus: [Police, Community]
 location: "11200 block of Kalliope Drive, Chesterfield County, Virginia"
 ai_provider: claude-cli
 tags: [missing person, Julie Ann Branan, Chesterfield County, cognitive impairment, Virginia State Police, alert system, vulnerable adults]
+lat: 37.3521075
+lon: -77.5291949
 ---
 
 # Chesterfield Woman Missing Since Saturday Morning

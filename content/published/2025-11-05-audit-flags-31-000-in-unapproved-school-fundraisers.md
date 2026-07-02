@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Real financial accountability finding from a school system audit — significant news for residents and matches editor's pattern of approving institutional governance stories."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Audit flags $31,000 in unapproved school fundraisers

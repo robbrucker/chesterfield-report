@@ -12,6 +12,8 @@ image: ""
 video_url: ""
 media_kind: ""
 ai_provider: linkqueue
+lat: 37.4503779
+lon: -77.6379944
 ---
 
 # Chesterfield completes $48M expansion of River City Sportsplex

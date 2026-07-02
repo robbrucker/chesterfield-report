@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Elections are significant civic news, but this stub lacks essential details (which positions, outcomes, timeline, context) to warrant auto-publish; editor should flesh out or pass."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Special Elections Held Jan. 6 in Parts of Chesterfield

@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Local government service change with named Chesterfield residents; matches editor's track record on property/maintenance and government accountability coverage."
 ai_sensitive: false
+lat: 37.4734159
+lon: -77.5964448
 ---
 
 # VDOT Stops Trimming Roadside Overgrowth at Chesterfield Home

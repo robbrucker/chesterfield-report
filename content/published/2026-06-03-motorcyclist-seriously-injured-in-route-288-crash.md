@@ -12,6 +12,8 @@ image: ""
 video_url: ""
 media_kind: 
 ai_provider: claude-cli
+lat: 37.357164
+lon: -77.4140954
 ---
 
 # Motorcyclist seriously injured in Route 288 crash

@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Death of prominent Chesterfield civic leader with longstanding education/government ties is substantial local news; editor regularly publishes sensitive stories with community impact."
 ai_sensitive: true
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # VCU Accounting Professor and Chesterfield Leader Jim Holland Dies at 73

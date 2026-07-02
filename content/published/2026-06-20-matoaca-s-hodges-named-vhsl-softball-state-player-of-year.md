@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Named local student athlete earns VHSL state player of the year in softball while leading Matoaca to a state championship—a significant achievement worth publishing."
 ai_sensitive: false
+lat: 37.2794118
+lon: -77.4664874
 ---
 
 # Matoaca's Hodges Named VHSL Softball State Player of Year

@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Timely Board of Supervisors briefing on state legislative changes affecting county code, with concrete action items and named officials—substantive local government news readers should know."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # County Board Addresses 2026 State Legislative Changes

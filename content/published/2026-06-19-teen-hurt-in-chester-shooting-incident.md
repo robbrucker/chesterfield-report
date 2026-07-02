@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Public-safety shooting incident with teen injury in Chester — matches editor's demonstrated taste for timely crime and emergency reporting."
 ai_sensitive: true
+lat: 37.4361513
+lon: -77.4560923
 ---
 
 # Teen hurt in March Chester shooting incident

@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Major $9B corporate investment representing significant economic development and infrastructure expansion in Chesterfield County merits immediate publication."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Google to Invest $9B in Three Chesterfield Data Center Campuses

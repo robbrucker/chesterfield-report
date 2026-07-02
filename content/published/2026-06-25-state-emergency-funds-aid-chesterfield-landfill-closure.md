@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Landfill closure with state emergency funding is a consequential infrastructure and environmental development affecting county residents."
 ai_sensitive: false
+lat: 37.357164
+lon: -77.4140954
 ---
 
 # State emergency funds aid Chesterfield landfill closure

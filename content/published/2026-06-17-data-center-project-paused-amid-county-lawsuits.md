@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Real development/lawsuit story with county impact, but vague on specifics (\"details remain unclear\")—editor should verify the piece has enough reporting before publishing."
 ai_sensitive: true
+lat: 37.3427152
+lon: -77.4032465
 ---
 
 # Data center project paused amid county lawsuits

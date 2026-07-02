@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Development story with real news value, but summary lacks specifics (which project, location, timeline, impacts)—verify substantive reporting before publish."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield Residents Seek Clarity on Data Center Expansion Plans

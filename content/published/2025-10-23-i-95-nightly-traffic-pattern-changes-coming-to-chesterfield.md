@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "VDOT traffic changes are real news affecting commuters, but the summary lacks actionable details (start date, affected segments, duration) needed before publishing."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # I-95 nightly traffic pattern changes coming to Chesterfield

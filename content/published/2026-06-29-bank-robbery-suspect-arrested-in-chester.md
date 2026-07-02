@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Bank robbery arrest is genuine Chesterfield-specific public-safety news matching the editor's approval of crime developments."
 ai_sensitive: true
+lat: 37.5125308
+lon: -77.609848
 ---
 
 # Bank robbery suspect arrested in Chester

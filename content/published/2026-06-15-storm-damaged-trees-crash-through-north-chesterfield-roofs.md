@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Local weather event with documented property damage to multiple North Chesterfield homes directly affects residents and matches the site's approved safety/weather story pattern."
 ai_sensitive: false
+lat: 37.4972296
+lon: -77.5699047
 ---
 
 # Storm-damaged trees crash through North Chesterfield roofs

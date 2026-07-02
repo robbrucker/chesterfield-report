@@ -12,6 +12,8 @@ image: ""
 video_url: ""
 media_kind: ""
 ai_provider: linkqueue
+lat: 37.3769145
+lon: -77.5068812
 ---
 
 # 50 Years of Collecting & Preserving Chesterfield History

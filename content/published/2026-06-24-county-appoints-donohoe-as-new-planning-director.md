@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Official appointment of county Planning Director brings substantive governance news affecting development policy — residents should know who leads planning decisions."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # County Appoints Donohoe as New Planning Director

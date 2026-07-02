@@ -33,6 +33,7 @@ Typical loop:
 from __future__ import annotations
 
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -352,6 +353,47 @@ def cmd_article(name: str, model: str = "claude-haiku-4-5") -> None:
     print("Review it, then: python run.py build")
 
 
+def cmd_geocode_backfill() -> None:
+    """Fill in lat/lon frontmatter for published stories that have a textual
+    location but no usable coordinates (blank, or an old bad geocode outside
+    the county). Rate-limited by geo.py's per-backend throttles plus a small
+    extra sleep between stories."""
+    def _bad(lat: str, lon: str) -> bool:
+        if not lat or not lon:
+            return True
+        try:
+            return not geo._in_bbox(float(lat), float(lon))
+        except ValueError:
+            return True
+
+    candidates = []
+    for path in sorted(render.PUBLISHED.glob("*.md")):
+        meta, _ = render._parse_frontmatter(path.read_text(encoding="utf-8"))
+        loc = (meta.get("location") or "").strip()
+        lat = (meta.get("lat") or "").strip()
+        lon = (meta.get("lon") or "").strip()
+        if loc and _bad(lat, lon):
+            candidates.append((path, loc))
+
+    print(f"{len(candidates)} published stories need geocoding.")
+    filled, missing = 0, []
+    for i, (path, loc) in enumerate(candidates, 1):
+        g = geo.geocode(loc)
+        if g:
+            render.update_frontmatter(path, {"lat": g["lat"], "lon": g["lon"]})
+            filled += 1
+            print(f"[{i}/{len(candidates)}] OK   {path.name}: {loc} -> "
+                  f"{g['lat']:.5f}, {g['lon']:.5f}")
+        else:
+            missing.append((path.name, loc))
+            print(f"[{i}/{len(candidates)}] MISS {path.name}: {loc}")
+        time.sleep(0.3)  # extra politeness on top of geo.py throttles
+
+    print(f"\nBackfill done: {filled} filled, {len(missing)} still missing.")
+    for name, loc in missing:
+        print(f"  still missing: {name}  ({loc})")
+
+
 def cmd_status() -> None:
     store = Store(DB_PATH)
     print("Item counts by status:", store.counts())
@@ -416,6 +458,10 @@ def main() -> None:
         # unpublish empty stubs/junk. --dry-run reports without changing files.
         result = qa_mod.run(apply="--dry-run" not in args)
         print(f"QA: {result['merged_away']} merged, {result['unpublished']} unpublished")
+    elif cmd == "geocode-backfill":
+        # One-time-ish: fill lat/lon for published stories with a location but
+        # no usable coordinates so they show up on the news map.
+        cmd_geocode_backfill()
     elif cmd == "cases-backfill":
         # One-time: enrich every development/zoning case (no per-build cap).
         print(cases_mod.backfill_cases())

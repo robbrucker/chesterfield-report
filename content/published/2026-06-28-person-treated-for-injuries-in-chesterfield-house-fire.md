@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Public-safety emergency (residential fire with injury) clearly local to Chesterfield County—matches the editor's approved fire/rescue stories like the Powhite Parkway brush fire."
 ai_sensitive: true
+lat: 37.4173942
+lon: -77.458974
 ---
 
 # Person Treated for Injuries in Chesterfield House Fire

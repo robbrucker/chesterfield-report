@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Community fundraiser supporting wounded officers and honoring K-9 Knight matches the approved pattern of local service-focused stories; respectful tribute rather than incident duplication."
 ai_sensitive: true
+lat: 37.4142227
+lon: -77.6443751
 ---
 
 # Chesterfield restaurant hosts fundraiser for wounded officers, honors K-9 Knight

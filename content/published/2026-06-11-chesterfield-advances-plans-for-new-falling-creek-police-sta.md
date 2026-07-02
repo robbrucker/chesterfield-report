@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Legitimate infrastructure development news distinct from the shooting-incident duplicates; a real county investment project with clear significance to residents."
 ai_sensitive: true
+lat: 37.500627
+lon: -77.5306161
 ---
 
 # Chesterfield Advances Plans for New Falling Creek Police Station

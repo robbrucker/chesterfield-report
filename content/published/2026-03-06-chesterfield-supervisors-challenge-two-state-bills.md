@@ -15,8 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Board of Supervisors policy stance on state legislation is locally consequential news, mirrors the editorial pattern for government-action approvals."
 ai_sensitive: false
-lat: 39.7837304
-lon: -100.445882
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield Supervisors Challenge Two State Bills

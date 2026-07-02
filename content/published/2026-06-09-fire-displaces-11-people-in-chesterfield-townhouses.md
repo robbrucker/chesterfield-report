@@ -12,6 +12,8 @@ image: ""
 video_url: ""
 media_kind: 
 ai_provider: claude-cli
+lat: 37.3107958
+lon: -77.4267919
 ---
 
 # Fire Displaces 11 People in Chesterfield Townhouses

@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Genuine Chesterfield community-interest story, but thin on specifics—no names or details beyond ages; editor should assess whether to develop or publish as-is."
 ai_sensitive: false
+lat: 37.5461246
+lon: -77.4540609
 ---
 
 # Chesterfield Couple Graduates from VCU at 65 and 58

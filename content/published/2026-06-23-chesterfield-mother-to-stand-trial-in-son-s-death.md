@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Substantive court/crime development with serious charges—fits the editor's demonstrated pattern of publishing crime and legal proceedings."
 ai_sensitive: true
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield Mother to Stand Trial in Son's Death

@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Housing affordability is a real community issue, but draft lacks specific findings or statistics — reads as generic data-availability notice rather than substantive reporting."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # How Many Chesterfield Residents Live in Subsidized Housing?

@@ -12,6 +12,8 @@ image: ""
 video_url: ""
 media_kind: 
 ai_provider: claude-cli
+lat: 37.3489475
+lon: -77.438379
 ---
 
 # Tall Ships Sail Into Chesterfield for 250th Celebration

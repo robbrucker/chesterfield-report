@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Real government decision with $26M budget implications for a county environmental remediation project directly affecting Chesterfield residents."
 ai_sensitive: false
+lat: 37.3557742
+lon: -77.4952692
 ---
 
 # Lawmakers Debate Cost of Shoosmith Landfill Cleanup

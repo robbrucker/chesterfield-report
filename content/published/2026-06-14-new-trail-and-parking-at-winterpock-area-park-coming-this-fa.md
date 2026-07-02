@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Concrete local parks development with specific amenities and fall 2026 timeline serves residents planning recreation access."
 ai_sensitive: false
+lat: 37.3509039
+lon: -77.6532239
 ---
 
 # New Trail and Parking at Winterpock Area Park Coming This Fall

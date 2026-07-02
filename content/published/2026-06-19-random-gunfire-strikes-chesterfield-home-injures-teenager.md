@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Genuine local public safety incident with injury; aligns with editor's demonstrated coverage of serious crimes."
 ai_sensitive: true
+lat: 37.3504306
+lon: -77.4410743
 ---
 
 # Random gunfire strikes Chesterfield home, injures teenager

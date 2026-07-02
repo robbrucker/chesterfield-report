@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Board of Supervisors approval of 1,500-home development is substantive local government news with direct impact on county growth and residents."
 ai_sensitive: false
+lat: 37.4791586
+lon: -77.5140088
 ---
 
 # Chesterfield Approves 1,500-Home Development in Western County

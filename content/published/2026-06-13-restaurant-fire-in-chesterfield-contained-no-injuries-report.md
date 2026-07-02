@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Public-safety incident with emergency response matches the editor's pattern of approving fire/emergency stories like the Powhite Parkway fire."
 ai_sensitive: true
+lat: 37.4791586
+lon: -77.5140088
 ---
 
 # Restaurant fire in Chesterfield contained, no injuries reported

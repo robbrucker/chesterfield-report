@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Newsworthy homicide investigation with filed charges, but sensitive crime story requiring editorial review for accuracy, fair framing, and proper attribution before publication."
 ai_sensitive: true
+lat: 37.4202543
+lon: -77.5974383
 ---
 
 # Chesterfield woman's death ruled homicide; husband charged

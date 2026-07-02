@@ -9,8 +9,8 @@ focus: [Government, Community]
 ai_provider: extractive
 tags: [Chesterfield County Public Library, summer reading, literacy programs, community service, youth engagement, Collaborative Summer Library Program, Beanstack, Chesterfield County VA]
 location: "\"\""
-lat: 39.7837304
-lon: -100.445882
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield Library Encourages Residents to Join Summer Library Game

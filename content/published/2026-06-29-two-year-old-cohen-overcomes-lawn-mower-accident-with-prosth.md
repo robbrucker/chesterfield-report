@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Named local child's recovery from serious injury is compelling community human-interest news readers want to see."
 ai_sensitive: true
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Two-Year-Old Cohen Overcomes Lawn Mower Accident with Prosthetic

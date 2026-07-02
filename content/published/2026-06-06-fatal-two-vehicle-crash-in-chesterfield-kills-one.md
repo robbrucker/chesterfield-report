@@ -9,6 +9,8 @@ focus: [Police, Fire & EMS]
 location: "6400 block of Hopkins Road, Chesterfield County"
 ai_provider: claude-cli
 tags: [fatal crash, Hopkins Road, Chesterfield County, Watchrun Drive, traffic fatality, vehicle collision, two-vehicle crash, road safety]
+lat: 37.3878485
+lon: -77.4580645
 ---
 
 # Fatal Two-Vehicle Crash in Chesterfield Kills One

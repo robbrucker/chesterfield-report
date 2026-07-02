@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Government news with real value, but too vague—names no specific projects, gives no budget figures or concrete decisions."
 ai_sensitive: false
+lat: 37.4559354
+lon: -77.634636
 ---
 
 # Parks and Recreation Presents Annual Update to Board

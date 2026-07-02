@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Missing child located safely after CODI Alert is newsworthy local public-safety news, appropriately reported without identifying details."
 ai_sensitive: true
+lat: 37.321755
+lon: -77.4336077
 ---
 
 # 6-Year-Old Chesterfield Girl Found Safe After CODI Alert

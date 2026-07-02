@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Infrastructure investment with concrete community impact — legitimate groundbreaking coverage for growing Chester area."
 ai_sensitive: false
+lat: 37.3489475
+lon: -77.438379
 ---
 
 # Chesterfield breaks ground on new fire station in Chester

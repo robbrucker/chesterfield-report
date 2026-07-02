@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "County government approval of a neighborhood development in Matoaca is a consequential land-use decision with documented resident impact—straightforward local news."
 ai_sensitive: false
+lat: 37.2578266
+lon: -77.4650127
 ---
 
 # Chesterfield reviews Marlbank Farms neighborhood development

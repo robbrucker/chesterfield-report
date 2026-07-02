@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "A private landfill's bankruptcy filing in Chesterfield County is significant local news affecting waste management and environmental protection—a real development with direct community impact."
 ai_sensitive: true
+lat: 37.3519252
+lon: -77.4967077
 ---
 
 # Chesterfield private landfill files for bankruptcy

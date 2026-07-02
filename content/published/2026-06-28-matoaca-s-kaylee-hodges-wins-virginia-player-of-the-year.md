@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "State-level athletic honor for a named local high school student is significant community achievement news."
 ai_sensitive: false
+lat: 37.2794118
+lon: -77.4664874
 ---
 
 # Matoaca's Kaylee Hodges Wins Virginia Player of the Year

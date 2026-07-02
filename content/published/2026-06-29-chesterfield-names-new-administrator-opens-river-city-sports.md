@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Substantive government news: county administrator selection is a consequential leadership decision, and River City Sportsplex park opening is a tangible development milestone for Chesterfield County residents."
 ai_sensitive: false
+lat: 37.4495632
+lon: -77.6288926
 ---
 
 # Chesterfield Names New Administrator, Opens River City Sportsplex Park

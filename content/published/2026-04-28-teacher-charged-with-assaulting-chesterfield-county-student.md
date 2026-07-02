@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Real news with genuine public safety significance, but criminal charges involving schools and students warrant human review for proper detail handling and privacy considerations."
 ai_sensitive: true
+lat: 37.3058494
+lon: -77.4252225
 ---
 
 # Chesterfield teacher found not guilty of assaulting student

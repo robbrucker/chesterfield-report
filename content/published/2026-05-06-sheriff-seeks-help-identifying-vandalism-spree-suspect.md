@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Newsworthy public-safety crime story with clear public assistance angle; straightforward presentation with no inflammatory tone or named suspects."
 ai_sensitive: true
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Midlothian man arrested in Chesterfield vandalism spree

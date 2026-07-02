@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "County leadership change is consequential local government news with real impact on residents; no indication of sensitivity or duplicate coverage."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield County names interim supervisor to replace Holland

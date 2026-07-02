@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Genuine court-document follow-up with real news value, but this is the fourth+ story about the May 31 K-9 incident and the editor has rejected multiple prior versions; needs human judgment on whether unsealed warrants justify another angle."
 ai_sensitive: true
+lat: 37.391001
+lon: -77.6334956
 ---
 
 # Search Warrants Reveal Details of Chesterfield Officer Shooting

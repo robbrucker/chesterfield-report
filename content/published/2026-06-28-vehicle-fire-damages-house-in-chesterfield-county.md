@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Vehicle fire damaging residential property is a public-safety incident of real interest to county residents, consistent with the approved emergency-coverage pattern."
 ai_sensitive: false
+lat: 37.4500944
+lon: -77.6711711
 ---
 
 # Vehicle Fire Damages House in Chesterfield County

@@ -12,6 +12,8 @@ image: ""
 video_url: ""
 media_kind: 
 ai_provider: claude-cli
+lat: 37.3053533
+lon: -77.4944875
 ---
 
 # Dump truck overturned, hazmat crew responds

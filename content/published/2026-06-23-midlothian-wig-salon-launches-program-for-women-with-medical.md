@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Local Chesterfield County business milestone with a genuine community health initiative—fits the profile of local business and human-interest news worth publishing."
 ai_sensitive: false
+lat: 37.4394782
+lon: -77.5922551
 ---
 
 # Midlothian Wig Salon Launches Program for Women with Medical Hair Loss

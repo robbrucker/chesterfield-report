@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "State senator's regulatory effort on data center growth is substantive government/policy news specific to Chesterfield—timely local coverage that fits your demonstrated taste for government action stories."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # State Senator Lucas Pushes Data Center Regulations in Chesterfield

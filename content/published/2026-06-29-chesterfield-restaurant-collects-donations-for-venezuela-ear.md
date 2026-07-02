@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Local restaurant organizing a charitable fundraiser and donation drive for earthquake relief is genuine community-interest news with clear Chesterfield value."
 ai_sensitive: false
+lat: 37.4607895
+lon: -77.5438221
 ---
 
 # Chesterfield restaurant collects donations for Venezuela earthquake relief

@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Community-led blood drive with concrete results (100+ units) showing local civic response to police incident."
 ai_sensitive: true
+lat: 37.5105495
+lon: -77.5953033
 ---
 
 # Over 100 Blood Units Collected for Wounded Chesterfield Officers

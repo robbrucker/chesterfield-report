@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Timely public-safety story with countywide emergency response impact, consistent with editor's approvals of similar incident coverage."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Icy Conditions Trigger Wave of Fall-Related Emergency Calls

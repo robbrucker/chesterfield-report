@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Legitimate public safety incident with injury — matches editor's approved traffic/accident stories."
 ai_sensitive: true
+lat: 37.4010469
+lon: -77.6299415
 ---
 
 # Teen injured after stepping into traffic near Chesterfield school

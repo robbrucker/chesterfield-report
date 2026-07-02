@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Local youth mentorship program with named professional instructor and established community presence (third annual)."
 ai_sensitive: false
+lat: 37.4503779
+lon: -77.6379944
 ---
 
 # Former NFL Linebacker Hosts I Am Power Football Camp

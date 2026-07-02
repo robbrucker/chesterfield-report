@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Feel-good local business/community story about a Chesterfield contractor volunteering to help residents, fitting the pattern of community recognition content the editor publishes."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Local Contractor Steps In to Help Chesterfield Couple

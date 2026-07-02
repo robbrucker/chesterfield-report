@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Substantive court/criminal justice story matching editor's demonstrated taste for homicide and judicial proceedings coverage."
 ai_sensitive: true
+lat: 37.3120428
+lon: -77.4284625
 ---
 
 # Judge Denies Bond for Man Accused in Teen's Death

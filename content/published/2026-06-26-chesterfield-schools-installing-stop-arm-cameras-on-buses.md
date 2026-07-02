@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Concrete school safety policy affecting county bus routes and traffic compliance; clearly named initiative with community-wide impact on parents, students, and drivers."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield Schools Installing Stop-Arm Cameras on Buses

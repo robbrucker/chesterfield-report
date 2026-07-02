@@ -15,8 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "County budget approval is significant government policy news directly impacting residents' services and taxes—fits the pattern of approved government announcements."
 ai_sensitive: false
-lat: 39.7837304
-lon: -100.445882
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # Chesterfield supervisors approve $2.3B budget for fiscal 2027

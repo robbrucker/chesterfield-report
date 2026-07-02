@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Unsolved 2013 homicide with active Crime Solvers appeal for tips is legitimate, newsworthy crime reporting serving community safety and public engagement."
 ai_sensitive: true
+lat: 37.486806
+lon: -77.6473195
 ---
 
 # 13 Years Unsolved: Chesterfield Seeks Tips in 2013 Shooting

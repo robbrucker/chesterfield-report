@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Serious injury traffic incident on Route 288 matches the editor's clear approval pattern for public-safety incidents."
 ai_sensitive: true
+lat: 37.357164
+lon: -77.4140954
 ---
 
 # Driver Seriously Injured in Crash on Route 288

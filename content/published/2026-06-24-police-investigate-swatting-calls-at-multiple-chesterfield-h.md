@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Active public safety investigation affecting multiple county homes is newsworthy local reporting that matches the editor's published police/emergency stories."
 ai_sensitive: true
+lat: 37.3896207
+lon: -77.4632252
 ---
 
 # Police Investigate Swatting Calls at Multiple Chesterfield Homes

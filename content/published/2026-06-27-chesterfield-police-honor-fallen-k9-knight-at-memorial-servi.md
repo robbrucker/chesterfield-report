@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Newsworthy memorial service honoring fallen K9; Chesterfield-specific community event distinct from original shooting coverage."
 ai_sensitive: true
+lat: 37.3764651
+lon: -77.5079238
 ---
 
 # Chesterfield Police Honor Fallen K9 Knight at Memorial Service

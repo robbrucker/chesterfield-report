@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Significant infrastructure policy change directly affecting Chesterfield commuters' transportation costs and daily experience."
 ai_sensitive: false
+lat: 37.4650579
+lon: -77.5995695
 ---
 
 # Powhite Parkway Tolls Coming to an End

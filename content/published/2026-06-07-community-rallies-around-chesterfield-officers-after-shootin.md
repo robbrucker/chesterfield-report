@@ -12,6 +12,8 @@ image: ""
 video_url: ""
 media_kind: 
 ai_provider: claude-cli
+lat: 37.391001
+lon: -77.6334956
 ---
 
 # Community rallies around Chesterfield officers after shooting

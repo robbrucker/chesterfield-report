@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Significant government action on an environmental crisis with direct community impact—state official convening stakeholders on bankrupt landfill and contamination."
 ai_sensitive: true
+lat: 37.3519252
+lon: -77.4967077
 ---
 
 # State official calls meeting on bankrupt Chesterfield landfill

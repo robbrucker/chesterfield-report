@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Major state infrastructure approval doubling county hospital capacity is significant local news with clear resident impact."
 ai_sensitive: false
+lat: 37.3859982
+lon: -77.578509
 ---
 
 # State approves hospital expansion doubling Chesterfield facilities

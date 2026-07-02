@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Local restaurant development with named business planning Chesterfield County reopenings is substantive news for the community."
 ai_sensitive: false
+lat: 37.5089153
+lon: -77.6086605
 ---
 
 # Lindsey Food Group Planning Restaurant Revivals in Chesterfield

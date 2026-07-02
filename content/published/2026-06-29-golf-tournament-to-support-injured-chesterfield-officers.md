@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Community fundraiser event supporting locally injured officers—fits the approved profile for officer-support and community-response stories like K-9 Knight, appropriately framed despite sensitive context."
 ai_sensitive: true
+lat: 37.3361228
+lon: -77.5296733
 ---
 
 # Golf Tournament to Support Injured Chesterfield Officers

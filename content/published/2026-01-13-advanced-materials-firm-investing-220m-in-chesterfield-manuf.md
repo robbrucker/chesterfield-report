@@ -15,6 +15,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Major economic development announcement with direct job-creation impact—substantive business news for local residents, comparable to editor-approved unemployment data."
 ai_sensitive: false
+lat: 37.3297307
+lon: -77.3870098
 ---
 
 # Advanced Materials Firm Investing $220M in Chesterfield Manufacturing

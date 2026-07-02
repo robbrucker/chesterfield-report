@@ -16,6 +16,8 @@ ai_provider: claude-cli
 ai_verdict: approve
 ai_verdict_reason: "Government infrastructure action addressing documented local safety concern; matches editor's pattern of publishing Board of Supervisors decisions and pedestrian/public-safety improvements."
 ai_sensitive: false
+lat: 37.5187218
+lon: -77.6023972
 ---
 
 # Chesterfield Adds Signal and Crosswalk at Safety Problem Intersection
