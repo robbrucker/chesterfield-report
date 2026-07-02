@@ -304,7 +304,8 @@ def build_dining() -> Path:
     page = render._inject_og(
         page, "Chesterfield dining guide",
         f"{total} places to eat in Chesterfield County by type of food, plus health-inspection lookup.",
-        "https://chesterfieldreport.com/dining.html")
+        "https://chesterfieldreport.com/dining.html",
+        page_title="Dining Guide | The Chesterfield Report")
     out = PUBLIC / "dining.html"
     out.write_text(page, encoding="utf-8")
     return out

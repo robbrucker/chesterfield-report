@@ -41,6 +41,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from . import ai
 from . import render
 
 ROOT = render.ROOT
@@ -338,8 +339,7 @@ def _summarize_agenda(pdf_path: str, body: str, name: str) -> dict | None:
         "--model", MODEL,
     ]
     try:
-        proc = subprocess.run(cmd, capture_output=True, text=True,
-                              timeout=CLI_TIMEOUT)
+        proc = ai.run("meetings", cmd, timeout=CLI_TIMEOUT)
         if proc.returncode != 0:
             print(f"  ! meetings: CLI failed ({proc.stderr.strip()[:160]})")
             return None

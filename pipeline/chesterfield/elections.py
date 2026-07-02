@@ -578,7 +578,8 @@ def build_elections() -> Path:
         page, "2026 Voter Guide: Chesterfield County",
         "How and when to vote in Chesterfield County, Virginia in 2026: the August 4 primary and "
         "November 3 general election, who is on your ballot, statewide ballot questions, and how to register.",
-        f"{render.SITE_URL}/elections.html", og_type="website")
+        f"{render.SITE_URL}/elections.html", og_type="website",
+        page_title="2026 Voter Guide | The Chesterfield Report")
     out = PUBLIC / "elections.html"
     out.write_text(page, encoding="utf-8")
     return out

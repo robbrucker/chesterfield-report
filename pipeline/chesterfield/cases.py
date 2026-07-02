@@ -29,6 +29,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+from . import ai
 from . import render, laserfiche
 from .render import PUBLIC
 
@@ -257,7 +258,7 @@ def enrich_case(case: dict, report_text: str | None) -> dict | None:
     # returns non-zero with no stderr).
     for attempt in range(2):
         try:
-            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+            proc = ai.run("cases", cmd, timeout=CLI_TIMEOUT)
             if proc.returncode != 0:
                 if attempt == 0:
                     time.sleep(4)

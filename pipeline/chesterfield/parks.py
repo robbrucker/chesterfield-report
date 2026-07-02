@@ -383,7 +383,8 @@ def build_parks() -> Path:
         "A map of every Chesterfield County park, the major parks and their amenities, and "
         "how to register for youth sports, camps, Active Lifestyles 50+ and therapeutic "
         "recreation. State parks like Pocahontas are flagged as not county-run.",
-        f"{render.SITE_URL}/parks.html", og_type="website")
+        f"{render.SITE_URL}/parks.html", og_type="website",
+        page_title="Parks & Recreation | The Chesterfield Report")
     out = PUBLIC / "parks.html"
     out.write_text(page, encoding="utf-8")
     return out

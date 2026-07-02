@@ -12,12 +12,62 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import shutil
 import subprocess
+import sys
 from pathlib import Path
+
+from . import ai
 
 MODEL = "claude-haiku-4-5"
 CLI_TIMEOUT = 240  # seconds; translation of a long body can take a while
+
+# --------------------------------------------------------------------------- #
+# Translation storm guard
+# --------------------------------------------------------------------------- #
+# July 2026 incident: a site-wide template edit invalidated many cache keys and a
+# single `run.py build` queued ~1,000 Spanish translation calls (the "storm"),
+# which hammered the Claude subscription. The global AI budget in ai.py is the
+# hard ceiling; THIS is the translation-specific check that halts far lower and
+# logs loudly, so a normal cron build can never storm. When the cap trips, the
+# remaining strings/stories are left in English for this build (pages still ship)
+# and picked up on a later run. For an INTENTIONAL bulk backfill (e.g. right
+# after a template change), raise the cap explicitly:
+#     CR_TRANSLATE_MAX=2000 CR_AI_BUDGET=2500 python run.py build
+# See docs/translation-guard.md.
+TRANSLATE_MAX = int(os.environ.get("CR_TRANSLATE_MAX", "200"))
+_translate_calls = 0
+_guard_logged = False
+
+
+class TranslationStormGuard(RuntimeError):
+    """Raised when one build exceeds the per-build translation-call cap."""
+
+
+def guard_tripped() -> bool:
+    """True once this process has hit the translation cap (build_es_sections
+    reads this so it does not cache a page it only partially translated)."""
+    return _translate_calls >= TRANSLATE_MAX
+
+
+def translation_calls() -> int:
+    return _translate_calls
+
+
+def _storm_check() -> None:
+    """Count one translation CLI call; raise once the per-build cap is reached."""
+    global _translate_calls, _guard_logged
+    if _translate_calls >= TRANSLATE_MAX:
+        if not _guard_logged:
+            print(f"  ! TRANSLATION STORM GUARD tripped: hit CR_TRANSLATE_MAX="
+                  f"{TRANSLATE_MAX} translation calls in one build. Remaining Spanish "
+                  f"translations are deferred (pages stay English until a later build). "
+                  f"For an intentional bulk backfill re-run with a higher CR_TRANSLATE_MAX "
+                  f"(see docs/translation-guard.md).", file=sys.stderr)
+            _guard_logged = True
+        raise TranslationStormGuard(f"per-build translation cap {TRANSLATE_MAX} reached")
+    _translate_calls += 1
 
 # pipeline/ is parents[1] of this file (chesterfield/translate.py).
 CACHE_PATH = Path(__file__).resolve().parents[1] / "es_cache.json"
@@ -92,6 +142,7 @@ def cli_available() -> bool:
 
 
 def _translate_cli(headline: str, body_md: str, model: str) -> dict:
+    _storm_check()
     cmd = [
         "claude", "-p", _PROMPT.format(headline=headline, body=body_md),
         "--output-format", "json",
@@ -99,7 +150,7 @@ def _translate_cli(headline: str, body_md: str, model: str) -> dict:
         "--append-system-prompt", _SYSTEM,
         "--model", model,
     ]
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+    proc = ai.run("translate", cmd, timeout=CLI_TIMEOUT)
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.strip()[:300] or "claude CLI failed")
     envelope = json.loads(proc.stdout)
@@ -204,12 +255,13 @@ def _save_ui_cache(cache: dict) -> None:
 
 
 def _translate_batch_cli(batch: list, model: str) -> list:
+    _storm_check()
     cmd = [
         "claude", "-p", _UI_PROMPT.format(arr=json.dumps(batch, ensure_ascii=False)),
         "--output-format", "json", "--json-schema", json.dumps(_UI_SCHEMA),
         "--append-system-prompt", _UI_SYSTEM, "--model", model,
     ]
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+    proc = ai.run("translate", cmd, timeout=CLI_TIMEOUT)
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.strip()[:300] or "claude CLI failed")
     envelope = json.loads(proc.stdout)
@@ -229,6 +281,8 @@ def _translate_split(batch: list, model: str) -> dict:
     try:
         trans = _translate_batch_cli(batch, model)
         return dict(zip(batch, trans))
+    except TranslationStormGuard:
+        raise  # do NOT split/retry past the cap; let translate_strings stop
     except Exception:
         if len(batch) <= 1:
             return {}
@@ -251,7 +305,10 @@ def translate_strings(strings, model: str = MODEL, batch_size: int = 25) -> dict
     todo = [s for s in uniq if _ui_hash(s) not in cache]
     changed = False
     for i in range(0, len(todo), batch_size):
-        res = _translate_split(todo[i:i + batch_size], model)
+        try:
+            res = _translate_split(todo[i:i + batch_size], model)
+        except TranslationStormGuard:
+            break  # cap reached: stop translating new strings; keep cache + EN fallback
         for src, dst in res.items():
             cache[_ui_hash(src)] = dst
             changed = True

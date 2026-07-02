@@ -344,7 +344,8 @@ def build_things() -> Path:
         page, "Things to Do: The Chesterfield Report",
         "Concerts, sports, theatre, and family events across Chesterfield County "
         "and the Richmond region, with tickets and times.",
-        f"{render.SITE_URL}/things-to-do.html", og_type="website")
+        f"{render.SITE_URL}/things-to-do.html", og_type="website",
+        page_title="Things to Do | The Chesterfield Report")
     out = PUBLIC / "things-to-do.html"
     out.write_text(page, encoding="utf-8")
     return out

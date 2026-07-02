@@ -362,7 +362,8 @@ def build_datacenters() -> Path:
         "Every data-center project in Chesterfield County, Virginia in one place: "
         "Google's $9 billion three-campus buildout, what's approved, denied, or under "
         "review, a map of the sites, key dates, and all of our coverage.",
-        f"{render.SITE_URL}/data-centers.html", og_type="website")
+        f"{render.SITE_URL}/data-centers.html", og_type="website",
+        page_title="Data Center Tracker | The Chesterfield Report")
     out = PUBLIC / "data-centers.html"
     out.write_text(page, encoding="utf-8")
     print(f"Built {out.name} ({len(data.get('projects', []))} projects)")

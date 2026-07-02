@@ -10,6 +10,11 @@ pipeline/geocode_cache.json
 pipeline/meetings_cache.json
 pipeline/dining_cache.json
 pipeline/es_cache.json
+pipeline/es_ui_cache.json
+pipeline/es_page_hashes.json
+pipeline/factcheck_seen.json
+pipeline/ai_features.json
+pipeline/ai_usage.log
 pipeline/ogimage_cache.json
 pipeline/linkqueue_seen.json
 pipeline/review_feedback.jsonl

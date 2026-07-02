@@ -22,6 +22,7 @@ import re
 import shutil
 import subprocess
 
+from . import ai
 from .models import Item
 from .sources import FOCUS_AREAS
 
@@ -123,9 +124,7 @@ def _enrich_cli(item: Item, model: str) -> None:
         "--append-system-prompt", _SYSTEM,
         "--model", model,
     ]
-    proc = subprocess.run(
-        cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT
-    )
+    proc = ai.run("enrich", cmd, timeout=CLI_TIMEOUT)
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.strip()[:200] or "claude CLI failed")
     envelope = json.loads(proc.stdout)
@@ -222,7 +221,7 @@ def research_timeline(topic: str, model: str = MODEL) -> dict:
         "--allowedTools", "WebSearch", "WebFetch",
         "--model", model,
     ]
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=TIMELINE_TIMEOUT)
+    proc = ai.run("enrich", cmd, timeout=TIMELINE_TIMEOUT)
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.strip()[:300] or "claude CLI failed")
     envelope = json.loads(proc.stdout)
@@ -407,7 +406,7 @@ def write_article(topic: str, model: str = MODEL) -> dict:
         "--allowedTools", "WebSearch", "WebFetch",
         "--model", model,
     ]
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=TIMELINE_TIMEOUT)
+    proc = ai.run("enrich", cmd, timeout=TIMELINE_TIMEOUT)
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.strip()[:300] or "claude CLI failed")
     envelope = json.loads(proc.stdout)

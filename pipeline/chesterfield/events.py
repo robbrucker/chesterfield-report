@@ -32,6 +32,7 @@ try:
 except Exception:                                # noqa: BLE001
     _ET = datetime.timezone(datetime.timedelta(hours=-4))
 
+from . import ai
 from . import render, geo
 from . import things as _things
 from . import farmers as _farmers
@@ -213,7 +214,7 @@ def enrich_event(ev: dict, detail: str) -> dict | None:
            "--json-schema", json.dumps(_ENRICH_SCHEMA), "--model", MODEL]
     for attempt in range(2):
         try:
-            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+            proc = ai.run("events", cmd, timeout=CLI_TIMEOUT)
             if proc.returncode != 0:
                 if attempt == 0:
                     time.sleep(4)

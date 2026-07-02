@@ -42,6 +42,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from chesterfield import classify, enrich as enrich_mod, fetch as fetch_mod, geo, render
+from chesterfield import ai as ai_mod
 from chesterfield import board as board_mod, maps as maps_mod
 from chesterfield import meetings as meetings_mod
 from chesterfield import dining as dining_mod
@@ -178,6 +179,9 @@ def cmd_ingest(backend: str = "auto", model: str = "claude-haiku-4-5",
     _save_watermark()
     print(f"\nDone. {total_new} new drafts in content/drafts/ "
           f"({stale_skipped} skipped as stale).")
+    # Machine-readable marker the cron reads to decide whether a rebuild is
+    # warranted (see ingest-cron.sh empty-run short-circuit).
+    print(f"CRON_INGEST_NEW={total_new}")
     if total_new:
         print("Review them, then: python run.py promote <file.md>")
 
@@ -396,6 +400,51 @@ def cmd_geocode_backfill() -> None:
         print(f"  still missing: {name}  ({loc})")
 
 
+def cmd_ai(sub: list) -> None:
+    """Manage the AI gateway: on/off per feature, budget, and usage.
+
+        run.py ai status              show feature toggles + today's call counts
+        run.py ai usage [days]        calls per feature per day (default 7)
+        run.py ai off <feature>       turn one feature off (persists to ai_features.json)
+        run.py ai on  <feature>       turn one feature back on
+        run.py ai features            list known feature names
+    """
+    action = sub[0] if sub else "status"
+    if action == "status":
+        s = ai_mod.status()
+        print("AI gateway status")
+        print(f"  global kill (CR_AI_OFF): {'ON — all AI disabled' if s['all_off'] else 'off'}")
+        print(f"  per-run budget:          {s['budget']} calls")
+        print(f"  calls today:             {s['today_total']}")
+        print("  features:")
+        for f, on in s["features"].items():
+            n = s["today"].get(f, 0)
+            print(f"    {'[on] ' if on else '[OFF]'} {f:<10} {n} call(s) today")
+    elif action == "usage":
+        days = int(sub[1]) if len(sub) > 1 and sub[1].isdigit() else 7
+        by_day = ai_mod.usage_by_day(days)
+        if not by_day:
+            print(f"No AI calls recorded in the last {days} day(s).")
+            return
+        print(f"AI calls per day (last {days} days):")
+        for day in sorted(by_day):
+            feats = by_day[day]
+            total = sum(feats.values())
+            detail = ", ".join(f"{k}={v}" for k, v in sorted(feats.items()))
+            print(f"  {day}  {total:>4}   {detail}")
+    elif action in ("on", "off") and len(sub) > 1:
+        feat = sub[1]
+        try:
+            ai_mod.set_feature(feat, on=(action == "on"))
+            print(f"AI feature '{feat}' turned {action.upper()} (saved to ai_features.json).")
+        except ValueError as e:
+            print(f"Error: {e}")
+    elif action == "features":
+        print("Known features:", ", ".join(ai_mod.KNOWN_FEATURES))
+    else:
+        print(cmd_ai.__doc__)
+
+
 def cmd_status() -> None:
     store = Store(DB_PATH)
     print("Item counts by status:", store.counts())
@@ -460,6 +509,7 @@ def main() -> None:
         # unpublish empty stubs/junk. --dry-run reports without changing files.
         result = qa_mod.run(apply="--dry-run" not in args)
         print(f"QA: {result['merged_away']} merged, {result['unpublished']} unpublished")
+        print(f"CRON_QA_CHANGED={result['merged_away'] + result['unpublished']}")
     elif cmd == "geocode-backfill":
         # One-time-ish: fill lat/lon for published stories with a location but
         # no usable coordinates so they show up on the news map.
@@ -485,6 +535,7 @@ def main() -> None:
             deepen="--no-deepen" not in args,
         )
         print(f"Triage: {result}")
+        print(f"CRON_TRIAGE_PUBLISHED={result.get('approved', 0) + result.get('regional', 0)}")
     elif cmd == "factcheck":
         # Twice-daily QA: SAFE auto-fix formatting/geocode, FLAG the rest to
         # research/wiki/ (journal + QA-ALERTS). --apply enables the safe fixes;
@@ -495,6 +546,8 @@ def main() -> None:
             apply_safe="--apply" in args,
         )
         print(f"Factcheck: {res}")
+    elif cmd == "ai":
+        cmd_ai(args[1:])
     elif cmd == "status":
         cmd_status()
     else:

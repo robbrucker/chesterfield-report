@@ -19,16 +19,24 @@ Stdlib only; the LLM check shells out to the Claude Code CLI like enrich/qa.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import subprocess
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
+from . import ai
 from .render import PUBLISHED, ROOT
 from .dedup import _parse_frontmatter
 
-MODEL = "claude-sonnet-4-6"
+# Two-tier fact-check: the cheap ROUTINE_MODEL screens every story; only stories
+# it flags as HIGH (a wrong/misleading published claim) get re-checked by the
+# stronger ESCALATE_MODEL. Most days nothing escalates, so the priciest model
+# runs a handful of times instead of on all ~30 stories twice a day.
+ROUTINE_MODEL = "claude-haiku-4-5"
+ESCALATE_MODEL = "claude-sonnet-4-6"
+MODEL = ROUTINE_MODEL          # default for _cli(); escalation passes the model explicitly
 CLI_TIMEOUT = 240
 
 WIKI_DIR = ROOT / "research" / "wiki"
@@ -206,7 +214,7 @@ def _cli(prompt: str, model: str = MODEL) -> dict:
         "--append-system-prompt", _SYSTEM,
         "--model", model,
     ]
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+    proc = ai.run("factcheck", cmd, timeout=CLI_TIMEOUT)
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.strip()[:200] or "claude CLI failed")
     env = json.loads(proc.stdout)
@@ -222,7 +230,37 @@ def _cli(prompt: str, model: str = MODEL) -> dict:
 # Per-story audit
 # --------------------------------------------------------------------------- #
 
-def audit_story(path: Path, apply_safe: bool) -> dict:
+# --------------------------------------------------------------------------- #
+# Skip-unchanged cache: the paid LLM claim check is the only per-story cost, so
+# we remember the post-fix content hash + last findings per story.  On the next
+# run an unchanged story reuses its cached findings instead of paying for the
+# sonnet call again.  Pruned to the live window each run so it stays small.
+# --------------------------------------------------------------------------- #
+
+FC_CACHE = ROOT / "pipeline" / "factcheck_seen.json"
+
+
+def _fc_hash(body: str) -> str:
+    return hashlib.sha256(body.encode("utf-8")).hexdigest()
+
+
+def _load_fc_cache() -> dict:
+    try:
+        return json.loads(FC_CACHE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _save_fc_cache(cache: dict) -> None:
+    try:
+        FC_CACHE.write_text(
+            json.dumps(cache, ensure_ascii=False, sort_keys=True),
+            encoding="utf-8")
+    except Exception:
+        pass
+
+
+def audit_story(path: Path, apply_safe: bool, llm_cache: dict | None = None) -> dict:
     """Return {file, headline, fixed: [..], flags: [{severity,type,detail,fix}]}.
     Applies SAFE deterministic fixes in place when apply_safe is True."""
     raw = path.read_text(encoding="utf-8")
@@ -264,14 +302,36 @@ def audit_story(path: Path, apply_safe: bool) -> dict:
                       "fix": "verify and correct the date or weekday"})
 
     # --- LLM claim check (flag only) ---
-    try:
-        res = _cli(_llm_prompt(headline, body, meta.get("source", "")))
-        for it in res.get("issues", []):
-            flags.append({"severity": it["severity"], "type": it["type"],
-                          "detail": it["detail"], "fix": it.get("suggested_fix", "")})
-    except Exception as e:  # non-fatal: record but don't abort the run
-        flags.append({"severity": "LOW", "type": "checker-error",
-                      "detail": f"LLM check failed: {str(e)[:120]}", "fix": ""})
+    # Only this call costs money.  If the (post-fix) body is byte-identical to
+    # the last time we checked it and we applied no fresh fix this run, reuse the
+    # cached findings and skip the paid call.
+    h = _fc_hash(body)
+    cached = llm_cache.get(path.name) if llm_cache is not None else None
+    if cached and cached.get("hash") == h and not fixed:
+        flags.extend(cached.get("flags", []))
+    else:
+        llm_flags = []
+        prompt = _llm_prompt(headline, body, meta.get("source", ""))
+        try:
+            issues = _cli(prompt, model=ROUTINE_MODEL).get("issues", [])
+            # Escalate to the stronger model ONLY when the cheap pass flags
+            # something serious. Its verdict then supersedes the routine one.
+            if any(it.get("severity") == "HIGH" for it in issues):
+                try:
+                    issues = _cli(prompt, model=ESCALATE_MODEL).get("issues", issues)
+                except Exception:
+                    pass  # escalation failed: keep the routine result
+            for it in issues:
+                llm_flags.append({"severity": it["severity"], "type": it["type"],
+                                  "detail": it["detail"], "fix": it.get("suggested_fix", "")})
+        except Exception as e:  # non-fatal: record but don't abort the run
+            llm_flags.append({"severity": "LOW", "type": "checker-error",
+                              "detail": f"LLM check failed: {str(e)[:120]}", "fix": ""})
+        flags.extend(llm_flags)
+        # Cache only a clean (non-errored) check so a transient CLI failure is retried.
+        if llm_cache is not None and not any(
+                f["type"] == "checker-error" for f in llm_flags):
+            llm_cache[path.name] = {"hash": h, "flags": llm_flags}
 
     return {"file": path.name, "headline": headline, "fixed": fixed, "flags": flags}
 
@@ -328,7 +388,11 @@ def _write_reports(results: list[dict], now: datetime, window_hours: int) -> dic
 def run(window_hours: int = 48, apply_safe: bool = True, now: datetime | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     stories = recent_stories(window_hours, now)
-    results = [audit_story(p, apply_safe) for p in stories]
+    cache = _load_fc_cache()
+    results = [audit_story(p, apply_safe, cache) for p in stories]
+    # Prune to the live window so the cache never grows unbounded.
+    live = {p.name for p in stories}
+    _save_fc_cache({k: v for k, v in cache.items() if k in live})
     summary = _write_reports(results, now, window_hours)
     summary["apply_built"] = apply_safe and summary["auto_fixed"] > 0
     return summary

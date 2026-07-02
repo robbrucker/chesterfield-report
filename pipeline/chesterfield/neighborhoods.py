@@ -305,7 +305,8 @@ def build_neighborhoods() -> Path:
     page = render._shell(body)
     page = render._inject_og(page, "Chesterfield neighborhoods directory",
         f"{len(rows):,} Chesterfield County neighborhoods with home counts and HOA info.",
-        "https://chesterfieldreport.com/neighborhoods.html")
+        "https://chesterfieldreport.com/neighborhoods.html",
+        page_title="Neighborhoods Directory | The Chesterfield Report")
     out = PUBLIC / "neighborhoods.html"
     out.write_text(page, encoding="utf-8")
 
@@ -346,7 +347,8 @@ def build_neighborhoods() -> Path:
         npage = render._shell(nbody)
         npage = render._inject_og(npage, f"{nm} — Chesterfield neighborhood",
             f"{nm}: {r['homes']:,} homes" + (", registered HOA" if r.get("hoa") else "") + ".",
-            f"https://chesterfieldreport.com/neighborhoods/{slug}.html")
+            f"https://chesterfieldreport.com/neighborhoods/{slug}.html",
+            page_title=f"{nm} | The Chesterfield Report")
         (OUT_DIR / f"{slug}.html").write_text(npage, encoding="utf-8")
 
     return out

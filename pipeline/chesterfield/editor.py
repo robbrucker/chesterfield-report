@@ -30,6 +30,7 @@ import urllib.request
 from collections import defaultdict
 from pathlib import Path
 
+from . import ai
 from . import dedup
 from . import enrich as enrich_mod
 from . import render
@@ -282,7 +283,7 @@ def _triage_cli(meta: dict, body: str, model: str, system: str = _RUBRIC) -> dic
         "--append-system-prompt", system,
         "--model", model,
     ]
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+    proc = ai.run("triage", cmd, timeout=CLI_TIMEOUT)
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.strip()[:200] or "claude CLI failed")
     envelope = json.loads(proc.stdout)
@@ -477,7 +478,7 @@ def _regional_decide(meta: dict, body: str, model: str) -> dict:
     )
     cmd = ["claude", "-p", prompt, "--output-format", "json",
            "--json-schema", json.dumps(_REGIONAL_SCHEMA), "--model", model]
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+    proc = ai.run("triage", cmd, timeout=CLI_TIMEOUT)
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.strip()[:200] or "regional CLI failed")
     data = json.loads(proc.stdout).get("structured_output")

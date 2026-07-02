@@ -366,7 +366,8 @@ def build_nonprofits() -> Path:
         "A categorized, mappable directory of nonprofits and charities that serve "
         "Chesterfield County, Virginia: food, housing, health, seniors, youth, veterans, "
         "and crisis help. Organizations can ask to be added or corrected.",
-        f"{render.SITE_URL}/nonprofits.html", og_type="website")
+        f"{render.SITE_URL}/nonprofits.html", og_type="website",
+        page_title="Nonprofits Directory | The Chesterfield Report")
     out = PUBLIC / "nonprofits.html"
     out.write_text(page, encoding="utf-8")
     return out

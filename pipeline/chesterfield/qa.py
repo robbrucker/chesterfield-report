@@ -26,6 +26,7 @@ import json
 import re
 import subprocess
 
+from . import ai
 from . import dedup
 from . import enrich
 from . import geo
@@ -65,7 +66,7 @@ def _cli(prompt: str, schema: dict, system: str, model: str) -> dict:
         "--append-system-prompt", system,
         "--model", model,
     ]
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+    proc = ai.run("qa", cmd, timeout=CLI_TIMEOUT)
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.strip()[:200] or "claude CLI failed")
     envelope = json.loads(proc.stdout)

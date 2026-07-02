@@ -6,6 +6,7 @@ renderer turns the *published* files into a browsable index.html.
 """
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import os
@@ -1130,6 +1131,17 @@ _TW_DEF_DESC = ('<meta name="twitter:description" content="Hyperlocal news for C
                 'Virginia. Free, no ads, links to the original sources.">')
 _TW_DEF_IMG = '<meta name="twitter:image" content="https://chesterfieldreport.com/assets/og-default.png">'
 
+# Standard meta description default — must match the template string exactly so
+# we can swap it per page.  See _inject_og / _set_page_meta below.
+_META_DEF_DESC = ('<meta name="description" content="The Chesterfield Report delivers '
+                  'hyperlocal news for Chesterfield County, Virginia. AI-assembled from '
+                  'official county sources, local outlets, and public records, then '
+                  'human-reviewed, with links to the originals. Growth & development, '
+                  'schools, public safety, government, and community.">')
+# Default <title> tag — matches the template so _set_page_meta / _inject_og can swap it.
+_DEF_TITLE = ('<title>The Chesterfield Report: Hyperlocal News for Chesterfield County, '
+              'Virginia</title>')
+
 
 def _attr_escape(s: str) -> str:
     return ((s or "").replace("&", "&amp;").replace('"', "&quot;")
@@ -1137,16 +1149,27 @@ def _attr_escape(s: str) -> str:
 
 
 def _inject_og(page: str, title: str, description: str, url: str,
-               image: str = "", og_type: str = "article") -> str:
+               image: str = "", og_type: str = "article",
+               page_title: str = "") -> str:
     """Swap the template's default OG/Twitter tags for page-specific ones so a
-    shared link shows this story's headline, summary, and photo."""
+    shared link shows this story's headline, summary, and photo.
+
+    If page_title is provided it is also written into the HTML <title> tag so
+    that Google sees a unique per-page title in search results.  The standard
+    <meta name="description"> is always set from description (truncated to 160
+    chars) so every page gets a unique snippet, not the generic homepage blurb.
+    """
     t = _attr_escape(title)
     page = page.replace(_OG_DEF_TITLE, f'<meta property="og:title" content="{t}">', 1)
     page = page.replace(_TW_DEF_TITLE, f'<meta name="twitter:title" content="{t}">', 1)
     if description:
         d = _attr_escape(description)
+        d160 = _attr_escape(description[:160])
         page = page.replace(_OG_DEF_DESC, f'<meta property="og:description" content="{d}">', 1)
         page = page.replace(_TW_DEF_DESC, f'<meta name="twitter:description" content="{d}">', 1)
+        # Standard meta description — Google uses this for search snippets.
+        page = page.replace(_META_DEF_DESC,
+                            f'<meta name="description" content="{d160}">', 1)
     page = page.replace(_OG_DEF_URL, f'<meta property="og:url" content="{_attr_escape(url)}">', 1)
     page = page.replace(_OG_DEF_TYPE, f'<meta property="og:type" content="{og_type}">', 1)
     if image:
@@ -1154,6 +1177,26 @@ def _inject_og(page: str, title: str, description: str, url: str,
         img = _attr_escape(img)
         page = page.replace(_OG_DEF_IMG, f'<meta property="og:image" content="{img}">', 1)
         page = page.replace(_TW_DEF_IMG, f'<meta name="twitter:image" content="{img}">', 1)
+    if page_title:
+        page = page.replace(_DEF_TITLE,
+                            f'<title>{_attr_escape(page_title)}</title>', 1)
+    return page
+
+
+def _set_page_meta(page: str, title: str = "", description: str = "") -> str:
+    """Set per-page <title> and/or <meta name='description'> on a _shell() page.
+
+    Use for section/utility pages that do not go through _inject_og (e.g.,
+    digest, topics index, about, tip, subscribe).  Both parameters are optional
+    so callers can set only what they need.
+    """
+    if title:
+        page = page.replace(_DEF_TITLE,
+                            f'<title>{_attr_escape(title)}</title>', 1)
+    if description:
+        d160 = _attr_escape(description[:160])
+        page = page.replace(_META_DEF_DESC,
+                            f'<meta name="description" content="{d160}">', 1)
     return page
 
 
@@ -1447,7 +1490,8 @@ def build_virginia() -> Path:
     page = _inject_og(page, "Virginia & Region — The Chesterfield Report",
                       "State and regional news that affects Chesterfield County residents: "
                       "laws, the budget, utility rates, transportation, courts, and elections.",
-                      "https://chesterfieldreport.com/virginia.html")
+                      "https://chesterfieldreport.com/virginia.html",
+                      page_title="Virginia & Region | The Chesterfield Report")
     out = PUBLIC / "virginia.html"
     out.write_text(page, encoding="utf-8")
     return out
@@ -1771,17 +1815,45 @@ def build_es_sections(only=None) -> int:
     if only is not None:
         want = set(only)
         targets = [t for t in targets if t[1] in want]
-    n = 0
+
+    # Page-level change gate: skip re-localizing a page whose rendered EN HTML is
+    # byte-identical to the last ES build (and whose /es/ output still exists).
+    # This is what keeps a normal build from re-walking ~60 pages of translation
+    # every time; only pages that actually changed get re-localized. The AI
+    # budget in ai.py is the hard backstop if a site-wide edit changes many at once.
+    from . import translate  # for the storm-guard state (see docs/translation-guard.md)
+    hashes_path = ROOT / "pipeline" / "es_page_hashes.json"
+    try:
+        page_hashes = json.loads(hashes_path.read_text(encoding="utf-8"))
+    except Exception:
+        page_hashes = {}
+
+    n = skipped = 0
     for src, en_path, es_path in targets:
         if not src.exists():
             continue
-        page = _es_localize_page(src.read_text(encoding="utf-8"),
-                                 en_path=en_path, es_path=es_path)
+        en_html = src.read_text(encoding="utf-8")
+        h = hashlib.sha256(en_html.encode("utf-8")).hexdigest()
         dst = es_dir / en_path.lstrip("/")
+        if page_hashes.get(en_path) == h and dst.exists():
+            skipped += 1
+            continue
+        page = _es_localize_page(en_html, en_path=en_path, es_path=es_path)
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_text(page, encoding="utf-8")
+        # Only remember this page's hash if it was FULLY translated. If the storm
+        # guard tripped, the page may be partly English, so leave its hash unset
+        # and it will be retried (and completed) on a later build/backfill.
+        if not translate.guard_tripped():
+            page_hashes[en_path] = h
         n += 1
-    print(f"Built {n} Spanish pages (/es/)")
+
+    try:
+        hashes_path.write_text(json.dumps(page_hashes, sort_keys=True),
+                               encoding="utf-8")
+    except Exception:
+        pass
+    print(f"Built {n} Spanish pages (/es/){f', {skipped} unchanged' if skipped else ''}")
     return n
 
 
@@ -2067,10 +2139,15 @@ def build_topics() -> int:
                      + _filter_links(recs)
                      + f'<div class="feed" id="feed">{feed}</div>')
         generated = _updated_stamp()
-        (tdir / f"{slug}.html").write_text(
-            _TEMPLATE.format(body=body_html, generated=generated,
-                             count=len(info["recs"])),
-            encoding="utf-8")
+        n_stories = len(info["recs"])
+        label = info["label"]
+        pg = _TEMPLATE.format(body=body_html, generated=generated, count=n_stories)
+        pg = _set_page_meta(
+            pg,
+            title=f"{label} | The Chesterfield Report",
+            description=(f"The latest {label} news from Chesterfield County, Virginia "
+                         f"— {n_stories} {'story' if n_stories == 1 else 'stories'}."))
+        (tdir / f"{slug}.html").write_text(pg, encoding="utf-8")
 
     # Index, grouped for digestibility: BEATS (the canonical focus areas, as
     # prominent cards) first, then the long tail of entity TAGS as small chips.
@@ -2101,7 +2178,13 @@ def build_topics() -> int:
             f'<div class="topic-beats">{beats_html or "<p>No beats yet.</p>"}</div>'
             + (f'<h2 class="topic-h">Browse by tag</h2>'
                f'<div class="topic-tags">{tags_html}</div>' if tags_html else ""))
-    (tdir / "index.html").write_text(_shell(body, len(recs)), encoding="utf-8")
+    pg = _shell(body, len(recs))
+    pg = _set_page_meta(
+        pg,
+        title="Topics | The Chesterfield Report",
+        description=("Browse Chesterfield County news by beat and topic: schools, "
+                     "public safety, development, government, community, and more."))
+    (tdir / "index.html").write_text(pg, encoding="utf-8")
     return len(topics)
 
 
@@ -2215,7 +2298,13 @@ def build_digest() -> Path:
                  + "".join(sections_html)
                  + '<p class="dg-foot">Have a tip or a correction? <a href="/tip.html">Let us know.</a></p>')
     out = PUBLIC / "digest.html"
-    out.write_text(_shell(body_html, len(week)), encoding="utf-8")
+    pg = _shell(body_html, len(week))
+    pg = _set_page_meta(
+        pg,
+        title="This Week in Chesterfield | The Chesterfield Report",
+        description=(f"A weekly digest of Chesterfield County news grouped by topic: "
+                     f"growth and development, schools, public safety, government, and community."))
+    out.write_text(pg, encoding="utf-8")
     (PUBLIC / "digest.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     return out
 
@@ -2371,7 +2460,14 @@ def build_about() -> Path:
         '</ul>'
         '</div>')
     out = PUBLIC / "about.html"
-    out.write_text(_shell(body), encoding="utf-8")
+    pg = _shell(body)
+    pg = _set_page_meta(
+        pg,
+        title="About | The Chesterfield Report",
+        description=("The Chesterfield Report is a free, independent hyperlocal news roundup "
+                     "for Chesterfield County, Virginia: AI-drafted summaries, human review, "
+                     "and links to original sources."))
+    out.write_text(pg, encoding="utf-8")
     return out
 
 
@@ -2613,7 +2709,8 @@ def build_shoosmith() -> Path:
         + '</div></div>')
 
     page = _shell(body)
-    page = _inject_og(page, headline, dek, "https://chesterfieldreport.com/shoosmith.html")
+    page = _inject_og(page, headline, dek, "https://chesterfieldreport.com/shoosmith.html",
+                      page_title=f"{headline} | The Chesterfield Report")
     out = PUBLIC / "shoosmith.html"
     out.write_text(page, encoding="utf-8")
     return out
@@ -2659,7 +2756,13 @@ def build_tip() -> Path:
         'info@chesterfieldreport.com</a>.</p></div>'
         + thanks_js)
     out = PUBLIC / "tip.html"
-    out.write_text(_shell(body), encoding="utf-8")
+    pg = _shell(body)
+    pg = _set_page_meta(
+        pg,
+        title="Send a Tip or Correction | The Chesterfield Report",
+        description=("Send a news tip or correction to The Chesterfield Report. "
+                     "Confidential -- we read every one."))
+    out.write_text(pg, encoding="utf-8")
     return out
 
 
@@ -2685,7 +2788,13 @@ def build_subscribe() -> Path:
         '<p class="tip-note" style="color:var(--text-faint);font-size:.85rem;margin-top:1rem">'
         'We only email you Chesterfield news and never share your address.</p></div>')
     out = PUBLIC / "subscribe.html"
-    out.write_text(_shell(body), encoding="utf-8")
+    pg = _shell(body)
+    pg = _set_page_meta(
+        pg,
+        title="Subscribe | The Chesterfield Report",
+        description=("Get The Weekly Report: free Chesterfield County news delivered "
+                     "to your inbox. Unsubscribe anytime."))
+    out.write_text(pg, encoding="utf-8")
     return out
 
 

@@ -259,5 +259,14 @@ def build_map():
     )
 
     out = PUBLIC / "map.html"
-    out.write_text(render._shell(body, len(markers)), encoding="utf-8")
+    page = render._shell(body, len(markers))
+    page = render._inject_og(
+        page,
+        "News & Development Map | The Chesterfield Report",
+        "An interactive map of Chesterfield County news stories, color-coded by topic: "
+        "growth and development, schools, public safety, government, and community.",
+        f"{render.SITE_URL}/map.html",
+        og_type="website",
+        page_title="News & Development Map | The Chesterfield Report")
+    out.write_text(page, encoding="utf-8")
     return out

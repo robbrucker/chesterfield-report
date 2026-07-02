@@ -16,6 +16,7 @@ import subprocess
 import time
 from pathlib import Path
 
+from . import ai
 from . import render
 
 PUBLIC = render.PUBLIC
@@ -257,7 +258,7 @@ def _summarize(m: dict, model: str = MODEL) -> str:
            "--json-schema", json.dumps(_SUM_SCHEMA), "--model", model]
     for attempt in range(2):
         try:
-            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=CLI_TIMEOUT)
+            proc = ai.run("farmers", cmd, timeout=CLI_TIMEOUT)
             if proc.returncode != 0:
                 if attempt == 0:
                     time.sleep(4)
